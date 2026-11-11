@@ -16,7 +16,7 @@
   "alternate_cdn_urls": [],
   "compilation_mode": "fresh_single_pass_no_resume",
   "compilation_elapsed_seconds": 1138.0,
-  "finalized_at_utc": "2026-11-11T03:06:39.815894+00:00",
+  "finalized_at_utc": "2026-11-11T20:33:07.129186+00:00",
   "telemetry": {
     "event_count": 4,
     "form_count": 15,
@@ -28,8 +28,8 @@
   },
   "artifacts": {
     "exports/rave_als.xlsx": {
-      "size_bytes": 41084,
-      "sha256": "8e0bce945b539a948a7ab8a68953d6987fd38393b401bd30ad72ead678602b62"
+      "size_bytes": 38558,
+      "sha256": "55e3cdb0140ed2f0116303d52becde2b983e197e123e297bd30823c2adab12e3"
     },
     "exports/veeva_cdms.xml": {
       "size_bytes": 67628,
@@ -44,8 +44,8 @@
       "sha256": "b780312e84b821a3a963e1c4528f5366052a6a249e2e0858274163553d730547"
     },
     "metadata/provenance_matrix_21cfr11.xlsx": {
-      "size_bytes": 34781,
-      "sha256": "5d1667437cd3dcc4aa9992ad6e64ba26d4903c4c82038140405269cb94de4d68"
+      "size_bytes": 36351,
+      "sha256": "ec19c6c910b39cf30413dc4a123450ca217d843721f788050a26bae109415dff"
     },
     "visuals/canvas_standard.svg": {
       "size_bytes": 3913685,

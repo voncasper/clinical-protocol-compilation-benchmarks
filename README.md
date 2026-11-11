@@ -19,9 +19,11 @@ using only the Python 3 Standard Library:
 
 ```bash
 python3 verify_turnkey_integrity.py
+# Forensic Dual-Layer OpenXML Watermark Inspection (survives file rename & Excel edits):
+python3 verify_turnkey_integrity.py --inspect-watermark studies/NCT01631552/exports/rave_als.xlsx
 ```
 
-*Last Manifest Finalization (UTC): `2026-11-11T03:06:39.815894+00:00`*
+*Last Manifest Finalization (UTC): `2026-11-11T20:33:07.129186+00:00`*
 
 ---
 

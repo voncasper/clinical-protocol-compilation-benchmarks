@@ -3,7 +3,7 @@
   "repository": "clinical-protocol-compilation-benchmarks",
   "publisher": "VonCasper Solutions",
   "license": "Apache-2.0",
-  "generated_at_utc": "2026-11-11T03:06:39.815894+00:00",
+  "generated_at_utc": "2026-11-11T20:33:07.129186+00:00",
   "study_count": 13,
   "total_indexed_study_files": 143,
   "studies": [
@@ -30,8 +30,8 @@
       },
       "files": {
         "exports/rave_als.xlsx": {
-          "size_bytes": 41084,
-          "sha256": "8e0bce945b539a948a7ab8a68953d6987fd38393b401bd30ad72ead678602b62"
+          "size_bytes": 38558,
+          "sha256": "55e3cdb0140ed2f0116303d52becde2b983e197e123e297bd30823c2adab12e3"
         },
         "exports/veeva_cdms.xml": {
           "size_bytes": 67628,
@@ -46,8 +46,8 @@
           "sha256": "b780312e84b821a3a963e1c4528f5366052a6a249e2e0858274163553d730547"
         },
         "metadata/provenance_matrix_21cfr11.xlsx": {
-          "size_bytes": 34781,
-          "sha256": "5d1667437cd3dcc4aa9992ad6e64ba26d4903c4c82038140405269cb94de4d68"
+          "size_bytes": 36351,
+          "sha256": "ec19c6c910b39cf30413dc4a123450ca217d843721f788050a26bae109415dff"
         },
         "visuals/canvas_standard.svg": {
           "size_bytes": 3913685,
@@ -67,11 +67,11 @@
         },
         "metadata/compilation_manifest.json": {
           "size_bytes": 2419,
-          "sha256": "5cfdab5470306b7acaf4bda835b35acad852d260a2fb368f5b2abee753ad369e"
+          "sha256": "9df73c93bca64b4ead099d42931ab361ac7640055d55dffa499dd20c26a46db9"
         },
         "README.md": {
           "size_bytes": 3122,
-          "sha256": "c9d2c16f4c16ceb068c89abd7192d1ff15ccfcc472a8802b91ed17416c1ead4e"
+          "sha256": "86531990a19232d08de722d61d956b65495c5c0fe44b602281847f7141963c39"
         }
       }
     },
@@ -98,8 +98,8 @@
       },
       "files": {
         "exports/rave_als.xlsx": {
-          "size_bytes": 42562,
-          "sha256": "583e76fd198e1366af6592cb7e1c4b16964c49a972ded40d369d53ced10b82a5"
+          "size_bytes": 40061,
+          "sha256": "7e664a2d674474cfcef5a3e70a0e476f9b023dc6a4a09fa305d6c28d5a4ac31e"
         },
         "exports/veeva_cdms.xml": {
           "size_bytes": 72485,
@@ -114,8 +114,8 @@
           "sha256": "2efad502801dd380c4fda40a14ce45409a9f824056af69d89b3fe5111eda9ea9"
         },
         "metadata/provenance_matrix_21cfr11.xlsx": {
-          "size_bytes": 34422,
-          "sha256": "c639e5e487c832b585f91b2430b3d3dc0e354749f07b54f18194b8900f00f658"
+          "size_bytes": 36000,
+          "sha256": "7a5e6021c3623f26d98ebf111507ab6c2eeb04f78cc90c0dd9057c2329df613e"
         },
         "visuals/canvas_standard.svg": {
           "size_bytes": 4717252,
@@ -135,11 +135,11 @@
         },
         "metadata/compilation_manifest.json": {
           "size_bytes": 2471,
-          "sha256": "68f3118610f3ab0147bdb889f94b4e360df46e7569e884363cff4c1ffbc60377"
+          "sha256": "4c75dc2f3dcff733ddfbcbf512d222b97a3fbeb69d47b885d1312923e5e53b3d"
         },
         "README.md": {
           "size_bytes": 3228,
-          "sha256": "d6cf4adb985a03d8145d829fa8bceb92bd922876b6e6daaaa116395536c24b75"
+          "sha256": "d46968b4f0d8d380a624d64fb9fbd2f5a3a001dda0694cbb12063528e0057d70"
         }
       }
     },
@@ -166,8 +166,8 @@
       },
       "files": {
         "exports/rave_als.xlsx": {
-          "size_bytes": 39370,
-          "sha256": "bab454eafb5a4bda335c32a4da12425620d99f900656269506ebacb09077fcaa"
+          "size_bytes": 36887,
+          "sha256": "2b9a56bb5673a338b88519a27a94b949729e4e5d5fc877018c46f47ff6ef16bc"
         },
         "exports/veeva_cdms.xml": {
           "size_bytes": 63387,
@@ -182,8 +182,8 @@
           "sha256": "60e66f1d562d0c3d27433f8473e38ce90f00a33bcdf925859bc15e4f702e578e"
         },
         "metadata/provenance_matrix_21cfr11.xlsx": {
-          "size_bytes": 32041,
-          "sha256": "f7e0f294ece3e1143907b3af81d4317ad2fd8aed40545b788192b880d88cea02"
+          "size_bytes": 33607,
+          "sha256": "196d3f1ce351e45bd53818c5e2abab2b8f175bd311121db23c1d318adab974ef"
         },
         "visuals/canvas_standard.svg": {
           "size_bytes": 3635200,
@@ -203,11 +203,11 @@
         },
         "metadata/compilation_manifest.json": {
           "size_bytes": 2607,
-          "sha256": "f7631fbda52a7f1afb0c95dd207fea2b373a796d5da9abdf537205d99b410166"
+          "sha256": "8551e03e95583c545f3d92ced933e45e341a645333b567694fc7e4bc07c7cd4c"
         },
         "README.md": {
           "size_bytes": 3426,
-          "sha256": "eab8e903c412d82bdb1aa1188aa40b8a2629080c26e3da0156a9c81b7753957c"
+          "sha256": "e042d91816850d5b5eb1499b235e66c5800c5069e5e35044a3f3c2e2642a7456"
         }
       }
     },
@@ -234,8 +234,8 @@
       },
       "files": {
         "exports/rave_als.xlsx": {
-          "size_bytes": 41498,
-          "sha256": "fd79caee77192ee0707382ba0be435aaa820fe1004e2e43a408f274a45337e8f"
+          "size_bytes": 38835,
+          "sha256": "a7c0de6b809440afe71cdfb69451bc064bfba768f10fb8cda2a0a09e09bbcdce"
         },
         "exports/veeva_cdms.xml": {
           "size_bytes": 68219,
@@ -250,8 +250,8 @@
           "sha256": "0c049b20e54f927850b3c0d266a72c3babb2f75d8be2544d8ee0b58ac404a37c"
         },
         "metadata/provenance_matrix_21cfr11.xlsx": {
-          "size_bytes": 32201,
-          "sha256": "84da7bed07894c033c1bf0a6c23e37f42545e85c652e749e3da0e0cd7ddf4efe"
+          "size_bytes": 33768,
+          "sha256": "8e0412ebd1bfc45fa0a13eafb918318174b64a510bec8aee83c99a2de85bb5d3"
         },
         "visuals/canvas_standard.svg": {
           "size_bytes": 7566748,
@@ -271,11 +271,11 @@
         },
         "metadata/compilation_manifest.json": {
           "size_bytes": 2598,
-          "sha256": "f378fcdaf98cbd1417edf5a1bd17e6e1e9e223838d053b1d28f4359ebfd3cdff"
+          "sha256": "6ea41cfe8c1e1938220a8651e420d08061c3a15d26a02bc6b4348d10dae43f11"
         },
         "README.md": {
           "size_bytes": 3417,
-          "sha256": "7fac742cafe4640639ada8625735115397e0358b969dab153517292e1277c3ef"
+          "sha256": "29aa4f446a08d65976f98eb4ab513a960299251e25042b93a7fcf358b3c1c0fb"
         }
       }
     },
@@ -302,8 +302,8 @@
       },
       "files": {
         "exports/rave_als.xlsx": {
-          "size_bytes": 20717,
-          "sha256": "cce927968194cfe4d0f34662cd5075ad3bc77d7b26f1b56f6e9dc17de0566f89"
+          "size_bytes": 21477,
+          "sha256": "d8b3266037e1f2d6633119e88d101fe8e867937b318b11b7909c3de198b42aa4"
         },
         "exports/veeva_cdms.xml": {
           "size_bytes": 30303,
@@ -318,8 +318,8 @@
           "sha256": "e8f36dbbe32780bbf7b175e9dfe17c93a8c833195f64772ab1ffd1f2cdea02b0"
         },
         "metadata/provenance_matrix_21cfr11.xlsx": {
-          "size_bytes": 20995,
-          "sha256": "777219423ea1eb4e9d1cd24de536b1941b0b0b0e540445030e885281e3df4222"
+          "size_bytes": 22560,
+          "sha256": "24ac8e8af6747d65a9a998ec8dddc5a95bcf776cb88a9dcc2ede47c7fad4fef6"
         },
         "visuals/canvas_standard.svg": {
           "size_bytes": 5123378,
@@ -339,11 +339,11 @@
         },
         "metadata/compilation_manifest.json": {
           "size_bytes": 2600,
-          "sha256": "850a3836bf51e6161c1b9396911dab620a12ca275d390b07637f24f2316ff1e8"
+          "sha256": "b44f8e1d872f040e3504a036d950ddc098c59c53501f10d8a768cb958f8d9162"
         },
         "README.md": {
           "size_bytes": 3418,
-          "sha256": "2f1df433e0638823bdd6c3162c5677c35dbcfe2f8749062ab04ee31e26897309"
+          "sha256": "729eafa4161892fdc4c85f3e304b5a86bebc9100bbf46592f09ca3f5778e9c86"
         }
       }
     },
@@ -372,8 +372,8 @@
       },
       "files": {
         "exports/rave_als.xlsx": {
-          "size_bytes": 40796,
-          "sha256": "b9512382a47e1791f38f93a1820faec788df4aac476bbe780cb480bba4614c5c"
+          "size_bytes": 38595,
+          "sha256": "a553dd606bcebb32461254afd7d0d4836d5d41ec410602f6d09433966d778ea1"
         },
         "exports/veeva_cdms.xml": {
           "size_bytes": 71099,
@@ -388,8 +388,8 @@
           "sha256": "0831828f384294006d87069703c8b5684ccd4125e421ce06e59a1710bd1f0e84"
         },
         "metadata/provenance_matrix_21cfr11.xlsx": {
-          "size_bytes": 33560,
-          "sha256": "1797ba92610c457e124145fdda371aa3c81f04d3b4f4e5dfdf88f0e4fdf6cc06"
+          "size_bytes": 35119,
+          "sha256": "e3fd7b96a5dd9434b707ddaf48ffc933d70aed508664bdc593b84bb2d452f6b9"
         },
         "visuals/canvas_standard.svg": {
           "size_bytes": 3106141,
@@ -409,11 +409,11 @@
         },
         "metadata/compilation_manifest.json": {
           "size_bytes": 2641,
-          "sha256": "3591136b123f44d362dcaef6f92a655953bab1f983fe653cbfb3db36322d7f10"
+          "sha256": "f819e3b66d6d5e8ca1a8ae35ca0eeff737cbae9932cbcd8cbed9a441d3be1ae6"
         },
         "README.md": {
           "size_bytes": 3640,
-          "sha256": "bc75366370dd4f2fd2ef450a04145d0799e5456e552c04b97955e7fd57710269"
+          "sha256": "0f28f829ab52123fae5f1a4979902913b2e9869f8314921e5552453fe814fd6f"
         }
       }
     },
@@ -440,8 +440,8 @@
       },
       "files": {
         "exports/rave_als.xlsx": {
-          "size_bytes": 24645,
-          "sha256": "816fe853fcfbe6ee3796f8b3f1c80810048e0e3fe8f72a231339db1eb38b7dce"
+          "size_bytes": 24952,
+          "sha256": "1a53a43ca462b9fa5998149e0b3be3370ec3f7cef79d4955e6b2cabbf50e4dc1"
         },
         "exports/veeva_cdms.xml": {
           "size_bytes": 42285,
@@ -456,8 +456,8 @@
           "sha256": "52e7740a644b00038c9410f84351e69c9a266abbe46681e3eb8559a4c5014a4d"
         },
         "metadata/provenance_matrix_21cfr11.xlsx": {
-          "size_bytes": 21172,
-          "sha256": "e919798e3bac3ba0b443351cff8927343bde7aa1fba546fb2cce38d11b727414"
+          "size_bytes": 22738,
+          "sha256": "9677e8f147a00ab2b36e903d658587d148bbcec0139e966e3d091329c2873490"
         },
         "visuals/canvas_standard.svg": {
           "size_bytes": 3848328,
@@ -477,11 +477,11 @@
         },
         "metadata/compilation_manifest.json": {
           "size_bytes": 2433,
-          "sha256": "d3fa1f3de06dc04028bae7235b58d06e6d372fddb20354019316c40773cfc983"
+          "sha256": "987bbc326d9cf15b8b5f2fc9c1f159a046c45c538c0bd54ed533f8630440b99a"
         },
         "README.md": {
           "size_bytes": 3135,
-          "sha256": "b1e0401c3e0cd4a61731d164c7218c1a1495de1d13c0b2237b05b6eb75e20c3a"
+          "sha256": "f58520efdf4befeaab3ab370fa4171752b76aedb85d6eceef51f65fa50b76c01"
         }
       }
     },
@@ -508,8 +508,8 @@
       },
       "files": {
         "exports/rave_als.xlsx": {
-          "size_bytes": 46258,
-          "sha256": "f6ef108be54ffda0bc408a6ecfcedcc45a4f203a0bc96137d0182735190bf264"
+          "size_bytes": 43530,
+          "sha256": "1c2393f5a5e77b1cdffd29424c2efe24103ca6170954f86833a55cee4ca42a74"
         },
         "exports/veeva_cdms.xml": {
           "size_bytes": 81471,
@@ -524,8 +524,8 @@
           "sha256": "608518652527d5c58710baa661dcb535d9e49c73d2f27a0629c968aeaf942917"
         },
         "metadata/provenance_matrix_21cfr11.xlsx": {
-          "size_bytes": 39555,
-          "sha256": "b9a8bcd3e9ec65543c6493df30595af6dd9196b2f65269588ff63b3006dd13d1"
+          "size_bytes": 41123,
+          "sha256": "309e94fd3155f29fa545c42c3ed7ff4a338530964262ca46f463239d5f1704d4"
         },
         "visuals/canvas_standard.svg": {
           "size_bytes": 2623921,
@@ -545,11 +545,11 @@
         },
         "metadata/compilation_manifest.json": {
           "size_bytes": 2438,
-          "sha256": "7c205034bc5edc84de49c1525d19436dcb4e0a40209f001443845e246aa3c346"
+          "sha256": "3eadf8e0021b5066bf63bc242340b44b0418f186e04ec39d25eb559ee5202506"
         },
         "README.md": {
           "size_bytes": 3140,
-          "sha256": "40e8e8b4afb25a6be5e4b5c70b62f5b6496e1d72392b828883f074ce1d214f8c"
+          "sha256": "a7c4b1eec4fa66027ac3ac92b6c073eef84adc5b2e97f03ee8bf69bd3ea34768"
         }
       }
     },
@@ -576,8 +576,8 @@
       },
       "files": {
         "exports/rave_als.xlsx": {
-          "size_bytes": 35083,
-          "sha256": "2cf7c7667626cfdf6d92e77436833d3c9a0f7f2662b724b294d457c53b39e685"
+          "size_bytes": 33290,
+          "sha256": "93317ceba0883f653dcebd2439ad1420952ad77a7a968413d31af83300aaa314"
         },
         "exports/veeva_cdms.xml": {
           "size_bytes": 54952,
@@ -592,8 +592,8 @@
           "sha256": "0f25d145761437a8766d03b05f47d5d509e6f741bd937f28fbc91c9367bca509"
         },
         "metadata/provenance_matrix_21cfr11.xlsx": {
-          "size_bytes": 26016,
-          "sha256": "ed9737f03835ef2aa2d0cb536b0d9fab5ad76a79acf8afd1a7b04e5707ddc8e6"
+          "size_bytes": 27589,
+          "sha256": "0a41e3942a4d444ac376c282b363fd9bd7c4731f6c48ec9b43c980f509218aee"
         },
         "visuals/canvas_standard.svg": {
           "size_bytes": 3106108,
@@ -613,11 +613,11 @@
         },
         "metadata/compilation_manifest.json": {
           "size_bytes": 2435,
-          "sha256": "95a0e71e2ca1628dae48909007630fe63d1002383f03117949980b001e40641e"
+          "sha256": "602434fbd6d658290b2a3521dff8e4a89cdeced66558da8a5bd82e2d9a338d3d"
         },
         "README.md": {
           "size_bytes": 3196,
-          "sha256": "793844ae47148d4a817f8fbc77ec22287db8cd2498aa9279204fe832a2248812"
+          "sha256": "b3096ad2a9519d13f77da66b3e9e03646dd19ac8ffe88d3939c36f2309c98328"
         }
       }
     },
@@ -644,8 +644,8 @@
       },
       "files": {
         "exports/rave_als.xlsx": {
-          "size_bytes": 35132,
-          "sha256": "41585f1bc1c6e89662cf878d8bb86f9e78564c807db0190912e388229747fcee"
+          "size_bytes": 33261,
+          "sha256": "973645fdd6c9537a6c0586bf79f3f39c55c7aa2fff4a09349942495d61a86baa"
         },
         "exports/veeva_cdms.xml": {
           "size_bytes": 55210,
@@ -660,8 +660,8 @@
           "sha256": "f5f8a151763540c11c2d9edd1482061ffd175c8f1beb9a551e69b5314a36e28e"
         },
         "metadata/provenance_matrix_21cfr11.xlsx": {
-          "size_bytes": 24427,
-          "sha256": "fe457dafa14d40f4b292ea3c895adfbeb68a79f726e1c5d1250a2e6e8689aa1a"
+          "size_bytes": 26001,
+          "sha256": "2c1b8ce70fc3f5548ac255a2214708b32dabd598be51774cab6796bf2afedc4e"
         },
         "visuals/canvas_standard.svg": {
           "size_bytes": 4300133,
@@ -681,11 +681,11 @@
         },
         "metadata/compilation_manifest.json": {
           "size_bytes": 2437,
-          "sha256": "10c2d4ce423e2714729a657c01de5d6949023b761964c3be4f45a28a99c298b9"
+          "sha256": "2e0d8629c9c0f106fdfdad13525015ebb23b0239baf026f4a252db1aee801f2b"
         },
         "README.md": {
           "size_bytes": 3196,
-          "sha256": "9eadfcea1ddebbf8c07ebda14172d74919d65e2d11c2129215ec0933be751d92"
+          "sha256": "fb850691c40f99526bea5e9ecba0d78e69310562d3a98e292c70120f0199da6b"
         }
       }
     },
@@ -712,8 +712,8 @@
       },
       "files": {
         "exports/rave_als.xlsx": {
-          "size_bytes": 28632,
-          "sha256": "9584e5d7dd5edbbe7e61fa50941cdc84d45fef6925460b250ebb920ea77e4b1a"
+          "size_bytes": 27868,
+          "sha256": "9a8d5ac4ad47d9a9b76d2f8674230fdf2fda49c10c88d585ef639f7f71a240a5"
         },
         "exports/veeva_cdms.xml": {
           "size_bytes": 43539,
@@ -728,8 +728,8 @@
           "sha256": "9692b62e1b439a64d2e8754cd5297282918ecbd887ac0f7620f2224585f05ff9"
         },
         "metadata/provenance_matrix_21cfr11.xlsx": {
-          "size_bytes": 22425,
-          "sha256": "f92a47b68c8a4bcf8d623fe6009b9b131e33e95013ee7de41ba23dba87775b80"
+          "size_bytes": 23993,
+          "sha256": "d0f3218574ed40c1bbde9437b72d7ee837b5857b51532f70ce75f9c7c9f3a417"
         },
         "visuals/canvas_standard.svg": {
           "size_bytes": 3706375,
@@ -749,11 +749,11 @@
         },
         "metadata/compilation_manifest.json": {
           "size_bytes": 2436,
-          "sha256": "f897b509e57247c911cee59ee2e478dac8a02f42e1041d8a498b8c84608c69b5"
+          "sha256": "18493dbe08e1a33b52aa17e126addf4b2e9bc5c58de212661eb06a57ede00e1e"
         },
         "README.md": {
           "size_bytes": 3196,
-          "sha256": "fb25000e9fab0a73d51d4b93552e3e751f89b9caca1c2a8d82542534ba979308"
+          "sha256": "94f18d522c024e5cd23e8c53c8a4f623a2b730488c78992bba7a6cd043b60fa5"
         }
       }
     },
@@ -780,8 +780,8 @@
       },
       "files": {
         "exports/rave_als.xlsx": {
-          "size_bytes": 36218,
-          "sha256": "1ad2544030441c475b42bed46cda4a65f647cc91b84511a44f597da73071aa27"
+          "size_bytes": 34220,
+          "sha256": "712a3cab3a34f03e7245a2050ca3037ceaf0d9f062e49628979c091fee7c9698"
         },
         "exports/veeva_cdms.xml": {
           "size_bytes": 57556,
@@ -796,8 +796,8 @@
           "sha256": "ed10c14ea316b9df0ff9da8a65e4408e4c05acdb5599e79f762fa4d3bc09932f"
         },
         "metadata/provenance_matrix_21cfr11.xlsx": {
-          "size_bytes": 28141,
-          "sha256": "aea0dd4a8f7ec1e71c1daf2bc752a0579ce1600b24aa92e1515146b7c0d27166"
+          "size_bytes": 29709,
+          "sha256": "ceeeae2a0ef279f54165caa308d503264d4515fa056d3e354fe1bdd93f61e881"
         },
         "visuals/canvas_standard.svg": {
           "size_bytes": 4291333,
@@ -817,11 +817,11 @@
         },
         "metadata/compilation_manifest.json": {
           "size_bytes": 2406,
-          "sha256": "4b7be8a93394f93af9f4c975fdfdc94248fd3766d878efa00233c9abd1a235df"
+          "sha256": "b8de47e2794b979141f37c370e34e62f8ae652bead38f369e509f92675a891f1"
         },
         "README.md": {
           "size_bytes": 3111,
-          "sha256": "1b3ad74c2687f2ea7dbfeb3c2a01cc0670a2ed3dad24541c64c6d0d8b93d7bce"
+          "sha256": "449cae5d5a61573f9ec6a2d25ed4817dcfda097161773ceef95b86f29162c035"
         }
       }
     },
@@ -848,8 +848,8 @@
       },
       "files": {
         "exports/rave_als.xlsx": {
-          "size_bytes": 37146,
-          "sha256": "bca0894000c73a86131cac989638efa33ad87b72effea8b7dc4aace558ed985e"
+          "size_bytes": 34929,
+          "sha256": "84ce61a20f6bb84d1fc5e712a8995f9a24535a4180e367940072b9bc351eddba"
         },
         "exports/veeva_cdms.xml": {
           "size_bytes": 59812,
@@ -864,8 +864,8 @@
           "sha256": "962fd118ee9e13b7fca6809bd91aeff846d185c7a2e2920c051bd4ef30065410"
         },
         "metadata/provenance_matrix_21cfr11.xlsx": {
-          "size_bytes": 28230,
-          "sha256": "d128f35fa56e2156c7b67ea13e26d006fb35ee2c422dcb630cddc34e5e0e114d"
+          "size_bytes": 29807,
+          "sha256": "cdaef809271b7a6a66ab93daf882a9c2d135dc336251a1f383af6210f32b8fae"
         },
         "visuals/canvas_standard.svg": {
           "size_bytes": 6756228,
@@ -885,11 +885,11 @@
         },
         "metadata/compilation_manifest.json": {
           "size_bytes": 2467,
-          "sha256": "69886eaebae9ac7831b363d87fa5338d716e2e0261590fd04024c8bbdf8f6be7"
+          "sha256": "fdd4e0b3d6b2a6b59838bcce5e813ab84dfaf4c09dbc966c1ba7ad3175a9607d"
         },
         "README.md": {
           "size_bytes": 3227,
-          "sha256": "71070ac307b7f743744b78d76ebcc3958f17d51ac6f529934660514cb7b70c86"
+          "sha256": "804f0ff6cb5b3ab36848f9fa18137c7aaa16292dafe6a4f7b0c2f18ee29a586a"
         }
       }
     }

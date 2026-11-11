@@ -40,11 +40,11 @@
 
 | Relative Artifact Path | Size (Bytes) | Verified SHA-256 Digest |
 | :--- | ---: | :--- |
-| [`./exports/rave_als.xlsx`](./exports/rave_als.xlsx) | `35,132` | `41585f1bc1c6e89662cf878d8bb86f9e78564c807db0190912e388229747fcee` |
+| [`./exports/rave_als.xlsx`](./exports/rave_als.xlsx) | `33,261` | `973645fdd6c9537a6c0586bf79f3f39c55c7aa2fff4a09349942495d61a86baa` |
 | [`./exports/veeva_cdms.xml`](./exports/veeva_cdms.xml) | `55,210` | `5c547e88f933b33a10638e0ad763104441cfdf9434c28bcd4f5337696abbee18` |
 | [`./exports/cdisc_odm_v1.3.2.xml`](./exports/cdisc_odm_v1.3.2.xml) | `128,044` | `72801a2a1c5da666c27d53eaf936305fefd6ff5d763fc63e26644bf86e9c5875` |
 | [`./exports/transcelerate_usdm_v3.0.json`](./exports/transcelerate_usdm_v3.0.json) | `68,907` | `f5f8a151763540c11c2d9edd1482061ffd175c8f1beb9a551e69b5314a36e28e` |
-| [`./metadata/provenance_matrix_21cfr11.xlsx`](./metadata/provenance_matrix_21cfr11.xlsx) | `24,427` | `fe457dafa14d40f4b292ea3c895adfbeb68a79f726e1c5d1250a2e6e8689aa1a` |
+| [`./metadata/provenance_matrix_21cfr11.xlsx`](./metadata/provenance_matrix_21cfr11.xlsx) | `26,001` | `2c1b8ce70fc3f5548ac255a2214708b32dabd598be51774cab6796bf2afedc4e` |
 | [`./visuals/canvas_standard.svg`](./visuals/canvas_standard.svg) | `4,300,133` | `04eed14a7b94dac63c50f77f2959a4f93357409f968fc9c652a3cc16e332e8d8` |
 | [`./visuals/canvas_standard.pdf`](./visuals/canvas_standard.pdf) | `634,695` | `186652ec6ac222b8020b1fcb53503df0ae2039ead6d9ac7d4aea37863cc156c1` |
 | [`./visuals/canvas_mindmap.svg`](./visuals/canvas_mindmap.svg) | `4,247,110` | `8a52f3787aaa86ec6c51988bb1e45f18a74a745c65fd2c751c91433a414627f5` |

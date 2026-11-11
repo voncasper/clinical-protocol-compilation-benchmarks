@@ -10,6 +10,7 @@ Zero-IP repository hygiene using ONLY the Python 3 Standard Library.
 
 Usage:
     python3 verify_turnkey_integrity.py [--repo-dir .]
+    python3 verify_turnkey_integrity.py --inspect-watermark studies/NCT01631552/exports/rave_als.xlsx
 """
 
 from __future__ import annotations
@@ -21,7 +22,7 @@ import sys
 import xml.etree.ElementTree as ET
 import zipfile
 from pathlib import Path
-from typing import Dict, List, Set, Tuple
+from typing import Any, Dict, List, Optional, Set, Tuple
 
 REQUIRED_9_ARTIFACTS: Tuple[str, ...] = (
     "exports/rave_als.xlsx",
@@ -93,7 +94,261 @@ def local_name(tag: str) -> str:
     return tag.split("}", 1)[-1] if "}" in tag else tag
 
 
-def _check_openxml_xlsx(xlsx_path: Path, label: str, errors: List[str]) -> None:
+WATERMARK_SHEET_NAME = "_GFlow_Provenance"
+
+
+def compute_watermark_digest(nct_id: str, design_id: str, protocol_sha256: str) -> str:
+    payload = f"VonCasper Solutions|Vincent Capers Jr.|{nct_id}|{design_id}|{protocol_sha256}"
+    return hashlib.sha256(payload.encode("utf-8")).hexdigest()
+
+
+def inspect_xlsx_watermark(xlsx_path: Path) -> Dict[str, Any]:
+    xlsx_path = Path(xlsx_path)
+    errors: List[str] = []
+    core_props: Dict[str, str] = {}
+    layer1_props: Dict[str, str] = {}
+    layer2_props: Dict[str, str] = {}
+    layer2_found = False
+    layer2_state: Optional[str] = None
+
+    if not xlsx_path.is_file():
+        return {
+            "file": str(xlsx_path),
+            "file_sha256": None,
+            "verified": False,
+            "status": "WATERMARK VERIFICATION FAILED",
+            "expected_watermark_digest": None,
+            "layer1_core_properties": core_props,
+            "layer1_custom_properties": layer1_props,
+            "layer1_valid": False,
+            "layer2_sheet_name": None,
+            "layer2_sheet_state": None,
+            "layer2_properties": layer2_props,
+            "layer2_valid": False,
+            "errors": [f"File does not exist: '{xlsx_path}'."],
+        }
+
+    file_sha = sha256_file(xlsx_path)
+    if not zipfile.is_zipfile(xlsx_path):
+        return {
+            "file": str(xlsx_path),
+            "file_sha256": file_sha,
+            "verified": False,
+            "status": "WATERMARK VERIFICATION FAILED",
+            "expected_watermark_digest": None,
+            "layer1_core_properties": core_props,
+            "layer1_custom_properties": layer1_props,
+            "layer1_valid": False,
+            "layer2_sheet_name": None,
+            "layer2_sheet_state": None,
+            "layer2_properties": layer2_props,
+            "layer2_valid": False,
+            "errors": [f"'{xlsx_path}' is not a valid OpenXML ZIP archive."],
+        }
+
+    req_keys = (
+        "GFlow_Watermark_Version",
+        "GFlow_Assignee",
+        "GFlow_Source_NCT_ID",
+        "GFlow_Design_ID",
+        "GFlow_Protocol_SHA256",
+        "GFlow_Watermark_Digest",
+    )
+
+    try:
+        with zipfile.ZipFile(xlsx_path, "r") as zf:
+            names = set(zf.namelist())
+
+            if "docProps/core.xml" in names:
+                core_root = ET.fromstring(zf.read("docProps/core.xml"))
+                for child in core_root:
+                    val = (child.text or "").strip()
+                    if val:
+                        core_props[local_name(child.tag)] = val
+
+            if "docProps/custom.xml" not in names:
+                errors.append("Layer 1 missing: 'docProps/custom.xml' not found in workbook archive.")
+            else:
+                custom_root = ET.fromstring(zf.read("docProps/custom.xml"))
+                for prop_el in custom_root:
+                    if local_name(prop_el.tag) == "property":
+                        pname = prop_el.attrib.get("name", "")
+                        if pname:
+                            layer1_props[pname] = "".join(prop_el.itertext()).strip()
+
+            shared_strings: List[str] = []
+            if "xl/sharedStrings.xml" in names:
+                sst_root = ET.fromstring(zf.read("xl/sharedStrings.xml"))
+                for si in sst_root:
+                    if local_name(si.tag) == "si":
+                        shared_strings.append(
+                            "".join((t.text or "") for t in si.iter() if local_name(t.tag) == "t")
+                        )
+
+            if "xl/workbook.xml" not in names:
+                errors.append("OpenXML workbook missing 'xl/workbook.xml'.")
+            else:
+                wb_root = ET.fromstring(zf.read("xl/workbook.xml"))
+                rel_map: Dict[str, str] = {}
+                if "xl/_rels/workbook.xml.rels" in names:
+                    rels_root = ET.fromstring(zf.read("xl/_rels/workbook.xml.rels"))
+                    for rel_el in rels_root:
+                        if local_name(rel_el.tag) == "Relationship":
+                            rid = rel_el.attrib.get("Id", "")
+                            rtarget = rel_el.attrib.get("Target", "")
+                            if rid and rtarget:
+                                rel_map[rid] = rtarget
+
+                prov_sheet_el = None
+                for sh in wb_root.iter():
+                    if local_name(sh.tag) == "sheet" and sh.attrib.get("name") == WATERMARK_SHEET_NAME:
+                        prov_sheet_el = sh
+                        break
+
+                if prov_sheet_el is None:
+                    errors.append(
+                        f"Layer 2 missing: worksheet '{WATERMARK_SHEET_NAME}' not declared in 'xl/workbook.xml'."
+                    )
+                else:
+                    layer2_found = True
+                    layer2_state = prov_sheet_el.attrib.get("state", "visible")
+                    if layer2_state != "veryHidden":
+                        errors.append(
+                            f"Layer 2 visibility violation: '{WATERMARK_SHEET_NAME}' state must be 'veryHidden', "
+                            f"got '{layer2_state}'."
+                        )
+
+                    rid_val = ""
+                    for attr_k, attr_v in prov_sheet_el.attrib.items():
+                        if local_name(attr_k) == "id":
+                            rid_val = attr_v
+                            break
+                    raw_target = rel_map.get(rid_val, "")
+                    norm_target = raw_target.lstrip("/")
+                    if norm_target and not norm_target.startswith("xl/") and f"xl/{norm_target}" in names:
+                        norm_target = f"xl/{norm_target}"
+
+                    if not norm_target or norm_target not in names:
+                        errors.append(
+                            f"Layer 2 worksheet XML target '{raw_target}' (r:id='{rid_val}') missing from archive."
+                        )
+                    else:
+                        ws_root = ET.fromstring(zf.read(norm_target))
+                        for row_el in ws_root.iter():
+                            if local_name(row_el.tag) != "row":
+                                continue
+                            cells: List[str] = []
+                            for c_el in row_el:
+                                if local_name(c_el.tag) != "c":
+                                    continue
+                                c_type = c_el.attrib.get("t", "")
+                                if c_type == "inlineStr":
+                                    c_val = "".join(
+                                        (t.text or "") for t in c_el.iter() if local_name(t.tag) == "t"
+                                    )
+                                elif c_type == "s":
+                                    v_nodes = [ch for ch in c_el if local_name(ch.tag) == "v"]
+                                    idx_str = (v_nodes[0].text or "").strip() if v_nodes else ""
+                                    c_val = (
+                                        shared_strings[int(idx_str)]
+                                        if idx_str.isdigit() and int(idx_str) < len(shared_strings)
+                                        else ""
+                                    )
+                                else:
+                                    v_nodes = [ch for ch in c_el if local_name(ch.tag) == "v"]
+                                    c_val = (v_nodes[0].text or "") if v_nodes else ""
+                                cells.append(c_val.strip())
+                            if len(cells) >= 2 and cells[0] and cells[0] != "Property":
+                                layer2_props[cells[0]] = cells[1]
+    except Exception as exc:
+        errors.append(f"Exception parsing OpenXML watermark structures: {exc}")
+
+    layer1_valid = False
+    expected_digest: Optional[str] = None
+    missing_l1 = [k for k in req_keys if not layer1_props.get(k)]
+    if missing_l1:
+        errors.append(f"Layer 1 missing required custom properties: {missing_l1}.")
+    elif "GFlow_CDN_Source_URL" not in layer1_props:
+        errors.append("Layer 1 missing 'GFlow_CDN_Source_URL' custom property.")
+    else:
+        expected_digest = compute_watermark_digest(
+            layer1_props["GFlow_Source_NCT_ID"],
+            layer1_props["GFlow_Design_ID"],
+            layer1_props["GFlow_Protocol_SHA256"],
+        )
+        if layer1_props["GFlow_Watermark_Digest"] != expected_digest:
+            errors.append(
+                f"Layer 1 digest mismatch: expected {expected_digest}, "
+                f"got {layer1_props['GFlow_Watermark_Digest']}."
+            )
+        else:
+            layer1_valid = True
+
+    layer2_valid = False
+    missing_l2 = [k for k in req_keys if not layer2_props.get(k)]
+    if missing_l2:
+        errors.append(f"Layer 2 missing required '{WATERMARK_SHEET_NAME}' rows: {missing_l2}.")
+    else:
+        expected_l2 = compute_watermark_digest(
+            layer2_props["GFlow_Source_NCT_ID"],
+            layer2_props["GFlow_Design_ID"],
+            layer2_props["GFlow_Protocol_SHA256"],
+        )
+        if expected_digest is None:
+            expected_digest = expected_l2
+        if layer2_props["GFlow_Watermark_Digest"] != expected_l2:
+            errors.append(
+                f"Layer 2 digest mismatch: expected {expected_l2}, "
+                f"got {layer2_props['GFlow_Watermark_Digest']}."
+            )
+        elif layer2_state == "veryHidden":
+            layer2_valid = True
+
+    if layer1_valid and layer2_valid:
+        for sync_key in (
+            "GFlow_Source_NCT_ID",
+            "GFlow_Design_ID",
+            "GFlow_Protocol_SHA256",
+            "GFlow_Watermark_Digest",
+        ):
+            if layer1_props.get(sync_key) != layer2_props.get(sync_key):
+                errors.append(
+                    f"Cross-layer mismatch on '{sync_key}': Layer 1='{layer1_props.get(sync_key)}' "
+                    f"vs Layer 2='{layer2_props.get(sync_key)}'."
+                )
+                layer1_valid = False
+                layer2_valid = False
+
+    verified = layer1_valid and layer2_valid and len(errors) == 0
+    return {
+        "file": str(xlsx_path),
+        "file_sha256": file_sha,
+        "verified": verified,
+        "status": (
+            "WATERMARK VERIFIED: AUTHENTIC G-FLOW COMPILATION"
+            if verified
+            else "WATERMARK VERIFICATION FAILED"
+        ),
+        "expected_watermark_digest": expected_digest,
+        "layer1_core_properties": core_props,
+        "layer1_custom_properties": layer1_props,
+        "layer1_valid": layer1_valid,
+        "layer2_sheet_name": WATERMARK_SHEET_NAME if layer2_found else None,
+        "layer2_sheet_state": layer2_state,
+        "layer2_properties": layer2_props,
+        "layer2_valid": layer2_valid,
+        "errors": errors,
+    }
+
+
+def _check_openxml_xlsx(
+    xlsx_path: Path,
+    label: str,
+    errors: List[str],
+    expected_nct_id: Optional[str] = None,
+    expected_design_id: Optional[str] = None,
+    expected_proto_sha: Optional[str] = None,
+) -> None:
     if not zipfile.is_zipfile(xlsx_path):
         errors.append(f"{label}: '{xlsx_path}' is not a valid OpenXML ZIP archive.")
         return
@@ -105,10 +360,34 @@ def _check_openxml_xlsx(xlsx_path: Path, label: str, errors: List[str]) -> None:
                 return
             wb_root = ET.fromstring(zf.read("xl/workbook.xml"))
             sheets = [el for el in wb_root.iter() if local_name(el.tag) == "sheet"]
-            if not sheets:
-                errors.append(f"{label}: '{xlsx_path}' workbook contains zero worksheet definitions.")
+            visible_sheets = [
+                s for s in sheets if s.attrib.get("name") != WATERMARK_SHEET_NAME
+            ]
+            if not visible_sheets:
+                errors.append(f"{label}: '{xlsx_path}' workbook contains zero data worksheet definitions.")
     except Exception as exc:
         errors.append(f"{label}: failed to inspect OpenXML workbook '{xlsx_path}': {exc}")
+        return
+
+    wm = inspect_xlsx_watermark(xlsx_path)
+    if not wm["verified"]:
+        for werr in wm["errors"]:
+            errors.append(f"{label}: {werr}")
+        return
+
+    l1 = wm["layer1_custom_properties"]
+    if expected_nct_id and l1.get("GFlow_Source_NCT_ID") != expected_nct_id:
+        errors.append(
+            f"{label}: watermark NCT_ID '{l1.get('GFlow_Source_NCT_ID')}' != study '{expected_nct_id}'."
+        )
+    if expected_design_id and l1.get("GFlow_Design_ID") != expected_design_id:
+        errors.append(
+            f"{label}: watermark design_id '{l1.get('GFlow_Design_ID')}' != '{expected_design_id}'."
+        )
+    if expected_proto_sha and l1.get("GFlow_Protocol_SHA256") != expected_proto_sha:
+        errors.append(
+            f"{label}: watermark protocol_sha256 '{l1.get('GFlow_Protocol_SHA256')}' != '{expected_proto_sha}'."
+        )
 
 
 def _check_cdisc_odm_xml(xml_path: Path, nct_id: str, errors: List[str]) -> None:
@@ -335,11 +614,25 @@ def verify_repository(repo_dir: Path) -> Tuple[bool, List[str]]:
 
         rave_xlsx = study_dir / "exports" / "rave_als.xlsx"
         if rave_xlsx.is_file():
-            _check_openxml_xlsx(rave_xlsx, f"[{nct_id}] Rave ALS", errors)
+            _check_openxml_xlsx(
+                rave_xlsx,
+                f"[{nct_id}] Rave ALS",
+                errors,
+                expected_nct_id=nct_id,
+                expected_design_id=str(st.get("design_id") or ""),
+                expected_proto_sha=str(st.get("protocol_sha256") or ""),
+            )
 
         prov_xlsx = study_dir / "metadata" / "provenance_matrix_21cfr11.xlsx"
         if prov_xlsx.is_file():
-            _check_openxml_xlsx(prov_xlsx, f"[{nct_id}] 21 CFR Part 11 Provenance Matrix", errors)
+            _check_openxml_xlsx(
+                prov_xlsx,
+                f"[{nct_id}] 21 CFR Part 11 Provenance Matrix",
+                errors,
+                expected_nct_id=nct_id,
+                expected_design_id=str(st.get("design_id") or ""),
+                expected_proto_sha=str(st.get("protocol_sha256") or ""),
+            )
 
         _check_dual_canvas_visuals(study_dir, nct_id, errors)
 
@@ -359,14 +652,33 @@ def main(argv: List[str] | None = None) -> int:
         default=Path(__file__).resolve().parent,
         help="Root directory of the benchmark repository.",
     )
+    parser.add_argument(
+        "--inspect-watermark",
+        type=Path,
+        default=None,
+        help="Extract and cryptographically verify Dual-Layer OpenXML G-Flow provenance watermark from an .xlsx file.",
+    )
     args = parser.parse_args(argv)
+
+    if args.inspect_watermark is not None:
+        report = inspect_xlsx_watermark(args.inspect_watermark)
+        if report["verified"]:
+            print("[PASS] WATERMARK VERIFIED: AUTHENTIC G-FLOW COMPILATION")
+            print(json.dumps(report, indent=2))
+            return 0
+        print("[FAIL] WATERMARK VERIFICATION FAILED:", file=sys.stderr)
+        for werr in report["errors"]:
+            print(f"  - {werr}", file=sys.stderr)
+        print(json.dumps(report, indent=2))
+        return 1
+
     passed, errors = verify_repository(args.repo_dir)
     if passed:
         bm = json.loads((Path(args.repo_dir).resolve() / "benchmark_manifest.json").read_text("utf-8"))
         n_studies = len(bm.get("studies", []))
         print(
-            f"[PASS] Verified 100% cryptographic, structural, Dual-Canvas SVG/PDF, and Zero-IP integrity "
-            f"across {n_studies} studies ({n_studies * 11} study files)."
+            f"[PASS] Verified 100% cryptographic, structural, Dual-Canvas SVG/PDF, Dual-Layer OpenXML Watermark, "
+            f"and Zero-IP integrity across {n_studies} studies ({n_studies * 11} study files)."
         )
         return 0
 
