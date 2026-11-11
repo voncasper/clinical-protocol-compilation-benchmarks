@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0.0",
+  "publisher": "VonCasper Solutions",
+  "nct_id": "NCT03084237",
+  "design_id": "study_6cff1fe3",
+  "slot": 2,
+  "section": "foundational_archetype",
+  "category": "Archetype 1: Parallel Randomized Arms",
+  "study_title": "HLX02 vs. EU-Sourced Trastuzumab Parallel Biosimilar Phase 3 Study (NCT03084237)",
+  "protocol_sha256": "6cff1fe32601f51b37a84e0cc4c8a1a3b62d8aa2663e1d9646051d3e4d505112",
+  "sap_sha256": null,
+  "sap_note": "Combined in Prot_SAP_000.pdf",
+  "study_url": "https://clinicaltrials.gov/study/NCT03084237",
+  "cdn_protocol_url": "https://cdn.clinicaltrials.gov/large-docs/37/NCT03084237/Prot_SAP_000.pdf",
+  "cdn_sap_url": null,
+  "alternate_cdn_urls": [],
+  "compilation_mode": "fresh_single_pass_no_resume",
+  "compilation_elapsed_seconds": 1332.36,
+  "finalized_at_utc": "2026-11-11T03:06:39.815894+00:00",
+  "telemetry": {
+    "event_count": 4,
+    "form_count": 15,
+    "item_group_count": 15,
+    "item_count": 85,
+    "edit_check_count": 54,
+    "node_count": 40,
+    "edge_count": 38
+  },
+  "artifacts": {
+    "exports/rave_als.xlsx": {
+      "size_bytes": 42562,
+      "sha256": "583e76fd198e1366af6592cb7e1c4b16964c49a972ded40d369d53ced10b82a5"
+    },
+    "exports/veeva_cdms.xml": {
+      "size_bytes": 72485,
+      "sha256": "86b7ed180edd9fc60f7d2995c2b4c3426466ad2a14db5b23253fc9465e4ac156"
+    },
+    "exports/cdisc_odm_v1.3.2.xml": {
+      "size_bytes": 170452,
+      "sha256": "acc46e3060ceb2634591624d7fa054f9a113352d1edafc5667d2d8d975c2fb4b"
+    },
+    "exports/transcelerate_usdm_v3.0.json": {
+      "size_bytes": 60773,
+      "sha256": "2efad502801dd380c4fda40a14ce45409a9f824056af69d89b3fe5111eda9ea9"
+    },
+    "metadata/provenance_matrix_21cfr11.xlsx": {
+      "size_bytes": 34422,
+      "sha256": "c639e5e487c832b585f91b2430b3d3dc0e354749f07b54f18194b8900f00f658"
+    },
+    "visuals/canvas_standard.svg": {
+      "size_bytes": 4717252,
+      "sha256": "6c9a93bda6f152df0f008162b855646894a1bc6bdf4a66576e0d6d0fbcf44033"
+    },
+    "visuals/canvas_standard.pdf": {
+      "size_bytes": 815039,
+      "sha256": "78e93e2badd1080ce2b9a4acdc4ae50c0991c86d5ce83fabd854c699fa0acb4f"
+    },
+    "visuals/canvas_mindmap.svg": {
+      "size_bytes": 4152650,
+      "sha256": "70c2234676d554613a66965eedb1b7ee2097bdbf9acbe6a6311a6dee1a348b87"
+    },
+    "visuals/canvas_mindmap.pdf": {
+      "size_bytes": 431111,
+      "sha256": "3537edc853fea489d2230df7381be9b899c4a2c8791382d1d67bc2159852ed17"
+    }
+  }
+}

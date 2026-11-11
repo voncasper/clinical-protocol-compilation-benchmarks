@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0.0",
+  "publisher": "VonCasper Solutions",
+  "nct_id": "NCT03226275",
+  "design_id": "study_6d342d6d",
+  "slot": 4,
+  "section": "foundational_archetype",
+  "category": "Archetype 3: 2x2 Crossover with Washout Period",
+  "study_title": "Bisoprolol-Amlodipine 2x2 Randomized Crossover Study with Washout (NCT03226275)",
+  "protocol_sha256": "6d342d6d8f12696c4e5eeb559f327051b69062d35144ffe63ea9e84fd9abb534",
+  "sap_sha256": "8e750f3fd37823118b4b4cb42e9b9f76bb777048f960621203bdff16d74962b4",
+  "sap_note": "Companion SAP_001.pdf",
+  "study_url": "https://clinicaltrials.gov/study/NCT03226275",
+  "cdn_protocol_url": "https://cdn.clinicaltrials.gov/large-docs/75/NCT03226275/Prot_000.pdf",
+  "cdn_sap_url": "https://cdn.clinicaltrials.gov/large-docs/75/NCT03226275/SAP_001.pdf",
+  "alternate_cdn_urls": [],
+  "compilation_mode": "fresh_single_pass_no_resume",
+  "compilation_elapsed_seconds": 1603.74,
+  "finalized_at_utc": "2026-11-11T03:06:39.815894+00:00",
+  "telemetry": {
+    "event_count": 8,
+    "form_count": 15,
+    "item_group_count": 15,
+    "item_count": 73,
+    "edit_check_count": 48,
+    "node_count": 64,
+    "edge_count": 62
+  },
+  "artifacts": {
+    "exports/rave_als.xlsx": {
+      "size_bytes": 41498,
+      "sha256": "fd79caee77192ee0707382ba0be435aaa820fe1004e2e43a408f274a45337e8f"
+    },
+    "exports/veeva_cdms.xml": {
+      "size_bytes": 68219,
+      "sha256": "c092ab8e8c6f57881f50e49c5476b15b43f9b1ab62f4abd6a035871a5404ea3a"
+    },
+    "exports/cdisc_odm_v1.3.2.xml": {
+      "size_bytes": 171579,
+      "sha256": "f9ce2d7cce0398de7c911c6180654452aea4348d57175bfe044e4ee6f699703c"
+    },
+    "exports/transcelerate_usdm_v3.0.json": {
+      "size_bytes": 120067,
+      "sha256": "0c049b20e54f927850b3c0d266a72c3babb2f75d8be2544d8ee0b58ac404a37c"
+    },
+    "metadata/provenance_matrix_21cfr11.xlsx": {
+      "size_bytes": 32201,
+      "sha256": "84da7bed07894c033c1bf0a6c23e37f42545e85c652e749e3da0e0cd7ddf4efe"
+    },
+    "visuals/canvas_standard.svg": {
+      "size_bytes": 7566748,
+      "sha256": "033824daf10a62842ff013e363b68217655bf8b8b57391d55e4eb3a3ad3d4028"
+    },
+    "visuals/canvas_standard.pdf": {
+      "size_bytes": 1221728,
+      "sha256": "37b29cdebad211c03cef751f27276fd230cefe9f604db057a48799efdda9d032"
+    },
+    "visuals/canvas_mindmap.svg": {
+      "size_bytes": 7001468,
+      "sha256": "14d86562171d3de281198bf83bd9ad1bc321a1463f46c98f09d0c99472972d7d"
+    },
+    "visuals/canvas_mindmap.pdf": {
+      "size_bytes": 681987,
+      "sha256": "ab1dd64d6bb3a21f143aacc1904baf32fa08ce24e14292d270844627e6353238"
+    }
+  }
+}

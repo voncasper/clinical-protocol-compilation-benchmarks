@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0.0",
+  "publisher": "VonCasper Solutions",
+  "nct_id": "NCT03922750",
+  "design_id": "study_6785f6da",
+  "slot": 7,
+  "section": "foundational_archetype",
+  "category": "Archetype 5: Adaptive Titration & Branching",
+  "study_title": "Adaptive Dose Titration & Conditional Branching Study (NCT03922750)",
+  "protocol_sha256": "6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6",
+  "sap_sha256": null,
+  "sap_note": null,
+  "study_url": "https://clinicaltrials.gov/study/NCT03922750",
+  "cdn_protocol_url": "https://cdn.clinicaltrials.gov/large-docs/50/NCT03922750/Prot_000.pdf",
+  "cdn_sap_url": null,
+  "alternate_cdn_urls": [],
+  "compilation_mode": "fresh_single_pass_no_resume",
+  "compilation_elapsed_seconds": 1606.58,
+  "finalized_at_utc": "2026-11-11T03:06:39.815894+00:00",
+  "telemetry": {
+    "event_count": 6,
+    "form_count": 15,
+    "item_group_count": 15,
+    "item_count": 43,
+    "edit_check_count": 22,
+    "node_count": 31,
+    "edge_count": 29
+  },
+  "artifacts": {
+    "exports/rave_als.xlsx": {
+      "size_bytes": 24645,
+      "sha256": "816fe853fcfbe6ee3796f8b3f1c80810048e0e3fe8f72a231339db1eb38b7dce"
+    },
+    "exports/veeva_cdms.xml": {
+      "size_bytes": 42285,
+      "sha256": "6fbcb823e4d629831ebea7f49397ea42659d044b074d635931b88bc386876330"
+    },
+    "exports/cdisc_odm_v1.3.2.xml": {
+      "size_bytes": 99412,
+      "sha256": "ce2bdf53ba8e4079ac34292ef1580632ae4aaee353335ad2fdccd86b0b2d62a6"
+    },
+    "exports/transcelerate_usdm_v3.0.json": {
+      "size_bytes": 60452,
+      "sha256": "52e7740a644b00038c9410f84351e69c9a266abbe46681e3eb8559a4c5014a4d"
+    },
+    "metadata/provenance_matrix_21cfr11.xlsx": {
+      "size_bytes": 21172,
+      "sha256": "e919798e3bac3ba0b443351cff8927343bde7aa1fba546fb2cce38d11b727414"
+    },
+    "visuals/canvas_standard.svg": {
+      "size_bytes": 3848328,
+      "sha256": "8304cedfb62db9bcf68178d55cf9893c62bd290ec1f834e5665e0cc5a38b1cd5"
+    },
+    "visuals/canvas_standard.pdf": {
+      "size_bytes": 754902,
+      "sha256": "e196d419cd91951d1e94048135fc88e7de5e78ff014422863f546d36f9aff7e5"
+    },
+    "visuals/canvas_mindmap.svg": {
+      "size_bytes": 3405285,
+      "sha256": "5dce823a8aabc3cc5f7da19c6b18162b1db8435147ce34b8a0b58d91af1cfe00"
+    },
+    "visuals/canvas_mindmap.pdf": {
+      "size_bytes": 356815,
+      "sha256": "6f7c0510456bc7bec4a69e91f87f97a9454b71d4eb1eb129c7db937cd744c8b7"
+    }
+  }
+}

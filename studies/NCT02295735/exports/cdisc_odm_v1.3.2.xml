@@ -1,0 +1,2152 @@
+<?xml version="1.0" ?>
+<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:makoto="http://gflow.ai/ns/makoto/v1.0" FileType="Snapshot" FileOID="ODM.STUDY.001.20261111030314" CreationDateTime="2026-11-11T03:03:14Z" ODMVersion="1.3.2">
+  <Study OID="STUDY.001">
+    <GlobalVariables>
+      <StudyName>NCT02295735 Benchmark</StudyName>
+      <StudyDescription>Compiled GFlow study design for NCT02295735 Benchmark.</StudyDescription>
+      <ProtocolName>7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1</ProtocolName>
+    </GlobalVariables>
+    <BasicDefinitions>
+      <MeasurementUnit OID="UNIT.PRESSURE" Name="Millimeters of Mercury">
+        <Symbol>
+          <TranslatedText>mmHg</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.HR" Name="Beats per Minute">
+        <Symbol>
+          <TranslatedText>bpm</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.TEMP" Name="Degrees Celsius">
+        <Symbol>
+          <TranslatedText>°C</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.RESP" Name="Breaths per Minute">
+        <Symbol>
+          <TranslatedText>breaths/min</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.SPO2" Name="Oxygen Saturation Percentage">
+        <Symbol>
+          <TranslatedText>%</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.PERCENT" Name="Percentage">
+        <Symbol>
+          <TranslatedText>%</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.WEIGHT" Name="Kilograms">
+        <Symbol>
+          <TranslatedText>kg</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.HEIGHT" Name="Centimeters">
+        <Symbol>
+          <TranslatedText>cm</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.BMI" Name="Kilograms per Square Meter">
+        <Symbol>
+          <TranslatedText>kg/m²</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.BSA" Name="Square Meters">
+        <Symbol>
+          <TranslatedText>m²</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.TIME_MS" Name="Milliseconds">
+        <Symbol>
+          <TranslatedText>ms</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.HGB" Name="Grams per Deciliter">
+        <Symbol>
+          <TranslatedText>g/dL</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.G_L" Name="Grams per Liter">
+        <Symbol>
+          <TranslatedText>g/L</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.CELL_COUNT" Name="Billion Cells per Liter">
+        <Symbol>
+          <TranslatedText>10^9/L</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.RBC_COUNT" Name="Trillion Cells per Liter">
+        <Symbol>
+          <TranslatedText>10^12/L</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.CELLS_UL" Name="Cells per Microliter">
+        <Symbol>
+          <TranslatedText>cells/µL</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.CELLS_KG" Name="Million Cells per Kilogram">
+        <Symbol>
+          <TranslatedText>10^6 cells/kg</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.CREAT" Name="Milligrams per Deciliter">
+        <Symbol>
+          <TranslatedText>mg/dL</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.MG_DL" Name="Milligrams per Deciliter">
+        <Symbol>
+          <TranslatedText>mg/dL</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.UMOL_L" Name="Micromoles per Liter">
+        <Symbol>
+          <TranslatedText>µmol/L</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.CRCL" Name="Milliliters per Minute">
+        <Symbol>
+          <TranslatedText>mL/min</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.EGFR" Name="mL/min/1.73m²">
+        <Symbol>
+          <TranslatedText>mL/min/1.73m²</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.ENZYME" Name="Units per Liter">
+        <Symbol>
+          <TranslatedText>U/L</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.BILI" Name="Milligrams per Deciliter">
+        <Symbol>
+          <TranslatedText>mg/dL</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.ELEC" Name="Millimoles per Liter">
+        <Symbol>
+          <TranslatedText>mmol/L</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.RATIO" Name="Dimensionless Ratio">
+        <Symbol>
+          <TranslatedText>ratio</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.DOSE" Name="Milligrams">
+        <Symbol>
+          <TranslatedText>mg</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.DOSE_MG_KG" Name="Milligrams per Kilogram">
+        <Symbol>
+          <TranslatedText>mg/kg</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.DOSE_MG_M2" Name="Milligrams per Square Meter">
+        <Symbol>
+          <TranslatedText>mg/m²</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.DOSE_UG_KG" Name="Micrograms per Kilogram">
+        <Symbol>
+          <TranslatedText>µg/kg</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.GY" Name="Gray Radiation Absorbed Dose">
+        <Symbol>
+          <TranslatedText>Gy</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.LENGTH_MM" Name="Millimeters">
+        <Symbol>
+          <TranslatedText>mm</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.METERS" Name="Meters">
+        <Symbol>
+          <TranslatedText>m</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.YEARS" Name="Years">
+        <Symbol>
+          <TranslatedText>years</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.MONTHS" Name="Months">
+        <Symbol>
+          <TranslatedText>months</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.WEEKS" Name="Weeks">
+        <Symbol>
+          <TranslatedText>weeks</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.DAYS" Name="Days">
+        <Symbol>
+          <TranslatedText>days</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.HOURS" Name="Hours">
+        <Symbol>
+          <TranslatedText>h</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.MINUTES" Name="Minutes">
+        <Symbol>
+          <TranslatedText>min</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.SECONDS" Name="Seconds">
+        <Symbol>
+          <TranslatedText>s</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.NG_ML" Name="Nanograms per Milliliter">
+        <Symbol>
+          <TranslatedText>ng/mL</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.PG_ML" Name="Picograms per Milliliter">
+        <Symbol>
+          <TranslatedText>pg/mL</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.NG_L" Name="Nanograms per Liter">
+        <Symbol>
+          <TranslatedText>ng/L</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.UG_ML" Name="Micrograms per Milliliter">
+        <Symbol>
+          <TranslatedText>µg/mL</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.UG_L" Name="Micrograms per Liter">
+        <Symbol>
+          <TranslatedText>µg/L</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.MG_L" Name="Milligrams per Liter">
+        <Symbol>
+          <TranslatedText>mg/L</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.MIU_L" Name="Milli-International Units per Liter">
+        <Symbol>
+          <TranslatedText>mIU/L</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.IU_ML" Name="International Units per Milliliter">
+        <Symbol>
+          <TranslatedText>IU/mL</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.COPIES_ML" Name="Viral Copies per Milliliter">
+        <Symbol>
+          <TranslatedText>copies/mL</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.MM_HR" Name="Millimeters per Hour">
+        <Symbol>
+          <TranslatedText>mm/hr</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.AUC" Name="Nanogram Hours per Milliliter">
+        <Symbol>
+          <TranslatedText>ng·h/mL</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.CLEARANCE" Name="Liters per Hour">
+        <Symbol>
+          <TranslatedText>L/h</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.VOLUME_L" Name="Liters">
+        <Symbol>
+          <TranslatedText>L</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.VOLUME_ML" Name="Milliliters">
+        <Symbol>
+          <TranslatedText>mL</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.FLOW_L_MIN" Name="Liters per Minute">
+        <Symbol>
+          <TranslatedText>L/min</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.FLOW_ML_HR" Name="Milliliters per Hour">
+        <Symbol>
+          <TranslatedText>mL/hr</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.PPB" Name="Parts per Billion">
+        <Symbol>
+          <TranslatedText>ppb</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.GRADE" Name="Clinical Severity / Performance Grade">
+        <Symbol>
+          <TranslatedText>grade</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.SCORE" Name="Clinical Scale / Rating Points">
+        <Symbol>
+          <TranslatedText>points</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.TITER" Name="Antibody Dilution Titer">
+        <Symbol>
+          <TranslatedText>titer</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.COUNT" Name="Discrete Count">
+        <Symbol>
+          <TranslatedText>count</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+    </BasicDefinitions>
+    <MetaDataVersion OID="MDV.1" Name="Initial Metadata Version">
+      <StudyEventDef OID="SE.V01" Name="Screening Visit" Repeating="No" Type="Scheduled">
+        <FormRef FormOID="FORM.IE" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.IC" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.DEMO" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.MH" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.CM" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.VS" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.EG" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.PE" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.LB" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.AE" Mandatory="Yes"/>
+      </StudyEventDef>
+      <StudyEventDef OID="SE.V02" Name="Dosing/Intervention Visit" Repeating="No" Type="Scheduled">
+        <FormRef FormOID="FORM.CM" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.PR" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.VS" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.LB" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.PK" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.BS" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.AE" Mandatory="Yes"/>
+      </StudyEventDef>
+      <StudyEventDef OID="SE.V03" Name="Daily Monitoring Visit" Repeating="No" Type="Scheduled">
+        <FormRef FormOID="FORM.CM" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.PR" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.VS" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.LB" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.PK" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.BS" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.AE" Mandatory="Yes"/>
+      </StudyEventDef>
+      <StudyEventDef OID="SE.V04" Name="Periodic Dressing Change Visit" Repeating="No" Type="Scheduled">
+        <FormRef FormOID="FORM.CM" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.PR" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.VS" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.LB" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.PK" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.BS" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.AE" Mandatory="Yes"/>
+      </StudyEventDef>
+      <StudyEventDef OID="SE.V05" Name="Unannounced PI Visit" Repeating="No" Type="Scheduled">
+        <FormRef FormOID="FORM.CM" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.PR" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.VS" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.EG" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.PE" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.LB" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.PK" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.BS" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.AE" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.DS" Mandatory="Yes"/>
+      </StudyEventDef>
+      <StudyEventDef OID="SE.V06" Name="Discharge/Transfer Visit" Repeating="No" Type="Scheduled">
+        <FormRef FormOID="FORM.CM" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.PR" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.VS" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.LB" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.PK" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.BS" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.AE" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.DS" Mandatory="Yes"/>
+      </StudyEventDef>
+      <FormDef OID="FORM.IE" Name="Inclusion/Exclusion Criteria" Repeating="No">
+        <ItemGroupRef ItemGroupOID="IG.IE" Mandatory="Yes"/>
+      </FormDef>
+      <FormDef OID="FORM.IC" Name="Informed Consent" Repeating="No">
+        <ItemGroupRef ItemGroupOID="IG.IC" Mandatory="Yes"/>
+      </FormDef>
+      <FormDef OID="FORM.DEMO" Name="Demographics" Repeating="No">
+        <ItemGroupRef ItemGroupOID="IG.DEMO" Mandatory="Yes"/>
+      </FormDef>
+      <FormDef OID="FORM.MH" Name="Medical History" Repeating="Yes">
+        <ItemGroupRef ItemGroupOID="IG.MH" Mandatory="Yes"/>
+      </FormDef>
+      <FormDef OID="FORM.EX" Name="Exposure" Repeating="Yes">
+        <ItemGroupRef ItemGroupOID="IG.EX" Mandatory="Yes"/>
+      </FormDef>
+      <FormDef OID="FORM.CM" Name="Concomitant Medications" Repeating="Yes">
+        <ItemGroupRef ItemGroupOID="IG.CM" Mandatory="Yes"/>
+      </FormDef>
+      <FormDef OID="FORM.PR" Name="Procedures" Repeating="Yes">
+        <ItemGroupRef ItemGroupOID="IG.PR" Mandatory="Yes"/>
+      </FormDef>
+      <FormDef OID="FORM.VS" Name="Vital Signs" Repeating="Yes">
+        <ItemGroupRef ItemGroupOID="IG.VS" Mandatory="Yes"/>
+      </FormDef>
+      <FormDef OID="FORM.EG" Name="Electrocardiogram" Repeating="Yes">
+        <ItemGroupRef ItemGroupOID="IG.EG" Mandatory="Yes"/>
+      </FormDef>
+      <FormDef OID="FORM.PE" Name="Physical Examination" Repeating="No">
+        <ItemGroupRef ItemGroupOID="IG.PE" Mandatory="Yes"/>
+      </FormDef>
+      <FormDef OID="FORM.LB" Name="Laboratory Findings" Repeating="Yes">
+        <ItemGroupRef ItemGroupOID="IG.LB" Mandatory="Yes"/>
+      </FormDef>
+      <FormDef OID="FORM.PK" Name="Pharmacokinetics" Repeating="No">
+        <ItemGroupRef ItemGroupOID="IG.PK" Mandatory="Yes"/>
+      </FormDef>
+      <FormDef OID="FORM.BS" Name="Biomarkers" Repeating="No">
+        <ItemGroupRef ItemGroupOID="IG.BS" Mandatory="Yes"/>
+      </FormDef>
+      <FormDef OID="FORM.AE" Name="Adverse Events" Repeating="Yes">
+        <ItemGroupRef ItemGroupOID="IG.AE" Mandatory="Yes"/>
+      </FormDef>
+      <FormDef OID="FORM.DS" Name="Disposition" Repeating="No">
+        <ItemGroupRef ItemGroupOID="IG.DS" Mandatory="Yes"/>
+      </FormDef>
+      <ItemGroupDef OID="IG.IE" Name="Inclusion/Exclusion Criteria Group" Repeating="No">
+        <ItemRef ItemOID="ITEM.Inclusion Criteria" Mandatory="No"/>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.IC" Name="Informed Consent Group" Repeating="No">
+        <ItemRef ItemOID="ITEM.Informed Consent Status" Mandatory="No"/>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.DEMO" Name="Demographics Group" Repeating="No">
+        <ItemRef ItemOID="ITEM.Age" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Sex" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Race" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.AGE" Mandatory="No"/>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.MH" Name="Medical History Group" Repeating="Yes">
+        <ItemRef ItemOID="ITEM.Diabetes Mellitus" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Prior Medical Diagnoses" Mandatory="No"/>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.EX" Name="Exposure Group" Repeating="Yes">
+        <ItemRef ItemOID="ITEM.Dressing_Application_B" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Randomization_Assignment" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.PU_Risk_Score_Braden" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.PU_Classification_NPUAP" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.BMI_Measurement" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Heart_Rate_Measurement" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Urine_Incontinence_Status" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Device_Deficiency_Status" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.DOSE_CALC" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.RDI" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.CUM_DOSE" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.COMPLIANCE_PCT" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.TRTDURD" Mandatory="No"/>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.CM" Name="Concomitant Medications Group" Repeating="Yes">
+        <ItemRef ItemOID="ITEM.Permitted Concomitant Medications" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Prohibited Concomitant Medications" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Corticosteroid Restrictions" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.CYP3A4 Interaction Restrictions" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Washout Period" Mandatory="No"/>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.PR" Name="Procedures Group" Repeating="Yes">
+        <ItemRef ItemOID="ITEM.Skin Assessment and Grading" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Risk Stratification (Braden Score)" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Intervention Application (Dressing)" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Unannounced PI Visit" Mandatory="No"/>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.VS" Name="Vital Signs Group" Repeating="Yes">
+        <ItemRef ItemOID="ITEM.SYSBP" Mandatory="Yes"/>
+        <ItemRef ItemOID="ITEM.DIABP" Mandatory="Yes"/>
+        <ItemRef ItemOID="ITEM.HR" Mandatory="Yes"/>
+        <ItemRef ItemOID="ITEM.TEMP" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.RR" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.HEIGHT" Mandatory="Yes"/>
+        <ItemRef ItemOID="ITEM.WEIGHT" Mandatory="Yes"/>
+        <ItemRef ItemOID="ITEM.Heart_Rate" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Incontinence_Status" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Catecholamine_Dose" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.BMI" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.BSA" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.BSA_DUBOIS" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.IBW" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.ABW" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.MAP" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.PP" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.PCHG" Mandatory="No"/>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.EG" Name="Electrocardiogram Group" Repeating="Yes">
+        <ItemRef ItemOID="ITEM.ECG_12_LEAD" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.QTC" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.VENTRICULAR_RATE" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.ECG_INTERPRETATION" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.QTCF" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.QTCB" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.QTCF_CHG" Mandatory="No"/>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.PE" Name="Physical Examination Group" Repeating="No">
+        <ItemRef ItemOID="ITEM.COMPLETE_PHYSICAL_EXAM" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.ECOG_PS" Mandatory="No"/>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.LB" Name="Laboratory Findings Group" Repeating="Yes"/>
+      <ItemGroupDef OID="IG.PK" Name="Pharmacokinetics Group" Repeating="No"/>
+      <ItemGroupDef OID="IG.BS" Name="Biomarkers Group" Repeating="No"/>
+      <ItemGroupDef OID="IG.AE" Name="Adverse Events Group" Repeating="Yes">
+        <ItemRef ItemOID="ITEM.PU_Category" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Braden_Score" Mandatory="No"/>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.DS" Name="Disposition Group" Repeating="No">
+        <ItemRef ItemOID="ITEM.Consent Status" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Withdrawal of Consent" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Enrollment Status" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Adherence Status" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.STUDYDY" Mandatory="No"/>
+      </ItemGroupDef>
+      <ItemDef OID="ITEM.Inclusion Criteria" Name="Inclusion Criteria" DataType="text" CodeListRef="CL.NY"/>
+      <ItemDef OID="ITEM.Informed Consent Status" Name="Informed Consent Status" DataType="text"/>
+      <ItemDef OID="ITEM.Age" Name="Age" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.YEARS"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.Sex" Name="Sex" DataType="text" CodeListRef="CL.SEX"/>
+      <ItemDef OID="ITEM.Race" Name="Race" DataType="text" CodeListRef="CL.RACE"/>
+      <ItemDef OID="ITEM.Diabetes Mellitus" Name="Diabetes Mellitus" DataType="text"/>
+      <ItemDef OID="ITEM.Prior Medical Diagnoses" Name="Prior Medical Diagnoses" DataType="text"/>
+      <ItemDef OID="ITEM.Dressing_Application_B" Name="Application of dressing B" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.DOSE"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.Randomization_Assignment" Name="Randomization via numbered envelopes" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.DOSE"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.PU_Risk_Score_Braden" Name="Pressure Ulcer Risk Score (Braden)" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.SCORE"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.PU_Classification_NPUAP" Name="Pressure Ulcer Classification (NPUAP/EPUAP)" DataType="text"/>
+      <ItemDef OID="ITEM.BMI_Measurement" Name="Body Mass Index" DataType="float">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.BMI"/>
+        <Alias Context="LOINC" Name="39156-5"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.Heart_Rate_Measurement" Name="Heart Rate" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.HR"/>
+        <Alias Context="LOINC" Name="8867-4"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.Urine_Incontinence_Status" Name="Urine Incontinence" DataType="text"/>
+      <ItemDef OID="ITEM.Device_Deficiency_Status" Name="Device Deficiency (DD)" DataType="text"/>
+      <ItemDef OID="ITEM.Permitted Concomitant Medications" Name="Permitted Concomitant Medications" DataType="text"/>
+      <ItemDef OID="ITEM.Prohibited Concomitant Medications" Name="Prohibited Concomitant Medications" DataType="text"/>
+      <ItemDef OID="ITEM.Corticosteroid Restrictions" Name="Corticosteroid Restrictions" DataType="text"/>
+      <ItemDef OID="ITEM.CYP3A4 Interaction Restrictions" Name="CYP3A4 Interaction Restrictions" DataType="text"/>
+      <ItemDef OID="ITEM.Washout Period" Name="Washout Period" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.DAYS"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.Skin Assessment and Grading" Name="Skin Assessment and Grading" DataType="text"/>
+      <ItemDef OID="ITEM.Risk Stratification (Braden Score)" Name="Risk Stratification (Braden Score)" DataType="text"/>
+      <ItemDef OID="ITEM.Intervention Application (Dressing)" Name="Intervention Application (Dressing)" DataType="text"/>
+      <ItemDef OID="ITEM.Unannounced PI Visit" Name="Unannounced PI Visit" DataType="text"/>
+      <ItemDef OID="ITEM.SYSBP" Name="Systolic Blood Pressure" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.PRESSURE"/>
+        <Alias Context="LOINC" Name="8480-6"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.DIABP" Name="Diastolic Blood Pressure" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.PRESSURE"/>
+        <Alias Context="LOINC" Name="8462-4"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.HR" Name="Heart Rate" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.HR"/>
+        <Alias Context="LOINC" Name="8867-4"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.TEMP" Name="Temperature" DataType="float">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.TEMP"/>
+        <Alias Context="LOINC" Name="8310-5"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.RR" Name="Respiratory Rate" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.RESP"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.HEIGHT" Name="Height" DataType="float">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.HEIGHT"/>
+        <Alias Context="LOINC" Name="8302-2"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.WEIGHT" Name="Weight" DataType="float">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.WEIGHT"/>
+        <Alias Context="LOINC" Name="29463-7"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.Heart_Rate" Name="Heart Rate (Mean)" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.HR"/>
+        <Alias Context="LOINC" Name="8867-4"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.Incontinence_Status" Name="Incontinence Status (Urine/Stool)" DataType="text"/>
+      <ItemDef OID="ITEM.Catecholamine_Dose" Name="Catecholamine Dose (µl/kg/min)" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.BMI"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.ECG_12_LEAD" Name="12-lead ECG" DataType="text"/>
+      <ItemDef OID="ITEM.QTC" Name="QTcF Interval" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.TIME_MS"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.VENTRICULAR_RATE" Name="Ventricular Rate" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.HR"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.ECG_INTERPRETATION" Name="ECG Interpretation" DataType="text" CodeListRef="CL.ECGINTP"/>
+      <ItemDef OID="ITEM.COMPLETE_PHYSICAL_EXAM" Name="Complete Physical Examination" DataType="text"/>
+      <ItemDef OID="ITEM.ECOG_PS" Name="ECOG Performance Status" DataType="integer" CodeListRef="CL.ECOG"/>
+      <ItemDef OID="ITEM.PU_Category" Name="Pressure Ulcer Category (II, III, IV, DTI, Unstageable)" DataType="text"/>
+      <ItemDef OID="ITEM.Braden_Score" Name="Braden Score (Risk Assessment)" DataType="text"/>
+      <ItemDef OID="ITEM.Consent Status" Name="Informed Consent Status" DataType="text"/>
+      <ItemDef OID="ITEM.Withdrawal of Consent" Name="Patient Withdrawal" DataType="text"/>
+      <ItemDef OID="ITEM.Enrollment Status" Name="Enrollment/Screening Completion" DataType="text"/>
+      <ItemDef OID="ITEM.Adherence Status" Name="Protocol Adherence (Intervention Maintenance)" DataType="text"/>
+      <ItemDef OID="ITEM.BMI" Name="Body Mass Index (BMI, kg/m²)" DataType="float" MethodOID="MT.BMI">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.BMI"/>
+        <Alias Context="LOINC" Name="39156-5"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.BSA" Name="Body Surface Area - Mosteller (BSA, m²)" DataType="float" MethodOID="MT.BSA">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.BSA"/>
+        <Alias Context="LOINC" Name="3140-1"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.BSA_DUBOIS" Name="Body Surface Area - DuBois (m²)" DataType="float" MethodOID="MT.BSA_DUBOIS">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.BSA"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.IBW" Name="Ideal Body Weight - Devine (IBW, kg)" DataType="float" MethodOID="MT.IBW">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.WEIGHT"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.ABW" Name="Adjusted Body Weight (ABW, kg)" DataType="float" MethodOID="MT.ABW">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.WEIGHT"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.MAP" Name="Mean Arterial Pressure (MAP, mmHg)" DataType="float" MethodOID="MT.MAP">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.PRESSURE"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.PP" Name="Arterial Pulse Pressure (PP, mmHg)" DataType="integer" MethodOID="MT.PP">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.PRESSURE"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.QTCF" Name="QTcF Interval - Fridericia (ms)" DataType="float" MethodOID="MT.QTCF">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.TIME_MS"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.QTCB" Name="QTcB Interval - Bazett (ms)" DataType="float" MethodOID="MT.QTCB">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.TIME_MS"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.QTCF_CHG" Name="Change from Baseline in QTcF (ms)" DataType="float" MethodOID="MT.QTCF_CHG">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.TIME_MS"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.DOSE_CALC" Name="Protocol Calculated Target Dose (mg)" DataType="float" MethodOID="MT.DOSE_CALC">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.DOSE"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.RDI" Name="Relative Dose Intensity (%)" DataType="float" MethodOID="MT.DOSE_INTENSITY">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.PERCENT"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.CUM_DOSE" Name="Cumulative Administered Dose (mg)" DataType="float" MethodOID="MT.CUM_DOSE">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.DOSE"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.COMPLIANCE_PCT" Name="Treatment Dosing Compliance (%)" DataType="float" MethodOID="MT.TREATMENT_COMPLIANCE">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.PERCENT"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.AGE" Name="Subject Age at Informed Consent (Years)" DataType="text" MethodOID="MT.AGE_DERIVED"/>
+      <ItemDef OID="ITEM.STUDYDY" Name="CDISC Study Day (--DY)" DataType="integer" MethodOID="MT.STUDY_DAY">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.DAYS"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.TRTDURD" Name="Total Treatment Exposure Duration (Days)" DataType="integer" MethodOID="MT.TRTDURD">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.DAYS"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.PCHG" Name="Percent Change from Baseline (%)" DataType="float" MethodOID="MT.CHG_BASELINE">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.PERCENT"/>
+      </ItemDef>
+      <CodeListDef OID="CL.SEX" Name="Sex Codelist" DataType="text">
+        <CodeListItem CodedValue="M">
+          <Decode>
+            <TranslatedText>Male</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="F">
+          <Decode>
+            <TranslatedText>Female</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.SEVERITY" Name="Severity Codelist" DataType="text">
+        <CodeListItem CodedValue="1">
+          <Decode>
+            <TranslatedText>Mild</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="2">
+          <Decode>
+            <TranslatedText>Moderate</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="3">
+          <Decode>
+            <TranslatedText>Severe</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.NY" Name="No / Yes Codelist" DataType="text">
+        <CodeListItem CodedValue="N">
+          <Decode>
+            <TranslatedText>No</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="Y">
+          <Decode>
+            <TranslatedText>Yes</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.AEREL" Name="Causality / Relatedness Codelist" DataType="text">
+        <CodeListItem CodedValue="1">
+          <Decode>
+            <TranslatedText>Not Related</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="2">
+          <Decode>
+            <TranslatedText>Unlikely</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="3">
+          <Decode>
+            <TranslatedText>Possible</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="4">
+          <Decode>
+            <TranslatedText>Probable</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="5">
+          <Decode>
+            <TranslatedText>Definite</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.AEOUT" Name="Adverse Event Outcome Codelist" DataType="text">
+        <CodeListItem CodedValue="1">
+          <Decode>
+            <TranslatedText>Recovered/Resolved</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="2">
+          <Decode>
+            <TranslatedText>Recovering/Resolving</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="3">
+          <Decode>
+            <TranslatedText>Not Recovered/Not Resolved</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="4">
+          <Decode>
+            <TranslatedText>Fatal</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="5">
+          <Decode>
+            <TranslatedText>Unknown</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.ETHNIC" Name="Ethnicity Codelist" DataType="text">
+        <CodeListItem CodedValue="HISPANIC">
+          <Decode>
+            <TranslatedText>Hispanic or Latino</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="NOT_HISPANIC">
+          <Decode>
+            <TranslatedText>Not Hispanic or Latino</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="NOT_REPORTED">
+          <Decode>
+            <TranslatedText>Not Reported</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="UNKNOWN">
+          <Decode>
+            <TranslatedText>Unknown</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.RACE" Name="Race Codelist" DataType="text">
+        <CodeListItem CodedValue="WHITE">
+          <Decode>
+            <TranslatedText>White</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="BLACK">
+          <Decode>
+            <TranslatedText>Black or African American</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="ASIAN">
+          <Decode>
+            <TranslatedText>Asian</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="AIAN">
+          <Decode>
+            <TranslatedText>American Indian or Alaska Native</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="NHOPI">
+          <Decode>
+            <TranslatedText>Native Hawaiian or Other Pacific Islander</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="OTHER">
+          <Decode>
+            <TranslatedText>Other</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.CTCAE" Name="NCI-CTCAE Toxicity Grade Codelist" DataType="text">
+        <CodeListItem CodedValue="1">
+          <Decode>
+            <TranslatedText>Grade 1 - Mild</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="2">
+          <Decode>
+            <TranslatedText>Grade 2 - Moderate</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="3">
+          <Decode>
+            <TranslatedText>Grade 3 - Severe</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="4">
+          <Decode>
+            <TranslatedText>Grade 4 - Life-threatening</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="5">
+          <Decode>
+            <TranslatedText>Grade 5 - Death related to AE</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.DISPOSITION" Name="Study Completion / Disposition Status Codelist" DataType="text">
+        <CodeListItem CodedValue="COMPLETED">
+          <Decode>
+            <TranslatedText>Completed Study per Protocol</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="DISEASE_PROGRESSION">
+          <Decode>
+            <TranslatedText>Progressive Disease (PD)</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="ADVERSE_EVENT">
+          <Decode>
+            <TranslatedText>Adverse Event / Unacceptable Toxicity</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="WITHDRAWAL">
+          <Decode>
+            <TranslatedText>Withdrawal of Consent by Subject</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="DEATH">
+          <Decode>
+            <TranslatedText>Death</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.AEACN" Name="Action Taken with Study Treatment Codelist" DataType="text">
+        <CodeListItem CodedValue="DOSE_NOT_CHANGED">
+          <Decode>
+            <TranslatedText>Dose Not Changed</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="DOSE_REDUCED">
+          <Decode>
+            <TranslatedText>Dose Reduced</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="DRUG_INTERRUPTED">
+          <Decode>
+            <TranslatedText>Drug Interrupted / Delayed</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="DRUG_WITHDRAWN">
+          <Decode>
+            <TranslatedText>Drug Permanently Withdrawn</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="NOT_APPLICABLE">
+          <Decode>
+            <TranslatedText>Not Applicable</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.ROUTE" Name="Route of Administration Codelist" DataType="text">
+        <CodeListItem CodedValue="IV">
+          <Decode>
+            <TranslatedText>Intravenous</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="PO">
+          <Decode>
+            <TranslatedText>Oral</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="SC">
+          <Decode>
+            <TranslatedText>Subcutaneous</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="IM">
+          <Decode>
+            <TranslatedText>Intramuscular</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="TOPICAL">
+          <Decode>
+            <TranslatedText>Topical / Cutaneous</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.FREQ" Name="Dosing Frequency Codelist" DataType="text">
+        <CodeListItem CodedValue="QD">
+          <Decode>
+            <TranslatedText>Once Daily (QD)</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="BID">
+          <Decode>
+            <TranslatedText>Twice Daily (BID)</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="QW">
+          <Decode>
+            <TranslatedText>Once Weekly (QW)</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="Q2W">
+          <Decode>
+            <TranslatedText>Every 2 Weeks (Q2W)</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="Q3W">
+          <Decode>
+            <TranslatedText>Every 3 Weeks (Q3W)</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="PRN">
+          <Decode>
+            <TranslatedText>As Needed (PRN)</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.ECOG" Name="ECOG Performance Status Codelist" DataType="integer">
+        <CodeListItem CodedValue="0">
+          <Decode>
+            <TranslatedText>0 - Fully active, able to carry on all pre-disease performance without restriction</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="1">
+          <Decode>
+            <TranslatedText>1 - Restricted in physically strenuous activity but ambulatory and able to carry out light work</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="2">
+          <Decode>
+            <TranslatedText>2 - Ambulatory and capable of all selfcare but unable to carry out any work activities</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="3">
+          <Decode>
+            <TranslatedText>3 - Capable of only limited selfcare; confined to bed or chair &gt;50% of waking hours</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="4">
+          <Decode>
+            <TranslatedText>4 - Completely disabled; cannot carry on any selfcare</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="5">
+          <Decode>
+            <TranslatedText>5 - Dead</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.ECGINTP" Name="ECG Overall Interpretation Codelist" DataType="text">
+        <CodeListItem CodedValue="NORMAL">
+          <Decode>
+            <TranslatedText>Normal</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="ABNORMAL_NCS">
+          <Decode>
+            <TranslatedText>Abnormal - Not Clinically Significant</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="ABNORMAL_CS">
+          <Decode>
+            <TranslatedText>Abnormal - Clinically Significant</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.LBCLSIG" Name="Laboratory Abnormality &amp; Clinical Significance Codelist" DataType="text">
+        <CodeListItem CodedValue="NORMAL">
+          <Decode>
+            <TranslatedText>Within Normal Limits (WNL)</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="LOW_NCS">
+          <Decode>
+            <TranslatedText>Low - Not Clinically Significant</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="LOW_CS">
+          <Decode>
+            <TranslatedText>Low - Clinically Significant</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="HIGH_NCS">
+          <Decode>
+            <TranslatedText>High - Not Clinically Significant</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="HIGH_CS">
+          <Decode>
+            <TranslatedText>High - Clinically Significant</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.VSPOS" Name="Vital Signs Subject Position Codelist" DataType="text">
+        <CodeListItem CodedValue="SUPINE">
+          <Decode>
+            <TranslatedText>Supine</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="SITTING">
+          <Decode>
+            <TranslatedText>Sitting</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="STANDING">
+          <Decode>
+            <TranslatedText>Standing</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.LAT" Name="Anatomical Laterality Codelist" DataType="text">
+        <CodeListItem CodedValue="LEFT">
+          <Decode>
+            <TranslatedText>Left</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="RIGHT">
+          <Decode>
+            <TranslatedText>Right</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="BILATERAL">
+          <Decode>
+            <TranslatedText>Bilateral</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <ConditionDef OID="COND.SYSBP_GT_DIABP" Name="Systolic BP Greater Than Diastolic BP" Description="Systolic blood pressure must exceed diastolic blood pressure.">
+        <FormalExpression Context="Python">ITEM.SYSBP &gt; ITEM.DIABP</FormalExpression>
+        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.AGE.AGE" Name="Age — Adult Clinical Trial Age Plausibility Bounds" Description="Enforces variable extreme bounds [18, 100] years for Age.">
+        <FormalExpression Context="Python">18 &lt;= ITEM.Age &lt;= 100</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="Demographics" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.5327" y0="0.0585" x1="0.831" y1="0.117"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.SCALE.PU_RISK_SCORE_BRADEN" Name="Pressure Ulcer Risk Score (Braden) — Clinical Rating Scale Bounds" Description="Enforces variable extreme bounds [0.0, 1000.0] points for Pressure Ulcer Risk Score (Braden).">
+        <FormalExpression Context="Python">0.0 &lt;= ITEM.PU_Risk_Score_Braden &lt;= 1000.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="16" ProtocolSection="Schedule of Assessments" Confidence="1.0">
+          <makoto:SourceQuote>PU risk | • Scoring based on Charité standard • Risk category (none/at risk/at high risk/at very high risk)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1139" y0="0.1447" x1="0.8675" y1="0.883"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.BMI.BMI_MEASUREMENT" Name="Body Mass Index — Body Mass Index Physiological Extreme Check" Description="Enforces variable extreme bounds [10.0, 70.0] kg/m² for Body Mass Index.">
+        <FormalExpression Context="Python">10.0 &lt;= ITEM.BMI_Measurement &lt;= 70.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="16" ProtocolSection="Schedule of Assessments" Confidence="1.0">
+          <makoto:SourceQuote>Body mass index | • Obtained from clinical records</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1139" y0="0.1447" x1="0.8675" y1="0.883"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.HR.HEART_RATE_MEASUREMENT" Name="Heart Rate — Heart Rate Physiological Extreme Check" Description="Enforces variable extreme bounds [30, 220] bpm for Heart Rate.">
+        <FormalExpression Context="Python">30 &lt;= ITEM.Heart_Rate_Measurement &lt;= 220</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="17" ProtocolSection="Schedule of Assessments" Confidence="1.0">
+          <makoto:SourceQuote>Heart rate | • Obtained from clinical records/monitoring</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1141" y0="0.0423" x1="0.868" y1="0.8265"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.SCALE.RISK_STRATIFICATION_BRADEN_SCORE" Name="Risk Stratification (Braden Score) — Clinical Rating Scale Bounds" Description="Enforces variable extreme bounds [0.0, 1000.0] points for Risk Stratification (Braden Score).">
+        <FormalExpression Context="Python">0.0 &lt;= ITEM.Risk Stratification (Braden Score) &lt;= 1000.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="12" ProtocolSection="Study Design and Measurements" Confidence="1.0">
+          <makoto:SourceQuote>This includes PU risk scoring and skin inspection within 6 hours after admission and depending on the risk categories &quot;high risk&quot; and &quot;very high risk&quot; the implementation of preventive measures</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.116" y0="0.7303" x1="0.8462" y1="0.8602"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.SYSBP.SYSBP" Name="Systolic Blood Pressure — Systolic Blood Pressure Physiological Extreme Check" Description="Enforces variable extreme bounds [60, 250] mmHg for Systolic Blood Pressure.">
+        <FormalExpression Context="Python">60 &lt;= ITEM.SYSBP &lt;= 250</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.DIABP.DIABP" Name="Diastolic Blood Pressure — Diastolic Blood Pressure Physiological Extreme Check" Description="Enforces variable extreme bounds [30, 150] mmHg for Diastolic Blood Pressure.">
+        <FormalExpression Context="Python">30 &lt;= ITEM.DIABP &lt;= 150</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.HR.HR" Name="Heart Rate — Heart Rate Physiological Extreme Check" Description="Enforces variable extreme bounds [30, 220] bpm for Heart Rate.">
+        <FormalExpression Context="Python">30 &lt;= ITEM.HR &lt;= 220</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="36" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1839" y0="0.2121" x1="0.4425" y1="0.6964"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.TEMP.TEMP" Name="Temperature — Body Temperature Physiological Extreme Check" Description="Enforces variable extreme bounds [34.0, 42.0] °C for Temperature.">
+        <FormalExpression Context="Python">34.0 &lt;= ITEM.TEMP &lt;= 42.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.RESP.RR" Name="Respiratory Rate — Respiratory Rate Physiological Extreme Check" Description="Enforces variable extreme bounds [6, 60] breaths/min for Respiratory Rate.">
+        <FormalExpression Context="Python">6 &lt;= ITEM.RR &lt;= 60</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="8" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.3149" y0="0.2881" x1="0.3339" y1="0.3075"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.HEIGHT.HEIGHT" Name="Height — Height Physiological Extreme Check" Description="Enforces variable extreme bounds [100.0, 250.0] cm for Height.">
+        <FormalExpression Context="Python">100.0 &lt;= ITEM.HEIGHT &lt;= 250.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.WEIGHT.WEIGHT" Name="Weight — Body Weight Physiological Extreme Check" Description="Enforces variable extreme bounds [25.0, 300.0] kg for Weight.">
+        <FormalExpression Context="Python">25.0 &lt;= ITEM.WEIGHT &lt;= 300.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.HR.HEART_RATE" Name="Heart Rate (Mean) — Heart Rate Physiological Extreme Check" Description="Enforces variable extreme bounds [30, 220] bpm for Heart Rate (Mean).">
+        <FormalExpression Context="Python">30 &lt;= ITEM.Heart_Rate &lt;= 220</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="17" ProtocolSection="Schedule of Assessments" Confidence="1.0">
+          <makoto:SourceQuote>Heart rate | • Obtained from clinical records/monitoring • Mean (beats/minute)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1141" y0="0.0423" x1="0.868" y1="0.8265"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.DOSE.CATECHOLAMINE_DOSE" Name="Catecholamine Dose (µl/kg/min) — Dosing &amp; Exposure Quantitative Plausibility Bounds" Description="Enforces variable extreme bounds [0.0, 10000.0] kg/m² for Catecholamine Dose (µl/kg/min).">
+        <FormalExpression Context="Python">0.0 &lt;= ITEM.Catecholamine_Dose &lt;= 10000.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="17" ProtocolSection="Schedule of Assessments" Confidence="1.0">
+          <makoto:SourceQuote>Catecholamines | • Obtained from clinical records • Type (adrenalin, noradrenalin ... ) • Mean doses (μl/kg/min)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1141" y0="0.0423" x1="0.868" y1="0.8265"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.QTC.ECG_12_LEAD" Name="12-lead ECG — QTc Interval Prolongation Safety Extreme Check" Description="Enforces variable extreme bounds [250, 500] ms for 12-lead ECG.">
+        <FormalExpression Context="Python">250 &lt;= ITEM.ECG_12_LEAD &lt;= 500</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.QTC.QTC" Name="QTcF Interval — QTc Interval Prolongation Safety Extreme Check" Description="Enforces variable extreme bounds [250, 500] ms for QTcF Interval.">
+        <FormalExpression Context="Python">250 &lt;= ITEM.QTC &lt;= 500</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.HR.VENTRICULAR_RATE" Name="Ventricular Rate — Heart Rate Physiological Extreme Check" Description="Enforces variable extreme bounds [30, 220] bpm for Ventricular Rate.">
+        <FormalExpression Context="Python">30 &lt;= ITEM.VENTRICULAR_RATE &lt;= 220</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.QTC.ECG_INTERPRETATION" Name="ECG Interpretation — QTc Interval Prolongation Safety Extreme Check" Description="Enforces variable extreme bounds [250, 500] ms for ECG Interpretation.">
+        <FormalExpression Context="Python">250 &lt;= ITEM.ECG_INTERPRETATION &lt;= 500</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.ECOG.ECOG_PS" Name="ECOG Performance Status — ECOG Performance Status Scale Bounds" Description="Enforces variable extreme bounds [0, 5] grade for ECOG Performance Status.">
+        <FormalExpression Context="Python">0 &lt;= ITEM.ECOG_PS &lt;= 5</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.SCALE.BRADEN_SCORE" Name="Braden Score (Risk Assessment) — Clinical Rating Scale Bounds" Description="Enforces variable extreme bounds [0.0, 1000.0] points for Braden Score (Risk Assessment).">
+        <FormalExpression Context="Python">0.0 &lt;= ITEM.Braden_Score &lt;= 1000.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="10" ProtocolSection="Summary" Confidence="1.0">
+          <makoto:SourceQuote>Calculation of PU risk using the Braden score</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.BMI.BMI" Name="Body Mass Index (BMI, kg/m²) — Body Mass Index Physiological Extreme Check" Description="Enforces variable extreme bounds [10.0, 70.0] kg/m² for Body Mass Index (BMI, kg/m²).">
+        <FormalExpression Context="Python">10.0 &lt;= ITEM.BMI &lt;= 70.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="16" ProtocolSection="Schedule of Assessments" Confidence="1.0">
+          <makoto:SourceQuote>Body mass index | • Obtained from clinical records</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1139" y0="0.1447" x1="0.8675" y1="0.883"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.BSA.BSA" Name="Body Surface Area - Mosteller (BSA, m²) — Body Surface Area Physiological Extreme Check" Description="Enforces variable extreme bounds [0.5, 3.5] m² for Body Surface Area - Mosteller (BSA, m²).">
+        <FormalExpression Context="Python">0.5 &lt;= ITEM.BSA &lt;= 3.5</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.BSA.BSA_DUBOIS" Name="Body Surface Area - DuBois (m²) — Body Surface Area Physiological Extreme Check" Description="Enforces variable extreme bounds [0.5, 3.5] m² for Body Surface Area - DuBois (m²).">
+        <FormalExpression Context="Python">0.5 &lt;= ITEM.BSA_DUBOIS &lt;= 3.5</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.WEIGHT.IBW" Name="Ideal Body Weight - Devine (IBW, kg) — Body Weight Physiological Extreme Check" Description="Enforces variable extreme bounds [25.0, 300.0] kg for Ideal Body Weight - Devine (IBW, kg).">
+        <FormalExpression Context="Python">25.0 &lt;= ITEM.IBW &lt;= 300.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.WEIGHT.ABW" Name="Adjusted Body Weight (ABW, kg) — Body Weight Physiological Extreme Check" Description="Enforces variable extreme bounds [25.0, 300.0] kg for Adjusted Body Weight (ABW, kg).">
+        <FormalExpression Context="Python">25.0 &lt;= ITEM.ABW &lt;= 300.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="16" ProtocolSection="Schedule of Assessments" Confidence="1.0">
+          <makoto:SourceQuote>Body mass index | • Obtained from clinical records</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1139" y0="0.1447" x1="0.8675" y1="0.883"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.BP.MAP" Name="Mean Arterial Pressure (MAP, mmHg) — Blood Pressure Physiological Extreme Check" Description="Enforces variable extreme bounds [20, 250] mmHg for Mean Arterial Pressure (MAP, mmHg).">
+        <FormalExpression Context="Python">20 &lt;= ITEM.MAP &lt;= 250</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.BP.PP" Name="Arterial Pulse Pressure (PP, mmHg) — Blood Pressure Physiological Extreme Check" Description="Enforces variable extreme bounds [20, 250] mmHg for Arterial Pulse Pressure (PP, mmHg).">
+        <FormalExpression Context="Python">20 &lt;= ITEM.PP &lt;= 250</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.QTC.QTCF" Name="QTcF Interval - Fridericia (ms) — QTc Interval Prolongation Safety Extreme Check" Description="Enforces variable extreme bounds [250, 500] ms for QTcF Interval - Fridericia (ms).">
+        <FormalExpression Context="Python">250 &lt;= ITEM.QTCF &lt;= 500</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.QTC.QTCB" Name="QTcB Interval - Bazett (ms) — QTc Interval Prolongation Safety Extreme Check" Description="Enforces variable extreme bounds [250, 500] ms for QTcB Interval - Bazett (ms).">
+        <FormalExpression Context="Python">250 &lt;= ITEM.QTCB &lt;= 500</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.QTC.QTCF_CHG" Name="Change from Baseline in QTcF (ms) — QTc Interval Prolongation Safety Extreme Check" Description="Enforces variable extreme bounds [250, 500] ms for Change from Baseline in QTcF (ms).">
+        <FormalExpression Context="Python">250 &lt;= ITEM.QTCF_CHG &lt;= 500</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.DOSE.DOSE_CALC" Name="Protocol Calculated Target Dose (mg) — Dosing &amp; Exposure Quantitative Plausibility Bounds" Description="Enforces variable extreme bounds [0.0, 10000.0] mg for Protocol Calculated Target Dose (mg).">
+        <FormalExpression Context="Python">0.0 &lt;= ITEM.DOSE_CALC &lt;= 10000.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="37" ProtocolSection="Intervention Application" Confidence="1.0">
+          <makoto:SourceQuote>Apply the adherent part of the dressing marked &quot;B&quot; in the instructions for use illustration under the foot. Do not stretch.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.536" y0="0.3339" x1="0.7637" y1="0.6966"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.DOSE.RDI" Name="Relative Dose Intensity (%) — Dosing &amp; Exposure Quantitative Plausibility Bounds" Description="Enforces variable extreme bounds [0.0, 10000.0] % for Relative Dose Intensity (%).">
+        <FormalExpression Context="Python">0.0 &lt;= ITEM.RDI &lt;= 10000.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="37" ProtocolSection="Procedure" Confidence="1.0">
+          <makoto:SourceQuote>Apply the adherent part of the dressing marked &quot;B&quot; in the instructions for use illustration under the foot. Do not stretch.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.536" y0="0.3339" x1="0.7637" y1="0.6966"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.DOSE.CUM_DOSE" Name="Cumulative Administered Dose (mg) — Dosing &amp; Exposure Quantitative Plausibility Bounds" Description="Enforces variable extreme bounds [0.0, 10000.0] mg for Cumulative Administered Dose (mg).">
+        <FormalExpression Context="Python">0.0 &lt;= ITEM.CUM_DOSE &lt;= 10000.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="37" ProtocolSection="Intervention Application" Confidence="1.0">
+          <makoto:SourceQuote>Apply the adherent part of the dressing marked &quot;B&quot; in the instructions for use illustration under the foot. Do not stretch.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.536" y0="0.3339" x1="0.7637" y1="0.6966"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.DOSE.TRTDURD" Name="Total Treatment Exposure Duration (Days) — Dosing &amp; Exposure Quantitative Plausibility Bounds" Description="Enforces variable extreme bounds [0.0, 10000.0] days for Total Treatment Exposure Duration (Days).">
+        <FormalExpression Context="Python">0.0 &lt;= ITEM.TRTDURD &lt;= 10000.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="17" ProtocolSection="Schedule of Assessments" Confidence="1.0">
+          <makoto:SourceQuote>Catecholamines | • Obtained from clinical records • Type (adrenalin, noradrenalin ... ) • Mean doses (μl/kg/min)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1141" y0="0.0423" x1="0.868" y1="0.8265"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.TIME.IC_BEFORE_PROCEDURES" Name="Informed Consent Prior to Study Procedures (BIMO Chronology)" Description="Informed Consent signature date must be on or prior to any screening or study procedure date (21 CFR Part 50 / ICH E6 GCP).">
+        <FormalExpression Context="Python">ITEM.Informed Consent Status &lt;= STUDY_EVENT.VISDAT</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="27" ProtocolSection="Informed Consent" Confidence="1.0">
+          <makoto:SourceQuote>Patients meeting the inclusion criteria and who are able must provide written informed consent prior to participation.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.116" y0="0.6819" x1="0.8587" y1="0.9106"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.TIME.NO_EVENTS_AFTER_DISPOSITION" Name="Post-Discontinuation / Death Chronology Guard" Description="No clinical assessment, laboratory draw, or dosing date may occur after subject discontinuation/death or in the future.">
+        <FormalExpression Context="Python">STUDY_EVENT.VISDAT &lt;= ITEM.Consent Status and STUDY_EVENT.VISDAT &lt;= TODAY()</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="10" ProtocolSection="Enrollment/Inclusion Criteria" Confidence="1.0">
+          <makoto:SourceQuote>Informed consent (or by legal representative)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1167" y0="0.5879" x1="0.4838" y1="0.6009"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.RECON.ELIGIBILITY_DOSE_RELEASE" Name="Eligibility Confirmation Prior to Study Dosing" Description="Subject cannot receive study treatment on FORM.EX if any Inclusion Criterion is unmet or any Exclusion Criterion is triggered on FORM.IE.">
+        <FormalExpression Context="Python">ITEM.Inclusion Criteria == 'ELIGIBLE' and ITEM.Dressing_Application_B is not None</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="37" ProtocolSection="Procedure" Confidence="1.0">
+          <makoto:SourceQuote>Apply the adherent part of the dressing marked &quot;B&quot; in the instructions for use illustration under the foot. Do not stretch.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.536" y0="0.3339" x1="0.7637" y1="0.6966"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.RECON.AE_CONMED_LINK" Name="Adverse Event Concomitant Medication Reconciliation" Description="Adverse Event indicates concomitant medication treatment was given; a corresponding medication entry must be logged on FORM.CM.">
+        <FormalExpression Context="Python">FORM.AE.AECONTRT != 'Y' or ITEM.Permitted Concomitant Medications is not None</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="Inclusion Criteria" Confidence="1.0">
+          <makoto:SourceQuote>participation in other clinical trials is permitted (as the study involves no drugs or invasive techniques)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.DELTA.WEIGHT_BSA_RECALC" Name="Longitudinal Weight Change &gt;= 10% BSA &amp; Dose Recalculation" Description="Subject body weight changed by &gt; 10% from baseline; verify weight entry and recalculate Body Surface Area (BSA) and dosing.">
+        <FormalExpression Context="Python">abs(ITEM.WEIGHT - BASELINE.WEIGHT) / BASELINE.WEIGHT &lt;= 0.10</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.DELTA.QTCF_BASELINE_CHANGE" Name="QTcF Longitudinal Increase &gt; 60 ms from Baseline (ICH E14)" Description="QTcF interval increased by &gt; 60 ms from baseline (ICH E14 cardiac safety threshold); requires triplicate ECG confirmation and cardiology evaluation.">
+        <FormalExpression Context="Python">(ITEM.ECG_12_LEAD - BASELINE.ECG_12_LEAD) &lt;= 60</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <EditCheck OID="EC.VS.SYSBP_DIABP" Name="Blood Pressure Physiological Plausibility" Target="FORM.VS.ITEM.SYSBP" ConditionRef="COND.SYSBP_GT_DIABP">
+        <ErrorMessage>
+          <TranslatedText>Systolic blood pressure must be strictly greater than diastolic blood pressure.</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.AGE.AGE" Name="Age — Adult Clinical Trial Age Plausibility Bounds" Target="FORM.DEMO.ITEM.Age" ConditionRef="COND.EXTREME.AGE.AGE">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Age (ITEM.Age): value must be within [18, 100] years (Adult Clinical Trial Age Plausibility Bounds).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="Demographics" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.5327" y0="0.0585" x1="0.831" y1="0.117"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.SCALE.PU_RISK_SCORE_BRADEN" Name="Pressure Ulcer Risk Score (Braden) — Clinical Rating Scale Bounds" Target="FORM.EX.ITEM.PU_Risk_Score_Braden" ConditionRef="COND.EXTREME.SCALE.PU_RISK_SCORE_BRADEN">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Pressure Ulcer Risk Score (Braden) (ITEM.PU_Risk_Score_Braden): value must be within [0.0, 1000.0] points (Clinical Rating Scale Bounds).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="16" ProtocolSection="Schedule of Assessments" Confidence="1.0">
+          <makoto:SourceQuote>PU risk | • Scoring based on Charité standard • Risk category (none/at risk/at high risk/at very high risk)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1139" y0="0.1447" x1="0.8675" y1="0.883"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.BMI.BMI_MEASUREMENT" Name="Body Mass Index — Body Mass Index Physiological Extreme Check" Target="FORM.EX.ITEM.BMI_Measurement" ConditionRef="COND.EXTREME.BMI.BMI_MEASUREMENT">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Body Mass Index (ITEM.BMI_Measurement): value must be within [10.0, 70.0] kg/m² (Body Mass Index Physiological Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="16" ProtocolSection="Schedule of Assessments" Confidence="1.0">
+          <makoto:SourceQuote>Body mass index | • Obtained from clinical records</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1139" y0="0.1447" x1="0.8675" y1="0.883"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.HR.HEART_RATE_MEASUREMENT" Name="Heart Rate — Heart Rate Physiological Extreme Check" Target="FORM.EX.ITEM.Heart_Rate_Measurement" ConditionRef="COND.EXTREME.HR.HEART_RATE_MEASUREMENT">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Heart Rate (ITEM.Heart_Rate_Measurement): value must be within [30, 220] bpm (Heart Rate Physiological Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="17" ProtocolSection="Schedule of Assessments" Confidence="1.0">
+          <makoto:SourceQuote>Heart rate | • Obtained from clinical records/monitoring</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1141" y0="0.0423" x1="0.868" y1="0.8265"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.SCALE.RISK_STRATIFICATION_BRADEN_SCORE" Name="Risk Stratification (Braden Score) — Clinical Rating Scale Bounds" Target="FORM.PR.ITEM.Risk Stratification (Braden Score)" ConditionRef="COND.EXTREME.SCALE.RISK_STRATIFICATION_BRADEN_SCORE">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Risk Stratification (Braden Score) (ITEM.Risk Stratification (Braden Score)): value must be within [0.0, 1000.0] points (Clinical Rating Scale Bounds).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="12" ProtocolSection="Study Design and Measurements" Confidence="1.0">
+          <makoto:SourceQuote>This includes PU risk scoring and skin inspection within 6 hours after admission and depending on the risk categories &quot;high risk&quot; and &quot;very high risk&quot; the implementation of preventive measures</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.116" y0="0.7303" x1="0.8462" y1="0.8602"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.SYSBP.SYSBP" Name="Systolic Blood Pressure — Systolic Blood Pressure Physiological Extreme Check" Target="FORM.VS.ITEM.SYSBP" ConditionRef="COND.EXTREME.SYSBP.SYSBP">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Systolic Blood Pressure (ITEM.SYSBP): value must be within [60, 250] mmHg (Systolic Blood Pressure Physiological Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.DIABP.DIABP" Name="Diastolic Blood Pressure — Diastolic Blood Pressure Physiological Extreme Check" Target="FORM.VS.ITEM.DIABP" ConditionRef="COND.EXTREME.DIABP.DIABP">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Diastolic Blood Pressure (ITEM.DIABP): value must be within [30, 150] mmHg (Diastolic Blood Pressure Physiological Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.HR.HR" Name="Heart Rate — Heart Rate Physiological Extreme Check" Target="FORM.VS.ITEM.HR" ConditionRef="COND.EXTREME.HR.HR">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Heart Rate (ITEM.HR): value must be within [30, 220] bpm (Heart Rate Physiological Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="36" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1839" y0="0.2121" x1="0.4425" y1="0.6964"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.TEMP.TEMP" Name="Temperature — Body Temperature Physiological Extreme Check" Target="FORM.VS.ITEM.TEMP" ConditionRef="COND.EXTREME.TEMP.TEMP">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Temperature (ITEM.TEMP): value must be within [34.0, 42.0] °C (Body Temperature Physiological Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.RESP.RR" Name="Respiratory Rate — Respiratory Rate Physiological Extreme Check" Target="FORM.VS.ITEM.RR" ConditionRef="COND.EXTREME.RESP.RR">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Respiratory Rate (ITEM.RR): value must be within [6, 60] breaths/min (Respiratory Rate Physiological Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="8" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.3149" y0="0.2881" x1="0.3339" y1="0.3075"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.HEIGHT.HEIGHT" Name="Height — Height Physiological Extreme Check" Target="FORM.VS.ITEM.HEIGHT" ConditionRef="COND.EXTREME.HEIGHT.HEIGHT">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Height (ITEM.HEIGHT): value must be within [100.0, 250.0] cm (Height Physiological Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.WEIGHT.WEIGHT" Name="Weight — Body Weight Physiological Extreme Check" Target="FORM.VS.ITEM.WEIGHT" ConditionRef="COND.EXTREME.WEIGHT.WEIGHT">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Weight (ITEM.WEIGHT): value must be within [25.0, 300.0] kg (Body Weight Physiological Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.HR.HEART_RATE" Name="Heart Rate (Mean) — Heart Rate Physiological Extreme Check" Target="FORM.VS.ITEM.Heart_Rate" ConditionRef="COND.EXTREME.HR.HEART_RATE">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Heart Rate (Mean) (ITEM.Heart_Rate): value must be within [30, 220] bpm (Heart Rate Physiological Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="17" ProtocolSection="Schedule of Assessments" Confidence="1.0">
+          <makoto:SourceQuote>Heart rate | • Obtained from clinical records/monitoring • Mean (beats/minute)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1141" y0="0.0423" x1="0.868" y1="0.8265"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.DOSE.CATECHOLAMINE_DOSE" Name="Catecholamine Dose (µl/kg/min) — Dosing &amp; Exposure Quantitative Plausibility Bounds" Target="FORM.VS.ITEM.Catecholamine_Dose" ConditionRef="COND.EXTREME.DOSE.CATECHOLAMINE_DOSE">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Catecholamine Dose (µl/kg/min) (ITEM.Catecholamine_Dose): value must be within [0.0, 10000.0] kg/m² (Dosing &amp; Exposure Quantitative Plausibility Bounds).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="17" ProtocolSection="Schedule of Assessments" Confidence="1.0">
+          <makoto:SourceQuote>Catecholamines | • Obtained from clinical records • Type (adrenalin, noradrenalin ... ) • Mean doses (μl/kg/min)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1141" y0="0.0423" x1="0.868" y1="0.8265"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.QTC.ECG_12_LEAD" Name="12-lead ECG — QTc Interval Prolongation Safety Extreme Check" Target="FORM.EG.ITEM.ECG_12_LEAD" ConditionRef="COND.EXTREME.QTC.ECG_12_LEAD">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for 12-lead ECG (ITEM.ECG_12_LEAD): value must be within [250, 500] ms (QTc Interval Prolongation Safety Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.QTC.QTC" Name="QTcF Interval — QTc Interval Prolongation Safety Extreme Check" Target="FORM.EG.ITEM.QTC" ConditionRef="COND.EXTREME.QTC.QTC">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for QTcF Interval (ITEM.QTC): value must be within [250, 500] ms (QTc Interval Prolongation Safety Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.HR.VENTRICULAR_RATE" Name="Ventricular Rate — Heart Rate Physiological Extreme Check" Target="FORM.EG.ITEM.VENTRICULAR_RATE" ConditionRef="COND.EXTREME.HR.VENTRICULAR_RATE">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Ventricular Rate (ITEM.VENTRICULAR_RATE): value must be within [30, 220] bpm (Heart Rate Physiological Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.QTC.ECG_INTERPRETATION" Name="ECG Interpretation — QTc Interval Prolongation Safety Extreme Check" Target="FORM.EG.ITEM.ECG_INTERPRETATION" ConditionRef="COND.EXTREME.QTC.ECG_INTERPRETATION">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for ECG Interpretation (ITEM.ECG_INTERPRETATION): value must be within [250, 500] ms (QTc Interval Prolongation Safety Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.ECOG.ECOG_PS" Name="ECOG Performance Status — ECOG Performance Status Scale Bounds" Target="FORM.PE.ITEM.ECOG_PS" ConditionRef="COND.EXTREME.ECOG.ECOG_PS">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for ECOG Performance Status (ITEM.ECOG_PS): value must be within [0, 5] grade (ECOG Performance Status Scale Bounds).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.SCALE.BRADEN_SCORE" Name="Braden Score (Risk Assessment) — Clinical Rating Scale Bounds" Target="FORM.AE.ITEM.Braden_Score" ConditionRef="COND.EXTREME.SCALE.BRADEN_SCORE">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Braden Score (Risk Assessment) (ITEM.Braden_Score): value must be within [0.0, 1000.0] points (Clinical Rating Scale Bounds).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="10" ProtocolSection="Summary" Confidence="1.0">
+          <makoto:SourceQuote>Calculation of PU risk using the Braden score</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.BMI.BMI" Name="Body Mass Index (BMI, kg/m²) — Body Mass Index Physiological Extreme Check" Target="FORM.VS.ITEM.BMI" ConditionRef="COND.EXTREME.BMI.BMI">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Body Mass Index (BMI, kg/m²) (ITEM.BMI): value must be within [10.0, 70.0] kg/m² (Body Mass Index Physiological Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="16" ProtocolSection="Schedule of Assessments" Confidence="1.0">
+          <makoto:SourceQuote>Body mass index | • Obtained from clinical records</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1139" y0="0.1447" x1="0.8675" y1="0.883"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.BSA.BSA" Name="Body Surface Area - Mosteller (BSA, m²) — Body Surface Area Physiological Extreme Check" Target="FORM.VS.ITEM.BSA" ConditionRef="COND.EXTREME.BSA.BSA">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Body Surface Area - Mosteller (BSA, m²) (ITEM.BSA): value must be within [0.5, 3.5] m² (Body Surface Area Physiological Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.BSA.BSA_DUBOIS" Name="Body Surface Area - DuBois (m²) — Body Surface Area Physiological Extreme Check" Target="FORM.VS.ITEM.BSA_DUBOIS" ConditionRef="COND.EXTREME.BSA.BSA_DUBOIS">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Body Surface Area - DuBois (m²) (ITEM.BSA_DUBOIS): value must be within [0.5, 3.5] m² (Body Surface Area Physiological Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.WEIGHT.IBW" Name="Ideal Body Weight - Devine (IBW, kg) — Body Weight Physiological Extreme Check" Target="FORM.VS.ITEM.IBW" ConditionRef="COND.EXTREME.WEIGHT.IBW">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Ideal Body Weight - Devine (IBW, kg) (ITEM.IBW): value must be within [25.0, 300.0] kg (Body Weight Physiological Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.WEIGHT.ABW" Name="Adjusted Body Weight (ABW, kg) — Body Weight Physiological Extreme Check" Target="FORM.VS.ITEM.ABW" ConditionRef="COND.EXTREME.WEIGHT.ABW">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Adjusted Body Weight (ABW, kg) (ITEM.ABW): value must be within [25.0, 300.0] kg (Body Weight Physiological Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="16" ProtocolSection="Schedule of Assessments" Confidence="1.0">
+          <makoto:SourceQuote>Body mass index | • Obtained from clinical records</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1139" y0="0.1447" x1="0.8675" y1="0.883"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.BP.MAP" Name="Mean Arterial Pressure (MAP, mmHg) — Blood Pressure Physiological Extreme Check" Target="FORM.VS.ITEM.MAP" ConditionRef="COND.EXTREME.BP.MAP">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Mean Arterial Pressure (MAP, mmHg) (ITEM.MAP): value must be within [20, 250] mmHg (Blood Pressure Physiological Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.BP.PP" Name="Arterial Pulse Pressure (PP, mmHg) — Blood Pressure Physiological Extreme Check" Target="FORM.VS.ITEM.PP" ConditionRef="COND.EXTREME.BP.PP">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Arterial Pulse Pressure (PP, mmHg) (ITEM.PP): value must be within [20, 250] mmHg (Blood Pressure Physiological Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.QTC.QTCF" Name="QTcF Interval - Fridericia (ms) — QTc Interval Prolongation Safety Extreme Check" Target="FORM.EG.ITEM.QTCF" ConditionRef="COND.EXTREME.QTC.QTCF">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for QTcF Interval - Fridericia (ms) (ITEM.QTCF): value must be within [250, 500] ms (QTc Interval Prolongation Safety Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.QTC.QTCB" Name="QTcB Interval - Bazett (ms) — QTc Interval Prolongation Safety Extreme Check" Target="FORM.EG.ITEM.QTCB" ConditionRef="COND.EXTREME.QTC.QTCB">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for QTcB Interval - Bazett (ms) (ITEM.QTCB): value must be within [250, 500] ms (QTc Interval Prolongation Safety Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.QTC.QTCF_CHG" Name="Change from Baseline in QTcF (ms) — QTc Interval Prolongation Safety Extreme Check" Target="FORM.EG.ITEM.QTCF_CHG" ConditionRef="COND.EXTREME.QTC.QTCF_CHG">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Change from Baseline in QTcF (ms) (ITEM.QTCF_CHG): value must be within [250, 500] ms (QTc Interval Prolongation Safety Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.DOSE.DOSE_CALC" Name="Protocol Calculated Target Dose (mg) — Dosing &amp; Exposure Quantitative Plausibility Bounds" Target="FORM.EX.ITEM.DOSE_CALC" ConditionRef="COND.EXTREME.DOSE.DOSE_CALC">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Protocol Calculated Target Dose (mg) (ITEM.DOSE_CALC): value must be within [0.0, 10000.0] mg (Dosing &amp; Exposure Quantitative Plausibility Bounds).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="37" ProtocolSection="Intervention Application" Confidence="1.0">
+          <makoto:SourceQuote>Apply the adherent part of the dressing marked &quot;B&quot; in the instructions for use illustration under the foot. Do not stretch.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.536" y0="0.3339" x1="0.7637" y1="0.6966"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.DOSE.RDI" Name="Relative Dose Intensity (%) — Dosing &amp; Exposure Quantitative Plausibility Bounds" Target="FORM.EX.ITEM.RDI" ConditionRef="COND.EXTREME.DOSE.RDI">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Relative Dose Intensity (%) (ITEM.RDI): value must be within [0.0, 10000.0] % (Dosing &amp; Exposure Quantitative Plausibility Bounds).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="37" ProtocolSection="Procedure" Confidence="1.0">
+          <makoto:SourceQuote>Apply the adherent part of the dressing marked &quot;B&quot; in the instructions for use illustration under the foot. Do not stretch.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.536" y0="0.3339" x1="0.7637" y1="0.6966"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.DOSE.CUM_DOSE" Name="Cumulative Administered Dose (mg) — Dosing &amp; Exposure Quantitative Plausibility Bounds" Target="FORM.EX.ITEM.CUM_DOSE" ConditionRef="COND.EXTREME.DOSE.CUM_DOSE">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Cumulative Administered Dose (mg) (ITEM.CUM_DOSE): value must be within [0.0, 10000.0] mg (Dosing &amp; Exposure Quantitative Plausibility Bounds).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="37" ProtocolSection="Intervention Application" Confidence="1.0">
+          <makoto:SourceQuote>Apply the adherent part of the dressing marked &quot;B&quot; in the instructions for use illustration under the foot. Do not stretch.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.536" y0="0.3339" x1="0.7637" y1="0.6966"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.DOSE.TRTDURD" Name="Total Treatment Exposure Duration (Days) — Dosing &amp; Exposure Quantitative Plausibility Bounds" Target="FORM.EX.ITEM.TRTDURD" ConditionRef="COND.EXTREME.DOSE.TRTDURD">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Total Treatment Exposure Duration (Days) (ITEM.TRTDURD): value must be within [0.0, 10000.0] days (Dosing &amp; Exposure Quantitative Plausibility Bounds).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="17" ProtocolSection="Schedule of Assessments" Confidence="1.0">
+          <makoto:SourceQuote>Catecholamines | • Obtained from clinical records • Type (adrenalin, noradrenalin ... ) • Mean doses (μl/kg/min)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1141" y0="0.0423" x1="0.868" y1="0.8265"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.TIME.IC_BEFORE_PROCEDURES" Name="Informed Consent Prior to Study Procedures (BIMO Chronology)" Target="FORM.IC.ITEM.Informed Consent Status" ConditionRef="COND.TIME.IC_BEFORE_PROCEDURES">
+        <ErrorMessage>
+          <TranslatedText>Informed Consent signature date must be on or prior to any screening or study procedure date (21 CFR Part 50 / ICH E6 GCP).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="27" ProtocolSection="Informed Consent" Confidence="1.0">
+          <makoto:SourceQuote>Patients meeting the inclusion criteria and who are able must provide written informed consent prior to participation.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.116" y0="0.6819" x1="0.8587" y1="0.9106"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.TIME.NO_EVENTS_AFTER_DISPOSITION" Name="Post-Discontinuation / Death Chronology Guard" Target="FORM.DS.ITEM.Consent Status" ConditionRef="COND.TIME.NO_EVENTS_AFTER_DISPOSITION">
+        <ErrorMessage>
+          <TranslatedText>No clinical assessment, laboratory draw, or dosing date may occur after subject discontinuation/death or in the future.</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="10" ProtocolSection="Enrollment/Inclusion Criteria" Confidence="1.0">
+          <makoto:SourceQuote>Informed consent (or by legal representative)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1167" y0="0.5879" x1="0.4838" y1="0.6009"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.RECON.ELIGIBILITY_DOSE_RELEASE" Name="Eligibility Confirmation Prior to Study Dosing" Target="FORM.EX.ITEM.Dressing_Application_B" ConditionRef="COND.RECON.ELIGIBILITY_DOSE_RELEASE">
+        <ErrorMessage>
+          <TranslatedText>Subject cannot receive study treatment on FORM.EX if any Inclusion Criterion is unmet or any Exclusion Criterion is triggered on FORM.IE.</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="37" ProtocolSection="Procedure" Confidence="1.0">
+          <makoto:SourceQuote>Apply the adherent part of the dressing marked &quot;B&quot; in the instructions for use illustration under the foot. Do not stretch.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.536" y0="0.3339" x1="0.7637" y1="0.6966"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.RECON.AE_CONMED_LINK" Name="Adverse Event Concomitant Medication Reconciliation" Target="FORM.CM.ITEM.Permitted Concomitant Medications" ConditionRef="COND.RECON.AE_CONMED_LINK">
+        <ErrorMessage>
+          <TranslatedText>Adverse Event indicates concomitant medication treatment was given; a corresponding medication entry must be logged on FORM.CM.</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="Inclusion Criteria" Confidence="1.0">
+          <makoto:SourceQuote>participation in other clinical trials is permitted (as the study involves no drugs or invasive techniques)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.DELTA.WEIGHT_BSA_RECALC" Name="Longitudinal Weight Change &gt;= 10% BSA &amp; Dose Recalculation" Target="FORM.VS.ITEM.WEIGHT" ConditionRef="COND.DELTA.WEIGHT_BSA_RECALC">
+        <ErrorMessage>
+          <TranslatedText>Subject body weight changed by &gt; 10% from baseline; verify weight entry and recalculate Body Surface Area (BSA) and dosing.</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.DELTA.QTCF_BASELINE_CHANGE" Name="QTcF Longitudinal Increase &gt; 60 ms from Baseline (ICH E14)" Target="FORM.EG.ITEM.ECG_12_LEAD" ConditionRef="COND.DELTA.QTCF_BASELINE_CHANGE">
+        <ErrorMessage>
+          <TranslatedText>QTcF interval increased by &gt; 60 ms from baseline (ICH E14 cardiac safety threshold); requires triplicate ECG confirmation and cardiology evaluation.</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <MethodDef OID="MT.BRADEN_SCORE" Name="Braden Scale for Pressure Ulcer Risk" Type="Scoring System">
+        <Description>
+          <TranslatedText>A clinical scoring system used to assess the risk of developing pressure ulcers based on sensory perception, moisture, activity, mobility, nutrition, and skin integrity.</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">sum(scores_per_category)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="2" ProtocolSection="" Confidence="1.0">
+          <makoto:SourceQuote>monitoring of PU risk scores (Braden score)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1229" y0="0.0" x1="0.3601" y1="0.0201"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.PU_CLASSIFICATION" Name="NPUAP/EPUAP PU Classification" Type="Categorization">
+        <Description>
+          <TranslatedText>Classification of pressure ulcers into categories II, III, IV, Unstageable, and Deep Tissue Injury (DTI) based on standardized criteria.</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">category_assignment(wound_depth, tissue_damage)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="2" ProtocolSection="" Confidence="1.0">
+          <makoto:SourceQuote>Use of the NPUAP/EPUAP 2014 PU classification system to categorize ulcers (II, III, IV, DTI)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1229" y0="0.0" x1="0.3601" y1="0.0201"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.BMI" Name="Body Mass Index" Type="Calculation">
+        <Description>
+          <TranslatedText>Calculation of body mass index from height and weight.</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">weight / (height ** 2)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="16" ProtocolSection="" Confidence="1.0">
+          <makoto:SourceQuote>Body mass index</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1229" y0="0.0" x1="0.3601" y1="0.0202"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.BSA" Name="Body Surface Area (BSA — Mosteller Formula)" Type="Derivation">
+        <Description>
+          <TranslatedText>Body Surface Area (BSA, m^2) via Mosteller formula: sqrt((HEIGHT * WEIGHT) / 3600).</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">round(((ITEM.HEIGHT * ITEM.WEIGHT) / 3600.0) ** 0.5, 2)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.BSA_DUBOIS" Name="Body Surface Area (BSA — DuBois &amp; DuBois Formula)" Type="Derivation">
+        <Description>
+          <TranslatedText>Body Surface Area (BSA, m^2) via DuBois &amp; DuBois allometric equation: 0.007184 * (WEIGHT^0.425) * (HEIGHT^0.725).</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">round(0.007184 * (ITEM.WEIGHT ** 0.425) * (ITEM.HEIGHT ** 0.725), 2)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.IBW" Name="Ideal Body Weight (IBW — Devine Formula)" Type="Derivation">
+        <Description>
+          <TranslatedText>Ideal Body Weight (IBW, kg) via Devine formula for sex-stratified height above 152.4 cm (60 inches).</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">round((50.0 if ITEM.SEX == 'M' else 45.5) + 0.9055 * (ITEM.HEIGHT - 152.4), 1)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.ABW" Name="Adjusted Body Weight (ABW — Obesity Dosing Cap)" Type="Derivation">
+        <Description>
+          <TranslatedText>Adjusted Body Weight (ABW, kg) for obese subjects (WEIGHT &gt; 1.2 * IBW): IBW + 0.4 * (WEIGHT - IBW).</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">round(ITEM.IBW + 0.4 * max(0.0, ITEM.WEIGHT - ITEM.IBW), 1)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="16" ProtocolSection="Schedule of Assessments" Confidence="1.0">
+          <makoto:SourceQuote>Body mass index | • Obtained from clinical records</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1139" y0="0.1447" x1="0.8675" y1="0.883"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.MAP" Name="Mean Arterial Pressure (MAP) Calculation" Type="Derivation">
+        <Description>
+          <TranslatedText>Mean Arterial Pressure (MAP, mmHg) derived from systolic and diastolic blood pressure: DIABP + (SYSBP - DIABP) / 3.</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">round(ITEM.DIABP + (ITEM.SYSBP - ITEM.DIABP) / 3.0, 1)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.PP" Name="Arterial Pulse Pressure (PP) Calculation" Type="Derivation">
+        <Description>
+          <TranslatedText>Arterial Pulse Pressure (PP, mmHg) derived as the difference between systolic and diastolic blood pressure (SYSBP - DIABP).</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">ITEM.SYSBP - ITEM.DIABP</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.QTCF" Name="Fridericia Rate-Corrected QT Interval (QTcF — ICH E14)" Type="Derivation">
+        <Description>
+          <TranslatedText>ICH E14 Fridericia rate-corrected QT interval (QTcF, ms): QT * (60 / EGHR)^(1/3).</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">round(ITEM.QT * ((60.0 / ITEM.EGHR) ** (1.0 / 3.0)), 1)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.QTCB" Name="Bazett Rate-Corrected QT Interval (QTcB — ICH E14)" Type="Derivation">
+        <Description>
+          <TranslatedText>ICH E14 Bazett rate-corrected QT interval (QTcB, ms): QT * (60 / EGHR)^(1/2).</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">round(ITEM.QT * ((60.0 / ITEM.EGHR) ** 0.5), 1)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.QTCF_CHG" Name="Longitudinal Change from Baseline in QTcF (Delta-QTcF — ICH E14)" Type="Derivation">
+        <Description>
+          <TranslatedText>ICH E14 longitudinal change from baseline in Fridericia-corrected QT interval (Delta-QTcF, ms) for &gt;30 ms and &gt;60 ms outlier flagging.</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">round(ITEM.QTCF - BASELINE.QTCF, 1)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.DOSE_CALC" Name="Protocol Weight / BSA-Adjusted Planned Dose Calculation" Type="Derivation">
+        <Description>
+          <TranslatedText>Protocol-prescribed weight-based (mg/kg) or BSA-based (mg/m^2) target dose calculation prior to drug preparation.</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">round(ITEM.WEIGHT * ITEM.DOSE_LEVEL_MG_KG, 1)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="37" ProtocolSection="Intervention Application" Confidence="1.0">
+          <makoto:SourceQuote>Apply the adherent part of the dressing marked &quot;B&quot; in the instructions for use illustration under the foot. Do not stretch.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.536" y0="0.3339" x1="0.7637" y1="0.6966"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.DOSE_INTENSITY" Name="Relative Dose Intensity (RDI %) Calculation" Type="Derivation">
+        <Description>
+          <TranslatedText>Relative Dose Intensity (RDI, %) calculated as actual administered dose divided by protocol-planned dose.</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">round((ITEM.EXDOSE / ITEM.EXDOSE_PLANNED) * 100.0, 1)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="37" ProtocolSection="Procedure" Confidence="1.0">
+          <makoto:SourceQuote>Apply the adherent part of the dressing marked &quot;B&quot; in the instructions for use illustration under the foot. Do not stretch.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.536" y0="0.3339" x1="0.7637" y1="0.6966"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.CUM_DOSE" Name="Cumulative Study Drug Exposure Dose (ADEX.CUMDOSE)" Type="Derivation">
+        <Description>
+          <TranslatedText>Cumulative administered study drug dose across all completed treatment cycles.</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">round(ITEM.CUM_DOSE_PRIOR + ITEM.EXDOSE, 1)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="37" ProtocolSection="Intervention Application" Confidence="1.0">
+          <makoto:SourceQuote>Apply the adherent part of the dressing marked &quot;B&quot; in the instructions for use illustration under the foot. Do not stretch.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.536" y0="0.3339" x1="0.7637" y1="0.6966"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.TREATMENT_COMPLIANCE" Name="Study Treatment Dosing Compliance Percentage (%)" Type="Derivation">
+        <Description>
+          <TranslatedText>Treatment compliance percentage derived from total doses administered/taken divided by planned doses over the treatment period.</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">round((ITEM.DOSES_TAKEN / ITEM.DOSES_PLANNED) * 100.0, 1)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="17" ProtocolSection="Schedule of Assessments" Confidence="1.0">
+          <makoto:SourceQuote>Catecholamines | • Obtained from clinical records • Type (adrenalin, noradrenalin ... ) • Mean doses (μl/kg/min)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1141" y0="0.0423" x1="0.868" y1="0.8265"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.AGE_DERIVED" Name="Derived Subject Age at Informed Consent (DM.AGE)" Type="Derivation">
+        <Description>
+          <TranslatedText>CDISC SDTM DM.AGE derivation at date of informed consent: floor((RFICDTC - BRTHDTC) / 365.25).</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">int((ITEM.RFICDTC - ITEM.BRTHDTC).days // 365.25)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="27" ProtocolSection="Informed Consent" Confidence="1.0">
+          <makoto:SourceQuote>Patients meeting the inclusion criteria and who are able must provide written informed consent prior to participation.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.116" y0="0.6819" x1="0.8587" y1="0.9106"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.STUDY_DAY" Name="CDISC Study Day (--DY, No-Day-0 Convention)" Type="Derivation">
+        <Description>
+          <TranslatedText>CDISC SDTM Study Day (--DY) relative to Reference Start Date (RFSTDTC) following the statutory no-Day-0 convention.</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">(STUDY_EVENT.VISDAT - ITEM.RFSTDTC).days + (1 if STUDY_EVENT.VISDAT &gt;= ITEM.RFSTDTC else 0)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="10" ProtocolSection="Inclusion Criteria" Confidence="1.0">
+          <makoto:SourceQuote>Patients requiring assessment for pressure ulcer risk or presenting with existing PUs at the heels or sacrum.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1156" y0="0.2919" x1="0.256" y1="0.3113"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.TRTDURD" Name="Total Treatment Exposure Duration (ADSL.TRTDURD)" Type="Derivation">
+        <Description>
+          <TranslatedText>CDISC ADaM ADSL Total Treatment Duration in days: (TRTEDT - TRTSDT) + 1.</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">(ITEM.EXENDTC - ITEM.EXSTDTC).days + 1</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="17" ProtocolSection="Schedule of Assessments" Confidence="1.0">
+          <makoto:SourceQuote>Catecholamines | • Obtained from clinical records • Type (adrenalin, noradrenalin ... ) • Mean doses (μl/kg/min)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1141" y0="0.0423" x1="0.868" y1="0.8265"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.CHG_BASELINE" Name="ADaM Longitudinal Change &amp; Percent Change from Baseline (CHG / PCHG)" Type="Derivation">
+        <Description>
+          <TranslatedText>CDISC ADaM longitudinal Change from Baseline (CHG = AVAL - BASE) and Percent Change from Baseline (PCHG = 100 * (AVAL - BASE) / BASE).</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">round(((ITEM.AVAL - BASELINE.BASE) / BASELINE.BASE) * 100.0, 1)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="16" ProtocolSection="Schedule of Assessments" Confidence="1.0">
+          <makoto:SourceQuote>PU risk | • Scoring based on Charité standard • Risk category (none/at risk/at high risk/at very high risk)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1139" y0="0.1447" x1="0.8675" y1="0.883"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <makoto:VisualLayout>
+        <makoto:Nodes>
+          <makoto:Node id="EP.1" type="epochGroup">
+            <makoto:Position x="360" y="50"/>
+          </makoto:Node>
+          <makoto:Node id="SE.V01" type="visit">
+            <makoto:Position x="40" y="160"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.IE.SE.V01" type="form">
+            <makoto:Position x="40" y="320"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.IC.SE.V01" type="form">
+            <makoto:Position x="40" y="450"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.DM.SE.V01" type="form">
+            <makoto:Position x="40" y="580"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.MH.SE.V01" type="form">
+            <makoto:Position x="40" y="710"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.VS.SE.V01" type="form">
+            <makoto:Position x="40" y="840"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.LB.SE.V01" type="form">
+            <makoto:Position x="40" y="970"/>
+          </makoto:Node>
+          <makoto:Node id="ARM.1" type="arm">
+            <makoto:Position x="740" y="275"/>
+          </makoto:Node>
+          <makoto:Node id="ARM.2" type="arm">
+            <makoto:Position x="740" y="525"/>
+          </makoto:Node>
+          <makoto:Node id="EP.2" type="epochGroup">
+            <makoto:Position x="960" y="50"/>
+          </makoto:Node>
+          <makoto:Node id="CYCLE_GROUP.EP.2" type="cycleTemplateGroup">
+            <makoto:Position x="40" y="80"/>
+          </makoto:Node>
+          <makoto:Node id="SE.V02" type="visit">
+            <makoto:Position x="30" y="80"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.VS.SE.V02.SE.V02" type="form">
+            <makoto:Position x="30" y="240"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.PE.SE.V02.SE.V02" type="form">
+            <makoto:Position x="30" y="370"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.LB.SE.V02.SE.V02" type="form">
+            <makoto:Position x="30" y="500"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.PK.SE.V02.SE.V02" type="form">
+            <makoto:Position x="30" y="630"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.CM.SE.V02.SE.V02" type="form">
+            <makoto:Position x="30" y="760"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.AE.SE.V02.SE.V02" type="form">
+            <makoto:Position x="30" y="890"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.BS.SE.V02.SE.V02" type="form">
+            <makoto:Position x="30" y="1020"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.EG.SE.V02.SE.V02" type="form">
+            <makoto:Position x="30" y="1150"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.PR.SE.V02.SE.V02" type="form">
+            <makoto:Position x="30" y="1280"/>
+          </makoto:Node>
+          <makoto:Node id="SE.V04" type="visit">
+            <makoto:Position x="330" y="80"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.VS.SE.V02.SE.V04" type="form">
+            <makoto:Position x="330" y="240"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.PE.SE.V02.SE.V04" type="form">
+            <makoto:Position x="330" y="370"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.LB.SE.V02.SE.V04" type="form">
+            <makoto:Position x="330" y="500"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.PK.SE.V02.SE.V04" type="form">
+            <makoto:Position x="330" y="630"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.CM.SE.V02.SE.V04" type="form">
+            <makoto:Position x="330" y="760"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.AE.SE.V02.SE.V04" type="form">
+            <makoto:Position x="330" y="890"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.BS.SE.V02.SE.V04" type="form">
+            <makoto:Position x="330" y="1020"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.EG.SE.V02.SE.V04" type="form">
+            <makoto:Position x="330" y="1150"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.PR.SE.V02.SE.V04" type="form">
+            <makoto:Position x="330" y="1280"/>
+          </makoto:Node>
+          <makoto:Node id="SE.V05" type="visit">
+            <makoto:Position x="630" y="80"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.VS.SE.V02.SE.V05" type="form">
+            <makoto:Position x="630" y="240"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.PE.SE.V02.SE.V05" type="form">
+            <makoto:Position x="630" y="370"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.LB.SE.V02.SE.V05" type="form">
+            <makoto:Position x="630" y="500"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.PK.SE.V02.SE.V05" type="form">
+            <makoto:Position x="630" y="630"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.CM.SE.V02.SE.V05" type="form">
+            <makoto:Position x="630" y="760"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.AE.SE.V02.SE.V05" type="form">
+            <makoto:Position x="630" y="890"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.BS.SE.V02.SE.V05" type="form">
+            <makoto:Position x="630" y="1020"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.EG.SE.V02.SE.V05" type="form">
+            <makoto:Position x="630" y="1150"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.PR.SE.V02.SE.V05" type="form">
+            <makoto:Position x="630" y="1280"/>
+          </makoto:Node>
+          <makoto:Node id="SE.V06" type="visit">
+            <makoto:Position x="930" y="80"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.VS.SE.V02.SE.V06" type="form">
+            <makoto:Position x="930" y="240"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.PE.SE.V02.SE.V06" type="form">
+            <makoto:Position x="930" y="370"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.LB.SE.V02.SE.V06" type="form">
+            <makoto:Position x="930" y="500"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.PK.SE.V02.SE.V06" type="form">
+            <makoto:Position x="930" y="630"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.CM.SE.V02.SE.V06" type="form">
+            <makoto:Position x="930" y="760"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.AE.SE.V02.SE.V06" type="form">
+            <makoto:Position x="930" y="890"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.BS.SE.V02.SE.V06" type="form">
+            <makoto:Position x="930" y="1020"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.EG.SE.V02.SE.V06" type="form">
+            <makoto:Position x="930" y="1150"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.PR.SE.V02.SE.V06" type="form">
+            <makoto:Position x="930" y="1280"/>
+          </makoto:Node>
+          <makoto:Node id="GATE.EP.2.CYCLE" type="decisionGate">
+            <makoto:Position x="1320" y="140"/>
+          </makoto:Node>
+          <makoto:Node id="EP.3" type="epochGroup">
+            <makoto:Position x="2600" y="50"/>
+          </makoto:Node>
+          <makoto:Node id="SE.V03" type="visit">
+            <makoto:Position x="40" y="160"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.VS.SE.V03" type="form">
+            <makoto:Position x="40" y="320"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.LB.SE.V03" type="form">
+            <makoto:Position x="40" y="450"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.AE.SE.V03" type="form">
+            <makoto:Position x="40" y="580"/>
+          </makoto:Node>
+        </makoto:Nodes>
+        <makoto:Edges>
+          <makoto:Edge id="e-ARM.1-SE.V01" source="ARM.1" target="SE.V01"/>
+          <makoto:Edge id="e-ARM.2-SE.V01" source="ARM.2" target="SE.V01"/>
+          <makoto:Edge id="e-epoch-EP.1-EP.2" source="EP.1" target="EP.2" animated="true"/>
+          <makoto:Edge id="e-epoch-EP.2-EP.3" source="EP.2" target="EP.3" animated="true"/>
+          <makoto:Edge id="e-SE.V01-CYCLE_GROUP.EP.2" source="SE.V01" target="CYCLE_GROUP.EP.2"/>
+          <makoto:Edge id="e-SE.V02-SE.V04" source="SE.V02" target="SE.V04"/>
+          <makoto:Edge id="e-SE.V04-SE.V05" source="SE.V04" target="SE.V05"/>
+          <makoto:Edge id="e-SE.V05-SE.V06" source="SE.V05" target="SE.V06"/>
+          <makoto:Edge id="e-SE.V02-FORM.VS.SE.V02.SE.V02" source="SE.V02" target="FORM.VS.SE.V02.SE.V02"/>
+          <makoto:Edge id="e-FORM.VS.SE.V02.SE.V02-FORM.PE.SE.V02.SE.V02" source="FORM.VS.SE.V02.SE.V02" target="FORM.PE.SE.V02.SE.V02"/>
+          <makoto:Edge id="e-FORM.PE.SE.V02.SE.V02-FORM.LB.SE.V02.SE.V02" source="FORM.PE.SE.V02.SE.V02" target="FORM.LB.SE.V02.SE.V02"/>
+          <makoto:Edge id="e-FORM.LB.SE.V02.SE.V02-FORM.PK.SE.V02.SE.V02" source="FORM.LB.SE.V02.SE.V02" target="FORM.PK.SE.V02.SE.V02"/>
+          <makoto:Edge id="e-FORM.PK.SE.V02.SE.V02-FORM.CM.SE.V02.SE.V02" source="FORM.PK.SE.V02.SE.V02" target="FORM.CM.SE.V02.SE.V02"/>
+          <makoto:Edge id="e-FORM.CM.SE.V02.SE.V02-FORM.AE.SE.V02.SE.V02" source="FORM.CM.SE.V02.SE.V02" target="FORM.AE.SE.V02.SE.V02"/>
+          <makoto:Edge id="e-FORM.AE.SE.V02.SE.V02-FORM.BS.SE.V02.SE.V02" source="FORM.AE.SE.V02.SE.V02" target="FORM.BS.SE.V02.SE.V02"/>
+          <makoto:Edge id="e-FORM.BS.SE.V02.SE.V02-FORM.EG.SE.V02.SE.V02" source="FORM.BS.SE.V02.SE.V02" target="FORM.EG.SE.V02.SE.V02"/>
+          <makoto:Edge id="e-FORM.EG.SE.V02.SE.V02-FORM.PR.SE.V02.SE.V02" source="FORM.EG.SE.V02.SE.V02" target="FORM.PR.SE.V02.SE.V02"/>
+          <makoto:Edge id="e-SE.V04-FORM.VS.SE.V02.SE.V04" source="SE.V04" target="FORM.VS.SE.V02.SE.V04"/>
+          <makoto:Edge id="e-FORM.VS.SE.V02.SE.V04-FORM.PE.SE.V02.SE.V04" source="FORM.VS.SE.V02.SE.V04" target="FORM.PE.SE.V02.SE.V04"/>
+          <makoto:Edge id="e-FORM.PE.SE.V02.SE.V04-FORM.LB.SE.V02.SE.V04" source="FORM.PE.SE.V02.SE.V04" target="FORM.LB.SE.V02.SE.V04"/>
+          <makoto:Edge id="e-FORM.LB.SE.V02.SE.V04-FORM.PK.SE.V02.SE.V04" source="FORM.LB.SE.V02.SE.V04" target="FORM.PK.SE.V02.SE.V04"/>
+          <makoto:Edge id="e-FORM.PK.SE.V02.SE.V04-FORM.CM.SE.V02.SE.V04" source="FORM.PK.SE.V02.SE.V04" target="FORM.CM.SE.V02.SE.V04"/>
+          <makoto:Edge id="e-FORM.CM.SE.V02.SE.V04-FORM.AE.SE.V02.SE.V04" source="FORM.CM.SE.V02.SE.V04" target="FORM.AE.SE.V02.SE.V04"/>
+          <makoto:Edge id="e-FORM.AE.SE.V02.SE.V04-FORM.BS.SE.V02.SE.V04" source="FORM.AE.SE.V02.SE.V04" target="FORM.BS.SE.V02.SE.V04"/>
+          <makoto:Edge id="e-FORM.BS.SE.V02.SE.V04-FORM.EG.SE.V02.SE.V04" source="FORM.BS.SE.V02.SE.V04" target="FORM.EG.SE.V02.SE.V04"/>
+          <makoto:Edge id="e-FORM.EG.SE.V02.SE.V04-FORM.PR.SE.V02.SE.V04" source="FORM.EG.SE.V02.SE.V04" target="FORM.PR.SE.V02.SE.V04"/>
+          <makoto:Edge id="e-SE.V05-FORM.VS.SE.V02.SE.V05" source="SE.V05" target="FORM.VS.SE.V02.SE.V05"/>
+          <makoto:Edge id="e-FORM.VS.SE.V02.SE.V05-FORM.PE.SE.V02.SE.V05" source="FORM.VS.SE.V02.SE.V05" target="FORM.PE.SE.V02.SE.V05"/>
+          <makoto:Edge id="e-FORM.PE.SE.V02.SE.V05-FORM.LB.SE.V02.SE.V05" source="FORM.PE.SE.V02.SE.V05" target="FORM.LB.SE.V02.SE.V05"/>
+          <makoto:Edge id="e-FORM.LB.SE.V02.SE.V05-FORM.PK.SE.V02.SE.V05" source="FORM.LB.SE.V02.SE.V05" target="FORM.PK.SE.V02.SE.V05"/>
+          <makoto:Edge id="e-FORM.PK.SE.V02.SE.V05-FORM.CM.SE.V02.SE.V05" source="FORM.PK.SE.V02.SE.V05" target="FORM.CM.SE.V02.SE.V05"/>
+          <makoto:Edge id="e-FORM.CM.SE.V02.SE.V05-FORM.AE.SE.V02.SE.V05" source="FORM.CM.SE.V02.SE.V05" target="FORM.AE.SE.V02.SE.V05"/>
+          <makoto:Edge id="e-FORM.AE.SE.V02.SE.V05-FORM.BS.SE.V02.SE.V05" source="FORM.AE.SE.V02.SE.V05" target="FORM.BS.SE.V02.SE.V05"/>
+          <makoto:Edge id="e-FORM.BS.SE.V02.SE.V05-FORM.EG.SE.V02.SE.V05" source="FORM.BS.SE.V02.SE.V05" target="FORM.EG.SE.V02.SE.V05"/>
+          <makoto:Edge id="e-FORM.EG.SE.V02.SE.V05-FORM.PR.SE.V02.SE.V05" source="FORM.EG.SE.V02.SE.V05" target="FORM.PR.SE.V02.SE.V05"/>
+          <makoto:Edge id="e-SE.V06-FORM.VS.SE.V02.SE.V06" source="SE.V06" target="FORM.VS.SE.V02.SE.V06"/>
+          <makoto:Edge id="e-FORM.VS.SE.V02.SE.V06-FORM.PE.SE.V02.SE.V06" source="FORM.VS.SE.V02.SE.V06" target="FORM.PE.SE.V02.SE.V06"/>
+          <makoto:Edge id="e-FORM.PE.SE.V02.SE.V06-FORM.LB.SE.V02.SE.V06" source="FORM.PE.SE.V02.SE.V06" target="FORM.LB.SE.V02.SE.V06"/>
+          <makoto:Edge id="e-FORM.LB.SE.V02.SE.V06-FORM.PK.SE.V02.SE.V06" source="FORM.LB.SE.V02.SE.V06" target="FORM.PK.SE.V02.SE.V06"/>
+          <makoto:Edge id="e-FORM.PK.SE.V02.SE.V06-FORM.CM.SE.V02.SE.V06" source="FORM.PK.SE.V02.SE.V06" target="FORM.CM.SE.V02.SE.V06"/>
+          <makoto:Edge id="e-FORM.CM.SE.V02.SE.V06-FORM.AE.SE.V02.SE.V06" source="FORM.CM.SE.V02.SE.V06" target="FORM.AE.SE.V02.SE.V06"/>
+          <makoto:Edge id="e-FORM.AE.SE.V02.SE.V06-FORM.BS.SE.V02.SE.V06" source="FORM.AE.SE.V02.SE.V06" target="FORM.BS.SE.V02.SE.V06"/>
+          <makoto:Edge id="e-FORM.BS.SE.V02.SE.V06-FORM.EG.SE.V02.SE.V06" source="FORM.BS.SE.V02.SE.V06" target="FORM.EG.SE.V02.SE.V06"/>
+          <makoto:Edge id="e-FORM.EG.SE.V02.SE.V06-FORM.PR.SE.V02.SE.V06" source="FORM.EG.SE.V02.SE.V06" target="FORM.PR.SE.V02.SE.V06"/>
+          <makoto:Edge id="e-CYCLE_GROUP.EP.2-GATE.EP.2.CYCLE" source="CYCLE_GROUP.EP.2" target="GATE.EP.2.CYCLE"/>
+          <makoto:Edge id="e-loopback-GATE.EP.2.CYCLE-CYCLE_GROUP.EP.2" source="GATE.EP.2.CYCLE" target="CYCLE_GROUP.EP.2" label="Cleared ➔ Next Cycle" animated="true"/>
+          <makoto:Edge id="e-exit-GATE.EP.2.CYCLE-SE.V03" source="GATE.EP.2.CYCLE" target="SE.V03" label="PD / Toxicity ➔ Exit" animated="true"/>
+          <makoto:Edge id="e-SE.V01-FORM.IE.SE.V01" source="SE.V01" target="FORM.IE.SE.V01"/>
+          <makoto:Edge id="e-FORM.IE.SE.V01-FORM.IC.SE.V01" source="FORM.IE.SE.V01" target="FORM.IC.SE.V01"/>
+          <makoto:Edge id="e-FORM.IC.SE.V01-FORM.DM.SE.V01" source="FORM.IC.SE.V01" target="FORM.DM.SE.V01"/>
+          <makoto:Edge id="e-FORM.DM.SE.V01-FORM.MH.SE.V01" source="FORM.DM.SE.V01" target="FORM.MH.SE.V01"/>
+          <makoto:Edge id="e-FORM.MH.SE.V01-FORM.VS.SE.V01" source="FORM.MH.SE.V01" target="FORM.VS.SE.V01"/>
+          <makoto:Edge id="e-FORM.VS.SE.V01-FORM.LB.SE.V01" source="FORM.VS.SE.V01" target="FORM.LB.SE.V01"/>
+          <makoto:Edge id="e-SE.V03-FORM.VS.SE.V03" source="SE.V03" target="FORM.VS.SE.V03"/>
+          <makoto:Edge id="e-FORM.VS.SE.V03-FORM.LB.SE.V03" source="FORM.VS.SE.V03" target="FORM.LB.SE.V03"/>
+          <makoto:Edge id="e-FORM.LB.SE.V03-FORM.AE.SE.V03" source="FORM.LB.SE.V03" target="FORM.AE.SE.V03"/>
+        </makoto:Edges>
+      </makoto:VisualLayout>
+    </MetaDataVersion>
+  </Study>
+</ODM>

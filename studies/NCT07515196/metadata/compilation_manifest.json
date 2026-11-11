@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0.0",
+  "publisher": "VonCasper Solutions",
+  "nct_id": "NCT07515196",
+  "design_id": "study_a4f4b299",
+  "slot": 9,
+  "section": "modern_parity_suite",
+  "category": "Live Single-Pass Parity Suite",
+  "study_title": "Modern Single-Pass Parity Evaluation Study (NCT07515196)",
+  "protocol_sha256": "a4f4b2994784bd36b7c41a6acd75642baf5180bc987b443bc3235ff21bdf3046",
+  "sap_sha256": null,
+  "sap_note": "Combined in Prot_SAP_000.pdf",
+  "study_url": "https://clinicaltrials.gov/study/NCT07515196",
+  "cdn_protocol_url": "https://cdn.clinicaltrials.gov/large-docs/96/NCT07515196/Prot_SAP_000.pdf",
+  "cdn_sap_url": null,
+  "alternate_cdn_urls": [],
+  "compilation_mode": "fresh_single_pass_no_resume",
+  "compilation_elapsed_seconds": 734.22,
+  "finalized_at_utc": "2026-11-11T03:06:39.815894+00:00",
+  "telemetry": {
+    "event_count": 3,
+    "form_count": 15,
+    "item_group_count": 15,
+    "item_count": 61,
+    "edit_check_count": 39,
+    "node_count": 27,
+    "edge_count": 25
+  },
+  "artifacts": {
+    "exports/rave_als.xlsx": {
+      "size_bytes": 35083,
+      "sha256": "2cf7c7667626cfdf6d92e77436833d3c9a0f7f2662b724b294d457c53b39e685"
+    },
+    "exports/veeva_cdms.xml": {
+      "size_bytes": 54952,
+      "sha256": "fbc53105c4a5e752b1c4c7f36593b39974d4de45d1e3024c1df02706864beadd"
+    },
+    "exports/cdisc_odm_v1.3.2.xml": {
+      "size_bytes": 129542,
+      "sha256": "19af70b408b60374d521c2f95dfe529116ecf9f13e978a01996e976cc3e7e352"
+    },
+    "exports/transcelerate_usdm_v3.0.json": {
+      "size_bytes": 40125,
+      "sha256": "0f25d145761437a8766d03b05f47d5d509e6f741bd937f28fbc91c9367bca509"
+    },
+    "metadata/provenance_matrix_21cfr11.xlsx": {
+      "size_bytes": 26016,
+      "sha256": "ed9737f03835ef2aa2d0cb536b0d9fab5ad76a79acf8afd1a7b04e5707ddc8e6"
+    },
+    "visuals/canvas_standard.svg": {
+      "size_bytes": 3106108,
+      "sha256": "eee1099b6f3c3f7914d90212c515804b5564f99664af4f224c91ca0f511b27e3"
+    },
+    "visuals/canvas_standard.pdf": {
+      "size_bytes": 494835,
+      "sha256": "9b592ef2e9df78eae4a5adc18c6825daab5501351ffeaca041a3c301cfb07ff5"
+    },
+    "visuals/canvas_mindmap.svg": {
+      "size_bytes": 2810510,
+      "sha256": "d0b93705dd75ce99b5b3702626fa97cc7a0e44160cea0185cf55ec0f0003c261"
+    },
+    "visuals/canvas_mindmap.pdf": {
+      "size_bytes": 288373,
+      "sha256": "b02ae231db93cc250b341f2f0255202788e185c4b2a217d113d718d938fd2af3"
+    }
+  }
+}

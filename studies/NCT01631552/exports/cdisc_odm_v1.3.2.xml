@@ -1,0 +1,1489 @@
+<?xml version="1.0" ?>
+<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:makoto="http://gflow.ai/ns/makoto/v1.0" FileType="Snapshot" FileOID="ODM.STUDY.001.20261111000734" CreationDateTime="2026-11-11T00:07:34Z" ODMVersion="1.3.2">
+  <Study OID="STUDY.001">
+    <GlobalVariables>
+      <StudyName>NCT01631552 Benchmark</StudyName>
+      <StudyDescription>Compiled GFlow study design for NCT01631552 Benchmark.</StudyDescription>
+      <ProtocolName>53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14</ProtocolName>
+    </GlobalVariables>
+    <BasicDefinitions>
+      <MeasurementUnit OID="UNIT.PRESSURE" Name="Millimeters of Mercury">
+        <Symbol>
+          <TranslatedText>mmHg</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.HR" Name="Beats per Minute">
+        <Symbol>
+          <TranslatedText>bpm</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.TEMP" Name="Degrees Celsius">
+        <Symbol>
+          <TranslatedText>°C</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.RESP" Name="Breaths per Minute">
+        <Symbol>
+          <TranslatedText>breaths/min</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.SPO2" Name="Oxygen Saturation Percentage">
+        <Symbol>
+          <TranslatedText>%</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.PERCENT" Name="Percentage">
+        <Symbol>
+          <TranslatedText>%</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.WEIGHT" Name="Kilograms">
+        <Symbol>
+          <TranslatedText>kg</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.HEIGHT" Name="Centimeters">
+        <Symbol>
+          <TranslatedText>cm</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.BMI" Name="Kilograms per Square Meter">
+        <Symbol>
+          <TranslatedText>kg/m²</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.BSA" Name="Square Meters">
+        <Symbol>
+          <TranslatedText>m²</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.TIME_MS" Name="Milliseconds">
+        <Symbol>
+          <TranslatedText>ms</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.HGB" Name="Grams per Deciliter">
+        <Symbol>
+          <TranslatedText>g/dL</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.G_L" Name="Grams per Liter">
+        <Symbol>
+          <TranslatedText>g/L</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.CELL_COUNT" Name="Billion Cells per Liter">
+        <Symbol>
+          <TranslatedText>10^9/L</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.RBC_COUNT" Name="Trillion Cells per Liter">
+        <Symbol>
+          <TranslatedText>10^12/L</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.CELLS_UL" Name="Cells per Microliter">
+        <Symbol>
+          <TranslatedText>cells/µL</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.CELLS_KG" Name="Million Cells per Kilogram">
+        <Symbol>
+          <TranslatedText>10^6 cells/kg</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.CREAT" Name="Milligrams per Deciliter">
+        <Symbol>
+          <TranslatedText>mg/dL</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.MG_DL" Name="Milligrams per Deciliter">
+        <Symbol>
+          <TranslatedText>mg/dL</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.UMOL_L" Name="Micromoles per Liter">
+        <Symbol>
+          <TranslatedText>µmol/L</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.CRCL" Name="Milliliters per Minute">
+        <Symbol>
+          <TranslatedText>mL/min</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.EGFR" Name="mL/min/1.73m²">
+        <Symbol>
+          <TranslatedText>mL/min/1.73m²</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.ENZYME" Name="Units per Liter">
+        <Symbol>
+          <TranslatedText>U/L</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.BILI" Name="Milligrams per Deciliter">
+        <Symbol>
+          <TranslatedText>mg/dL</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.ELEC" Name="Millimoles per Liter">
+        <Symbol>
+          <TranslatedText>mmol/L</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.RATIO" Name="Dimensionless Ratio">
+        <Symbol>
+          <TranslatedText>ratio</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.DOSE" Name="Milligrams">
+        <Symbol>
+          <TranslatedText>mg</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.DOSE_MG_KG" Name="Milligrams per Kilogram">
+        <Symbol>
+          <TranslatedText>mg/kg</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.DOSE_MG_M2" Name="Milligrams per Square Meter">
+        <Symbol>
+          <TranslatedText>mg/m²</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.DOSE_UG_KG" Name="Micrograms per Kilogram">
+        <Symbol>
+          <TranslatedText>µg/kg</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.GY" Name="Gray Radiation Absorbed Dose">
+        <Symbol>
+          <TranslatedText>Gy</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.LENGTH_MM" Name="Millimeters">
+        <Symbol>
+          <TranslatedText>mm</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.METERS" Name="Meters">
+        <Symbol>
+          <TranslatedText>m</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.YEARS" Name="Years">
+        <Symbol>
+          <TranslatedText>years</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.MONTHS" Name="Months">
+        <Symbol>
+          <TranslatedText>months</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.WEEKS" Name="Weeks">
+        <Symbol>
+          <TranslatedText>weeks</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.DAYS" Name="Days">
+        <Symbol>
+          <TranslatedText>days</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.HOURS" Name="Hours">
+        <Symbol>
+          <TranslatedText>h</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.MINUTES" Name="Minutes">
+        <Symbol>
+          <TranslatedText>min</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.SECONDS" Name="Seconds">
+        <Symbol>
+          <TranslatedText>s</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.NG_ML" Name="Nanograms per Milliliter">
+        <Symbol>
+          <TranslatedText>ng/mL</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.PG_ML" Name="Picograms per Milliliter">
+        <Symbol>
+          <TranslatedText>pg/mL</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.NG_L" Name="Nanograms per Liter">
+        <Symbol>
+          <TranslatedText>ng/L</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.UG_ML" Name="Micrograms per Milliliter">
+        <Symbol>
+          <TranslatedText>µg/mL</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.UG_L" Name="Micrograms per Liter">
+        <Symbol>
+          <TranslatedText>µg/L</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.MG_L" Name="Milligrams per Liter">
+        <Symbol>
+          <TranslatedText>mg/L</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.MIU_L" Name="Milli-International Units per Liter">
+        <Symbol>
+          <TranslatedText>mIU/L</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.IU_ML" Name="International Units per Milliliter">
+        <Symbol>
+          <TranslatedText>IU/mL</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.COPIES_ML" Name="Viral Copies per Milliliter">
+        <Symbol>
+          <TranslatedText>copies/mL</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.MM_HR" Name="Millimeters per Hour">
+        <Symbol>
+          <TranslatedText>mm/hr</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.AUC" Name="Nanogram Hours per Milliliter">
+        <Symbol>
+          <TranslatedText>ng·h/mL</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.CLEARANCE" Name="Liters per Hour">
+        <Symbol>
+          <TranslatedText>L/h</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.VOLUME_L" Name="Liters">
+        <Symbol>
+          <TranslatedText>L</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.VOLUME_ML" Name="Milliliters">
+        <Symbol>
+          <TranslatedText>mL</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.FLOW_L_MIN" Name="Liters per Minute">
+        <Symbol>
+          <TranslatedText>L/min</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.FLOW_ML_HR" Name="Milliliters per Hour">
+        <Symbol>
+          <TranslatedText>mL/hr</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.PPB" Name="Parts per Billion">
+        <Symbol>
+          <TranslatedText>ppb</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.GRADE" Name="Clinical Severity / Performance Grade">
+        <Symbol>
+          <TranslatedText>grade</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.SCORE" Name="Clinical Scale / Rating Points">
+        <Symbol>
+          <TranslatedText>points</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.TITER" Name="Antibody Dilution Titer">
+        <Symbol>
+          <TranslatedText>titer</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.COUNT" Name="Discrete Count">
+        <Symbol>
+          <TranslatedText>count</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+    </BasicDefinitions>
+    <MetaDataVersion OID="MDV.1" Name="Initial Metadata Version">
+      <StudyEventDef OID="SE.V01" Name="Registration Visit" Repeating="No" Type="Scheduled">
+        <FormRef FormOID="FORM.IE" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.IC" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.DEMO" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.MH" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.CM" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.VS" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.EG" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.PE" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.LB" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.AE" Mandatory="Yes"/>
+      </StudyEventDef>
+      <StudyEventDef OID="SE.V02" Name="Dosing Visit (Cycle 1 Day 1)" Repeating="Yes" Type="Scheduled">
+        <FormRef FormOID="FORM.EX" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.CM" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.PR" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.VS" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.PE" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.LB" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.PK" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.BS" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.AE" Mandatory="Yes"/>
+      </StudyEventDef>
+      <StudyEventDef OID="SE.V03" Name="Dosing Visit (Cycle 1 Day 8)" Repeating="Yes" Type="Scheduled">
+        <FormRef FormOID="FORM.EX" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.CM" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.PR" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.VS" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.PE" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.LB" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.PK" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.BS" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.AE" Mandatory="Yes"/>
+      </StudyEventDef>
+      <StudyEventDef OID="SE.V04" Name="Subsequent Cycles" Repeating="Yes" Type="Scheduled">
+        <FormRef FormOID="FORM.CM" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.PR" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.VS" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.LB" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.PK" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.BS" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.AE" Mandatory="Yes"/>
+      </StudyEventDef>
+      <StudyEventDef OID="SE.V05" Name="6-8 Week Follow-up" Repeating="No" Type="Scheduled">
+        <FormRef FormOID="FORM.PR" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.PK" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.BS" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.AE" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.DS" Mandatory="Yes"/>
+      </StudyEventDef>
+      <StudyEventDef OID="SE.V06" Name="Final Study Evaluation" Repeating="No" Type="Scheduled">
+        <FormRef FormOID="FORM.CM" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.PR" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.VS" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.LB" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.PK" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.BS" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.AE" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.DS" Mandatory="Yes"/>
+      </StudyEventDef>
+      <FormDef OID="FORM.IE" Name="Inclusion/Exclusion Criteria" Repeating="No">
+        <ItemGroupRef ItemGroupOID="IG.IE" Mandatory="Yes"/>
+      </FormDef>
+      <FormDef OID="FORM.IC" Name="Informed Consent" Repeating="No">
+        <ItemGroupRef ItemGroupOID="IG.IC" Mandatory="Yes"/>
+      </FormDef>
+      <FormDef OID="FORM.DEMO" Name="Demographics" Repeating="No">
+        <ItemGroupRef ItemGroupOID="IG.DEMO" Mandatory="Yes"/>
+      </FormDef>
+      <FormDef OID="FORM.MH" Name="Medical History" Repeating="Yes">
+        <ItemGroupRef ItemGroupOID="IG.MH" Mandatory="Yes"/>
+      </FormDef>
+      <FormDef OID="FORM.EX" Name="Exposure" Repeating="Yes">
+        <ItemGroupRef ItemGroupOID="IG.EX" Mandatory="Yes"/>
+      </FormDef>
+      <FormDef OID="FORM.CM" Name="Concomitant Medications" Repeating="Yes">
+        <ItemGroupRef ItemGroupOID="IG.CM" Mandatory="Yes"/>
+      </FormDef>
+      <FormDef OID="FORM.PR" Name="Procedures" Repeating="Yes">
+        <ItemGroupRef ItemGroupOID="IG.PR" Mandatory="Yes"/>
+      </FormDef>
+      <FormDef OID="FORM.VS" Name="Vital Signs" Repeating="Yes">
+        <ItemGroupRef ItemGroupOID="IG.VS" Mandatory="Yes"/>
+      </FormDef>
+      <FormDef OID="FORM.EG" Name="Electrocardiogram" Repeating="Yes">
+        <ItemGroupRef ItemGroupOID="IG.EG" Mandatory="Yes"/>
+      </FormDef>
+      <FormDef OID="FORM.PE" Name="Physical Examination" Repeating="No">
+        <ItemGroupRef ItemGroupOID="IG.PE" Mandatory="Yes"/>
+      </FormDef>
+      <FormDef OID="FORM.LB" Name="Laboratory Findings" Repeating="Yes">
+        <ItemGroupRef ItemGroupOID="IG.LB" Mandatory="Yes"/>
+      </FormDef>
+      <FormDef OID="FORM.PK" Name="Pharmacokinetics" Repeating="No">
+        <ItemGroupRef ItemGroupOID="IG.PK" Mandatory="Yes"/>
+      </FormDef>
+      <FormDef OID="FORM.BS" Name="Biomarkers" Repeating="No">
+        <ItemGroupRef ItemGroupOID="IG.BS" Mandatory="Yes"/>
+      </FormDef>
+      <FormDef OID="FORM.AE" Name="Adverse Events" Repeating="Yes">
+        <ItemGroupRef ItemGroupOID="IG.AE" Mandatory="Yes"/>
+      </FormDef>
+      <FormDef OID="FORM.DS" Name="Disposition" Repeating="No">
+        <ItemGroupRef ItemGroupOID="IG.DS" Mandatory="Yes"/>
+      </FormDef>
+      <ItemGroupDef OID="IG.IE" Name="Inclusion/Exclusion Criteria Group" Repeating="No">
+        <ItemRef ItemOID="ITEM.Disease_Status" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Prophylactic_Medication_Restriction" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Treatment_Delay_Tolerance" Mandatory="No"/>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.IC" Name="Informed Consent Group" Repeating="No">
+        <ItemRef ItemOID="ITEM.Regulatory_Approval" Mandatory="No"/>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.DEMO" Name="Demographics Group" Repeating="No">
+        <ItemRef ItemOID="ITEM.Cancer_Subtype" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Height" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Weight" Mandatory="No"/>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.MH" Name="Medical History Group" Repeating="Yes">
+        <ItemRef ItemOID="ITEM.Prior_Malignancy_Type" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Prior_Therapy_Status" Mandatory="No"/>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.EX" Name="Exposure Group" Repeating="Yes">
+        <ItemRef ItemOID="ITEM.InvestigationalDrug" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.StandardOfCareRegimen" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.GrowthFactorUse" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.DosingDocumentationRequirement" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.DoseDiscrepancyReporting" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.ShippingTemperatureControl" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.ToxicityMonitoringProtocol" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.AnticipatedToxicityProfile" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.CoagulationMonitoring" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.PostTreatmentFollowUpTiming" Mandatory="No"/>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.CM" Name="Concomitant Medications Group" Repeating="Yes">
+        <ItemRef ItemOID="ITEM.Concomitant Medication" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Corticosteroid Restriction" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.CYP3A4 Interaction Warning" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Washout Period" Mandatory="No"/>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.PR" Name="Procedures Group" Repeating="Yes">
+        <ItemRef ItemOID="ITEM.Drug Administration" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Laboratory Monitoring" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Material Handling" Mandatory="No"/>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.VS" Name="Vital Signs Group" Repeating="Yes">
+        <ItemRef ItemOID="ITEM.HEIGHT" Mandatory="Yes"/>
+        <ItemRef ItemOID="ITEM.WEIGHT" Mandatory="Yes"/>
+        <ItemRef ItemOID="ITEM.CREAT" Mandatory="Yes"/>
+        <ItemRef ItemOID="ITEM.BILI" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.AST" Mandatory="Yes"/>
+        <ItemRef ItemOID="ITEM.ALT" Mandatory="Yes"/>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.EG" Name="Electrocardiogram Group" Repeating="Yes">
+        <ItemRef ItemOID="ITEM.ECG_12_LEAD" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.QTC" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.VENTRICULAR_RATE" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.ECG_INTERPRETATION" Mandatory="No"/>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.PE" Name="Physical Examination Group" Repeating="No">
+        <ItemRef ItemOID="ITEM.PHYSICAL_EXAM" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.ECOG_PS" Mandatory="No"/>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.LB" Name="Laboratory Findings Group" Repeating="Yes">
+        <ItemRef ItemOID="ITEM.PT" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.PTT" Mandatory="No"/>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.PK" Name="Pharmacokinetics Group" Repeating="No">
+        <ItemRef ItemOID="ITEM.Calculated Dose (mg)" Mandatory="No"/>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.BS" Name="Biomarkers Group" Repeating="No">
+        <ItemRef ItemOID="ITEM.AST" Mandatory="Yes"/>
+        <ItemRef ItemOID="ITEM.PT" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.PTT" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.SN-38/Trop-2 Interaction" Mandatory="No"/>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.AE" Name="Adverse Events Group" Repeating="Yes">
+        <ItemRef ItemOID="ITEM.Laboratory Monitoring" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Coagulation Monitoring" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Toxicity Grading" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Toxicity Distribution" Mandatory="No"/>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.DS" Name="Disposition Group" Repeating="No">
+        <ItemRef ItemOID="ITEM.Discontinuation Reason" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Dose Modification" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Subject Status" Mandatory="No"/>
+      </ItemGroupDef>
+      <ItemDef OID="ITEM.Disease_Status" Name="Disease Status" DataType="text"/>
+      <ItemDef OID="ITEM.Prophylactic_Medication_Restriction" Name="Prophylactic Medication Restriction" DataType="text"/>
+      <ItemDef OID="ITEM.Treatment_Delay_Tolerance" Name="Treatment Delay Tolerance" DataType="text"/>
+      <ItemDef OID="ITEM.Regulatory_Approval" Name="Regulatory Approval" DataType="text"/>
+      <ItemDef OID="ITEM.Cancer_Subtype" Name="Cancer Subtype" DataType="text"/>
+      <ItemDef OID="ITEM.Height" Name="Height" DataType="float">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.HEIGHT"/>
+        <Alias Context="LOINC" Name="8302-2"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.Weight" Name="Weight" DataType="float">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.WEIGHT"/>
+        <Alias Context="LOINC" Name="29463-7"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.Prior_Malignancy_Type" Name="Prior Malignancy Type" DataType="text"/>
+      <ItemDef OID="ITEM.Prior_Therapy_Status" Name="Prior Therapy Status" DataType="text"/>
+      <ItemDef OID="ITEM.InvestigationalDrug" Name="Investigational Drug" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.DOSE"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.StandardOfCareRegimen" Name="Standard of Care Regimen" DataType="text"/>
+      <ItemDef OID="ITEM.GrowthFactorUse" Name="Growth Factor Use" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.DOSE"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.DosingDocumentationRequirement" Name="Dosing Documentation Requirement" DataType="text"/>
+      <ItemDef OID="ITEM.DoseDiscrepancyReporting" Name="Dose Discrepancy Reporting" DataType="text"/>
+      <ItemDef OID="ITEM.ShippingTemperatureControl" Name="Shipping Temperature Control" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.TEMP"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.ToxicityMonitoringProtocol" Name="Toxicity Monitoring Protocol" DataType="text" CodeListRef="CL.CTCAE"/>
+      <ItemDef OID="ITEM.AnticipatedToxicityProfile" Name="Anticipated Toxicity Profile" DataType="integer" CodeListRef="CL.CTCAE"/>
+      <ItemDef OID="ITEM.CoagulationMonitoring" Name="Coagulation Monitoring" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.DOSE"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.PostTreatmentFollowUpTiming" Name="Post-Treatment Follow-Up Timing" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.DOSE"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.Concomitant Medication" Name="Concomitant Medication" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.DAYS"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.Corticosteroid Restriction" Name="Corticosteroid Restriction" DataType="text"/>
+      <ItemDef OID="ITEM.CYP3A4 Interaction Warning" Name="CYP3A4 Interaction Warning" DataType="text"/>
+      <ItemDef OID="ITEM.Washout Period" Name="Washout Period" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.DAYS"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.Drug Administration" Name="Drug Administration" DataType="text"/>
+      <ItemDef OID="ITEM.Laboratory Monitoring" Name="Laboratory Monitoring" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.COUNT"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.Material Handling" Name="Material Handling" DataType="text"/>
+      <ItemDef OID="ITEM.HEIGHT" Name="Height" DataType="float">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.HEIGHT"/>
+        <Alias Context="LOINC" Name="8302-2"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.WEIGHT" Name="Weight" DataType="float">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.WEIGHT"/>
+        <Alias Context="LOINC" Name="29463-7"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.CREAT" Name="Creatinine" DataType="float">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.CREAT"/>
+        <Alias Context="LOINC" Name="2160-0"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.BILI" Name="Bilirubin" DataType="float">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.BILI"/>
+        <Alias Context="LOINC" Name="1975-2"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.AST" Name="AST" DataType="float">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.ENZYME"/>
+        <Alias Context="LOINC" Name="1920-8"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.ALT" Name="ALT" DataType="float">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.ENZYME"/>
+        <Alias Context="LOINC" Name="1742-6"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.ECG_12_LEAD" Name="12-Lead ECG" DataType="text"/>
+      <ItemDef OID="ITEM.QTC" Name="QTcF Interval" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.TIME_MS"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.VENTRICULAR_RATE" Name="Ventricular Rate" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.HR"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.ECG_INTERPRETATION" Name="Overall Interpretation" DataType="text" CodeListRef="CL.ECGINTP"/>
+      <ItemDef OID="ITEM.PHYSICAL_EXAM" Name="Complete Physical Examination" DataType="text">
+        <Alias Context="LOINC" Name="29545-1"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.ECOG_PS" Name="ECOG Performance Status" DataType="text" CodeListRef="CL.ECOG"/>
+      <ItemDef OID="ITEM.PT" Name="Prothrombin Time" DataType="float">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.SECONDS"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.PTT" Name="Partial Thromboplastin Time" DataType="float">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.SECONDS"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.Calculated Dose (mg)" Name="Calculated Dose in milligrams" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.DOSE"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.SN-38/Trop-2 Interaction" Name="Mechanism of Action Marker" DataType="text"/>
+      <ItemDef OID="ITEM.Coagulation Monitoring" Name="Coagulation parameters (PT and PTT)" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.SECONDS"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.Toxicity Grading" Name="CTCAE Severity Grading" DataType="integer" CodeListRef="CL.CTCAE"/>
+      <ItemDef OID="ITEM.Toxicity Distribution" Name="Worst CTCAE Grade Frequency Distribution" DataType="integer" CodeListRef="CL.CTCAE"/>
+      <ItemDef OID="ITEM.Discontinuation Reason" Name="Discontinuation Reason" DataType="text"/>
+      <ItemDef OID="ITEM.Dose Modification" Name="Dose Modification" DataType="text"/>
+      <ItemDef OID="ITEM.Subject Status" Name="Subject Status" DataType="text"/>
+      <CodeListDef OID="CL.SEX" Name="Sex Codelist" DataType="text">
+        <CodeListItem CodedValue="M">
+          <Decode>
+            <TranslatedText>Male</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="F">
+          <Decode>
+            <TranslatedText>Female</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.SEVERITY" Name="Severity Codelist" DataType="text">
+        <CodeListItem CodedValue="1">
+          <Decode>
+            <TranslatedText>Mild</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="2">
+          <Decode>
+            <TranslatedText>Moderate</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="3">
+          <Decode>
+            <TranslatedText>Severe</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.NY" Name="No / Yes Codelist" DataType="text">
+        <CodeListItem CodedValue="N">
+          <Decode>
+            <TranslatedText>No</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="Y">
+          <Decode>
+            <TranslatedText>Yes</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.AEREL" Name="Causality / Relatedness Codelist" DataType="text">
+        <CodeListItem CodedValue="1">
+          <Decode>
+            <TranslatedText>Not Related</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="2">
+          <Decode>
+            <TranslatedText>Unlikely</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="3">
+          <Decode>
+            <TranslatedText>Possible</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="4">
+          <Decode>
+            <TranslatedText>Probable</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="5">
+          <Decode>
+            <TranslatedText>Definite</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.AEOUT" Name="Adverse Event Outcome Codelist" DataType="text">
+        <CodeListItem CodedValue="1">
+          <Decode>
+            <TranslatedText>Recovered/Resolved</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="2">
+          <Decode>
+            <TranslatedText>Recovering/Resolving</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="3">
+          <Decode>
+            <TranslatedText>Not Recovered/Not Resolved</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="4">
+          <Decode>
+            <TranslatedText>Fatal</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="5">
+          <Decode>
+            <TranslatedText>Unknown</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.ETHNIC" Name="Ethnicity Codelist" DataType="text">
+        <CodeListItem CodedValue="HISPANIC">
+          <Decode>
+            <TranslatedText>Hispanic or Latino</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="NOT_HISPANIC">
+          <Decode>
+            <TranslatedText>Not Hispanic or Latino</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="NOT_REPORTED">
+          <Decode>
+            <TranslatedText>Not Reported</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="UNKNOWN">
+          <Decode>
+            <TranslatedText>Unknown</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.RACE" Name="Race Codelist" DataType="text">
+        <CodeListItem CodedValue="WHITE">
+          <Decode>
+            <TranslatedText>White</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="BLACK">
+          <Decode>
+            <TranslatedText>Black or African American</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="ASIAN">
+          <Decode>
+            <TranslatedText>Asian</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="AIAN">
+          <Decode>
+            <TranslatedText>American Indian or Alaska Native</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="NHOPI">
+          <Decode>
+            <TranslatedText>Native Hawaiian or Other Pacific Islander</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="OTHER">
+          <Decode>
+            <TranslatedText>Other</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.CTCAE" Name="NCI-CTCAE Toxicity Grade Codelist" DataType="text">
+        <CodeListItem CodedValue="1">
+          <Decode>
+            <TranslatedText>Grade 1 - Mild</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="2">
+          <Decode>
+            <TranslatedText>Grade 2 - Moderate</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="3">
+          <Decode>
+            <TranslatedText>Grade 3 - Severe</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="4">
+          <Decode>
+            <TranslatedText>Grade 4 - Life-threatening</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="5">
+          <Decode>
+            <TranslatedText>Grade 5 - Death related to AE</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.DISPOSITION" Name="Study Completion / Disposition Status Codelist" DataType="text">
+        <CodeListItem CodedValue="COMPLETED">
+          <Decode>
+            <TranslatedText>Completed Study per Protocol</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="DISEASE_PROGRESSION">
+          <Decode>
+            <TranslatedText>Progressive Disease (PD)</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="ADVERSE_EVENT">
+          <Decode>
+            <TranslatedText>Adverse Event / Unacceptable Toxicity</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="WITHDRAWAL">
+          <Decode>
+            <TranslatedText>Withdrawal of Consent by Subject</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="DEATH">
+          <Decode>
+            <TranslatedText>Death</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.AEACN" Name="Action Taken with Study Treatment Codelist" DataType="text">
+        <CodeListItem CodedValue="DOSE_NOT_CHANGED">
+          <Decode>
+            <TranslatedText>Dose Not Changed</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="DOSE_REDUCED">
+          <Decode>
+            <TranslatedText>Dose Reduced</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="DRUG_INTERRUPTED">
+          <Decode>
+            <TranslatedText>Drug Interrupted / Delayed</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="DRUG_WITHDRAWN">
+          <Decode>
+            <TranslatedText>Drug Permanently Withdrawn</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="NOT_APPLICABLE">
+          <Decode>
+            <TranslatedText>Not Applicable</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.ROUTE" Name="Route of Administration Codelist" DataType="text">
+        <CodeListItem CodedValue="IV">
+          <Decode>
+            <TranslatedText>Intravenous</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="PO">
+          <Decode>
+            <TranslatedText>Oral</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="SC">
+          <Decode>
+            <TranslatedText>Subcutaneous</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="IM">
+          <Decode>
+            <TranslatedText>Intramuscular</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="TOPICAL">
+          <Decode>
+            <TranslatedText>Topical / Cutaneous</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.FREQ" Name="Dosing Frequency Codelist" DataType="text">
+        <CodeListItem CodedValue="QD">
+          <Decode>
+            <TranslatedText>Once Daily (QD)</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="BID">
+          <Decode>
+            <TranslatedText>Twice Daily (BID)</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="QW">
+          <Decode>
+            <TranslatedText>Once Weekly (QW)</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="Q2W">
+          <Decode>
+            <TranslatedText>Every 2 Weeks (Q2W)</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="Q3W">
+          <Decode>
+            <TranslatedText>Every 3 Weeks (Q3W)</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="PRN">
+          <Decode>
+            <TranslatedText>As Needed (PRN)</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.ECOG" Name="ECOG Performance Status Codelist" DataType="integer">
+        <CodeListItem CodedValue="0">
+          <Decode>
+            <TranslatedText>0 - Fully active, able to carry on all pre-disease performance without restriction</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="1">
+          <Decode>
+            <TranslatedText>1 - Restricted in physically strenuous activity but ambulatory and able to carry out light work</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="2">
+          <Decode>
+            <TranslatedText>2 - Ambulatory and capable of all selfcare but unable to carry out any work activities</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="3">
+          <Decode>
+            <TranslatedText>3 - Capable of only limited selfcare; confined to bed or chair &gt;50% of waking hours</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="4">
+          <Decode>
+            <TranslatedText>4 - Completely disabled; cannot carry on any selfcare</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="5">
+          <Decode>
+            <TranslatedText>5 - Dead</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.ECGINTP" Name="ECG Overall Interpretation Codelist" DataType="text">
+        <CodeListItem CodedValue="NORMAL">
+          <Decode>
+            <TranslatedText>Normal</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="ABNORMAL_NCS">
+          <Decode>
+            <TranslatedText>Abnormal - Not Clinically Significant</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="ABNORMAL_CS">
+          <Decode>
+            <TranslatedText>Abnormal - Clinically Significant</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.LBCLSIG" Name="Laboratory Abnormality &amp; Clinical Significance Codelist" DataType="text">
+        <CodeListItem CodedValue="NORMAL">
+          <Decode>
+            <TranslatedText>Within Normal Limits (WNL)</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="LOW_NCS">
+          <Decode>
+            <TranslatedText>Low - Not Clinically Significant</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="LOW_CS">
+          <Decode>
+            <TranslatedText>Low - Clinically Significant</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="HIGH_NCS">
+          <Decode>
+            <TranslatedText>High - Not Clinically Significant</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="HIGH_CS">
+          <Decode>
+            <TranslatedText>High - Clinically Significant</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.VSPOS" Name="Vital Signs Subject Position Codelist" DataType="text">
+        <CodeListItem CodedValue="SUPINE">
+          <Decode>
+            <TranslatedText>Supine</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="SITTING">
+          <Decode>
+            <TranslatedText>Sitting</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="STANDING">
+          <Decode>
+            <TranslatedText>Standing</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.LAT" Name="Anatomical Laterality Codelist" DataType="text">
+        <CodeListItem CodedValue="LEFT">
+          <Decode>
+            <TranslatedText>Left</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="RIGHT">
+          <Decode>
+            <TranslatedText>Right</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="BILATERAL">
+          <Decode>
+            <TranslatedText>Bilateral</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <MethodDef OID="MT.BSA" Name="Body Surface Area Calculation (Mosteller)" Type="Derivation">
+        <Description>
+          <TranslatedText>Mosteller formula: sqrt((HEIGHT * WEIGHT) / 3600)</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">round(((ITEM.HEIGHT * ITEM.WEIGHT) / 3600) ** 0.5, 2)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="SAP" DocumentHash="ec458b7a83a5e83b3ada944b66dbe4dc672c702cf35393df36c3955b789a8950" PageNumber="19" ProtocolSection="Section 5.2.1. Baseline Demographic Characteristics &amp; Anthropometrics" Confidence="1.0">
+          <makoto:SourceQuote>Baseline demographic data summaries will include age, age group, sex, race, ethnicity, height, weight, body mass index (BMI), and number of subjects with renal impairment and hepatic impairment.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1178" y0="0.7107" x1="0.8572" y1="0.7574"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.BMI" Name="Body Mass Index Calculation" Type="Derivation">
+        <Description>
+          <TranslatedText>BMI formula: WEIGHT / ((HEIGHT / 100) ^ 2)</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">round(ITEM.WEIGHT / ((ITEM.HEIGHT / 100) ** 2), 1)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="SAP" DocumentHash="ec458b7a83a5e83b3ada944b66dbe4dc672c702cf35393df36c3955b789a8950" PageNumber="19" ProtocolSection="Section 5.2.1. Baseline Demographic Characteristics" Confidence="1.0">
+          <makoto:SourceQuote>Body mass index will be calculated as: BMI (kg/m 2 ) = weight in kg / (height in m 2 ).</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.118" y0="0.8463" x1="0.7822" y1="0.8624"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.ANC" Name="Absolute Neutrophil Count Calculation" Type="Derivation">
+        <Description>
+          <TranslatedText>ANC calculation: WBC * (NEUT / 100)</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">round(ITEM.WBC * (ITEM.NEUT / 100), 2)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="SAP" DocumentHash="ec458b7a83a5e83b3ada944b66dbe4dc672c702cf35393df36c3955b789a8950" PageNumber="32" ProtocolSection="Section 7.1. Adverse Events &amp; Laboratory Safety Evaluation" Confidence="1.0">
+          <makoto:SourceQuote>| Preferred term: vomiting | | Neutropenia+ | Preferred terms: neutropenia, neutrophil count decreased, febrile neutropenia | | Febrile neutropenia+ | Preferred term: febrile neutropenia</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1157" y0="0.1564" x1="0.8832" y1="0.4018"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.NCI_Toxicity_Grade_3_Threshold" Name="Severe Infusion Reaction Threshold" Type="Derivation">
+        <Description>
+          <TranslatedText>Identification of severe or life-threatening infusion reactions based on NCI toxicity grading.</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">toxicity_grade &gt;= 3</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="36" ProtocolSection="" Confidence="1.0">
+          <makoto:SourceQuote>For a serious infusion reaction considered severe or life threatening (NCI toxicity Grade 3 or higher) an infusion must be permanently terminated.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.107" y0="0.0991" x1="0.285" y1="0.1129"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.BSA_DUBOIS" Name="Body Surface Area (BSA — DuBois &amp; DuBois Formula)" Type="Derivation">
+        <Description>
+          <TranslatedText>Body Surface Area (BSA, m^2) via DuBois &amp; DuBois allometric equation: 0.007184 * (WEIGHT^0.425) * (HEIGHT^0.725).</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">round(0.007184 * (ITEM.WEIGHT ** 0.425) * (ITEM.HEIGHT ** 0.725), 2)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="49" ProtocolSection="Dosing Parameters" Confidence="1.0">
+          <makoto:SourceQuote>Body Surface Area (BSA — DuBois &amp; DuBois Formula) synthesized from protocol assessment 'Height'.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1069" y0="0.1268" x1="0.9031" y1="0.2261"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.IBW" Name="Ideal Body Weight (IBW — Devine Formula)" Type="Derivation">
+        <Description>
+          <TranslatedText>Ideal Body Weight (IBW, kg) via Devine formula for sex-stratified height above 152.4 cm (60 inches).</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">round((50.0 if ITEM.SEX == 'M' else 45.5) + 0.9055 * (ITEM.HEIGHT - 152.4), 1)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="49" ProtocolSection="Dosing Parameters" Confidence="1.0">
+          <makoto:SourceQuote>Ideal Body Weight (IBW — Devine Formula) synthesized from protocol assessment 'Height'.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1069" y0="0.1268" x1="0.9031" y1="0.2261"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.ABW" Name="Adjusted Body Weight (ABW — Obesity Dosing Cap)" Type="Derivation">
+        <Description>
+          <TranslatedText>Adjusted Body Weight (ABW, kg) for obese subjects (WEIGHT &gt; 1.2 * IBW): IBW + 0.4 * (WEIGHT - IBW).</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">round(ITEM.IBW + 0.4 * max(0.0, ITEM.WEIGHT - ITEM.IBW), 1)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="49" ProtocolSection="Dosing Parameters" Confidence="1.0">
+          <makoto:SourceQuote>Adjusted Body Weight (ABW — Obesity Dosing Cap) synthesized from protocol assessment 'Height'.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1069" y0="0.1268" x1="0.9031" y1="0.2261"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.QTCF" Name="Fridericia Rate-Corrected QT Interval (QTcF — ICH E14)" Type="Derivation">
+        <Description>
+          <TranslatedText>ICH E14 Fridericia rate-corrected QT interval (QTcF, ms): QT * (60 / EGHR)^(1/3).</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">round(ITEM.QT * ((60.0 / ITEM.EGHR) ** (1.0 / 3.0)), 1)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Fridericia Rate-Corrected QT Interval (QTcF — ICH E14) synthesized from protocol assessment '12-Lead ECG'.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.QTCB" Name="Bazett Rate-Corrected QT Interval (QTcB — ICH E14)" Type="Derivation">
+        <Description>
+          <TranslatedText>ICH E14 Bazett rate-corrected QT interval (QTcB, ms): QT * (60 / EGHR)^(1/2).</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">round(ITEM.QT * ((60.0 / ITEM.EGHR) ** 0.5), 1)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Bazett Rate-Corrected QT Interval (QTcB — ICH E14) synthesized from protocol assessment '12-Lead ECG'.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.QTCF_CHG" Name="Longitudinal Change from Baseline in QTcF (Delta-QTcF — ICH E14)" Type="Derivation">
+        <Description>
+          <TranslatedText>ICH E14 longitudinal change from baseline in Fridericia-corrected QT interval (Delta-QTcF, ms) for &gt;30 ms and &gt;60 ms outlier flagging.</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">round(ITEM.QTCF - BASELINE.QTCF, 1)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Longitudinal Change from Baseline in QTcF (Delta-QTcF — ICH E14) synthesized from protocol assessment '12-Lead ECG'.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.CRCL_CG" Name="Creatinine Clearance (Cockcroft-Gault CrCl)" Type="Derivation">
+        <Description>
+          <TranslatedText>Cockcroft-Gault Creatinine Clearance (CrCl, mL/min) for renal dosing adjustment based on age, weight, serum creatinine, and sex.</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">round(((140 - ITEM.AGE) * ITEM.WEIGHT) / (72.0 * ITEM.CREAT) * (0.85 if ITEM.SEX == 'F' else 1.0), 1)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="8" ProtocolSection="Inclusion Criteria" Confidence="1.0">
+          <makoto:SourceQuote>adequate renal (creatinine ≤2.0 x IULN)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2827" y0="0.3439" x1="0.909" y1="0.6553"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.EGFR_CKDEPI" Name="Estimated GFR (CKD-EPI 2021 Race-Free Equation)" Type="Derivation">
+        <Description>
+          <TranslatedText>2021 CKD-EPI race-free estimated Glomerular Filtration Rate (eGFR, mL/min/1.73m^2) derived from serum creatinine, age, and sex.</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">round(142 * (min(ITEM.CREAT / (0.7 if ITEM.SEX == 'F' else 0.9), 1.0) ** (-0.241 if ITEM.SEX == 'F' else -0.302)) * (max(ITEM.CREAT / (0.7 if ITEM.SEX == 'F' else 0.9), 1.0) ** -1.200) * (0.9938 ** ITEM.AGE) * (1.012 if ITEM.SEX == 'F' else 1.0), 1)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="8" ProtocolSection="Inclusion Criteria" Confidence="1.0">
+          <makoto:SourceQuote>adequate renal (creatinine ≤2.0 x IULN)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2827" y0="0.3439" x1="0.909" y1="0.6553"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.BUN_CREAT_RATIO" Name="Blood Urea Nitrogen to Creatinine Ratio (BUN/Cr)" Type="Derivation">
+        <Description>
+          <TranslatedText>Blood Urea Nitrogen to Serum Creatinine ratio (BUN/Cr) for pre-renal azotemia and dehydration screening.</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">round(ITEM.BUN / ITEM.CREAT, 1)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="8" ProtocolSection="Inclusion Criteria" Confidence="1.0">
+          <makoto:SourceQuote>adequate renal (creatinine ≤2.0 x IULN)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2827" y0="0.3439" x1="0.909" y1="0.6553"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.ALC" Name="Absolute Lymphocyte Count (ALC) Calculation" Type="Derivation">
+        <Description>
+          <TranslatedText>Absolute Lymphocyte Count (ALC, 10^9/L) derived from total white blood cell count and lymphocyte percentage: WBC * (LYM / 100).</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">round(ITEM.WBC * (ITEM.LYM / 100.0), 2)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="47" ProtocolSection="Laboratory Monitoring" Confidence="1.0">
+          <makoto:SourceQuote>Routine safety laboratories, based on hematology and serum chemistry data, will be listed by patient and summarized by descriptive statistics for each dose group, if appropriate.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1062" y0="0.3515" x1="0.9036" y1="0.4362"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.NLR" Name="Neutrophil-to-Lymphocyte Ratio (NLR — Immune Prognostic Index)" Type="Derivation">
+        <Description>
+          <TranslatedText>Neutrophil-to-Lymphocyte Ratio (NLR) prognostic inflammatory biomarker derived as ANC divided by ALC.</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">round(ITEM.ANC / ITEM.ALC, 2)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="47" ProtocolSection="Laboratory Monitoring" Confidence="1.0">
+          <makoto:SourceQuote>Routine safety laboratories, based on hematology and serum chemistry data, will be listed by patient and summarized by descriptive statistics for each dose group, if appropriate.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1062" y0="0.3515" x1="0.9036" y1="0.4362"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.ULN_RATIO" Name="Hepatic Enzyme / Bilirubin Upper Limit of Normal Ratio (x ULN)" Type="Derivation">
+        <Description>
+          <TranslatedText>Hepatic transaminase Upper Limit of Normal multiple (ALT / ALT_ULN) for NCI-CTCAE hepatotoxicity grading.</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">round(ITEM.ALT / ITEM.ALT_ULN, 2)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="8" ProtocolSection="Inclusion Criteria" Confidence="1.0">
+          <makoto:SourceQuote>hepatic function (bilirubin ≤1.5 x IULN</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2827" y0="0.3439" x1="0.909" y1="0.6553"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.AST_ALT_RATIO" Name="De Ritis Hepatic Transaminase Ratio (AST/ALT)" Type="Derivation">
+        <Description>
+          <TranslatedText>De Ritis ratio of Aspartate Aminotransferase (AST) to Alanine Aminotransferase (ALT) for hepatocellular injury differentiation.</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">round(ITEM.AST / ITEM.ALT, 2)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="8" ProtocolSection="Inclusion Criteria" Confidence="1.0">
+          <makoto:SourceQuote>AST and ALT ≤ 3 x IULN or 5 x IULN</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2827" y0="0.3439" x1="0.909" y1="0.6553"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.BILI_ULN_RATIO" Name="Total Bilirubin Upper Limit of Normal Multiple (TBILI x ULN)" Type="Derivation">
+        <Description>
+          <TranslatedText>Total Bilirubin Upper Limit of Normal multiple (TBILI / TBILI_ULN) for NCI-CTCAE hyperbilirubinemia grading and Hy's Law evaluation.</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">round(ITEM.TBILI / ITEM.TBILI_ULN, 2)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="8" ProtocolSection="Inclusion Criteria" Confidence="1.0">
+          <makoto:SourceQuote>hepatic function (bilirubin ≤1.5 x IULN</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2827" y0="0.3439" x1="0.909" y1="0.6553"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.HYS_LAW_FLAG" Name="FDA Drug-Induced Liver Injury (Hy's Law) Composite Flag" Type="Derivation">
+        <Description>
+          <TranslatedText>FDA DILI Guidance composite Hy's Law biochemical criterion: (ALT &gt;= 3x ULN or AST &gt;= 3x ULN) and Total Bilirubin &gt;= 2x ULN.</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">1 if ((ITEM.ALT / ITEM.ALT_ULN &gt;= 3.0 or ITEM.AST / ITEM.AST_ULN &gt;= 3.0) and (ITEM.TBILI / ITEM.TBILI_ULN &gt;= 2.0)) else 0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="8" ProtocolSection="Inclusion Criteria" Confidence="1.0">
+          <makoto:SourceQuote>hepatic function (bilirubin ≤1.5 x IULN</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2827" y0="0.3439" x1="0.909" y1="0.6553"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.CORR_CALCIUM" Name="Albumin-Corrected Serum Calcium (Payne Formula)" Type="Derivation">
+        <Description>
+          <TranslatedText>Payne albumin-corrected serum calcium (mg/dL): CALCIUM + 0.8 * (4.0 - ALB).</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">round(ITEM.CALCIUM + 0.8 * (4.0 - ITEM.ALB), 2)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="47" ProtocolSection="Laboratory Monitoring" Confidence="1.0">
+          <makoto:SourceQuote>Routine safety laboratories, based on hematology and serum chemistry data, will be listed by patient and summarized by descriptive statistics for each dose group, if appropriate.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1062" y0="0.3515" x1="0.9036" y1="0.4362"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.ANION_GAP" Name="Serum Anion Gap (Metabolic Acidosis Screening)" Type="Derivation">
+        <Description>
+          <TranslatedText>Serum Anion Gap (mmol/L) for metabolic acidosis evaluation: SODIUM - (CHLORIDE + BICARB).</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">round(ITEM.SODIUM - (ITEM.CHLORIDE + ITEM.BICARB), 1)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="47" ProtocolSection="Laboratory Monitoring" Confidence="1.0">
+          <makoto:SourceQuote>Routine safety laboratories, based on hematology and serum chemistry data, will be listed by patient and summarized by descriptive statistics for each dose group, if appropriate.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1062" y0="0.3515" x1="0.9036" y1="0.4362"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.FIB4" Name="Fibrosis-4 (FIB-4) Hepatic Fibrosis Index" Type="Derivation">
+        <Description>
+          <TranslatedText>Non-invasive FIB-4 hepatic fibrosis index derived from Age, AST, Platelets, and ALT: (AGE * AST) / (PLT * sqrt(ALT)).</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">round((ITEM.AGE * ITEM.AST) / (ITEM.PLT * (ITEM.ALT ** 0.5)), 2)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="8" ProtocolSection="Inclusion Criteria" Confidence="1.0">
+          <makoto:SourceQuote>AST and ALT ≤ 3 x IULN or 5 x IULN</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2827" y0="0.3439" x1="0.909" y1="0.6553"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.DOSE_CALC" Name="Protocol Weight / BSA-Adjusted Planned Dose Calculation" Type="Derivation">
+        <Description>
+          <TranslatedText>Protocol-prescribed weight-based (mg/kg) or BSA-based (mg/m^2) target dose calculation prior to drug preparation.</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">round(ITEM.WEIGHT * ITEM.DOSE_LEVEL_MG_KG, 1)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="33" ProtocolSection="Protocol Adherence" Confidence="1.0">
+          <makoto:SourceQuote>Treatment delay for any reason &gt; 3 weeks (Treatment delays of up to 3 weeks will be allowed at the investigator's discretion)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1662" y0="0.2842" x1="0.8708" y1="0.3159"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.DOSE_INTENSITY" Name="Relative Dose Intensity (RDI %) Calculation" Type="Derivation">
+        <Description>
+          <TranslatedText>Relative Dose Intensity (RDI, %) calculated as actual administered dose divided by protocol-planned dose.</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">round((ITEM.EXDOSE / ITEM.EXDOSE_PLANNED) * 100.0, 1)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="33" ProtocolSection="Protocol Adherence" Confidence="1.0">
+          <makoto:SourceQuote>Treatment delay for any reason &gt; 3 weeks (Treatment delays of up to 3 weeks will be allowed at the investigator's discretion)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1662" y0="0.2842" x1="0.8708" y1="0.3159"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.CUM_DOSE" Name="Cumulative Study Drug Exposure Dose (ADEX.CUMDOSE)" Type="Derivation">
+        <Description>
+          <TranslatedText>Cumulative administered study drug dose across all completed treatment cycles.</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">round(ITEM.CUM_DOSE_PRIOR + ITEM.EXDOSE, 1)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="33" ProtocolSection="Protocol Adherence" Confidence="1.0">
+          <makoto:SourceQuote>Treatment delay for any reason &gt; 3 weeks (Treatment delays of up to 3 weeks will be allowed at the investigator's discretion)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1662" y0="0.2842" x1="0.8708" y1="0.3159"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.TREATMENT_COMPLIANCE" Name="Study Treatment Dosing Compliance Percentage (%)" Type="Derivation">
+        <Description>
+          <TranslatedText>Treatment compliance percentage derived from total doses administered/taken divided by planned doses over the treatment period.</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">round((ITEM.DOSES_TAKEN / ITEM.DOSES_PLANNED) * 100.0, 1)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="33" ProtocolSection="Protocol Adherence" Confidence="1.0">
+          <makoto:SourceQuote>Treatment delay for any reason &gt; 3 weeks (Treatment delays of up to 3 weeks will be allowed at the investigator's discretion)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1662" y0="0.2842" x1="0.8708" y1="0.3159"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.AEDUR" Name="Adverse Event Duration (ADAE.AEDUR)" Type="Derivation">
+        <Description>
+          <TranslatedText>CDISC ADaM ADAE adverse event duration (AEDUR, days) from onset date (AESTDAT) to resolution date (AEENDAT) inclusive.</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">(ITEM.AEENDAT - ITEM.AESTDAT).days + 1</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="22" ProtocolSection="Safety Monitoring" Confidence="1.0">
+          <makoto:SourceQuote>NCI CTCAE v4.0 is used to grade all adverse events and to provide dose reduction, delay or cessation guidelines in the event of treatment-related toxicity</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1062" y0="0.2985" x1="0.9033" y1="0.5423"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.TRTDURD" Name="Total Treatment Exposure Duration (ADSL.TRTDURD)" Type="Derivation">
+        <Description>
+          <TranslatedText>CDISC ADaM ADSL Total Treatment Duration in days: (TRTEDT - TRTSDT) + 1.</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">(ITEM.EXENDTC - ITEM.EXSTDTC).days + 1</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="69" ProtocolSection="Pharmacy Procedures" Confidence="1.0">
+          <makoto:SourceQuote>Any variance between the calculated dose and the actual administered dose must be documented in source documents and Case Report Forms (CRFs)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.434" y0="0.0997" x1="0.5752" y1="0.112"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.CHG_BASELINE" Name="ADaM Longitudinal Change &amp; Percent Change from Baseline (CHG / PCHG)" Type="Derivation">
+        <Description>
+          <TranslatedText>CDISC ADaM longitudinal Change from Baseline (CHG = AVAL - BASE) and Percent Change from Baseline (PCHG = 100 * (AVAL - BASE) / BASE).</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">round(((ITEM.AVAL - BASELINE.BASE) / BASELINE.BASE) * 100.0, 1)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="49" ProtocolSection="Dosing Parameters" Confidence="1.0">
+          <makoto:SourceQuote>ADaM Longitudinal Change &amp; Percent Change from Baseline (CHG / PCHG) synthesized from protocol assessment 'Weight'.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1069" y0="0.1268" x1="0.9031" y1="0.2261"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <makoto:VisualLayout>
+        <makoto:Nodes>
+          <makoto:Node id="EP.1" type="epochGroup">
+            <makoto:Position x="360" y="50"/>
+          </makoto:Node>
+          <makoto:Node id="SE.V01" type="visit">
+            <makoto:Position x="40" y="160"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.IE.SE.V01" type="form">
+            <makoto:Position x="40" y="320"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.IC.SE.V01" type="form">
+            <makoto:Position x="40" y="450"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.DM.SE.V01" type="form">
+            <makoto:Position x="40" y="580"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.MH.SE.V01" type="form">
+            <makoto:Position x="40" y="710"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.VS.SE.V01" type="form">
+            <makoto:Position x="40" y="840"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.LB.SE.V01" type="form">
+            <makoto:Position x="40" y="970"/>
+          </makoto:Node>
+          <makoto:Node id="ARM.1" type="arm">
+            <makoto:Position x="740" y="150"/>
+          </makoto:Node>
+          <makoto:Node id="ARM.2" type="arm">
+            <makoto:Position x="740" y="250"/>
+          </makoto:Node>
+          <makoto:Node id="ARM.3" type="arm">
+            <makoto:Position x="740" y="350"/>
+          </makoto:Node>
+          <makoto:Node id="ARM.4" type="arm">
+            <makoto:Position x="740" y="450"/>
+          </makoto:Node>
+          <makoto:Node id="ARM.5" type="arm">
+            <makoto:Position x="740" y="550"/>
+          </makoto:Node>
+          <makoto:Node id="ARM.6" type="arm">
+            <makoto:Position x="740" y="650"/>
+          </makoto:Node>
+          <makoto:Node id="EP.2" type="epochGroup">
+            <makoto:Position x="960" y="50"/>
+          </makoto:Node>
+          <makoto:Node id="CYCLE_GROUP.EP.2" type="cycleTemplateGroup">
+            <makoto:Position x="40" y="80"/>
+          </makoto:Node>
+          <makoto:Node id="SE.V02" type="visit">
+            <makoto:Position x="30" y="80"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.VS.SE.V02.SE.V02" type="form">
+            <makoto:Position x="30" y="240"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.PE.SE.V02.SE.V02" type="form">
+            <makoto:Position x="30" y="370"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.LB.SE.V02.SE.V02" type="form">
+            <makoto:Position x="30" y="500"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.PK.SE.V02.SE.V02" type="form">
+            <makoto:Position x="30" y="630"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.CM.SE.V02.SE.V02" type="form">
+            <makoto:Position x="30" y="760"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.AE.SE.V02.SE.V02" type="form">
+            <makoto:Position x="30" y="890"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.BS.SE.V02.SE.V02" type="form">
+            <makoto:Position x="30" y="1020"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.EG.SE.V02.SE.V02" type="form">
+            <makoto:Position x="30" y="1150"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.PR.SE.V02.SE.V02" type="form">
+            <makoto:Position x="30" y="1280"/>
+          </makoto:Node>
+          <makoto:Node id="SE.V03" type="visit">
+            <makoto:Position x="330" y="80"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.VS.SE.V02.SE.V03" type="form">
+            <makoto:Position x="330" y="240"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.PE.SE.V02.SE.V03" type="form">
+            <makoto:Position x="330" y="370"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.LB.SE.V02.SE.V03" type="form">
+            <makoto:Position x="330" y="500"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.PK.SE.V02.SE.V03" type="form">
+            <makoto:Position x="330" y="630"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.CM.SE.V02.SE.V03" type="form">
+            <makoto:Position x="330" y="760"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.AE.SE.V02.SE.V03" type="form">
+            <makoto:Position x="330" y="890"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.BS.SE.V02.SE.V03" type="form">
+            <makoto:Position x="330" y="1020"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.EG.SE.V02.SE.V03" type="form">
+            <makoto:Position x="330" y="1150"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.PR.SE.V02.SE.V03" type="form">
+            <makoto:Position x="330" y="1280"/>
+          </makoto:Node>
+          <makoto:Node id="GATE.EP.2.CYCLE" type="decisionGate">
+            <makoto:Position x="720" y="140"/>
+          </makoto:Node>
+          <makoto:Node id="EP.3" type="epochGroup">
+            <makoto:Position x="2000" y="50"/>
+          </makoto:Node>
+          <makoto:Node id="SE.V06" type="visit">
+            <makoto:Position x="30" y="160"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.VS.SE.V06" type="form">
+            <makoto:Position x="30" y="320"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.LB.SE.V06" type="form">
+            <makoto:Position x="30" y="450"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.AE.SE.V06" type="form">
+            <makoto:Position x="30" y="580"/>
+          </makoto:Node>
+          <makoto:Node id="SE.V05" type="visit">
+            <makoto:Position x="330" y="160"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.VS.SE.V05" type="form">
+            <makoto:Position x="330" y="320"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.LB.SE.V05" type="form">
+            <makoto:Position x="330" y="450"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.AE.SE.V05" type="form">
+            <makoto:Position x="330" y="580"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.DS.SE.V05" type="form">
+            <makoto:Position x="330" y="710"/>
+          </makoto:Node>
+        </makoto:Nodes>
+        <makoto:Edges>
+          <makoto:Edge id="e-ARM.1-SE.V01" source="ARM.1" target="SE.V01"/>
+          <makoto:Edge id="e-ARM.2-SE.V01" source="ARM.2" target="SE.V01"/>
+          <makoto:Edge id="e-ARM.3-SE.V01" source="ARM.3" target="SE.V01"/>
+          <makoto:Edge id="e-ARM.4-SE.V01" source="ARM.4" target="SE.V01"/>
+          <makoto:Edge id="e-ARM.5-SE.V01" source="ARM.5" target="SE.V01"/>
+          <makoto:Edge id="e-ARM.6-SE.V01" source="ARM.6" target="SE.V01"/>
+          <makoto:Edge id="e-epoch-EP.1-EP.2" source="EP.1" target="EP.2" animated="true"/>
+          <makoto:Edge id="e-epoch-EP.2-EP.3" source="EP.2" target="EP.3" animated="true"/>
+          <makoto:Edge id="e-SE.V01-CYCLE_GROUP.EP.2" source="SE.V01" target="CYCLE_GROUP.EP.2"/>
+          <makoto:Edge id="e-SE.V02-SE.V03" source="SE.V02" target="SE.V03"/>
+          <makoto:Edge id="e-SE.V02-FORM.VS.SE.V02.SE.V02" source="SE.V02" target="FORM.VS.SE.V02.SE.V02"/>
+          <makoto:Edge id="e-FORM.VS.SE.V02.SE.V02-FORM.PE.SE.V02.SE.V02" source="FORM.VS.SE.V02.SE.V02" target="FORM.PE.SE.V02.SE.V02"/>
+          <makoto:Edge id="e-FORM.PE.SE.V02.SE.V02-FORM.LB.SE.V02.SE.V02" source="FORM.PE.SE.V02.SE.V02" target="FORM.LB.SE.V02.SE.V02"/>
+          <makoto:Edge id="e-FORM.LB.SE.V02.SE.V02-FORM.PK.SE.V02.SE.V02" source="FORM.LB.SE.V02.SE.V02" target="FORM.PK.SE.V02.SE.V02"/>
+          <makoto:Edge id="e-FORM.PK.SE.V02.SE.V02-FORM.CM.SE.V02.SE.V02" source="FORM.PK.SE.V02.SE.V02" target="FORM.CM.SE.V02.SE.V02"/>
+          <makoto:Edge id="e-FORM.CM.SE.V02.SE.V02-FORM.AE.SE.V02.SE.V02" source="FORM.CM.SE.V02.SE.V02" target="FORM.AE.SE.V02.SE.V02"/>
+          <makoto:Edge id="e-FORM.AE.SE.V02.SE.V02-FORM.BS.SE.V02.SE.V02" source="FORM.AE.SE.V02.SE.V02" target="FORM.BS.SE.V02.SE.V02"/>
+          <makoto:Edge id="e-FORM.BS.SE.V02.SE.V02-FORM.EG.SE.V02.SE.V02" source="FORM.BS.SE.V02.SE.V02" target="FORM.EG.SE.V02.SE.V02"/>
+          <makoto:Edge id="e-FORM.EG.SE.V02.SE.V02-FORM.PR.SE.V02.SE.V02" source="FORM.EG.SE.V02.SE.V02" target="FORM.PR.SE.V02.SE.V02"/>
+          <makoto:Edge id="e-SE.V03-FORM.VS.SE.V02.SE.V03" source="SE.V03" target="FORM.VS.SE.V02.SE.V03"/>
+          <makoto:Edge id="e-FORM.VS.SE.V02.SE.V03-FORM.PE.SE.V02.SE.V03" source="FORM.VS.SE.V02.SE.V03" target="FORM.PE.SE.V02.SE.V03"/>
+          <makoto:Edge id="e-FORM.PE.SE.V02.SE.V03-FORM.LB.SE.V02.SE.V03" source="FORM.PE.SE.V02.SE.V03" target="FORM.LB.SE.V02.SE.V03"/>
+          <makoto:Edge id="e-FORM.LB.SE.V02.SE.V03-FORM.PK.SE.V02.SE.V03" source="FORM.LB.SE.V02.SE.V03" target="FORM.PK.SE.V02.SE.V03"/>
+          <makoto:Edge id="e-FORM.PK.SE.V02.SE.V03-FORM.CM.SE.V02.SE.V03" source="FORM.PK.SE.V02.SE.V03" target="FORM.CM.SE.V02.SE.V03"/>
+          <makoto:Edge id="e-FORM.CM.SE.V02.SE.V03-FORM.AE.SE.V02.SE.V03" source="FORM.CM.SE.V02.SE.V03" target="FORM.AE.SE.V02.SE.V03"/>
+          <makoto:Edge id="e-FORM.AE.SE.V02.SE.V03-FORM.BS.SE.V02.SE.V03" source="FORM.AE.SE.V02.SE.V03" target="FORM.BS.SE.V02.SE.V03"/>
+          <makoto:Edge id="e-FORM.BS.SE.V02.SE.V03-FORM.EG.SE.V02.SE.V03" source="FORM.BS.SE.V02.SE.V03" target="FORM.EG.SE.V02.SE.V03"/>
+          <makoto:Edge id="e-FORM.EG.SE.V02.SE.V03-FORM.PR.SE.V02.SE.V03" source="FORM.EG.SE.V02.SE.V03" target="FORM.PR.SE.V02.SE.V03"/>
+          <makoto:Edge id="e-CYCLE_GROUP.EP.2-GATE.EP.2.CYCLE" source="CYCLE_GROUP.EP.2" target="GATE.EP.2.CYCLE"/>
+          <makoto:Edge id="e-loopback-GATE.EP.2.CYCLE-CYCLE_GROUP.EP.2" source="GATE.EP.2.CYCLE" target="CYCLE_GROUP.EP.2" label="Cleared ➔ Next Cycle" animated="true"/>
+          <makoto:Edge id="e-exit-GATE.EP.2.CYCLE-SE.V06" source="GATE.EP.2.CYCLE" target="SE.V06" label="PD / Toxicity ➔ Exit" animated="true"/>
+          <makoto:Edge id="e-SE.V01-FORM.IE.SE.V01" source="SE.V01" target="FORM.IE.SE.V01"/>
+          <makoto:Edge id="e-FORM.IE.SE.V01-FORM.IC.SE.V01" source="FORM.IE.SE.V01" target="FORM.IC.SE.V01"/>
+          <makoto:Edge id="e-FORM.IC.SE.V01-FORM.DM.SE.V01" source="FORM.IC.SE.V01" target="FORM.DM.SE.V01"/>
+          <makoto:Edge id="e-FORM.DM.SE.V01-FORM.MH.SE.V01" source="FORM.DM.SE.V01" target="FORM.MH.SE.V01"/>
+          <makoto:Edge id="e-FORM.MH.SE.V01-FORM.VS.SE.V01" source="FORM.MH.SE.V01" target="FORM.VS.SE.V01"/>
+          <makoto:Edge id="e-FORM.VS.SE.V01-FORM.LB.SE.V01" source="FORM.VS.SE.V01" target="FORM.LB.SE.V01"/>
+          <makoto:Edge id="e-SE.V06-SE.V05" source="SE.V06" target="SE.V05"/>
+          <makoto:Edge id="e-SE.V06-FORM.VS.SE.V06" source="SE.V06" target="FORM.VS.SE.V06"/>
+          <makoto:Edge id="e-FORM.VS.SE.V06-FORM.LB.SE.V06" source="FORM.VS.SE.V06" target="FORM.LB.SE.V06"/>
+          <makoto:Edge id="e-FORM.LB.SE.V06-FORM.AE.SE.V06" source="FORM.LB.SE.V06" target="FORM.AE.SE.V06"/>
+          <makoto:Edge id="e-SE.V05-FORM.VS.SE.V05" source="SE.V05" target="FORM.VS.SE.V05"/>
+          <makoto:Edge id="e-FORM.VS.SE.V05-FORM.LB.SE.V05" source="FORM.VS.SE.V05" target="FORM.LB.SE.V05"/>
+          <makoto:Edge id="e-FORM.LB.SE.V05-FORM.AE.SE.V05" source="FORM.LB.SE.V05" target="FORM.AE.SE.V05"/>
+          <makoto:Edge id="e-FORM.AE.SE.V05-FORM.DS.SE.V05" source="FORM.AE.SE.V05" target="FORM.DS.SE.V05"/>
+        </makoto:Edges>
+      </makoto:VisualLayout>
+    </MetaDataVersion>
+  </Study>
+</ODM>

@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0.0",
+  "publisher": "VonCasper Solutions",
+  "nct_id": "NCT04891770",
+  "design_id": "study_f115ce87",
+  "slot": 1,
+  "section": "foundational_archetype",
+  "category": "Archetype 1: Parallel Randomized Arms",
+  "study_title": "Parallel Randomized Controlled Clinical Study (NCT04891770)",
+  "protocol_sha256": "f115ce8761b6557c64921a79a5d2efad9ce5fa0681eebab508c131e8fe6a6379",
+  "sap_sha256": null,
+  "sap_note": null,
+  "study_url": "https://clinicaltrials.gov/study/NCT04891770",
+  "cdn_protocol_url": "https://cdn.clinicaltrials.gov/large-docs/70/NCT04891770/Prot_000.pdf",
+  "cdn_sap_url": null,
+  "alternate_cdn_urls": [],
+  "compilation_mode": "fresh_single_pass_no_resume",
+  "compilation_elapsed_seconds": 1138.0,
+  "finalized_at_utc": "2026-11-11T03:06:39.815894+00:00",
+  "telemetry": {
+    "event_count": 4,
+    "form_count": 15,
+    "item_group_count": 15,
+    "item_count": 84,
+    "edit_check_count": 47,
+    "node_count": 32,
+    "edge_count": 30
+  },
+  "artifacts": {
+    "exports/rave_als.xlsx": {
+      "size_bytes": 41084,
+      "sha256": "8e0bce945b539a948a7ab8a68953d6987fd38393b401bd30ad72ead678602b62"
+    },
+    "exports/veeva_cdms.xml": {
+      "size_bytes": 67628,
+      "sha256": "a41dcdc8e27fdc7f50a6c0d45ab7c6e425a409cb2d2b59367004b6d29e7099c0"
+    },
+    "exports/cdisc_odm_v1.3.2.xml": {
+      "size_bytes": 165469,
+      "sha256": "0d9f00603f1f79fd18a925d5567c6d030feb5ec94cf87c74822b1d292b99df17"
+    },
+    "exports/transcelerate_usdm_v3.0.json": {
+      "size_bytes": 54421,
+      "sha256": "b780312e84b821a3a963e1c4528f5366052a6a249e2e0858274163553d730547"
+    },
+    "metadata/provenance_matrix_21cfr11.xlsx": {
+      "size_bytes": 34781,
+      "sha256": "5d1667437cd3dcc4aa9992ad6e64ba26d4903c4c82038140405269cb94de4d68"
+    },
+    "visuals/canvas_standard.svg": {
+      "size_bytes": 3913685,
+      "sha256": "91bd8aa534143d1dbc15ef904abaf46a33cb87a951846311c82c1e09fbf6d354"
+    },
+    "visuals/canvas_standard.pdf": {
+      "size_bytes": 701433,
+      "sha256": "70d74c9acd908139f8199f478fd09a9019ee94ff124f79a2f963bff8cc537d23"
+    },
+    "visuals/canvas_mindmap.svg": {
+      "size_bytes": 3470560,
+      "sha256": "cdc4b92b9b95f0967b55588f8aca0904df296704e3254a89d8e2df7717b66d2a"
+    },
+    "visuals/canvas_mindmap.pdf": {
+      "size_bytes": 362860,
+      "sha256": "d7a800ad5048f08f7eddb1b4649b66eafcb0f9b10fdf8022adce9c8ee057c676"
+    }
+  }
+}

@@ -1,0 +1,1557 @@
+<?xml version="1.0" ?>
+<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:makoto="http://gflow.ai/ns/makoto/v1.0" FileType="Snapshot" FileOID="ODM.STUDY.001.20261111005927" CreationDateTime="2026-11-11T00:59:27Z" ODMVersion="1.3.2">
+  <Study OID="STUDY.001">
+    <GlobalVariables>
+      <StudyName>NCT03922750 Benchmark</StudyName>
+      <StudyDescription>Compiled GFlow study design for NCT03922750 Benchmark.</StudyDescription>
+      <ProtocolName>6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6</ProtocolName>
+    </GlobalVariables>
+    <BasicDefinitions>
+      <MeasurementUnit OID="UNIT.PRESSURE" Name="Millimeters of Mercury">
+        <Symbol>
+          <TranslatedText>mmHg</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.HR" Name="Beats per Minute">
+        <Symbol>
+          <TranslatedText>bpm</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.TEMP" Name="Degrees Celsius">
+        <Symbol>
+          <TranslatedText>°C</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.RESP" Name="Breaths per Minute">
+        <Symbol>
+          <TranslatedText>breaths/min</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.SPO2" Name="Oxygen Saturation Percentage">
+        <Symbol>
+          <TranslatedText>%</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.PERCENT" Name="Percentage">
+        <Symbol>
+          <TranslatedText>%</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.WEIGHT" Name="Kilograms">
+        <Symbol>
+          <TranslatedText>kg</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.HEIGHT" Name="Centimeters">
+        <Symbol>
+          <TranslatedText>cm</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.BMI" Name="Kilograms per Square Meter">
+        <Symbol>
+          <TranslatedText>kg/m²</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.BSA" Name="Square Meters">
+        <Symbol>
+          <TranslatedText>m²</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.TIME_MS" Name="Milliseconds">
+        <Symbol>
+          <TranslatedText>ms</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.HGB" Name="Grams per Deciliter">
+        <Symbol>
+          <TranslatedText>g/dL</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.G_L" Name="Grams per Liter">
+        <Symbol>
+          <TranslatedText>g/L</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.CELL_COUNT" Name="Billion Cells per Liter">
+        <Symbol>
+          <TranslatedText>10^9/L</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.RBC_COUNT" Name="Trillion Cells per Liter">
+        <Symbol>
+          <TranslatedText>10^12/L</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.CELLS_UL" Name="Cells per Microliter">
+        <Symbol>
+          <TranslatedText>cells/µL</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.CELLS_KG" Name="Million Cells per Kilogram">
+        <Symbol>
+          <TranslatedText>10^6 cells/kg</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.CREAT" Name="Milligrams per Deciliter">
+        <Symbol>
+          <TranslatedText>mg/dL</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.MG_DL" Name="Milligrams per Deciliter">
+        <Symbol>
+          <TranslatedText>mg/dL</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.UMOL_L" Name="Micromoles per Liter">
+        <Symbol>
+          <TranslatedText>µmol/L</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.CRCL" Name="Milliliters per Minute">
+        <Symbol>
+          <TranslatedText>mL/min</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.EGFR" Name="mL/min/1.73m²">
+        <Symbol>
+          <TranslatedText>mL/min/1.73m²</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.ENZYME" Name="Units per Liter">
+        <Symbol>
+          <TranslatedText>U/L</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.BILI" Name="Milligrams per Deciliter">
+        <Symbol>
+          <TranslatedText>mg/dL</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.ELEC" Name="Millimoles per Liter">
+        <Symbol>
+          <TranslatedText>mmol/L</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.RATIO" Name="Dimensionless Ratio">
+        <Symbol>
+          <TranslatedText>ratio</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.DOSE" Name="Milligrams">
+        <Symbol>
+          <TranslatedText>mg</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.DOSE_MG_KG" Name="Milligrams per Kilogram">
+        <Symbol>
+          <TranslatedText>mg/kg</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.DOSE_MG_M2" Name="Milligrams per Square Meter">
+        <Symbol>
+          <TranslatedText>mg/m²</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.DOSE_UG_KG" Name="Micrograms per Kilogram">
+        <Symbol>
+          <TranslatedText>µg/kg</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.GY" Name="Gray Radiation Absorbed Dose">
+        <Symbol>
+          <TranslatedText>Gy</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.LENGTH_MM" Name="Millimeters">
+        <Symbol>
+          <TranslatedText>mm</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.METERS" Name="Meters">
+        <Symbol>
+          <TranslatedText>m</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.YEARS" Name="Years">
+        <Symbol>
+          <TranslatedText>years</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.MONTHS" Name="Months">
+        <Symbol>
+          <TranslatedText>months</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.WEEKS" Name="Weeks">
+        <Symbol>
+          <TranslatedText>weeks</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.DAYS" Name="Days">
+        <Symbol>
+          <TranslatedText>days</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.HOURS" Name="Hours">
+        <Symbol>
+          <TranslatedText>h</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.MINUTES" Name="Minutes">
+        <Symbol>
+          <TranslatedText>min</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.SECONDS" Name="Seconds">
+        <Symbol>
+          <TranslatedText>s</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.NG_ML" Name="Nanograms per Milliliter">
+        <Symbol>
+          <TranslatedText>ng/mL</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.PG_ML" Name="Picograms per Milliliter">
+        <Symbol>
+          <TranslatedText>pg/mL</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.NG_L" Name="Nanograms per Liter">
+        <Symbol>
+          <TranslatedText>ng/L</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.UG_ML" Name="Micrograms per Milliliter">
+        <Symbol>
+          <TranslatedText>µg/mL</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.UG_L" Name="Micrograms per Liter">
+        <Symbol>
+          <TranslatedText>µg/L</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.MG_L" Name="Milligrams per Liter">
+        <Symbol>
+          <TranslatedText>mg/L</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.MIU_L" Name="Milli-International Units per Liter">
+        <Symbol>
+          <TranslatedText>mIU/L</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.IU_ML" Name="International Units per Milliliter">
+        <Symbol>
+          <TranslatedText>IU/mL</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.COPIES_ML" Name="Viral Copies per Milliliter">
+        <Symbol>
+          <TranslatedText>copies/mL</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.MM_HR" Name="Millimeters per Hour">
+        <Symbol>
+          <TranslatedText>mm/hr</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.AUC" Name="Nanogram Hours per Milliliter">
+        <Symbol>
+          <TranslatedText>ng·h/mL</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.CLEARANCE" Name="Liters per Hour">
+        <Symbol>
+          <TranslatedText>L/h</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.VOLUME_L" Name="Liters">
+        <Symbol>
+          <TranslatedText>L</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.VOLUME_ML" Name="Milliliters">
+        <Symbol>
+          <TranslatedText>mL</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.FLOW_L_MIN" Name="Liters per Minute">
+        <Symbol>
+          <TranslatedText>L/min</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.FLOW_ML_HR" Name="Milliliters per Hour">
+        <Symbol>
+          <TranslatedText>mL/hr</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.PPB" Name="Parts per Billion">
+        <Symbol>
+          <TranslatedText>ppb</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.GRADE" Name="Clinical Severity / Performance Grade">
+        <Symbol>
+          <TranslatedText>grade</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.SCORE" Name="Clinical Scale / Rating Points">
+        <Symbol>
+          <TranslatedText>points</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.TITER" Name="Antibody Dilution Titer">
+        <Symbol>
+          <TranslatedText>titer</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+      <MeasurementUnit OID="UNIT.COUNT" Name="Discrete Count">
+        <Symbol>
+          <TranslatedText>count</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+    </BasicDefinitions>
+    <MetaDataVersion OID="MDV.1" Name="Initial Metadata Version">
+      <StudyEventDef OID="SE.V01" Name="High-Level: Dosing/Titration Visit" Repeating="No" Type="Scheduled">
+        <FormRef FormOID="FORM.IE" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.IC" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.DEMO" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.MH" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.CM" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.VS" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.EG" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.PE" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.LB" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.AE" Mandatory="Yes"/>
+      </StudyEventDef>
+      <StudyEventDef OID="SE.V02" Name="High-Level: Assessment/Monitoring Visit" Repeating="No" Type="Scheduled">
+        <FormRef FormOID="FORM.CM" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.PR" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.VS" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.LB" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.PK" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.BS" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.AE" Mandatory="Yes"/>
+      </StudyEventDef>
+      <StudyEventDef OID="SE.V03" Name="High-Level: Final Outcome Assessment" Repeating="No" Type="Scheduled">
+        <FormRef FormOID="FORM.CM" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.PR" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.VS" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.LB" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.PK" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.BS" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.AE" Mandatory="Yes"/>
+      </StudyEventDef>
+      <StudyEventDef OID="SE.V18" Name="Visit 18 (Specific Code)" Repeating="No" Type="Scheduled">
+        <FormRef FormOID="FORM.CM" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.PR" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.VS" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.LB" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.PK" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.BS" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.AE" Mandatory="Yes"/>
+      </StudyEventDef>
+      <StudyEventDef OID="SE.V19" Name="Visit 19 (Specific Code)" Repeating="No" Type="Scheduled">
+        <FormRef FormOID="FORM.CM" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.PR" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.VS" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.LB" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.PK" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.BS" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.AE" Mandatory="Yes"/>
+      </StudyEventDef>
+      <StudyEventDef OID="SE.V20" Name="Visit 20 (Specific Code)" Repeating="No" Type="Scheduled">
+        <FormRef FormOID="FORM.CM" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.PR" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.VS" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.LB" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.PK" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.BS" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.AE" Mandatory="Yes"/>
+        <FormRef FormOID="FORM.DS" Mandatory="Yes"/>
+      </StudyEventDef>
+      <FormDef OID="FORM.IE" Name="Inclusion/Exclusion Criteria" Repeating="No">
+        <ItemGroupRef ItemGroupOID="IG.IE" Mandatory="Yes"/>
+      </FormDef>
+      <FormDef OID="FORM.IC" Name="Informed Consent" Repeating="No">
+        <ItemGroupRef ItemGroupOID="IG.IC" Mandatory="Yes"/>
+      </FormDef>
+      <FormDef OID="FORM.DEMO" Name="Demographics" Repeating="No">
+        <ItemGroupRef ItemGroupOID="IG.DEMO" Mandatory="Yes"/>
+      </FormDef>
+      <FormDef OID="FORM.MH" Name="Medical History" Repeating="Yes">
+        <ItemGroupRef ItemGroupOID="IG.MH" Mandatory="Yes"/>
+      </FormDef>
+      <FormDef OID="FORM.EX" Name="Exposure" Repeating="Yes">
+        <ItemGroupRef ItemGroupOID="IG.EX" Mandatory="Yes"/>
+      </FormDef>
+      <FormDef OID="FORM.CM" Name="Concomitant Medications" Repeating="Yes">
+        <ItemGroupRef ItemGroupOID="IG.CM" Mandatory="Yes"/>
+      </FormDef>
+      <FormDef OID="FORM.PR" Name="Procedures" Repeating="Yes">
+        <ItemGroupRef ItemGroupOID="IG.PR" Mandatory="Yes"/>
+      </FormDef>
+      <FormDef OID="FORM.VS" Name="Vital Signs" Repeating="Yes">
+        <ItemGroupRef ItemGroupOID="IG.VS" Mandatory="Yes"/>
+      </FormDef>
+      <FormDef OID="FORM.EG" Name="Electrocardiogram" Repeating="Yes">
+        <ItemGroupRef ItemGroupOID="IG.EG" Mandatory="Yes"/>
+      </FormDef>
+      <FormDef OID="FORM.PE" Name="Physical Examination" Repeating="No">
+        <ItemGroupRef ItemGroupOID="IG.PE" Mandatory="Yes"/>
+      </FormDef>
+      <FormDef OID="FORM.LB" Name="Laboratory Findings" Repeating="Yes">
+        <ItemGroupRef ItemGroupOID="IG.LB" Mandatory="Yes"/>
+      </FormDef>
+      <FormDef OID="FORM.PK" Name="Pharmacokinetics" Repeating="No">
+        <ItemGroupRef ItemGroupOID="IG.PK" Mandatory="Yes"/>
+      </FormDef>
+      <FormDef OID="FORM.BS" Name="Biomarkers" Repeating="No">
+        <ItemGroupRef ItemGroupOID="IG.BS" Mandatory="Yes"/>
+      </FormDef>
+      <FormDef OID="FORM.AE" Name="Adverse Events" Repeating="Yes">
+        <ItemGroupRef ItemGroupOID="IG.AE" Mandatory="Yes"/>
+      </FormDef>
+      <FormDef OID="FORM.DS" Name="Disposition" Repeating="No">
+        <ItemGroupRef ItemGroupOID="IG.DS" Mandatory="Yes"/>
+      </FormDef>
+      <ItemGroupDef OID="IG.IE" Name="Inclusion/Exclusion Criteria Group" Repeating="No">
+        <ItemRef ItemOID="ITEM.Bilateral Oophorectomy" Mandatory="No"/>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.IC" Name="Informed Consent Group" Repeating="No">
+        <ItemRef ItemOID="ITEM.Protocol Compliance" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Device Instruction" Mandatory="No"/>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.DEMO" Name="Demographics Group" Repeating="No">
+        <ItemRef ItemOID="ITEM.Age" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Sex" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.AGE" Mandatory="No"/>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.MH" Name="Medical History Group" Repeating="Yes">
+        <ItemRef ItemOID="ITEM.Bilateral Oophorectomy" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Overdose History" Mandatory="No"/>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.EX" Name="Exposure Group" Repeating="Yes">
+        <ItemRef ItemOID="ITEM.Insulin 287 Dosing" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Insulin Glargine Dosing" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Treatment Duration" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Randomization Ratio" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.On-Treatment AE Definition" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.DOSE_CALC" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.RDI" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.CUM_DOSE" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.COMPLIANCE_PCT" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.TRTDURD" Mandatory="No"/>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.CM" Name="Concomitant Medications Group" Repeating="Yes">
+        <ItemRef ItemOID="ITEM.Permitted Medications" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Prohibited Therapies" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Corticosteroid Restrictions" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.CYP3A4 Interaction Restrictions" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Washout Period Requirements" Mandatory="No"/>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.PR" Name="Procedures Group" Repeating="Yes">
+        <ItemRef ItemOID="ITEM.Insulin Dosing Adjustment" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Glucose Monitoring" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Cardiovascular Event Adjudication" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Overdose Management Protocol" Mandatory="No"/>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.VS" Name="Vital Signs Group" Repeating="Yes">
+        <ItemRef ItemOID="ITEM.Time in Target Range" Mandatory="No"/>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.EG" Name="Electrocardiogram Group" Repeating="Yes"/>
+      <ItemGroupDef OID="IG.PE" Name="Physical Examination Group" Repeating="No">
+        <ItemRef ItemOID="ITEM.Medical Record Review" Mandatory="No"/>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.LB" Name="Laboratory Findings Group" Repeating="Yes">
+        <ItemRef ItemOID="ITEM.Blood Glucose (BG) Monitoring" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Hypoglycemia Risk Assessment" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Dose Reduction Percentage" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Overdose Management Protocol" Mandatory="No"/>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.PK" Name="Pharmacokinetics Group" Repeating="No">
+        <ItemRef ItemOID="ITEM.Insulin 287 Exposure Profile" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Dosing Range" Mandatory="No"/>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.BS" Name="Biomarkers Group" Repeating="No">
+        <ItemRef ItemOID="ITEM.Glucose Monitoring Device" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Continuous Glucose Monitoring (CGM)" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Baseline Endpoint Covariate" Mandatory="No"/>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.AE" Name="Adverse Events Group" Repeating="Yes">
+        <ItemRef ItemOID="ITEM.Overdose Management Protocol" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Emergency Response Guidance" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Dose Justification Requirement" Mandatory="No"/>
+      </ItemGroupDef>
+      <ItemGroupDef OID="IG.DS" Name="Disposition Group" Repeating="No">
+        <ItemRef ItemOID="ITEM.Treatment after end of trial" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.DSREAS" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Hospitalization" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Overdose Management" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Screening Confirmation" Mandatory="No"/>
+      </ItemGroupDef>
+      <ItemDef OID="ITEM.Bilateral Oophorectomy" Name="Bilateral Oophorectomy" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.COUNT"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.Protocol Compliance" Name="Protocol Compliance" DataType="text"/>
+      <ItemDef OID="ITEM.Device Instruction" Name="Device Instruction" DataType="text"/>
+      <ItemDef OID="ITEM.Age" Name="Age" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.YEARS"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.Sex" Name="Sex" DataType="text" CodeListRef="CL.SEX"/>
+      <ItemDef OID="ITEM.Overdose History" Name="Overdose History" DataType="text"/>
+      <ItemDef OID="ITEM.Insulin 287 Dosing" Name="Insulin 287 Dosing" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.DOSE"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.Insulin Glargine Dosing" Name="Insulin Glargine Dosing" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.DOSE"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.Treatment Duration" Name="Treatment Duration" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.WEEKS"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.Randomization Ratio" Name="Randomization Ratio" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.RATIO"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.On-Treatment AE Definition" Name="On-Treatment AE Definition" DataType="text"/>
+      <ItemDef OID="ITEM.Permitted Medications" Name="Permitted Medications" DataType="text"/>
+      <ItemDef OID="ITEM.Prohibited Therapies" Name="Prohibited Therapies" DataType="text"/>
+      <ItemDef OID="ITEM.Corticosteroid Restrictions" Name="Corticosteroid Restrictions" DataType="text"/>
+      <ItemDef OID="ITEM.CYP3A4 Interaction Restrictions" Name="CYP3A4 Interaction Restrictions" DataType="text"/>
+      <ItemDef OID="ITEM.Washout Period Requirements" Name="Washout Period Requirements" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.DAYS"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.Insulin Dosing Adjustment" Name="Insulin Dosing Adjustment" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.COUNT"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.Glucose Monitoring" Name="Glucose Monitoring" DataType="float">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.MG_DL"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.Cardiovascular Event Adjudication" Name="Cardiovascular Event Adjudication" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.COUNT"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.Overdose Management Protocol" Name="Overdose Management Protocol" DataType="text"/>
+      <ItemDef OID="ITEM.Time in Target Range" Name="Time in Target Range" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.PRESSURE"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.Medical Record Review" Name="Medical Record Review" DataType="text"/>
+      <ItemDef OID="ITEM.Blood Glucose (BG) Monitoring" Name="Blood Glucose Monitoring" DataType="float">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.MG_DL"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.Hypoglycemia Risk Assessment" Name="Hypoglycemia Risk Assessment" DataType="text"/>
+      <ItemDef OID="ITEM.Dose Reduction Percentage" Name="Dose Reduction Percentage" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.PERCENT"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.Insulin 287 Exposure Profile" Name="Insulin 287 Exposure Profile" DataType="text"/>
+      <ItemDef OID="ITEM.Dosing Range" Name="Dosing Range" DataType="text"/>
+      <ItemDef OID="ITEM.Glucose Monitoring Device" Name="Glucose Monitoring Device" DataType="float">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.MG_DL"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.Continuous Glucose Monitoring (CGM)" Name="Continuous Glucose Monitoring (CGM)" DataType="float">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.MG_DL"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.Baseline Endpoint Covariate" Name="Baseline Endpoint Covariate" DataType="text"/>
+      <ItemDef OID="ITEM.Emergency Response Guidance" Name="Emergency Response Guidance" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.GRADE"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.Dose Justification Requirement" Name="Dose Justification Requirement" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.DOSE"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.Treatment after end of trial" Name="Treatment after the end of the trial" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.DAYS"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.DSREAS" Name="Discontinuation/Withdrawal" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.DAYS"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.Hospitalization" Name="Hospitalization (Inpatient/Emergency)" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.DAYS"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.Overdose Management" Name="Overdose Management Protocol" DataType="text"/>
+      <ItemDef OID="ITEM.Screening Confirmation" Name="Screening Completion and Eligibility Confirmation" DataType="text"/>
+      <ItemDef OID="ITEM.DOSE_CALC" Name="Protocol Calculated Target Dose (mg)" DataType="float" MethodOID="MT.DOSE_CALC">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.DOSE"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.RDI" Name="Relative Dose Intensity (%)" DataType="float" MethodOID="MT.DOSE_INTENSITY">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.PERCENT"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.CUM_DOSE" Name="Cumulative Administered Dose (mg)" DataType="float" MethodOID="MT.CUM_DOSE">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.DOSE"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.COMPLIANCE_PCT" Name="Treatment Dosing Compliance (%)" DataType="float" MethodOID="MT.TREATMENT_COMPLIANCE">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.PERCENT"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.AGE" Name="Subject Age at Informed Consent (Years)" DataType="text" MethodOID="MT.AGE_DERIVED"/>
+      <ItemDef OID="ITEM.TRTDURD" Name="Total Treatment Exposure Duration (Days)" DataType="integer" MethodOID="MT.TRTDURD">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.DAYS"/>
+      </ItemDef>
+      <CodeListDef OID="CL.SEX" Name="Sex Codelist" DataType="text">
+        <CodeListItem CodedValue="M">
+          <Decode>
+            <TranslatedText>Male</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="F">
+          <Decode>
+            <TranslatedText>Female</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.SEVERITY" Name="Severity Codelist" DataType="text">
+        <CodeListItem CodedValue="1">
+          <Decode>
+            <TranslatedText>Mild</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="2">
+          <Decode>
+            <TranslatedText>Moderate</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="3">
+          <Decode>
+            <TranslatedText>Severe</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.NY" Name="No / Yes Codelist" DataType="text">
+        <CodeListItem CodedValue="N">
+          <Decode>
+            <TranslatedText>No</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="Y">
+          <Decode>
+            <TranslatedText>Yes</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.AEREL" Name="Causality / Relatedness Codelist" DataType="text">
+        <CodeListItem CodedValue="1">
+          <Decode>
+            <TranslatedText>Not Related</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="2">
+          <Decode>
+            <TranslatedText>Unlikely</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="3">
+          <Decode>
+            <TranslatedText>Possible</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="4">
+          <Decode>
+            <TranslatedText>Probable</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="5">
+          <Decode>
+            <TranslatedText>Definite</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.AEOUT" Name="Adverse Event Outcome Codelist" DataType="text">
+        <CodeListItem CodedValue="1">
+          <Decode>
+            <TranslatedText>Recovered/Resolved</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="2">
+          <Decode>
+            <TranslatedText>Recovering/Resolving</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="3">
+          <Decode>
+            <TranslatedText>Not Recovered/Not Resolved</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="4">
+          <Decode>
+            <TranslatedText>Fatal</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="5">
+          <Decode>
+            <TranslatedText>Unknown</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.ETHNIC" Name="Ethnicity Codelist" DataType="text">
+        <CodeListItem CodedValue="HISPANIC">
+          <Decode>
+            <TranslatedText>Hispanic or Latino</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="NOT_HISPANIC">
+          <Decode>
+            <TranslatedText>Not Hispanic or Latino</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="NOT_REPORTED">
+          <Decode>
+            <TranslatedText>Not Reported</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="UNKNOWN">
+          <Decode>
+            <TranslatedText>Unknown</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.RACE" Name="Race Codelist" DataType="text">
+        <CodeListItem CodedValue="WHITE">
+          <Decode>
+            <TranslatedText>White</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="BLACK">
+          <Decode>
+            <TranslatedText>Black or African American</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="ASIAN">
+          <Decode>
+            <TranslatedText>Asian</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="AIAN">
+          <Decode>
+            <TranslatedText>American Indian or Alaska Native</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="NHOPI">
+          <Decode>
+            <TranslatedText>Native Hawaiian or Other Pacific Islander</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="OTHER">
+          <Decode>
+            <TranslatedText>Other</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.CTCAE" Name="NCI-CTCAE Toxicity Grade Codelist" DataType="text">
+        <CodeListItem CodedValue="1">
+          <Decode>
+            <TranslatedText>Grade 1 - Mild</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="2">
+          <Decode>
+            <TranslatedText>Grade 2 - Moderate</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="3">
+          <Decode>
+            <TranslatedText>Grade 3 - Severe</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="4">
+          <Decode>
+            <TranslatedText>Grade 4 - Life-threatening</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="5">
+          <Decode>
+            <TranslatedText>Grade 5 - Death related to AE</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.DISPOSITION" Name="Study Completion / Disposition Status Codelist" DataType="text">
+        <CodeListItem CodedValue="COMPLETED">
+          <Decode>
+            <TranslatedText>Completed Study per Protocol</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="DISEASE_PROGRESSION">
+          <Decode>
+            <TranslatedText>Progressive Disease (PD)</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="ADVERSE_EVENT">
+          <Decode>
+            <TranslatedText>Adverse Event / Unacceptable Toxicity</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="WITHDRAWAL">
+          <Decode>
+            <TranslatedText>Withdrawal of Consent by Subject</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="DEATH">
+          <Decode>
+            <TranslatedText>Death</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.AEACN" Name="Action Taken with Study Treatment Codelist" DataType="text">
+        <CodeListItem CodedValue="DOSE_NOT_CHANGED">
+          <Decode>
+            <TranslatedText>Dose Not Changed</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="DOSE_REDUCED">
+          <Decode>
+            <TranslatedText>Dose Reduced</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="DRUG_INTERRUPTED">
+          <Decode>
+            <TranslatedText>Drug Interrupted / Delayed</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="DRUG_WITHDRAWN">
+          <Decode>
+            <TranslatedText>Drug Permanently Withdrawn</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="NOT_APPLICABLE">
+          <Decode>
+            <TranslatedText>Not Applicable</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.ROUTE" Name="Route of Administration Codelist" DataType="text">
+        <CodeListItem CodedValue="IV">
+          <Decode>
+            <TranslatedText>Intravenous</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="PO">
+          <Decode>
+            <TranslatedText>Oral</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="SC">
+          <Decode>
+            <TranslatedText>Subcutaneous</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="IM">
+          <Decode>
+            <TranslatedText>Intramuscular</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="TOPICAL">
+          <Decode>
+            <TranslatedText>Topical / Cutaneous</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.FREQ" Name="Dosing Frequency Codelist" DataType="text">
+        <CodeListItem CodedValue="QD">
+          <Decode>
+            <TranslatedText>Once Daily (QD)</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="BID">
+          <Decode>
+            <TranslatedText>Twice Daily (BID)</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="QW">
+          <Decode>
+            <TranslatedText>Once Weekly (QW)</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="Q2W">
+          <Decode>
+            <TranslatedText>Every 2 Weeks (Q2W)</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="Q3W">
+          <Decode>
+            <TranslatedText>Every 3 Weeks (Q3W)</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="PRN">
+          <Decode>
+            <TranslatedText>As Needed (PRN)</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.ECOG" Name="ECOG Performance Status Codelist" DataType="integer">
+        <CodeListItem CodedValue="0">
+          <Decode>
+            <TranslatedText>0 - Fully active, able to carry on all pre-disease performance without restriction</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="1">
+          <Decode>
+            <TranslatedText>1 - Restricted in physically strenuous activity but ambulatory and able to carry out light work</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="2">
+          <Decode>
+            <TranslatedText>2 - Ambulatory and capable of all selfcare but unable to carry out any work activities</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="3">
+          <Decode>
+            <TranslatedText>3 - Capable of only limited selfcare; confined to bed or chair &gt;50% of waking hours</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="4">
+          <Decode>
+            <TranslatedText>4 - Completely disabled; cannot carry on any selfcare</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="5">
+          <Decode>
+            <TranslatedText>5 - Dead</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.ECGINTP" Name="ECG Overall Interpretation Codelist" DataType="text">
+        <CodeListItem CodedValue="NORMAL">
+          <Decode>
+            <TranslatedText>Normal</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="ABNORMAL_NCS">
+          <Decode>
+            <TranslatedText>Abnormal - Not Clinically Significant</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="ABNORMAL_CS">
+          <Decode>
+            <TranslatedText>Abnormal - Clinically Significant</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.LBCLSIG" Name="Laboratory Abnormality &amp; Clinical Significance Codelist" DataType="text">
+        <CodeListItem CodedValue="NORMAL">
+          <Decode>
+            <TranslatedText>Within Normal Limits (WNL)</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="LOW_NCS">
+          <Decode>
+            <TranslatedText>Low - Not Clinically Significant</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="LOW_CS">
+          <Decode>
+            <TranslatedText>Low - Clinically Significant</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="HIGH_NCS">
+          <Decode>
+            <TranslatedText>High - Not Clinically Significant</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="HIGH_CS">
+          <Decode>
+            <TranslatedText>High - Clinically Significant</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.VSPOS" Name="Vital Signs Subject Position Codelist" DataType="text">
+        <CodeListItem CodedValue="SUPINE">
+          <Decode>
+            <TranslatedText>Supine</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="SITTING">
+          <Decode>
+            <TranslatedText>Sitting</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="STANDING">
+          <Decode>
+            <TranslatedText>Standing</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <CodeListDef OID="CL.LAT" Name="Anatomical Laterality Codelist" DataType="text">
+        <CodeListItem CodedValue="LEFT">
+          <Decode>
+            <TranslatedText>Left</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="RIGHT">
+          <Decode>
+            <TranslatedText>Right</TranslatedText>
+          </Decode>
+        </CodeListItem>
+        <CodeListItem CodedValue="BILATERAL">
+          <Decode>
+            <TranslatedText>Bilateral</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeListDef>
+      <ConditionDef OID="COND.SYSBP_GT_DIABP" Name="Systolic BP Greater Than Diastolic BP" Description="Systolic blood pressure must exceed diastolic blood pressure.">
+        <FormalExpression Context="Python">ITEM.SYSBP &gt; ITEM.DIABP</FormalExpression>
+      </ConditionDef>
+      <ConditionDef OID="COND.PREG_FEMALE_ONLY" Name="Pregnancy Assessment Restricted to Females" Description="Pregnancy testing is only applicable to female subjects.">
+        <FormalExpression Context="Python">ITEM.SEX == 'F'</FormalExpression>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXDAT_EQ_VISDAT" Name="Dose Date Concurrence with Visit Date" Description="Dose administration date must match visit date on dosing visits.">
+        <FormalExpression Context="Python">ITEM.EXDAT == ITEM.VISDAT</FormalExpression>
+      </ConditionDef>
+      <ConditionDef OID="COND.ANC_SAFETY_CLEARANCE" Name="Absolute Neutrophil Count Safety Clearance" Description="Absolute Neutrophil Count must be &gt;= 1.0 x 10^9/L to initiate cycle.">
+        <FormalExpression Context="Python">ITEM.ANC &gt;= 1.0</FormalExpression>
+      </ConditionDef>
+      <ConditionDef OID="COND.AE_START_LE_END" Name="Adverse Event Date Chronology" Description="Adverse event resolution date must be on or after onset date.">
+        <FormalExpression Context="Python">ITEM.AESTDAT &lt;= ITEM.AEENDAT</FormalExpression>
+      </ConditionDef>
+      <ConditionDef OID="COND.AE_GRADE3_DOSE_DELAY" Name="Grade 3+ Toxicity Dose Delay Requirement" Description="Severe toxicity (CTCAE Grade &gt;= 3) mandates dose delay or modification.">
+        <FormalExpression Context="Python">ITEM.AETOXGR &gt;= 3</FormalExpression>
+      </ConditionDef>
+      <ConditionDef OID="COND.AE_FATAL_DISPOSITION_SYNC" Name="Fatal Adverse Event Study Disposition Sync" Description="Fatal outcome requires matching Death disposition record.">
+        <FormalExpression Context="Python">ITEM.AEOUT == '4' or ITEM.AETOXGR == '5'</FormalExpression>
+      </ConditionDef>
+      <ConditionDef OID="COND.PREG_EVEN_CYCLES_AND_BASELINE" Name="Pregnancy Test Even-Numbered Cycle Cadence (Footnote 3)" Description="Mandates pregnancy test within 1 week prior to start of treatment, on Day 1 of every even-numbered cycle (2, 4, 6, etc.), and at end of study (Footnote 3).">
+        <FormalExpression Context="Python">(ITEM.EX_CYCLE % 2 == 0 and ITEM.EX_DAY == 1) or (STUDY_EVENT.OID in ['SE.V01', 'SE.V05'])</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="11" ProtocolSection="Table 2: Schedule of Assessments, Footnote 3" Confidence="1.0">
+          <makoto:SourceQuote>Pregnancy test, if applicable, will be performed within 1 week prior to start of treatment, and on Day 1 of every even numbered treatment cycle (2, 4, 6, etc ) and at the end of the study</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.107" y0="0.0995" x1="0.3562" y1="0.1131"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.AGE.AGE" Name="Age — Adult Clinical Trial Age Plausibility Bounds" Description="Enforces variable extreme bounds [18, 100] years for Age.">
+        <FormalExpression Context="Python">18 &lt;= ITEM.Age &lt;= 100</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="11" ProtocolSection="Demographics" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly defined in the provided text snippets</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1642" y0="0.3249" x1="0.1863" y1="0.3449"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.BIOMARKER.INSULIN_287_DOSING" Name="Insulin 287 Dosing — Biomarker / Immunoassay Quantitative Extreme Check" Description="Enforces variable extreme bounds [0.0, 10000.0] mg for Insulin 287 Dosing.">
+        <FormalExpression Context="Python">0.0 &lt;= ITEM.Insulin 287 Dosing &lt;= 10000.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="9" ProtocolSection="Treatment/Dosing" Confidence="1.0">
+          <makoto:SourceQuote>insulin 287, 700 U/mL or insulin glargine 100 U/mL throughout the 16-week treatment period. The trial products will be provided as prefilled pens containing 3 mL solution for s.c. injection once weekly (insulin 287) and once daily (insulin glargine U100) respectively.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1515" y0="0.3827" x1="0.8819" y1="0.4495"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.BIOMARKER.INSULIN_GLARGINE_DOSING" Name="Insulin Glargine Dosing — Biomarker / Immunoassay Quantitative Extreme Check" Description="Enforces variable extreme bounds [0.0, 10000.0] mg for Insulin Glargine Dosing.">
+        <FormalExpression Context="Python">0.0 &lt;= ITEM.Insulin Glargine Dosing &lt;= 10000.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="9" ProtocolSection="Treatment/Dosing" Confidence="1.0">
+          <makoto:SourceQuote>insulin glargine 100 U/mL throughout the 16-week treatment period. The trial products will be provided as prefilled pens containing 3 mL solution for s.c. injection... once daily (insulin glargine U100) respectively.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1515" y0="0.3827" x1="0.8819" y1="0.4495"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.DOSE.TREATMENT_DURATION" Name="Treatment Duration — Dosing &amp; Exposure Quantitative Plausibility Bounds" Description="Enforces variable extreme bounds [0.0, 10000.0] weeks for Treatment Duration.">
+        <FormalExpression Context="Python">0.0 &lt;= ITEM.Treatment Duration &lt;= 10000.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="9" ProtocolSection="Treatment/Dosing" Confidence="1.0">
+          <makoto:SourceQuote>throughout the 16-week treatment period.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1515" y0="0.3827" x1="0.8819" y1="0.4495"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.BIOMARKER.INSULIN_DOSING_ADJUSTMENT" Name="Insulin Dosing Adjustment — Biomarker / Immunoassay Quantitative Extreme Check" Description="Enforces variable extreme bounds [0.0, 10000.0] count for Insulin Dosing Adjustment.">
+        <FormalExpression Context="Python">0.0 &lt;= ITEM.Insulin Dosing Adjustment &lt;= 10000.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="89" ProtocolSection="Dosing and Medication Adjustments" Confidence="1.0">
+          <makoto:SourceQuote>If the subject prior to randomisation received a twice daily regimen with any basal insulin analogue or a once daily regimen with insulin glargine U300 the total daily insulin dose prior to randomisation should be reduced by 20% and taken once daily.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1513" y0="0.2052" x1="0.867" y1="0.2511"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.GLUC.GLUCOSE_MONITORING" Name="Glucose Monitoring — Blood Glucose Physiological Extreme Check" Description="Enforces variable extreme bounds [20, 800] mg/dL for Glucose Monitoring.">
+        <FormalExpression Context="Python">20 &lt;= ITEM.Glucose Monitoring &lt;= 800</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="38" ProtocolSection="Glucose Monitoring and Testing" Confidence="1.0">
+          <makoto:SourceQuote>use of a specific BG meter provided by Novo Nordisk is mandatory for all required measurements</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.152" y0="0.099" x1="0.8276" y1="0.1067"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.DOSE.TIME_IN_TARGET_RANGE" Name="Time in Target Range — Dosing &amp; Exposure Quantitative Plausibility Bounds" Description="Enforces variable extreme bounds [0.0, 10000.0] mmHg for Time in Target Range.">
+        <FormalExpression Context="Python">0.0 &lt;= ITEM.Time in Target Range &lt;= 10000.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="54" ProtocolSection="Endpoint Analysis" Confidence="1.0">
+          <makoto:SourceQuote>the primary endpoint will be analysed using an ANOVA model with randomised treatment as fixed factor and baseline 'time in target range' as covariate</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1515" y0="0.7856" x1="0.7766" y1="0.7985"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.GLUC.BLOOD_GLUCOSE_BG_MONITORING" Name="Blood Glucose Monitoring — Blood Glucose Physiological Extreme Check" Description="Enforces variable extreme bounds [20, 800] mg/dL for Blood Glucose Monitoring.">
+        <FormalExpression Context="Python">20 &lt;= ITEM.Blood Glucose (BG) Monitoring &lt;= 800</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="38" ProtocolSection="Glucose Monitoring" Confidence="1.0">
+          <makoto:SourceQuote>Mandatory use of a specific BG meter provided by Novo Nordisk for all required measurements (Page 38).</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.152" y0="0.099" x1="0.8276" y1="0.1067"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.DOSE.DOSE_REDUCTION_PERCENTAGE" Name="Dose Reduction Percentage — Dosing &amp; Exposure Quantitative Plausibility Bounds" Description="Enforces variable extreme bounds [0.0, 10000.0] % for Dose Reduction Percentage.">
+        <FormalExpression Context="Python">0.0 &lt;= ITEM.Dose Reduction Percentage &lt;= 10000.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="103" ProtocolSection="Dosing and Safety" Confidence="1.0">
+          <makoto:SourceQuote>...subjects switching from a twice daily basal insulin regiment and a once daily regimen with insulin glargine U300 will have their dose reduced by 20%.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1516" y0="0.3816" x1="0.8761" y1="0.4307"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.BIOMARKER.INSULIN_287_EXPOSURE_PROFILE" Name="Insulin 287 Exposure Profile — Biomarker / Immunoassay Quantitative Extreme Check" Description="Enforces variable extreme bounds [0.0, 10000.0] units for Insulin 287 Exposure Profile.">
+        <FormalExpression Context="Python">0.0 &lt;= ITEM.Insulin 287 Exposure Profile &lt;= 10000.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="103" ProtocolSection="PK/PD Properties" Confidence="1.0">
+          <makoto:SourceQuote>insulin 287 exposure was well distributed across the dosing interval, with a PK profile suitable for once weekly dosing</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1516" y0="0.1548" x1="0.8879" y1="0.2398"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.GLUC.GLUCOSE_MONITORING_DEVICE" Name="Glucose Monitoring Device — Blood Glucose Physiological Extreme Check" Description="Enforces variable extreme bounds [20, 800] mg/dL for Glucose Monitoring Device.">
+        <FormalExpression Context="Python">20 &lt;= ITEM.Glucose Monitoring Device &lt;= 800</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="38" ProtocolSection="Monitoring Equipment" Confidence="1.0">
+          <makoto:SourceQuote>A specific BG meter provided by Novo Nordisk</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.152" y0="0.099" x1="0.8276" y1="0.1067"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.GLUC.CONTINUOUS_GLUCOSE_MONITORING_CG" Name="Continuous Glucose Monitoring (CGM) — Blood Glucose Physiological Extreme Check" Description="Enforces variable extreme bounds [20, 800] mg/dL for Continuous Glucose Monitoring (CGM).">
+        <FormalExpression Context="Python">20 &lt;= ITEM.Continuous Glucose Monitoring (CGM) &lt;= 800</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="39" ProtocolSection="CGM Maintenance" Confidence="1.0">
+          <makoto:SourceQuote>For further information on fitting, and changing of the CGM parts, please refer to the user manual.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1518" y0="0.6138" x1="0.8822" y1="0.6266"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.DOSE.DOSE_JUSTIFICATION_REQUIREMENT" Name="Dose Justification Requirement — Dosing &amp; Exposure Quantitative Plausibility Bounds" Description="Enforces variable extreme bounds [0.0, 10000.0] mg for Dose Justification Requirement.">
+        <FormalExpression Context="Python">0.0 &lt;= ITEM.Dose Justification Requirement &lt;= 10000.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="4" ProtocolSection="Dosing Procedures" Confidence="1.0">
+          <makoto:SourceQuote>Dose Justification (Page 4) to mitigate potential dosing errors</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.152" y0="0.099" x1="0.8276" y1="0.1067"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.DOSE.DOSE_CALC" Name="Protocol Calculated Target Dose (mg) — Dosing &amp; Exposure Quantitative Plausibility Bounds" Description="Enforces variable extreme bounds [0.0, 10000.0] mg for Protocol Calculated Target Dose (mg).">
+        <FormalExpression Context="Python">0.0 &lt;= ITEM.DOSE_CALC &lt;= 10000.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="9" ProtocolSection="Treatment/Dosing" Confidence="1.0">
+          <makoto:SourceQuote>throughout the 16-week treatment period.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1515" y0="0.3827" x1="0.8819" y1="0.4495"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.DOSE.RDI" Name="Relative Dose Intensity (%) — Dosing &amp; Exposure Quantitative Plausibility Bounds" Description="Enforces variable extreme bounds [0.0, 10000.0] % for Relative Dose Intensity (%).">
+        <FormalExpression Context="Python">0.0 &lt;= ITEM.RDI &lt;= 10000.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="9" ProtocolSection="Treatment/Dosing" Confidence="1.0">
+          <makoto:SourceQuote>throughout the 16-week treatment period.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1515" y0="0.3827" x1="0.8819" y1="0.4495"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.DOSE.CUM_DOSE" Name="Cumulative Administered Dose (mg) — Dosing &amp; Exposure Quantitative Plausibility Bounds" Description="Enforces variable extreme bounds [0.0, 10000.0] mg for Cumulative Administered Dose (mg).">
+        <FormalExpression Context="Python">0.0 &lt;= ITEM.CUM_DOSE &lt;= 10000.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="9" ProtocolSection="Treatment/Dosing" Confidence="1.0">
+          <makoto:SourceQuote>throughout the 16-week treatment period.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1515" y0="0.3827" x1="0.8819" y1="0.4495"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.DOSE.TRTDURD" Name="Total Treatment Exposure Duration (Days) — Dosing &amp; Exposure Quantitative Plausibility Bounds" Description="Enforces variable extreme bounds [0.0, 10000.0] days for Total Treatment Exposure Duration (Days).">
+        <FormalExpression Context="Python">0.0 &lt;= ITEM.TRTDURD &lt;= 10000.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="103" ProtocolSection="Dosing and Safety" Confidence="1.0">
+          <makoto:SourceQuote>...subjects switching from a twice daily basal insulin regiment and a once daily regimen with insulin glargine U300 will have their dose reduced by 20%.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1516" y0="0.3816" x1="0.8761" y1="0.4307"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.TIME.IC_BEFORE_PROCEDURES" Name="Informed Consent Prior to Study Procedures (BIMO Chronology)" Description="Informed Consent signature date must be on or prior to any screening or study procedure date (21 CFR Part 50 / ICH E6 GCP).">
+        <FormalExpression Context="Python">ITEM.Protocol Compliance &lt;= STUDY_EVENT.VISDAT</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="6" ProtocolSection="General Compliance" Confidence="1.0">
+          <makoto:SourceQuote>All procedures must comply with the approved protocol, ICH GCP, and applicable regulatory requirements</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.152" y0="0.099" x1="0.8276" y1="0.1067"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.TIME.NO_EVENTS_AFTER_DISPOSITION" Name="Post-Discontinuation / Death Chronology Guard" Description="No clinical assessment, laboratory draw, or dosing date may occur after subject discontinuation/death or in the future.">
+        <FormalExpression Context="Python">STUDY_EVENT.VISDAT &lt;= ITEM.Treatment after end of trial and STUDY_EVENT.VISDAT &lt;= TODAY()</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="5" ProtocolSection="7.8" Confidence="1.0">
+          <makoto:SourceQuote>7.8 Treatment after the end of the trial</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.15" y0="0.1525" x1="0.8931" y1="0.8866"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.RECON.ELIGIBILITY_DOSE_RELEASE" Name="Eligibility Confirmation Prior to Study Dosing" Description="Subject cannot receive study treatment on FORM.EX if any Inclusion Criterion is unmet or any Exclusion Criterion is triggered on FORM.IE.">
+        <FormalExpression Context="Python">ITEM.Bilateral Oophorectomy == 'ELIGIBLE' and ITEM.Insulin 287 Dosing is not None</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="9" ProtocolSection="Treatment/Dosing" Confidence="1.0">
+          <makoto:SourceQuote>insulin 287, 700 U/mL or insulin glargine 100 U/mL throughout the 16-week treatment period. The trial products will be provided as prefilled pens containing 3 mL solution for s.c. injection once weekly (insulin 287) and once daily (insulin glargine U100) respectively.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1515" y0="0.3827" x1="0.8819" y1="0.4495"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.RECON.AE_CONMED_LINK" Name="Adverse Event Concomitant Medication Reconciliation" Description="Adverse Event indicates concomitant medication treatment was given; a corresponding medication entry must be logged on FORM.CM.">
+        <FormalExpression Context="Python">FORM.AE.AECONTRT != 'Y' or ITEM.Permitted Medications is not None</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="11" ProtocolSection="Not Found" Confidence="1.0">
+          <makoto:SourceQuote>Not specified in the provided text.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.RECON.CS_LAB_REQUIRES_AE" Name="Clinically Significant Lab Abnormality to AE Reconciliation" Description="Post-baseline laboratory abnormality marked Clinically Significant (CS) requires a corresponding Adverse Event record on FORM.AE.">
+        <FormalExpression Context="Python">FORM.LB.LBCLSIG != 'Y' or FORM.AE.RECORD_COUNT &gt;= 1</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="9" ProtocolSection="Treatment/Dosing" Confidence="1.0">
+          <makoto:SourceQuote>insulin 287, 700 U/mL or insulin glargine 100 U/mL throughout the 16-week treatment period. The trial products will be provided as prefilled pens containing 3 mL solution for s.c. injection once weekly (insulin 287) and once daily (insulin glargine U100) respectively.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1515" y0="0.3827" x1="0.8819" y1="0.4495"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <EditCheck OID="EC.EXTREME.AGE.AGE" Name="Age — Adult Clinical Trial Age Plausibility Bounds" Target="FORM.DEMO.ITEM.Age" ConditionRef="COND.EXTREME.AGE.AGE">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Age (ITEM.Age): value must be within [18, 100] years (Adult Clinical Trial Age Plausibility Bounds).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="11" ProtocolSection="Demographics" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly defined in the provided text snippets</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1642" y0="0.3249" x1="0.1863" y1="0.3449"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.BIOMARKER.INSULIN_287_DOSING" Name="Insulin 287 Dosing — Biomarker / Immunoassay Quantitative Extreme Check" Target="FORM.EX.ITEM.Insulin 287 Dosing" ConditionRef="COND.EXTREME.BIOMARKER.INSULIN_287_DOSING">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Insulin 287 Dosing (ITEM.Insulin 287 Dosing): value must be within [0.0, 10000.0] mg (Biomarker / Immunoassay Quantitative Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="9" ProtocolSection="Treatment/Dosing" Confidence="1.0">
+          <makoto:SourceQuote>insulin 287, 700 U/mL or insulin glargine 100 U/mL throughout the 16-week treatment period. The trial products will be provided as prefilled pens containing 3 mL solution for s.c. injection once weekly (insulin 287) and once daily (insulin glargine U100) respectively.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1515" y0="0.3827" x1="0.8819" y1="0.4495"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.BIOMARKER.INSULIN_GLARGINE_DOSING" Name="Insulin Glargine Dosing — Biomarker / Immunoassay Quantitative Extreme Check" Target="FORM.EX.ITEM.Insulin Glargine Dosing" ConditionRef="COND.EXTREME.BIOMARKER.INSULIN_GLARGINE_DOSING">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Insulin Glargine Dosing (ITEM.Insulin Glargine Dosing): value must be within [0.0, 10000.0] mg (Biomarker / Immunoassay Quantitative Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="9" ProtocolSection="Treatment/Dosing" Confidence="1.0">
+          <makoto:SourceQuote>insulin glargine 100 U/mL throughout the 16-week treatment period. The trial products will be provided as prefilled pens containing 3 mL solution for s.c. injection... once daily (insulin glargine U100) respectively.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1515" y0="0.3827" x1="0.8819" y1="0.4495"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.DOSE.TREATMENT_DURATION" Name="Treatment Duration — Dosing &amp; Exposure Quantitative Plausibility Bounds" Target="FORM.EX.ITEM.Treatment Duration" ConditionRef="COND.EXTREME.DOSE.TREATMENT_DURATION">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Treatment Duration (ITEM.Treatment Duration): value must be within [0.0, 10000.0] weeks (Dosing &amp; Exposure Quantitative Plausibility Bounds).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="9" ProtocolSection="Treatment/Dosing" Confidence="1.0">
+          <makoto:SourceQuote>throughout the 16-week treatment period.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1515" y0="0.3827" x1="0.8819" y1="0.4495"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.BIOMARKER.INSULIN_DOSING_ADJUSTMENT" Name="Insulin Dosing Adjustment — Biomarker / Immunoassay Quantitative Extreme Check" Target="FORM.PR.ITEM.Insulin Dosing Adjustment" ConditionRef="COND.EXTREME.BIOMARKER.INSULIN_DOSING_ADJUSTMENT">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Insulin Dosing Adjustment (ITEM.Insulin Dosing Adjustment): value must be within [0.0, 10000.0] count (Biomarker / Immunoassay Quantitative Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="89" ProtocolSection="Dosing and Medication Adjustments" Confidence="1.0">
+          <makoto:SourceQuote>If the subject prior to randomisation received a twice daily regimen with any basal insulin analogue or a once daily regimen with insulin glargine U300 the total daily insulin dose prior to randomisation should be reduced by 20% and taken once daily.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1513" y0="0.2052" x1="0.867" y1="0.2511"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.GLUC.GLUCOSE_MONITORING" Name="Glucose Monitoring — Blood Glucose Physiological Extreme Check" Target="FORM.PR.ITEM.Glucose Monitoring" ConditionRef="COND.EXTREME.GLUC.GLUCOSE_MONITORING">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Glucose Monitoring (ITEM.Glucose Monitoring): value must be within [20, 800] mg/dL (Blood Glucose Physiological Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="38" ProtocolSection="Glucose Monitoring and Testing" Confidence="1.0">
+          <makoto:SourceQuote>use of a specific BG meter provided by Novo Nordisk is mandatory for all required measurements</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.152" y0="0.099" x1="0.8276" y1="0.1067"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.DOSE.TIME_IN_TARGET_RANGE" Name="Time in Target Range — Dosing &amp; Exposure Quantitative Plausibility Bounds" Target="FORM.VS.ITEM.Time in Target Range" ConditionRef="COND.EXTREME.DOSE.TIME_IN_TARGET_RANGE">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Time in Target Range (ITEM.Time in Target Range): value must be within [0.0, 10000.0] mmHg (Dosing &amp; Exposure Quantitative Plausibility Bounds).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="54" ProtocolSection="Endpoint Analysis" Confidence="1.0">
+          <makoto:SourceQuote>the primary endpoint will be analysed using an ANOVA model with randomised treatment as fixed factor and baseline 'time in target range' as covariate</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1515" y0="0.7856" x1="0.7766" y1="0.7985"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.GLUC.BLOOD_GLUCOSE_BG_MONITORING" Name="Blood Glucose Monitoring — Blood Glucose Physiological Extreme Check" Target="FORM.LB.ITEM.Blood Glucose (BG) Monitoring" ConditionRef="COND.EXTREME.GLUC.BLOOD_GLUCOSE_BG_MONITORING">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Blood Glucose Monitoring (ITEM.Blood Glucose (BG) Monitoring): value must be within [20, 800] mg/dL (Blood Glucose Physiological Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="38" ProtocolSection="Glucose Monitoring" Confidence="1.0">
+          <makoto:SourceQuote>Mandatory use of a specific BG meter provided by Novo Nordisk for all required measurements (Page 38).</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.152" y0="0.099" x1="0.8276" y1="0.1067"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.DOSE.DOSE_REDUCTION_PERCENTAGE" Name="Dose Reduction Percentage — Dosing &amp; Exposure Quantitative Plausibility Bounds" Target="FORM.LB.ITEM.Dose Reduction Percentage" ConditionRef="COND.EXTREME.DOSE.DOSE_REDUCTION_PERCENTAGE">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Dose Reduction Percentage (ITEM.Dose Reduction Percentage): value must be within [0.0, 10000.0] % (Dosing &amp; Exposure Quantitative Plausibility Bounds).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="103" ProtocolSection="Dosing and Safety" Confidence="1.0">
+          <makoto:SourceQuote>...subjects switching from a twice daily basal insulin regiment and a once daily regimen with insulin glargine U300 will have their dose reduced by 20%.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1516" y0="0.3816" x1="0.8761" y1="0.4307"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.BIOMARKER.INSULIN_287_EXPOSURE_PROFILE" Name="Insulin 287 Exposure Profile — Biomarker / Immunoassay Quantitative Extreme Check" Target="FORM.PK.ITEM.Insulin 287 Exposure Profile" ConditionRef="COND.EXTREME.BIOMARKER.INSULIN_287_EXPOSURE_PROFILE">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Insulin 287 Exposure Profile (ITEM.Insulin 287 Exposure Profile): value must be within [0.0, 10000.0] units (Biomarker / Immunoassay Quantitative Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="103" ProtocolSection="PK/PD Properties" Confidence="1.0">
+          <makoto:SourceQuote>insulin 287 exposure was well distributed across the dosing interval, with a PK profile suitable for once weekly dosing</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1516" y0="0.1548" x1="0.8879" y1="0.2398"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.GLUC.GLUCOSE_MONITORING_DEVICE" Name="Glucose Monitoring Device — Blood Glucose Physiological Extreme Check" Target="FORM.BS.ITEM.Glucose Monitoring Device" ConditionRef="COND.EXTREME.GLUC.GLUCOSE_MONITORING_DEVICE">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Glucose Monitoring Device (ITEM.Glucose Monitoring Device): value must be within [20, 800] mg/dL (Blood Glucose Physiological Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="38" ProtocolSection="Monitoring Equipment" Confidence="1.0">
+          <makoto:SourceQuote>A specific BG meter provided by Novo Nordisk</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.152" y0="0.099" x1="0.8276" y1="0.1067"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.GLUC.CONTINUOUS_GLUCOSE_MONITORING_CG" Name="Continuous Glucose Monitoring (CGM) — Blood Glucose Physiological Extreme Check" Target="FORM.BS.ITEM.Continuous Glucose Monitoring (CGM)" ConditionRef="COND.EXTREME.GLUC.CONTINUOUS_GLUCOSE_MONITORING_CG">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Continuous Glucose Monitoring (CGM) (ITEM.Continuous Glucose Monitoring (CGM)): value must be within [20, 800] mg/dL (Blood Glucose Physiological Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="39" ProtocolSection="CGM Maintenance" Confidence="1.0">
+          <makoto:SourceQuote>For further information on fitting, and changing of the CGM parts, please refer to the user manual.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1518" y0="0.6138" x1="0.8822" y1="0.6266"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.DOSE.DOSE_JUSTIFICATION_REQUIREMENT" Name="Dose Justification Requirement — Dosing &amp; Exposure Quantitative Plausibility Bounds" Target="FORM.AE.ITEM.Dose Justification Requirement" ConditionRef="COND.EXTREME.DOSE.DOSE_JUSTIFICATION_REQUIREMENT">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Dose Justification Requirement (ITEM.Dose Justification Requirement): value must be within [0.0, 10000.0] mg (Dosing &amp; Exposure Quantitative Plausibility Bounds).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="4" ProtocolSection="Dosing Procedures" Confidence="1.0">
+          <makoto:SourceQuote>Dose Justification (Page 4) to mitigate potential dosing errors</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.152" y0="0.099" x1="0.8276" y1="0.1067"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.DOSE.DOSE_CALC" Name="Protocol Calculated Target Dose (mg) — Dosing &amp; Exposure Quantitative Plausibility Bounds" Target="FORM.EX.ITEM.DOSE_CALC" ConditionRef="COND.EXTREME.DOSE.DOSE_CALC">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Protocol Calculated Target Dose (mg) (ITEM.DOSE_CALC): value must be within [0.0, 10000.0] mg (Dosing &amp; Exposure Quantitative Plausibility Bounds).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="9" ProtocolSection="Treatment/Dosing" Confidence="1.0">
+          <makoto:SourceQuote>throughout the 16-week treatment period.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1515" y0="0.3827" x1="0.8819" y1="0.4495"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.DOSE.RDI" Name="Relative Dose Intensity (%) — Dosing &amp; Exposure Quantitative Plausibility Bounds" Target="FORM.EX.ITEM.RDI" ConditionRef="COND.EXTREME.DOSE.RDI">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Relative Dose Intensity (%) (ITEM.RDI): value must be within [0.0, 10000.0] % (Dosing &amp; Exposure Quantitative Plausibility Bounds).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="9" ProtocolSection="Treatment/Dosing" Confidence="1.0">
+          <makoto:SourceQuote>throughout the 16-week treatment period.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1515" y0="0.3827" x1="0.8819" y1="0.4495"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.DOSE.CUM_DOSE" Name="Cumulative Administered Dose (mg) — Dosing &amp; Exposure Quantitative Plausibility Bounds" Target="FORM.EX.ITEM.CUM_DOSE" ConditionRef="COND.EXTREME.DOSE.CUM_DOSE">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Cumulative Administered Dose (mg) (ITEM.CUM_DOSE): value must be within [0.0, 10000.0] mg (Dosing &amp; Exposure Quantitative Plausibility Bounds).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="9" ProtocolSection="Treatment/Dosing" Confidence="1.0">
+          <makoto:SourceQuote>throughout the 16-week treatment period.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1515" y0="0.3827" x1="0.8819" y1="0.4495"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.DOSE.TRTDURD" Name="Total Treatment Exposure Duration (Days) — Dosing &amp; Exposure Quantitative Plausibility Bounds" Target="FORM.EX.ITEM.TRTDURD" ConditionRef="COND.EXTREME.DOSE.TRTDURD">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Total Treatment Exposure Duration (Days) (ITEM.TRTDURD): value must be within [0.0, 10000.0] days (Dosing &amp; Exposure Quantitative Plausibility Bounds).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="103" ProtocolSection="Dosing and Safety" Confidence="1.0">
+          <makoto:SourceQuote>...subjects switching from a twice daily basal insulin regiment and a once daily regimen with insulin glargine U300 will have their dose reduced by 20%.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1516" y0="0.3816" x1="0.8761" y1="0.4307"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.TIME.IC_BEFORE_PROCEDURES" Name="Informed Consent Prior to Study Procedures (BIMO Chronology)" Target="FORM.IC.ITEM.Protocol Compliance" ConditionRef="COND.TIME.IC_BEFORE_PROCEDURES">
+        <ErrorMessage>
+          <TranslatedText>Informed Consent signature date must be on or prior to any screening or study procedure date (21 CFR Part 50 / ICH E6 GCP).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="6" ProtocolSection="General Compliance" Confidence="1.0">
+          <makoto:SourceQuote>All procedures must comply with the approved protocol, ICH GCP, and applicable regulatory requirements</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.152" y0="0.099" x1="0.8276" y1="0.1067"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.TIME.NO_EVENTS_AFTER_DISPOSITION" Name="Post-Discontinuation / Death Chronology Guard" Target="FORM.DS.ITEM.Treatment after end of trial" ConditionRef="COND.TIME.NO_EVENTS_AFTER_DISPOSITION">
+        <ErrorMessage>
+          <TranslatedText>No clinical assessment, laboratory draw, or dosing date may occur after subject discontinuation/death or in the future.</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="5" ProtocolSection="7.8" Confidence="1.0">
+          <makoto:SourceQuote>7.8 Treatment after the end of the trial</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.15" y0="0.1525" x1="0.8931" y1="0.8866"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.RECON.ELIGIBILITY_DOSE_RELEASE" Name="Eligibility Confirmation Prior to Study Dosing" Target="FORM.EX.ITEM.Insulin 287 Dosing" ConditionRef="COND.RECON.ELIGIBILITY_DOSE_RELEASE">
+        <ErrorMessage>
+          <TranslatedText>Subject cannot receive study treatment on FORM.EX if any Inclusion Criterion is unmet or any Exclusion Criterion is triggered on FORM.IE.</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="9" ProtocolSection="Treatment/Dosing" Confidence="1.0">
+          <makoto:SourceQuote>insulin 287, 700 U/mL or insulin glargine 100 U/mL throughout the 16-week treatment period. The trial products will be provided as prefilled pens containing 3 mL solution for s.c. injection once weekly (insulin 287) and once daily (insulin glargine U100) respectively.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1515" y0="0.3827" x1="0.8819" y1="0.4495"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.RECON.AE_CONMED_LINK" Name="Adverse Event Concomitant Medication Reconciliation" Target="FORM.CM.ITEM.Permitted Medications" ConditionRef="COND.RECON.AE_CONMED_LINK">
+        <ErrorMessage>
+          <TranslatedText>Adverse Event indicates concomitant medication treatment was given; a corresponding medication entry must be logged on FORM.CM.</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="11" ProtocolSection="Not Found" Confidence="1.0">
+          <makoto:SourceQuote>Not specified in the provided text.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.RECON.CS_LAB_REQUIRES_AE" Name="Clinically Significant Lab Abnormality to AE Reconciliation" Target="FORM.LB.ITEM.Insulin 287 Dosing" ConditionRef="COND.RECON.CS_LAB_REQUIRES_AE">
+        <ErrorMessage>
+          <TranslatedText>Post-baseline laboratory abnormality marked Clinically Significant (CS) requires a corresponding Adverse Event record on FORM.AE.</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="9" ProtocolSection="Treatment/Dosing" Confidence="1.0">
+          <makoto:SourceQuote>insulin 287, 700 U/mL or insulin glargine 100 U/mL throughout the 16-week treatment period. The trial products will be provided as prefilled pens containing 3 mL solution for s.c. injection once weekly (insulin 287) and once daily (insulin glargine U100) respectively.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1515" y0="0.3827" x1="0.8819" y1="0.4495"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <MethodDef OID="MT.DOSE_CALC" Name="Protocol Weight / BSA-Adjusted Planned Dose Calculation" Type="Derivation">
+        <Description>
+          <TranslatedText>Protocol-prescribed weight-based (mg/kg) or BSA-based (mg/m^2) target dose calculation prior to drug preparation.</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">round(ITEM.WEIGHT * ITEM.DOSE_LEVEL_MG_KG, 1)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="9" ProtocolSection="Treatment/Dosing" Confidence="1.0">
+          <makoto:SourceQuote>throughout the 16-week treatment period.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1515" y0="0.3827" x1="0.8819" y1="0.4495"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.DOSE_INTENSITY" Name="Relative Dose Intensity (RDI %) Calculation" Type="Derivation">
+        <Description>
+          <TranslatedText>Relative Dose Intensity (RDI, %) calculated as actual administered dose divided by protocol-planned dose.</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">round((ITEM.EXDOSE / ITEM.EXDOSE_PLANNED) * 100.0, 1)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="9" ProtocolSection="Treatment/Dosing" Confidence="1.0">
+          <makoto:SourceQuote>throughout the 16-week treatment period.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1515" y0="0.3827" x1="0.8819" y1="0.4495"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.CUM_DOSE" Name="Cumulative Study Drug Exposure Dose (ADEX.CUMDOSE)" Type="Derivation">
+        <Description>
+          <TranslatedText>Cumulative administered study drug dose across all completed treatment cycles.</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">round(ITEM.CUM_DOSE_PRIOR + ITEM.EXDOSE, 1)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="9" ProtocolSection="Treatment/Dosing" Confidence="1.0">
+          <makoto:SourceQuote>throughout the 16-week treatment period.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1515" y0="0.3827" x1="0.8819" y1="0.4495"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.TREATMENT_COMPLIANCE" Name="Study Treatment Dosing Compliance Percentage (%)" Type="Derivation">
+        <Description>
+          <TranslatedText>Treatment compliance percentage derived from total doses administered/taken divided by planned doses over the treatment period.</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">round((ITEM.DOSES_TAKEN / ITEM.DOSES_PLANNED) * 100.0, 1)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="6" ProtocolSection="General Compliance" Confidence="1.0">
+          <makoto:SourceQuote>All procedures must comply with the approved protocol, ICH GCP, and applicable regulatory requirements</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.152" y0="0.099" x1="0.8276" y1="0.1067"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.AGE_DERIVED" Name="Derived Subject Age at Informed Consent (DM.AGE)" Type="Derivation">
+        <Description>
+          <TranslatedText>CDISC SDTM DM.AGE derivation at date of informed consent: floor((RFICDTC - BRTHDTC) / 365.25).</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">int((ITEM.RFICDTC - ITEM.BRTHDTC).days // 365.25)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="11" ProtocolSection="Demographics" Confidence="1.0">
+          <makoto:SourceQuote>Not explicitly defined in the provided text snippets</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1642" y0="0.3249" x1="0.1863" y1="0.3449"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <MethodDef OID="MT.TRTDURD" Name="Total Treatment Exposure Duration (ADSL.TRTDURD)" Type="Derivation">
+        <Description>
+          <TranslatedText>CDISC ADaM ADSL Total Treatment Duration in days: (TRTEDT - TRTSDT) + 1.</TranslatedText>
+        </Description>
+        <FormalExpression Context="Python">(ITEM.EXENDTC - ITEM.EXSTDTC).days + 1</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6" PageNumber="103" ProtocolSection="Dosing and Safety" Confidence="1.0">
+          <makoto:SourceQuote>...subjects switching from a twice daily basal insulin regiment and a once daily regimen with insulin glargine U300 will have their dose reduced by 20%.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1516" y0="0.3816" x1="0.8761" y1="0.4307"/>
+        </makoto:SourceGrounding>
+      </MethodDef>
+      <makoto:VisualLayout>
+        <makoto:Nodes>
+          <makoto:Node id="EP.1" type="epochGroup">
+            <makoto:Position x="360" y="50"/>
+          </makoto:Node>
+          <makoto:Node id="ARM.1" type="arm">
+            <makoto:Position x="740" y="400"/>
+          </makoto:Node>
+          <makoto:Node id="EP.2" type="epochGroup">
+            <makoto:Position x="960" y="50"/>
+          </makoto:Node>
+          <makoto:Node id="CYCLE_GROUP.EP.2" type="cycleTemplateGroup">
+            <makoto:Position x="40" y="80"/>
+          </makoto:Node>
+          <makoto:Node id="SE.V01" type="visit">
+            <makoto:Position x="30" y="80"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.VS.SE.V01.SE.V01" type="form">
+            <makoto:Position x="30" y="240"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.LB.SE.V01.SE.V01" type="form">
+            <makoto:Position x="30" y="370"/>
+          </makoto:Node>
+          <makoto:Node id="SE.V03" type="visit">
+            <makoto:Position x="330" y="80"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.VS.SE.V01.SE.V03" type="form">
+            <makoto:Position x="330" y="240"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.LB.SE.V01.SE.V03" type="form">
+            <makoto:Position x="330" y="370"/>
+          </makoto:Node>
+          <makoto:Node id="SE.V18" type="visit">
+            <makoto:Position x="630" y="80"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.VS.SE.V01.SE.V18" type="form">
+            <makoto:Position x="630" y="240"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.LB.SE.V01.SE.V18" type="form">
+            <makoto:Position x="630" y="370"/>
+          </makoto:Node>
+          <makoto:Node id="SE.V19" type="visit">
+            <makoto:Position x="930" y="80"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.VS.SE.V01.SE.V19" type="form">
+            <makoto:Position x="930" y="240"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.LB.SE.V01.SE.V19" type="form">
+            <makoto:Position x="930" y="370"/>
+          </makoto:Node>
+          <makoto:Node id="SE.V20" type="visit">
+            <makoto:Position x="1230" y="80"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.VS.SE.V01.SE.V20" type="form">
+            <makoto:Position x="1230" y="240"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.LB.SE.V01.SE.V20" type="form">
+            <makoto:Position x="1230" y="370"/>
+          </makoto:Node>
+          <makoto:Node id="GATE.EP.2.CYCLE" type="decisionGate">
+            <makoto:Position x="1620" y="140"/>
+          </makoto:Node>
+          <makoto:Node id="EP.3" type="epochGroup">
+            <makoto:Position x="2900" y="50"/>
+          </makoto:Node>
+          <makoto:Node id="SE.V02" type="visit">
+            <makoto:Position x="40" y="160"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.VS.SE.V02" type="form">
+            <makoto:Position x="40" y="320"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.PE.SE.V02" type="form">
+            <makoto:Position x="40" y="450"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.LB.SE.V02" type="form">
+            <makoto:Position x="40" y="580"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.PK.SE.V02" type="form">
+            <makoto:Position x="40" y="710"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.CM.SE.V02" type="form">
+            <makoto:Position x="40" y="840"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.AE.SE.V02" type="form">
+            <makoto:Position x="40" y="970"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.BS.SE.V02" type="form">
+            <makoto:Position x="40" y="1100"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.EG.SE.V02" type="form">
+            <makoto:Position x="40" y="1230"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.PR.SE.V02" type="form">
+            <makoto:Position x="40" y="1360"/>
+          </makoto:Node>
+        </makoto:Nodes>
+        <makoto:Edges>
+          <makoto:Edge id="e-ARM.1-SE.V01" source="ARM.1" target="SE.V01"/>
+          <makoto:Edge id="e-epoch-EP.1-EP.2" source="EP.1" target="EP.2" animated="true"/>
+          <makoto:Edge id="e-epoch-EP.2-EP.3" source="EP.2" target="EP.3" animated="true"/>
+          <makoto:Edge id="e-SE.V01-SE.V03" source="SE.V01" target="SE.V03"/>
+          <makoto:Edge id="e-SE.V03-SE.V18" source="SE.V03" target="SE.V18"/>
+          <makoto:Edge id="e-SE.V18-SE.V19" source="SE.V18" target="SE.V19"/>
+          <makoto:Edge id="e-SE.V19-SE.V20" source="SE.V19" target="SE.V20"/>
+          <makoto:Edge id="e-SE.V01-FORM.VS.SE.V01.SE.V01" source="SE.V01" target="FORM.VS.SE.V01.SE.V01"/>
+          <makoto:Edge id="e-FORM.VS.SE.V01.SE.V01-FORM.LB.SE.V01.SE.V01" source="FORM.VS.SE.V01.SE.V01" target="FORM.LB.SE.V01.SE.V01"/>
+          <makoto:Edge id="e-SE.V03-FORM.VS.SE.V01.SE.V03" source="SE.V03" target="FORM.VS.SE.V01.SE.V03"/>
+          <makoto:Edge id="e-FORM.VS.SE.V01.SE.V03-FORM.LB.SE.V01.SE.V03" source="FORM.VS.SE.V01.SE.V03" target="FORM.LB.SE.V01.SE.V03"/>
+          <makoto:Edge id="e-SE.V18-FORM.VS.SE.V01.SE.V18" source="SE.V18" target="FORM.VS.SE.V01.SE.V18"/>
+          <makoto:Edge id="e-FORM.VS.SE.V01.SE.V18-FORM.LB.SE.V01.SE.V18" source="FORM.VS.SE.V01.SE.V18" target="FORM.LB.SE.V01.SE.V18"/>
+          <makoto:Edge id="e-SE.V19-FORM.VS.SE.V01.SE.V19" source="SE.V19" target="FORM.VS.SE.V01.SE.V19"/>
+          <makoto:Edge id="e-FORM.VS.SE.V01.SE.V19-FORM.LB.SE.V01.SE.V19" source="FORM.VS.SE.V01.SE.V19" target="FORM.LB.SE.V01.SE.V19"/>
+          <makoto:Edge id="e-SE.V20-FORM.VS.SE.V01.SE.V20" source="SE.V20" target="FORM.VS.SE.V01.SE.V20"/>
+          <makoto:Edge id="e-FORM.VS.SE.V01.SE.V20-FORM.LB.SE.V01.SE.V20" source="FORM.VS.SE.V01.SE.V20" target="FORM.LB.SE.V01.SE.V20"/>
+          <makoto:Edge id="e-CYCLE_GROUP.EP.2-GATE.EP.2.CYCLE" source="CYCLE_GROUP.EP.2" target="GATE.EP.2.CYCLE"/>
+          <makoto:Edge id="e-loopback-GATE.EP.2.CYCLE-CYCLE_GROUP.EP.2" source="GATE.EP.2.CYCLE" target="CYCLE_GROUP.EP.2" label="Cleared ➔ Next Cycle" animated="true"/>
+          <makoto:Edge id="e-exit-GATE.EP.2.CYCLE-SE.V02" source="GATE.EP.2.CYCLE" target="SE.V02" label="PD / Toxicity ➔ Exit" animated="true"/>
+          <makoto:Edge id="e-SE.V02-FORM.VS.SE.V02" source="SE.V02" target="FORM.VS.SE.V02"/>
+          <makoto:Edge id="e-FORM.VS.SE.V02-FORM.PE.SE.V02" source="FORM.VS.SE.V02" target="FORM.PE.SE.V02"/>
+          <makoto:Edge id="e-FORM.PE.SE.V02-FORM.LB.SE.V02" source="FORM.PE.SE.V02" target="FORM.LB.SE.V02"/>
+          <makoto:Edge id="e-FORM.LB.SE.V02-FORM.PK.SE.V02" source="FORM.LB.SE.V02" target="FORM.PK.SE.V02"/>
+          <makoto:Edge id="e-FORM.PK.SE.V02-FORM.CM.SE.V02" source="FORM.PK.SE.V02" target="FORM.CM.SE.V02"/>
+          <makoto:Edge id="e-FORM.CM.SE.V02-FORM.AE.SE.V02" source="FORM.CM.SE.V02" target="FORM.AE.SE.V02"/>
+          <makoto:Edge id="e-FORM.AE.SE.V02-FORM.BS.SE.V02" source="FORM.AE.SE.V02" target="FORM.BS.SE.V02"/>
+          <makoto:Edge id="e-FORM.BS.SE.V02-FORM.EG.SE.V02" source="FORM.BS.SE.V02" target="FORM.EG.SE.V02"/>
+          <makoto:Edge id="e-FORM.EG.SE.V02-FORM.PR.SE.V02" source="FORM.EG.SE.V02" target="FORM.PR.SE.V02"/>
+        </makoto:Edges>
+      </makoto:VisualLayout>
+    </MetaDataVersion>
+  </Study>
+</ODM>

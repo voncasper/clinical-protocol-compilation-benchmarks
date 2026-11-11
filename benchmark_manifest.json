@@ -1,0 +1,897 @@
+{
+  "schema_version": "1.0.0",
+  "repository": "clinical-protocol-compilation-benchmarks",
+  "publisher": "VonCasper Solutions",
+  "license": "Apache-2.0",
+  "generated_at_utc": "2026-11-11T03:06:39.815894+00:00",
+  "study_count": 13,
+  "total_indexed_study_files": 143,
+  "studies": [
+    {
+      "nct_id": "NCT04891770",
+      "design_id": "study_f115ce87",
+      "slot": 1,
+      "section": "foundational_archetype",
+      "category": "Archetype 1: Parallel Randomized Arms",
+      "study_title": "Parallel Randomized Controlled Clinical Study (NCT04891770)",
+      "protocol_sha256": "f115ce8761b6557c64921a79a5d2efad9ce5fa0681eebab508c131e8fe6a6379",
+      "sap_sha256": null,
+      "study_url": "https://clinicaltrials.gov/study/NCT04891770",
+      "cdn_protocol_url": "https://cdn.clinicaltrials.gov/large-docs/70/NCT04891770/Prot_000.pdf",
+      "alternate_cdn_urls": [],
+      "telemetry": {
+        "event_count": 4,
+        "form_count": 15,
+        "item_group_count": 15,
+        "item_count": 84,
+        "edit_check_count": 47,
+        "node_count": 32,
+        "edge_count": 30
+      },
+      "files": {
+        "exports/rave_als.xlsx": {
+          "size_bytes": 41084,
+          "sha256": "8e0bce945b539a948a7ab8a68953d6987fd38393b401bd30ad72ead678602b62"
+        },
+        "exports/veeva_cdms.xml": {
+          "size_bytes": 67628,
+          "sha256": "a41dcdc8e27fdc7f50a6c0d45ab7c6e425a409cb2d2b59367004b6d29e7099c0"
+        },
+        "exports/cdisc_odm_v1.3.2.xml": {
+          "size_bytes": 165469,
+          "sha256": "0d9f00603f1f79fd18a925d5567c6d030feb5ec94cf87c74822b1d292b99df17"
+        },
+        "exports/transcelerate_usdm_v3.0.json": {
+          "size_bytes": 54421,
+          "sha256": "b780312e84b821a3a963e1c4528f5366052a6a249e2e0858274163553d730547"
+        },
+        "metadata/provenance_matrix_21cfr11.xlsx": {
+          "size_bytes": 34781,
+          "sha256": "5d1667437cd3dcc4aa9992ad6e64ba26d4903c4c82038140405269cb94de4d68"
+        },
+        "visuals/canvas_standard.svg": {
+          "size_bytes": 3913685,
+          "sha256": "91bd8aa534143d1dbc15ef904abaf46a33cb87a951846311c82c1e09fbf6d354"
+        },
+        "visuals/canvas_standard.pdf": {
+          "size_bytes": 701433,
+          "sha256": "70d74c9acd908139f8199f478fd09a9019ee94ff124f79a2f963bff8cc537d23"
+        },
+        "visuals/canvas_mindmap.svg": {
+          "size_bytes": 3470560,
+          "sha256": "cdc4b92b9b95f0967b55588f8aca0904df296704e3254a89d8e2df7717b66d2a"
+        },
+        "visuals/canvas_mindmap.pdf": {
+          "size_bytes": 362860,
+          "sha256": "d7a800ad5048f08f7eddb1b4649b66eafcb0f9b10fdf8022adce9c8ee057c676"
+        },
+        "metadata/compilation_manifest.json": {
+          "size_bytes": 2419,
+          "sha256": "5cfdab5470306b7acaf4bda835b35acad852d260a2fb368f5b2abee753ad369e"
+        },
+        "README.md": {
+          "size_bytes": 3122,
+          "sha256": "c9d2c16f4c16ceb068c89abd7192d1ff15ccfcc472a8802b91ed17416c1ead4e"
+        }
+      }
+    },
+    {
+      "nct_id": "NCT03084237",
+      "design_id": "study_6cff1fe3",
+      "slot": 2,
+      "section": "foundational_archetype",
+      "category": "Archetype 1: Parallel Randomized Arms",
+      "study_title": "HLX02 vs. EU-Sourced Trastuzumab Parallel Biosimilar Phase 3 Study (NCT03084237)",
+      "protocol_sha256": "6cff1fe32601f51b37a84e0cc4c8a1a3b62d8aa2663e1d9646051d3e4d505112",
+      "sap_sha256": null,
+      "study_url": "https://clinicaltrials.gov/study/NCT03084237",
+      "cdn_protocol_url": "https://cdn.clinicaltrials.gov/large-docs/37/NCT03084237/Prot_SAP_000.pdf",
+      "alternate_cdn_urls": [],
+      "telemetry": {
+        "event_count": 4,
+        "form_count": 15,
+        "item_group_count": 15,
+        "item_count": 85,
+        "edit_check_count": 54,
+        "node_count": 40,
+        "edge_count": 38
+      },
+      "files": {
+        "exports/rave_als.xlsx": {
+          "size_bytes": 42562,
+          "sha256": "583e76fd198e1366af6592cb7e1c4b16964c49a972ded40d369d53ced10b82a5"
+        },
+        "exports/veeva_cdms.xml": {
+          "size_bytes": 72485,
+          "sha256": "86b7ed180edd9fc60f7d2995c2b4c3426466ad2a14db5b23253fc9465e4ac156"
+        },
+        "exports/cdisc_odm_v1.3.2.xml": {
+          "size_bytes": 170452,
+          "sha256": "acc46e3060ceb2634591624d7fa054f9a113352d1edafc5667d2d8d975c2fb4b"
+        },
+        "exports/transcelerate_usdm_v3.0.json": {
+          "size_bytes": 60773,
+          "sha256": "2efad502801dd380c4fda40a14ce45409a9f824056af69d89b3fe5111eda9ea9"
+        },
+        "metadata/provenance_matrix_21cfr11.xlsx": {
+          "size_bytes": 34422,
+          "sha256": "c639e5e487c832b585f91b2430b3d3dc0e354749f07b54f18194b8900f00f658"
+        },
+        "visuals/canvas_standard.svg": {
+          "size_bytes": 4717252,
+          "sha256": "6c9a93bda6f152df0f008162b855646894a1bc6bdf4a66576e0d6d0fbcf44033"
+        },
+        "visuals/canvas_standard.pdf": {
+          "size_bytes": 815039,
+          "sha256": "78e93e2badd1080ce2b9a4acdc4ae50c0991c86d5ce83fabd854c699fa0acb4f"
+        },
+        "visuals/canvas_mindmap.svg": {
+          "size_bytes": 4152650,
+          "sha256": "70c2234676d554613a66965eedb1b7ee2097bdbf9acbe6a6311a6dee1a348b87"
+        },
+        "visuals/canvas_mindmap.pdf": {
+          "size_bytes": 431111,
+          "sha256": "3537edc853fea489d2230df7381be9b899c4a2c8791382d1d67bc2159852ed17"
+        },
+        "metadata/compilation_manifest.json": {
+          "size_bytes": 2471,
+          "sha256": "68f3118610f3ab0147bdb889f94b4e360df46e7569e884363cff4c1ffbc60377"
+        },
+        "README.md": {
+          "size_bytes": 3228,
+          "sha256": "d6cf4adb985a03d8145d829fa8bceb92bd922876b6e6daaaa116395536c24b75"
+        }
+      }
+    },
+    {
+      "nct_id": "NCT04030195",
+      "design_id": "study_3fc386fd",
+      "slot": 3,
+      "section": "foundational_archetype",
+      "category": "Archetype 2: CAR-T Multi-Cohort 3+3 Dose Escalation",
+      "study_title": "PBCAR20A Allogeneic Anti-CD20 CAR-T 3+3 Dose Escalation Study in NHL/CLL (NCT04030195)",
+      "protocol_sha256": "3fc386fdad7e96cd02c0610ccd08b992e05e4339f734cbcbf593ea7ab6618a3c",
+      "sap_sha256": "bb4e858a086404f160e3e29e4da42e02d06b442c6d7616863155322115f94a04",
+      "study_url": "https://clinicaltrials.gov/study/NCT04030195",
+      "cdn_protocol_url": "https://cdn.clinicaltrials.gov/large-docs/95/NCT04030195/Prot_000.pdf",
+      "alternate_cdn_urls": [],
+      "telemetry": {
+        "event_count": 3,
+        "form_count": 15,
+        "item_group_count": 15,
+        "item_count": 75,
+        "edit_check_count": 46,
+        "node_count": 32,
+        "edge_count": 28
+      },
+      "files": {
+        "exports/rave_als.xlsx": {
+          "size_bytes": 39370,
+          "sha256": "bab454eafb5a4bda335c32a4da12425620d99f900656269506ebacb09077fcaa"
+        },
+        "exports/veeva_cdms.xml": {
+          "size_bytes": 63387,
+          "sha256": "623394ac84dd46fb11b227077648e1c8e28e5e56a920d63beb55d3f2efa162dd"
+        },
+        "exports/cdisc_odm_v1.3.2.xml": {
+          "size_bytes": 150797,
+          "sha256": "93788931cf1146920c021c523ceaa0b2a97b89c248890fe0a9e03f1b13f8fb09"
+        },
+        "exports/transcelerate_usdm_v3.0.json": {
+          "size_bytes": 44064,
+          "sha256": "60e66f1d562d0c3d27433f8473e38ce90f00a33bcdf925859bc15e4f702e578e"
+        },
+        "metadata/provenance_matrix_21cfr11.xlsx": {
+          "size_bytes": 32041,
+          "sha256": "f7e0f294ece3e1143907b3af81d4317ad2fd8aed40545b788192b880d88cea02"
+        },
+        "visuals/canvas_standard.svg": {
+          "size_bytes": 3635200,
+          "sha256": "1590961152e36a1cb50036ced28fc875eddb6ab67d24ec213b700f60d05cba94"
+        },
+        "visuals/canvas_standard.pdf": {
+          "size_bytes": 665646,
+          "sha256": "488cde93b0f89a1f51aab5fe1b77acb5f5a15ed9f4c18d976bcac7d1c9483029"
+        },
+        "visuals/canvas_mindmap.svg": {
+          "size_bytes": 2976064,
+          "sha256": "b8ca33df4a3fa763a2511488445e2a0a167d1fff2e707a60bf627d17f60be490"
+        },
+        "visuals/canvas_mindmap.pdf": {
+          "size_bytes": 321899,
+          "sha256": "922304e05d68a27568ed88d221654104e170090e57f7c3b7f5663daf6c75a098"
+        },
+        "metadata/compilation_manifest.json": {
+          "size_bytes": 2607,
+          "sha256": "f7631fbda52a7f1afb0c95dd207fea2b373a796d5da9abdf537205d99b410166"
+        },
+        "README.md": {
+          "size_bytes": 3426,
+          "sha256": "eab8e903c412d82bdb1aa1188aa40b8a2629080c26e3da0156a9c81b7753957c"
+        }
+      }
+    },
+    {
+      "nct_id": "NCT03226275",
+      "design_id": "study_6d342d6d",
+      "slot": 4,
+      "section": "foundational_archetype",
+      "category": "Archetype 3: 2x2 Crossover with Washout Period",
+      "study_title": "Bisoprolol-Amlodipine 2x2 Randomized Crossover Study with Washout (NCT03226275)",
+      "protocol_sha256": "6d342d6d8f12696c4e5eeb559f327051b69062d35144ffe63ea9e84fd9abb534",
+      "sap_sha256": "8e750f3fd37823118b4b4cb42e9b9f76bb777048f960621203bdff16d74962b4",
+      "study_url": "https://clinicaltrials.gov/study/NCT03226275",
+      "cdn_protocol_url": "https://cdn.clinicaltrials.gov/large-docs/75/NCT03226275/Prot_000.pdf",
+      "alternate_cdn_urls": [],
+      "telemetry": {
+        "event_count": 8,
+        "form_count": 15,
+        "item_group_count": 15,
+        "item_count": 73,
+        "edit_check_count": 48,
+        "node_count": 64,
+        "edge_count": 62
+      },
+      "files": {
+        "exports/rave_als.xlsx": {
+          "size_bytes": 41498,
+          "sha256": "fd79caee77192ee0707382ba0be435aaa820fe1004e2e43a408f274a45337e8f"
+        },
+        "exports/veeva_cdms.xml": {
+          "size_bytes": 68219,
+          "sha256": "c092ab8e8c6f57881f50e49c5476b15b43f9b1ab62f4abd6a035871a5404ea3a"
+        },
+        "exports/cdisc_odm_v1.3.2.xml": {
+          "size_bytes": 171579,
+          "sha256": "f9ce2d7cce0398de7c911c6180654452aea4348d57175bfe044e4ee6f699703c"
+        },
+        "exports/transcelerate_usdm_v3.0.json": {
+          "size_bytes": 120067,
+          "sha256": "0c049b20e54f927850b3c0d266a72c3babb2f75d8be2544d8ee0b58ac404a37c"
+        },
+        "metadata/provenance_matrix_21cfr11.xlsx": {
+          "size_bytes": 32201,
+          "sha256": "84da7bed07894c033c1bf0a6c23e37f42545e85c652e749e3da0e0cd7ddf4efe"
+        },
+        "visuals/canvas_standard.svg": {
+          "size_bytes": 7566748,
+          "sha256": "033824daf10a62842ff013e363b68217655bf8b8b57391d55e4eb3a3ad3d4028"
+        },
+        "visuals/canvas_standard.pdf": {
+          "size_bytes": 1221728,
+          "sha256": "37b29cdebad211c03cef751f27276fd230cefe9f604db057a48799efdda9d032"
+        },
+        "visuals/canvas_mindmap.svg": {
+          "size_bytes": 7001468,
+          "sha256": "14d86562171d3de281198bf83bd9ad1bc321a1463f46c98f09d0c99472972d7d"
+        },
+        "visuals/canvas_mindmap.pdf": {
+          "size_bytes": 681987,
+          "sha256": "ab1dd64d6bb3a21f143aacc1904baf32fa08ce24e14292d270844627e6353238"
+        },
+        "metadata/compilation_manifest.json": {
+          "size_bytes": 2598,
+          "sha256": "f378fcdaf98cbd1417edf5a1bd17e6e1e9e223838d053b1d28f4359ebfd3cdff"
+        },
+        "README.md": {
+          "size_bytes": 3417,
+          "sha256": "7fac742cafe4640639ada8625735115397e0358b969dab153517292e1277c3ef"
+        }
+      }
+    },
+    {
+      "nct_id": "NCT01631552",
+      "design_id": "study_53457f06",
+      "slot": 5,
+      "section": "foundational_archetype",
+      "category": "Archetype 4: Multi-Cyclic Oncology (Q3W/Q4W)",
+      "study_title": "IMMU-132-01 Sacituzumab Govitecan Multi-Cyclic Solid Tumor Oncology Study (NCT01631552)",
+      "protocol_sha256": "53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14",
+      "sap_sha256": "ec458b7a83a5e83b3ada944b66dbe4dc672c702cf35393df36c3955b789a8950",
+      "study_url": "https://clinicaltrials.gov/study/NCT01631552",
+      "cdn_protocol_url": "https://cdn.clinicaltrials.gov/large-docs/52/NCT01631552/Prot_000.pdf",
+      "alternate_cdn_urls": [],
+      "telemetry": {
+        "event_count": 6,
+        "form_count": 15,
+        "item_group_count": 15,
+        "item_count": 48,
+        "edit_check_count": 0,
+        "node_count": 47,
+        "edge_count": 45
+      },
+      "files": {
+        "exports/rave_als.xlsx": {
+          "size_bytes": 20717,
+          "sha256": "cce927968194cfe4d0f34662cd5075ad3bc77d7b26f1b56f6e9dc17de0566f89"
+        },
+        "exports/veeva_cdms.xml": {
+          "size_bytes": 30303,
+          "sha256": "31e1af7fa16778f55989461ee49e23ad6a5e0464da6f24b49a395cef50b29ebc"
+        },
+        "exports/cdisc_odm_v1.3.2.xml": {
+          "size_bytes": 81097,
+          "sha256": "ba8693e74932e63cf0729980640bc166645b6d90786727eca518caf8cee7feb5"
+        },
+        "exports/transcelerate_usdm_v3.0.json": {
+          "size_bytes": 71155,
+          "sha256": "e8f36dbbe32780bbf7b175e9dfe17c93a8c833195f64772ab1ffd1f2cdea02b0"
+        },
+        "metadata/provenance_matrix_21cfr11.xlsx": {
+          "size_bytes": 20995,
+          "sha256": "777219423ea1eb4e9d1cd24de536b1941b0b0b0e540445030e885281e3df4222"
+        },
+        "visuals/canvas_standard.svg": {
+          "size_bytes": 5123378,
+          "sha256": "1c84d750ce6ae79a1e0915650390b3269a094b468f11e76e2972ee00a9f5cd75"
+        },
+        "visuals/canvas_standard.pdf": {
+          "size_bytes": 868996,
+          "sha256": "72b8c6ec0defc18fd71beaba876b36b47b7feaf9e78c2617abd979b73702485e"
+        },
+        "visuals/canvas_mindmap.svg": {
+          "size_bytes": 4679989,
+          "sha256": "65fa568b3b8d8d4e2f1fa2e9085818febc972557d93f5661e3d7a18d17f34158"
+        },
+        "visuals/canvas_mindmap.pdf": {
+          "size_bytes": 474655,
+          "sha256": "ba6b9a99ce87b517090d9fa378b1fa7fe35471e769ccd86648bbae98af1081d4"
+        },
+        "metadata/compilation_manifest.json": {
+          "size_bytes": 2600,
+          "sha256": "850a3836bf51e6161c1b9396911dab620a12ca275d390b07637f24f2316ff1e8"
+        },
+        "README.md": {
+          "size_bytes": 3418,
+          "sha256": "2f1df433e0638823bdd6c3162c5677c35dbcfe2f8749062ab04ee31e26897309"
+        }
+      }
+    },
+    {
+      "nct_id": "NCT01772472",
+      "design_id": "study_51072f90",
+      "slot": 6,
+      "section": "foundational_archetype",
+      "category": "Archetype 4: Multi-Cyclic Oncology (Q3W/Q4W)",
+      "study_title": "Multi-Cyclic HER2+ Oncology Study (NCT01772472)",
+      "protocol_sha256": "51072f903c0f0c881db0dea7ed4c8bba0a7d28bd1e95a946e573981db158c460",
+      "sap_sha256": "2c1031877d283b0bf4406382dc389cb91bf8827bb3fb4e47497e7bf244db27d9",
+      "study_url": "https://clinicaltrials.gov/study/NCT01772472",
+      "cdn_protocol_url": "https://cdn.clinicaltrials.gov/large-docs/72/NCT01772472/Prot_000.pdf",
+      "alternate_cdn_urls": [
+        "https://cdn.clinicaltrials.gov/large-docs/72/NCT01772472/Prot_002.pdf"
+      ],
+      "telemetry": {
+        "event_count": 3,
+        "form_count": 15,
+        "item_group_count": 15,
+        "item_count": 73,
+        "edit_check_count": 53,
+        "node_count": 27,
+        "edge_count": 25
+      },
+      "files": {
+        "exports/rave_als.xlsx": {
+          "size_bytes": 40796,
+          "sha256": "b9512382a47e1791f38f93a1820faec788df4aac476bbe780cb480bba4614c5c"
+        },
+        "exports/veeva_cdms.xml": {
+          "size_bytes": 71099,
+          "sha256": "14375c31708f24e016b7af64aaf236566d6adfa3573327b70742a86c94b934f0"
+        },
+        "exports/cdisc_odm_v1.3.2.xml": {
+          "size_bytes": 169838,
+          "sha256": "4b05748d8202b346f99a00bbdd2089b5682b5bc898239a75445dfaadde8d89c0"
+        },
+        "exports/transcelerate_usdm_v3.0.json": {
+          "size_bytes": 42017,
+          "sha256": "0831828f384294006d87069703c8b5684ccd4125e421ce06e59a1710bd1f0e84"
+        },
+        "metadata/provenance_matrix_21cfr11.xlsx": {
+          "size_bytes": 33560,
+          "sha256": "1797ba92610c457e124145fdda371aa3c81f04d3b4f4e5dfdf88f0e4fdf6cc06"
+        },
+        "visuals/canvas_standard.svg": {
+          "size_bytes": 3106141,
+          "sha256": "d8b7580bcaf29b8e5259970fd61e274696f68e6e0c6b22f10cf91709c0530e32"
+        },
+        "visuals/canvas_standard.pdf": {
+          "size_bytes": 468443,
+          "sha256": "8fb99777ae54ebf68493c721dde3bf8a851ec60f6646efa7f9e4c1f5a3d9c780"
+        },
+        "visuals/canvas_mindmap.svg": {
+          "size_bytes": 2810628,
+          "sha256": "889ee8b48b9fae7e6947596b402a61324e49d516fd3d72da00b838c9900f02d0"
+        },
+        "visuals/canvas_mindmap.pdf": {
+          "size_bytes": 290185,
+          "sha256": "1d1109fbe3ae50e6e57b266394e693ab6394df4d27e5f2547b7d8949fa573984"
+        },
+        "metadata/compilation_manifest.json": {
+          "size_bytes": 2641,
+          "sha256": "3591136b123f44d362dcaef6f92a655953bab1f983fe653cbfb3db36322d7f10"
+        },
+        "README.md": {
+          "size_bytes": 3640,
+          "sha256": "bc75366370dd4f2fd2ef450a04145d0799e5456e552c04b97955e7fd57710269"
+        }
+      }
+    },
+    {
+      "nct_id": "NCT03922750",
+      "design_id": "study_6785f6da",
+      "slot": 7,
+      "section": "foundational_archetype",
+      "category": "Archetype 5: Adaptive Titration & Branching",
+      "study_title": "Adaptive Dose Titration & Conditional Branching Study (NCT03922750)",
+      "protocol_sha256": "6785f6da6fce946fbf73ed15474c09b57bc20c7704f3eecc32791a40a535a8b6",
+      "sap_sha256": null,
+      "study_url": "https://clinicaltrials.gov/study/NCT03922750",
+      "cdn_protocol_url": "https://cdn.clinicaltrials.gov/large-docs/50/NCT03922750/Prot_000.pdf",
+      "alternate_cdn_urls": [],
+      "telemetry": {
+        "event_count": 6,
+        "form_count": 15,
+        "item_group_count": 15,
+        "item_count": 43,
+        "edit_check_count": 22,
+        "node_count": 31,
+        "edge_count": 29
+      },
+      "files": {
+        "exports/rave_als.xlsx": {
+          "size_bytes": 24645,
+          "sha256": "816fe853fcfbe6ee3796f8b3f1c80810048e0e3fe8f72a231339db1eb38b7dce"
+        },
+        "exports/veeva_cdms.xml": {
+          "size_bytes": 42285,
+          "sha256": "6fbcb823e4d629831ebea7f49397ea42659d044b074d635931b88bc386876330"
+        },
+        "exports/cdisc_odm_v1.3.2.xml": {
+          "size_bytes": 99412,
+          "sha256": "ce2bdf53ba8e4079ac34292ef1580632ae4aaee353335ad2fdccd86b0b2d62a6"
+        },
+        "exports/transcelerate_usdm_v3.0.json": {
+          "size_bytes": 60452,
+          "sha256": "52e7740a644b00038c9410f84351e69c9a266abbe46681e3eb8559a4c5014a4d"
+        },
+        "metadata/provenance_matrix_21cfr11.xlsx": {
+          "size_bytes": 21172,
+          "sha256": "e919798e3bac3ba0b443351cff8927343bde7aa1fba546fb2cce38d11b727414"
+        },
+        "visuals/canvas_standard.svg": {
+          "size_bytes": 3848328,
+          "sha256": "8304cedfb62db9bcf68178d55cf9893c62bd290ec1f834e5665e0cc5a38b1cd5"
+        },
+        "visuals/canvas_standard.pdf": {
+          "size_bytes": 754902,
+          "sha256": "e196d419cd91951d1e94048135fc88e7de5e78ff014422863f546d36f9aff7e5"
+        },
+        "visuals/canvas_mindmap.svg": {
+          "size_bytes": 3405285,
+          "sha256": "5dce823a8aabc3cc5f7da19c6b18162b1db8435147ce34b8a0b58d91af1cfe00"
+        },
+        "visuals/canvas_mindmap.pdf": {
+          "size_bytes": 356815,
+          "sha256": "6f7c0510456bc7bec4a69e91f87f97a9454b71d4eb1eb129c7db937cd744c8b7"
+        },
+        "metadata/compilation_manifest.json": {
+          "size_bytes": 2433,
+          "sha256": "d3fa1f3de06dc04028bae7235b58d06e6d372fddb20354019316c40773cfc983"
+        },
+        "README.md": {
+          "size_bytes": 3135,
+          "sha256": "b1e0401c3e0cd4a61731d164c7218c1a1495de1d13c0b2237b05b6eb75e20c3a"
+        }
+      }
+    },
+    {
+      "nct_id": "NCT02365597",
+      "design_id": "study_75af2dbc",
+      "slot": 8,
+      "section": "foundational_archetype",
+      "category": "Archetype 5: Adaptive Titration & Branching",
+      "study_title": "Erdafitinib Adaptive Pharmacodynamic Dose Titration Study (NCT02365597)",
+      "protocol_sha256": "75af2dbccea681e4d4c1a38503187da261c9c03c4f10a2f080482ac6269f7eb7",
+      "sap_sha256": null,
+      "study_url": "https://clinicaltrials.gov/study/NCT02365597",
+      "cdn_protocol_url": "https://cdn.clinicaltrials.gov/large-docs/97/NCT02365597/Prot_000.pdf",
+      "alternate_cdn_urls": [],
+      "telemetry": {
+        "event_count": 5,
+        "form_count": 15,
+        "item_group_count": 15,
+        "item_count": 81,
+        "edit_check_count": 60,
+        "node_count": 24,
+        "edge_count": 22
+      },
+      "files": {
+        "exports/rave_als.xlsx": {
+          "size_bytes": 46258,
+          "sha256": "f6ef108be54ffda0bc408a6ecfcedcc45a4f203a0bc96137d0182735190bf264"
+        },
+        "exports/veeva_cdms.xml": {
+          "size_bytes": 81471,
+          "sha256": "915ac80ca0446dbba2cffb70916a48a1834d931da7375465546040daf9baaa21"
+        },
+        "exports/cdisc_odm_v1.3.2.xml": {
+          "size_bytes": 197386,
+          "sha256": "a0a58e5da4385a6e290f321db8fabba4d9819cc3bb1c19c83801a57e8058aa00"
+        },
+        "exports/transcelerate_usdm_v3.0.json": {
+          "size_bytes": 34293,
+          "sha256": "608518652527d5c58710baa661dcb535d9e49c73d2f27a0629c968aeaf942917"
+        },
+        "metadata/provenance_matrix_21cfr11.xlsx": {
+          "size_bytes": 39555,
+          "sha256": "b9a8bcd3e9ec65543c6493df30595af6dd9196b2f65269588ff63b3006dd13d1"
+        },
+        "visuals/canvas_standard.svg": {
+          "size_bytes": 2623921,
+          "sha256": "6c6d8938ec0497576c2ba45df2257977b92ea36ae8ec0f3bd03f5159a327281a"
+        },
+        "visuals/canvas_standard.pdf": {
+          "size_bytes": 427243,
+          "sha256": "e472f1f60082cc7294491fc893035d2aa2864991260048b4c877fb746aeca4ca"
+        },
+        "visuals/canvas_mindmap.svg": {
+          "size_bytes": 2327959,
+          "sha256": "da3a48f900aa31b841e1a48ca18a8f266eb7e496b89b96d569573de3498d118f"
+        },
+        "visuals/canvas_mindmap.pdf": {
+          "size_bytes": 245383,
+          "sha256": "aaf4c47a6b0b5fca2b33b2c2397f9ce1e02df57b67cfaf2ddd2e8edaa0cd4040"
+        },
+        "metadata/compilation_manifest.json": {
+          "size_bytes": 2438,
+          "sha256": "7c205034bc5edc84de49c1525d19436dcb4e0a40209f001443845e246aa3c346"
+        },
+        "README.md": {
+          "size_bytes": 3140,
+          "sha256": "40e8e8b4afb25a6be5e4b5c70b62f5b6496e1d72392b828883f074ce1d214f8c"
+        }
+      }
+    },
+    {
+      "nct_id": "NCT07515196",
+      "design_id": "study_a4f4b299",
+      "slot": 9,
+      "section": "modern_parity_suite",
+      "category": "Live Single-Pass Parity Suite",
+      "study_title": "Modern Single-Pass Parity Evaluation Study (NCT07515196)",
+      "protocol_sha256": "a4f4b2994784bd36b7c41a6acd75642baf5180bc987b443bc3235ff21bdf3046",
+      "sap_sha256": null,
+      "study_url": "https://clinicaltrials.gov/study/NCT07515196",
+      "cdn_protocol_url": "https://cdn.clinicaltrials.gov/large-docs/96/NCT07515196/Prot_SAP_000.pdf",
+      "alternate_cdn_urls": [],
+      "telemetry": {
+        "event_count": 3,
+        "form_count": 15,
+        "item_group_count": 15,
+        "item_count": 61,
+        "edit_check_count": 39,
+        "node_count": 27,
+        "edge_count": 25
+      },
+      "files": {
+        "exports/rave_als.xlsx": {
+          "size_bytes": 35083,
+          "sha256": "2cf7c7667626cfdf6d92e77436833d3c9a0f7f2662b724b294d457c53b39e685"
+        },
+        "exports/veeva_cdms.xml": {
+          "size_bytes": 54952,
+          "sha256": "fbc53105c4a5e752b1c4c7f36593b39974d4de45d1e3024c1df02706864beadd"
+        },
+        "exports/cdisc_odm_v1.3.2.xml": {
+          "size_bytes": 129542,
+          "sha256": "19af70b408b60374d521c2f95dfe529116ecf9f13e978a01996e976cc3e7e352"
+        },
+        "exports/transcelerate_usdm_v3.0.json": {
+          "size_bytes": 40125,
+          "sha256": "0f25d145761437a8766d03b05f47d5d509e6f741bd937f28fbc91c9367bca509"
+        },
+        "metadata/provenance_matrix_21cfr11.xlsx": {
+          "size_bytes": 26016,
+          "sha256": "ed9737f03835ef2aa2d0cb536b0d9fab5ad76a79acf8afd1a7b04e5707ddc8e6"
+        },
+        "visuals/canvas_standard.svg": {
+          "size_bytes": 3106108,
+          "sha256": "eee1099b6f3c3f7914d90212c515804b5564f99664af4f224c91ca0f511b27e3"
+        },
+        "visuals/canvas_standard.pdf": {
+          "size_bytes": 494835,
+          "sha256": "9b592ef2e9df78eae4a5adc18c6825daab5501351ffeaca041a3c301cfb07ff5"
+        },
+        "visuals/canvas_mindmap.svg": {
+          "size_bytes": 2810510,
+          "sha256": "d0b93705dd75ce99b5b3702626fa97cc7a0e44160cea0185cf55ec0f0003c261"
+        },
+        "visuals/canvas_mindmap.pdf": {
+          "size_bytes": 288373,
+          "sha256": "b02ae231db93cc250b341f2f0255202788e185c4b2a217d113d718d938fd2af3"
+        },
+        "metadata/compilation_manifest.json": {
+          "size_bytes": 2435,
+          "sha256": "95a0e71e2ca1628dae48909007630fe63d1002383f03117949980b001e40641e"
+        },
+        "README.md": {
+          "size_bytes": 3196,
+          "sha256": "793844ae47148d4a817f8fbc77ec22287db8cd2498aa9279204fe832a2248812"
+        }
+      }
+    },
+    {
+      "nct_id": "NCT04681482",
+      "design_id": "study_407ab016",
+      "slot": 10,
+      "section": "modern_parity_suite",
+      "category": "Live Single-Pass Parity Suite",
+      "study_title": "Modern Single-Pass Parity Evaluation Study (NCT04681482)",
+      "protocol_sha256": "407ab0160f7ad37f3ba17a8a189dfa3f562b77f02ec0275608c08d67dd75862a",
+      "sap_sha256": null,
+      "study_url": "https://clinicaltrials.gov/study/NCT04681482",
+      "cdn_protocol_url": "https://cdn.clinicaltrials.gov/large-docs/82/NCT04681482/Prot_SAP_000.pdf",
+      "alternate_cdn_urls": [],
+      "telemetry": {
+        "event_count": 6,
+        "form_count": 15,
+        "item_group_count": 15,
+        "item_count": 57,
+        "edit_check_count": 39,
+        "node_count": 36,
+        "edge_count": 34
+      },
+      "files": {
+        "exports/rave_als.xlsx": {
+          "size_bytes": 35132,
+          "sha256": "41585f1bc1c6e89662cf878d8bb86f9e78564c807db0190912e388229747fcee"
+        },
+        "exports/veeva_cdms.xml": {
+          "size_bytes": 55210,
+          "sha256": "5c547e88f933b33a10638e0ad763104441cfdf9434c28bcd4f5337696abbee18"
+        },
+        "exports/cdisc_odm_v1.3.2.xml": {
+          "size_bytes": 128044,
+          "sha256": "72801a2a1c5da666c27d53eaf936305fefd6ff5d763fc63e26644bf86e9c5875"
+        },
+        "exports/transcelerate_usdm_v3.0.json": {
+          "size_bytes": 68907,
+          "sha256": "f5f8a151763540c11c2d9edd1482061ffd175c8f1beb9a551e69b5314a36e28e"
+        },
+        "metadata/provenance_matrix_21cfr11.xlsx": {
+          "size_bytes": 24427,
+          "sha256": "fe457dafa14d40f4b292ea3c895adfbeb68a79f726e1c5d1250a2e6e8689aa1a"
+        },
+        "visuals/canvas_standard.svg": {
+          "size_bytes": 4300133,
+          "sha256": "04eed14a7b94dac63c50f77f2959a4f93357409f968fc9c652a3cc16e332e8d8"
+        },
+        "visuals/canvas_standard.pdf": {
+          "size_bytes": 634695,
+          "sha256": "186652ec6ac222b8020b1fcb53503df0ae2039ead6d9ac7d4aea37863cc156c1"
+        },
+        "visuals/canvas_mindmap.svg": {
+          "size_bytes": 4247110,
+          "sha256": "8a52f3787aaa86ec6c51988bb1e45f18a74a745c65fd2c751c91433a414627f5"
+        },
+        "visuals/canvas_mindmap.pdf": {
+          "size_bytes": 409243,
+          "sha256": "318dd9b16a7350c388fd697eb1c23690ef45fe563fc959e6e9211653fdfcd345"
+        },
+        "metadata/compilation_manifest.json": {
+          "size_bytes": 2437,
+          "sha256": "10c2d4ce423e2714729a657c01de5d6949023b761964c3be4f45a28a99c298b9"
+        },
+        "README.md": {
+          "size_bytes": 3196,
+          "sha256": "9eadfcea1ddebbf8c07ebda14172d74919d65e2d11c2129215ec0933be751d92"
+        }
+      }
+    },
+    {
+      "nct_id": "NCT05460650",
+      "design_id": "study_e87816cb",
+      "slot": 11,
+      "section": "modern_parity_suite",
+      "category": "Live Single-Pass Parity Suite",
+      "study_title": "Modern Single-Pass Parity Evaluation Study (NCT05460650)",
+      "protocol_sha256": "e87816cb09fc41f416c4fd5e559616a1464177181e49dead3586df53802568b0",
+      "sap_sha256": null,
+      "study_url": "https://clinicaltrials.gov/study/NCT05460650",
+      "cdn_protocol_url": "https://cdn.clinicaltrials.gov/large-docs/50/NCT05460650/Prot_SAP_000.pdf",
+      "alternate_cdn_urls": [],
+      "telemetry": {
+        "event_count": 4,
+        "form_count": 15,
+        "item_group_count": 15,
+        "item_count": 41,
+        "edit_check_count": 28,
+        "node_count": 31,
+        "edge_count": 29
+      },
+      "files": {
+        "exports/rave_als.xlsx": {
+          "size_bytes": 28632,
+          "sha256": "9584e5d7dd5edbbe7e61fa50941cdc84d45fef6925460b250ebb920ea77e4b1a"
+        },
+        "exports/veeva_cdms.xml": {
+          "size_bytes": 43539,
+          "sha256": "7432b230ebcb24aaa6a76caa3ec01cb1507e3984c9db5c47883a45a020bb13c8"
+        },
+        "exports/cdisc_odm_v1.3.2.xml": {
+          "size_bytes": 110553,
+          "sha256": "b7c643bafb64ac92c73ce1b23a1fe4e7254aeec019d582c9741dd38c1fc3057f"
+        },
+        "exports/transcelerate_usdm_v3.0.json": {
+          "size_bytes": 46182,
+          "sha256": "9692b62e1b439a64d2e8754cd5297282918ecbd887ac0f7620f2224585f05ff9"
+        },
+        "metadata/provenance_matrix_21cfr11.xlsx": {
+          "size_bytes": 22425,
+          "sha256": "f92a47b68c8a4bcf8d623fe6009b9b131e33e95013ee7de41ba23dba87775b80"
+        },
+        "visuals/canvas_standard.svg": {
+          "size_bytes": 3706375,
+          "sha256": "46088f894a8b29886ab13c429cc7ba639edb909a4ed762c839f61b4fe324fdb8"
+        },
+        "visuals/canvas_standard.pdf": {
+          "size_bytes": 589537,
+          "sha256": "dd02d3ccb6c91437c81ff2add0ba47d41416f21ffbe4bdbff1c85308b439b6ed"
+        },
+        "visuals/canvas_mindmap.svg": {
+          "size_bytes": 3289575,
+          "sha256": "0d78773daa59747f284ff3b56eaaeacb293fa32946cf6f03f3a9702b75646098"
+        },
+        "visuals/canvas_mindmap.pdf": {
+          "size_bytes": 339747,
+          "sha256": "ad16ac687186ec613789ac714980ae089764e78358f894ee704bde842494661b"
+        },
+        "metadata/compilation_manifest.json": {
+          "size_bytes": 2436,
+          "sha256": "f897b509e57247c911cee59ee2e478dac8a02f42e1041d8a498b8c84608c69b5"
+        },
+        "README.md": {
+          "size_bytes": 3196,
+          "sha256": "fb25000e9fab0a73d51d4b93552e3e751f89b9caca1c2a8d82542534ba979308"
+        }
+      }
+    },
+    {
+      "nct_id": "NCT05307783",
+      "design_id": "study_5fc98924",
+      "slot": 12,
+      "section": "modern_parity_suite",
+      "category": "Live Single-Pass Parity Suite",
+      "study_title": "Modern Single-Pass Parity Evaluation Study (NCT05307783)",
+      "protocol_sha256": "5fc98924b2e462b0f900e397e6b34aacb2b663761b056b8bcaf183eb3b8a2a99",
+      "sap_sha256": null,
+      "study_url": "https://clinicaltrials.gov/study/NCT05307783",
+      "cdn_protocol_url": "https://cdn.clinicaltrials.gov/large-docs/83/NCT05307783/Prot_000.pdf",
+      "alternate_cdn_urls": [],
+      "telemetry": {
+        "event_count": 5,
+        "form_count": 15,
+        "item_group_count": 15,
+        "item_count": 61,
+        "edit_check_count": 40,
+        "node_count": 37,
+        "edge_count": 35
+      },
+      "files": {
+        "exports/rave_als.xlsx": {
+          "size_bytes": 36218,
+          "sha256": "1ad2544030441c475b42bed46cda4a65f647cc91b84511a44f597da73071aa27"
+        },
+        "exports/veeva_cdms.xml": {
+          "size_bytes": 57556,
+          "sha256": "d10d488c23b3ea4dc48a28d9c83bdc0885b4597489b90188eb0fd3b39cc7f18d"
+        },
+        "exports/cdisc_odm_v1.3.2.xml": {
+          "size_bytes": 137538,
+          "sha256": "a284bc34ae594437df6a3d437895965f1a3d2c4608dfba8420bb6425d93eb4cc"
+        },
+        "exports/transcelerate_usdm_v3.0.json": {
+          "size_bytes": 63613,
+          "sha256": "ed10c14ea316b9df0ff9da8a65e4408e4c05acdb5599e79f762fa4d3bc09932f"
+        },
+        "metadata/provenance_matrix_21cfr11.xlsx": {
+          "size_bytes": 28141,
+          "sha256": "aea0dd4a8f7ec1e71c1daf2bc752a0579ce1600b24aa92e1515146b7c0d27166"
+        },
+        "visuals/canvas_standard.svg": {
+          "size_bytes": 4291333,
+          "sha256": "66d26e06e5e0a80bb05ffbdfb74f1a4e97ec97534ea51ec8feb257416ebc40cb"
+        },
+        "visuals/canvas_standard.pdf": {
+          "size_bytes": 659363,
+          "sha256": "7679be855a3ba47b2fc5d503bc9722661fd28f5a5ebe8c2740f9df9b01844ccd"
+        },
+        "visuals/canvas_mindmap.svg": {
+          "size_bytes": 3995720,
+          "sha256": "dff4daed1e78caaf4d264fe08cc791a2bfa9976c2e51a313219e1ceecfca7ea7"
+        },
+        "visuals/canvas_mindmap.pdf": {
+          "size_bytes": 403061,
+          "sha256": "519ce97db736da03eb56d9f1c015f197ff92b73bd8f51b74079805efd50175a1"
+        },
+        "metadata/compilation_manifest.json": {
+          "size_bytes": 2406,
+          "sha256": "4b7be8a93394f93af9f4c975fdfdc94248fd3766d878efa00233c9abd1a235df"
+        },
+        "README.md": {
+          "size_bytes": 3111,
+          "sha256": "1b3ad74c2687f2ea7dbfeb3c2a01cc0670a2ed3dad24541c64c6d0d8b93d7bce"
+        }
+      }
+    },
+    {
+      "nct_id": "NCT02295735",
+      "design_id": "study_7e9b8990",
+      "slot": 13,
+      "section": "modern_parity_suite",
+      "category": "Live Single-Pass Parity Suite (Historical Parity Control)",
+      "study_title": "Single-Pass Historical Parity Control Study (NCT02295735)",
+      "protocol_sha256": "7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1",
+      "sap_sha256": null,
+      "study_url": "https://clinicaltrials.gov/study/NCT02295735",
+      "cdn_protocol_url": "https://cdn.clinicaltrials.gov/large-docs/35/NCT02295735/Prot_SAP_000.pdf",
+      "alternate_cdn_urls": [],
+      "telemetry": {
+        "event_count": 6,
+        "form_count": 15,
+        "item_group_count": 15,
+        "item_count": 64,
+        "edit_check_count": 41,
+        "node_count": 58,
+        "edge_count": 56
+      },
+      "files": {
+        "exports/rave_als.xlsx": {
+          "size_bytes": 37146,
+          "sha256": "bca0894000c73a86131cac989638efa33ad87b72effea8b7dc4aace558ed985e"
+        },
+        "exports/veeva_cdms.xml": {
+          "size_bytes": 59812,
+          "sha256": "9c5a0c7da4c42129db15fcda692efc64257b2439f13418379133071df138c6b4"
+        },
+        "exports/cdisc_odm_v1.3.2.xml": {
+          "size_bytes": 147404,
+          "sha256": "60a355ec2f6997db1904b60fe190a00aefdaaf0ae25316a7090fb156db8b77f6"
+        },
+        "exports/transcelerate_usdm_v3.0.json": {
+          "size_bytes": 99399,
+          "sha256": "962fd118ee9e13b7fca6809bd91aeff846d185c7a2e2920c051bd4ef30065410"
+        },
+        "metadata/provenance_matrix_21cfr11.xlsx": {
+          "size_bytes": 28230,
+          "sha256": "d128f35fa56e2156c7b67ea13e26d006fb35ee2c422dcb630cddc34e5e0e114d"
+        },
+        "visuals/canvas_standard.svg": {
+          "size_bytes": 6756228,
+          "sha256": "399f71a23eaba5b5f56cfdae19b2cbb0c8481a06a62e434b819e743609d74877"
+        },
+        "visuals/canvas_standard.pdf": {
+          "size_bytes": 1083931,
+          "sha256": "8a49451972935128acfb982e60732176514cf9cd4e473768d9ef6a703d2ed4ce"
+        },
+        "visuals/canvas_mindmap.svg": {
+          "size_bytes": 6312025,
+          "sha256": "f7b68f95e2819c64454d70acb88c88fa5cde2ff40004ad047b20d5a3c9425c9b"
+        },
+        "visuals/canvas_mindmap.pdf": {
+          "size_bytes": 624757,
+          "sha256": "517972749dcb1038db3d84397853a19e4d58f03deec7bbc6a7b8fa4a4b9e2d60"
+        },
+        "metadata/compilation_manifest.json": {
+          "size_bytes": 2467,
+          "sha256": "69886eaebae9ac7831b363d87fa5338d716e2e0261590fd04024c8bbdf8f6be7"
+        },
+        "README.md": {
+          "size_bytes": 3227,
+          "sha256": "71070ac307b7f743744b78d76ebcc3958f17d51ac6f529934660514cb7b70c86"
+        }
+      }
+    }
+  ]
+}

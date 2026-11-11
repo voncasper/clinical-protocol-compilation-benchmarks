@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0.0",
+  "publisher": "VonCasper Solutions",
+  "nct_id": "NCT02295735",
+  "design_id": "study_7e9b8990",
+  "slot": 13,
+  "section": "modern_parity_suite",
+  "category": "Live Single-Pass Parity Suite (Historical Parity Control)",
+  "study_title": "Single-Pass Historical Parity Control Study (NCT02295735)",
+  "protocol_sha256": "7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1",
+  "sap_sha256": null,
+  "sap_note": "Combined in Prot_SAP_000.pdf",
+  "study_url": "https://clinicaltrials.gov/study/NCT02295735",
+  "cdn_protocol_url": "https://cdn.clinicaltrials.gov/large-docs/35/NCT02295735/Prot_SAP_000.pdf",
+  "cdn_sap_url": null,
+  "alternate_cdn_urls": [],
+  "compilation_mode": "fresh_single_pass_no_resume",
+  "compilation_elapsed_seconds": 1160.02,
+  "finalized_at_utc": "2026-11-11T03:06:39.815894+00:00",
+  "telemetry": {
+    "event_count": 6,
+    "form_count": 15,
+    "item_group_count": 15,
+    "item_count": 64,
+    "edit_check_count": 41,
+    "node_count": 58,
+    "edge_count": 56
+  },
+  "artifacts": {
+    "exports/rave_als.xlsx": {
+      "size_bytes": 37146,
+      "sha256": "bca0894000c73a86131cac989638efa33ad87b72effea8b7dc4aace558ed985e"
+    },
+    "exports/veeva_cdms.xml": {
+      "size_bytes": 59812,
+      "sha256": "9c5a0c7da4c42129db15fcda692efc64257b2439f13418379133071df138c6b4"
+    },
+    "exports/cdisc_odm_v1.3.2.xml": {
+      "size_bytes": 147404,
+      "sha256": "60a355ec2f6997db1904b60fe190a00aefdaaf0ae25316a7090fb156db8b77f6"
+    },
+    "exports/transcelerate_usdm_v3.0.json": {
+      "size_bytes": 99399,
+      "sha256": "962fd118ee9e13b7fca6809bd91aeff846d185c7a2e2920c051bd4ef30065410"
+    },
+    "metadata/provenance_matrix_21cfr11.xlsx": {
+      "size_bytes": 28230,
+      "sha256": "d128f35fa56e2156c7b67ea13e26d006fb35ee2c422dcb630cddc34e5e0e114d"
+    },
+    "visuals/canvas_standard.svg": {
+      "size_bytes": 6756228,
+      "sha256": "399f71a23eaba5b5f56cfdae19b2cbb0c8481a06a62e434b819e743609d74877"
+    },
+    "visuals/canvas_standard.pdf": {
+      "size_bytes": 1083931,
+      "sha256": "8a49451972935128acfb982e60732176514cf9cd4e473768d9ef6a703d2ed4ce"
+    },
+    "visuals/canvas_mindmap.svg": {
+      "size_bytes": 6312025,
+      "sha256": "f7b68f95e2819c64454d70acb88c88fa5cde2ff40004ad047b20d5a3c9425c9b"
+    },
+    "visuals/canvas_mindmap.pdf": {
+      "size_bytes": 624757,
+      "sha256": "517972749dcb1038db3d84397853a19e4d58f03deec7bbc6a7b8fa4a4b9e2d60"
+    }
+  }
+}

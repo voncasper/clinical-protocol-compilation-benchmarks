@@ -1,0 +1,1458 @@
+{
+  "usdmVersion": "3.0",
+  "systemName": "GFlow Semantic Protocol Compiler",
+  "systemVersion": "1.78.0",
+  "study": {
+    "id": "study_study_3fc386fd",
+    "name": "NCT04030195 Benchmark",
+    "description": "Compiled clinical study design conforming to ICH M11 and CDISC USDM v3.0 for NCT04030195 Benchmark.",
+    "protocolVersions": [
+      {
+        "id": "spv_3fc386fdad7e",
+        "protocolNumber": "3fc386fdad7e96cd02c0610ccd08b992e05e4339f734cbcbf593ea7ab6618a3c",
+        "briefTitle": "NCT04030195 Benchmark",
+        "officialTitle": "A Study Evaluating NCT04030195 Benchmark in Clinical Trial Subjects",
+        "protocolVersion": "1.0",
+        "status": "Approved",
+        "sponsor": {
+          "id": "org_voncasper_001",
+          "name": "VonCasper Solutions"
+        }
+      }
+    ],
+    "studyDesigns": [
+      {
+        "id": "sd_study_3fc386fd",
+        "name": "NCT04030195 Benchmark Study Design",
+        "studyType": "Interventional",
+        "studyPhase": null,
+        "interventionModel": "Parallel",
+        "epochs": [
+          {
+            "id": "EP.1",
+            "name": "Treatment Period",
+            "epochType": "Treatment",
+            "sequenceNumber": 1,
+            "description": "Treatment Period chronological phase."
+          },
+          {
+            "id": "EP.2",
+            "name": "Follow-up Period",
+            "epochType": "Follow-up",
+            "sequenceNumber": 2,
+            "description": "Follow-up Period chronological phase."
+          },
+          {
+            "id": "EP.3",
+            "name": "Study Completion Endpoint",
+            "epochType": "Treatment",
+            "sequenceNumber": 3,
+            "description": "Study Completion Endpoint chronological phase."
+          },
+          {
+            "id": "EP.4",
+            "name": "Disease Progression/Death/New Therapy",
+            "epochType": "Treatment",
+            "sequenceNumber": 4,
+            "description": "Disease Progression/Death/New Therapy chronological phase."
+          },
+          {
+            "id": "EP.Treatment_Epoch",
+            "name": "Treatment Period",
+            "epochType": "Treatment",
+            "sequenceNumber": 5,
+            "description": "Treatment Period chronological phase."
+          }
+        ],
+        "encounters": [
+          {
+            "id": "SE.V02",
+            "name": "Daily Monitoring (Days 1-28)",
+            "epochId": "EP.2",
+            "sequenceNumber": 1,
+            "targetDay": 7.0,
+            "windowBeforeDays": 3.0,
+            "windowAfterDays": 3.0,
+            "environmentalSetting": "Clinic"
+          },
+          {
+            "id": "SE.V01",
+            "name": "Day 0 Visit",
+            "epochId": "EP.1",
+            "sequenceNumber": 2,
+            "targetDay": 0.0,
+            "windowBeforeDays": 0.0,
+            "windowAfterDays": 3.0,
+            "environmentalSetting": "Clinic"
+          },
+          {
+            "id": "SE.V03",
+            "name": "Final Study Evaluation (Day 360)",
+            "epochId": "EP.2",
+            "sequenceNumber": 3,
+            "targetDay": 360.0,
+            "windowBeforeDays": 3.0,
+            "windowAfterDays": 3.0,
+            "environmentalSetting": "Clinic"
+          }
+        ],
+        "activities": [
+          {
+            "id": "act_ic",
+            "name": "Informed Consent",
+            "definedProcedures": [
+              {
+                "id": "proc_consent_requirement",
+                "name": "Informed Consent Requirement",
+                "code": "Consent_Requirement",
+                "measurementUnit": null,
+                "unitOrigin": "NOT_APPLICABLE"
+              }
+            ]
+          },
+          {
+            "id": "act_dm",
+            "name": "Demographics",
+            "definedProcedures": [
+              {
+                "id": "proc_weight",
+                "name": "Weight",
+                "code": "Weight",
+                "measurementUnit": "kg",
+                "unitOrigin": "CDASH_INFERRED"
+              },
+              {
+                "id": "proc_sex_gender",
+                "name": "Sex/Gender",
+                "code": "Sex_Gender",
+                "measurementUnit": null,
+                "unitOrigin": "NOT_APPLICABLE"
+              }
+            ]
+          },
+          {
+            "id": "act_mh",
+            "name": "Medical History",
+            "definedProcedures": [
+              {
+                "id": "proc_baseline_malignancy",
+                "name": "Baseline Malignancy",
+                "code": "Baseline_Malignancy",
+                "measurementUnit": null,
+                "unitOrigin": "NOT_APPLICABLE"
+              },
+              {
+                "id": "proc_prior_therapy_status",
+                "name": "Prior Therapy Status",
+                "code": "Prior_Therapy_Status",
+                "measurementUnit": null,
+                "unitOrigin": "NOT_APPLICABLE"
+              }
+            ]
+          },
+          {
+            "id": "act_ex",
+            "name": "Exposure",
+            "definedProcedures": [
+              {
+                "id": "proc_pbcar20a_dose",
+                "name": "PBCAR20A Administration",
+                "code": "PBCAR20A_Dose",
+                "measurementUnit": null,
+                "unitOrigin": "NOT_APPLICABLE"
+              },
+              {
+                "id": "proc_lymphodepletion_regimen",
+                "name": "Lymphodepletion Chemotherapy Regimen",
+                "code": "Lymphodepletion_Regimen",
+                "measurementUnit": null,
+                "unitOrigin": "NOT_APPLICABLE"
+              },
+              {
+                "id": "proc_ibrutinib_exposure",
+                "name": "Prior Ibrutinib Exposure",
+                "code": "Ibrutinib_Exposure",
+                "measurementUnit": null,
+                "unitOrigin": "NOT_APPLICABLE"
+              },
+              {
+                "id": "proc_fever_management_intervention",
+                "name": "Intervention for Grade 2 Fever",
+                "code": "Fever_Management_Intervention",
+                "measurementUnit": null,
+                "unitOrigin": "NOT_APPLICABLE"
+              },
+              {
+                "id": "proc_gvhd_confirmation_method",
+                "name": "GvHD Confirmation Method",
+                "code": "GvHD_Confirmation_Method",
+                "measurementUnit": null,
+                "unitOrigin": "NOT_APPLICABLE"
+              },
+              {
+                "id": "proc_fibrinogen_monitoring",
+                "name": "Fibrinogen Monitoring",
+                "code": "Fibrinogen_Monitoring",
+                "measurementUnit": "mg",
+                "unitOrigin": "CDASH_INFERRED"
+              }
+            ]
+          },
+          {
+            "id": "act_cm",
+            "name": "Concomitant Medications",
+            "definedProcedures": [
+              {
+                "id": "proc_permittedmedication_lymphodepletion",
+                "name": "Permitted Medication: Lymphodepletion",
+                "code": "PermittedMedication_Lymphodepletion",
+                "measurementUnit": null,
+                "unitOrigin": "NOT_APPLICABLE"
+              },
+              {
+                "id": "proc_prohibitedmedication_nonelisted",
+                "name": "Prohibited Medications",
+                "code": "ProhibitedMedication_NoneListed",
+                "measurementUnit": null,
+                "unitOrigin": "NOT_APPLICABLE"
+              },
+              {
+                "id": "proc_corticosteroidrestriction",
+                "name": "Corticosteroid Restriction",
+                "code": "CorticosteroidRestriction",
+                "measurementUnit": null,
+                "unitOrigin": "NOT_APPLICABLE"
+              },
+              {
+                "id": "proc_cyp3a4_interaction_caution",
+                "name": "CYP3A4 Interaction Caution",
+                "code": "CYP3A4_Interaction_Caution",
+                "measurementUnit": null,
+                "unitOrigin": "NOT_APPLICABLE"
+              },
+              {
+                "id": "proc_washoutperiod_nonedefined",
+                "name": "Washout Period",
+                "code": "WashoutPeriod_NoneDefined",
+                "measurementUnit": "days",
+                "unitOrigin": "CDASH_INFERRED"
+              }
+            ]
+          },
+          {
+            "id": "act_pr",
+            "name": "Procedures",
+            "definedProcedures": [
+              {
+                "id": "proc_bone marrow aspiration and biopsy",
+                "name": "Bone Marrow Aspiration and Biopsy",
+                "code": "Bone Marrow Aspiration and Biopsy",
+                "measurementUnit": "count",
+                "unitOrigin": "CDASH_INFERRED"
+              },
+              {
+                "id": "proc_anti-cd20 therapy",
+                "name": "Anti-CD20 Therapy",
+                "code": "Anti-CD20 Therapy",
+                "measurementUnit": "count",
+                "unitOrigin": "CDASH_INFERRED"
+              },
+              {
+                "id": "proc_intensive care supportive therapy",
+                "name": "Intensive Care Supportive Therapy",
+                "code": "Intensive Care Supportive Therapy",
+                "measurementUnit": null,
+                "unitOrigin": "NOT_APPLICABLE"
+              },
+              {
+                "id": "proc_icans/seizure monitoring",
+                "name": "ICANS/Seizure Monitoring",
+                "code": "ICANS/Seizure Monitoring",
+                "measurementUnit": "count",
+                "unitOrigin": "CDASH_INFERRED"
+              }
+            ]
+          },
+          {
+            "id": "act_vs",
+            "name": "Vital Signs",
+            "definedProcedures": [
+              {
+                "id": "proc_sysbp",
+                "name": "Systolic Blood Pressure",
+                "code": "SYSBP",
+                "measurementUnit": "mmHg",
+                "unitOrigin": "CDASH_INFERRED"
+              },
+              {
+                "id": "proc_diabp",
+                "name": "Diastolic Blood Pressure",
+                "code": "DIABP",
+                "measurementUnit": "mmHg",
+                "unitOrigin": "CDASH_INFERRED"
+              },
+              {
+                "id": "proc_temp",
+                "name": "Temperature",
+                "code": "TEMP",
+                "measurementUnit": "\u00b0C",
+                "unitOrigin": "PROTOCOL_VERBATIM"
+              },
+              {
+                "id": "proc_hr",
+                "name": "Heart Rate",
+                "code": "HR",
+                "measurementUnit": "bpm",
+                "unitOrigin": "CDASH_INFERRED"
+              },
+              {
+                "id": "proc_rr",
+                "name": "Respiratory Rate",
+                "code": "RR",
+                "measurementUnit": "breaths/min",
+                "unitOrigin": "CDASH_INFERRED"
+              },
+              {
+                "id": "proc_wt",
+                "name": "Weight",
+                "code": "WT",
+                "measurementUnit": "kg",
+                "unitOrigin": "PROTOCOL_VERBATIM"
+              }
+            ]
+          },
+          {
+            "id": "act_eg",
+            "name": "Electrocardiogram",
+            "definedProcedures": [
+              {
+                "id": "proc_ecg_12l",
+                "name": "12-lead ECG",
+                "code": "ECG_12L",
+                "measurementUnit": null,
+                "unitOrigin": "NOT_APPLICABLE"
+              },
+              {
+                "id": "proc_qtc",
+                "name": "QTcF Interval",
+                "code": "QTC",
+                "measurementUnit": "ms",
+                "unitOrigin": "CDASH_INFERRED"
+              },
+              {
+                "id": "proc_v_rate",
+                "name": "Ventricular Rate",
+                "code": "V_RATE",
+                "measurementUnit": "bpm",
+                "unitOrigin": "CDASH_INFERRED"
+              },
+              {
+                "id": "proc_ecg_interp",
+                "name": "Overall Interpretation",
+                "code": "ECG_INTERP",
+                "measurementUnit": null,
+                "unitOrigin": "NOT_APPLICABLE"
+              }
+            ]
+          },
+          {
+            "id": "act_pe",
+            "name": "Physical Examination",
+            "definedProcedures": [
+              {
+                "id": "proc_phys_exam",
+                "name": "Complete Physical Examination",
+                "code": "PHYS_EXAM",
+                "measurementUnit": null,
+                "unitOrigin": "NOT_APPLICABLE"
+              },
+              {
+                "id": "proc_ecog_ps",
+                "name": "ECOG Performance Status",
+                "code": "ECOG_PS",
+                "measurementUnit": "grade",
+                "unitOrigin": "CDASH_INFERRED"
+              },
+              {
+                "id": "proc_height",
+                "name": "Height",
+                "code": "HEIGHT",
+                "measurementUnit": "cm",
+                "unitOrigin": "CDASH_INFERRED"
+              }
+            ]
+          },
+          {
+            "id": "act_lb",
+            "name": "Laboratory Findings",
+            "definedProcedures": [
+              {
+                "id": "proc_cytokine levels",
+                "name": "Cytokine Levels",
+                "code": "Cytokine Levels",
+                "measurementUnit": "pg/mL",
+                "unitOrigin": "CDASH_INFERRED"
+              },
+              {
+                "id": "proc_inflammatory markers",
+                "name": "Inflammatory Markers",
+                "code": "Inflammatory Markers",
+                "measurementUnit": "mg/dL",
+                "unitOrigin": "CDASH_INFERRED"
+              },
+              {
+                "id": "proc_pregnancy test",
+                "name": "Pregnancy Test",
+                "code": "Pregnancy Test",
+                "measurementUnit": null,
+                "unitOrigin": "NOT_APPLICABLE"
+              }
+            ]
+          },
+          {
+            "id": "act_pk",
+            "name": "Pharmacokinetics",
+            "definedProcedures": [
+              {
+                "id": "proc_pre-dose blood sample",
+                "name": "Pre-dose Blood Sample",
+                "code": "Pre-dose Blood Sample",
+                "measurementUnit": "10^6 cells/kg",
+                "unitOrigin": "CDASH_INFERRED"
+              }
+            ]
+          },
+          {
+            "id": "act_bs",
+            "name": "Biomarkers",
+            "definedProcedures": [
+              {
+                "id": "proc_disease status assessment",
+                "name": "Disease Status Assessment",
+                "code": "Disease Status Assessment",
+                "measurementUnit": null,
+                "unitOrigin": "NOT_APPLICABLE"
+              },
+              {
+                "id": "proc_neurotoxicity marker",
+                "name": "Neurotoxicity Marker",
+                "code": "Neurotoxicity Marker",
+                "measurementUnit": "count",
+                "unitOrigin": "CDASH_INFERRED"
+              },
+              {
+                "id": "proc_systemic inflammation marker",
+                "name": "Systemic Inflammation Marker",
+                "code": "Systemic Inflammation Marker",
+                "measurementUnit": "count",
+                "unitOrigin": "CDASH_INFERRED"
+              },
+              {
+                "id": "proc_hypoxia status",
+                "name": "Hypoxia Status",
+                "code": "Hypoxia Status",
+                "measurementUnit": null,
+                "unitOrigin": "NOT_APPLICABLE"
+              }
+            ]
+          },
+          {
+            "id": "act_ae",
+            "name": "Adverse Event",
+            "definedProcedures": [
+              {
+                "id": "proc_ae_collection_window",
+                "name": "Adverse Event Collection Window",
+                "code": "AE_Collection_Window",
+                "measurementUnit": "grade",
+                "unitOrigin": "CDASH_INFERRED"
+              },
+              {
+                "id": "proc_aeterm",
+                "name": "Reported Term for the Adverse Event",
+                "code": "AETERM",
+                "measurementUnit": null,
+                "unitOrigin": "NOT_APPLICABLE"
+              },
+              {
+                "id": "proc_aetoxgr",
+                "name": "NCI-CTCAE Toxicity Grade",
+                "code": "AETOXGR",
+                "measurementUnit": "grade",
+                "unitOrigin": "PROTOCOL_VERBATIM"
+              },
+              {
+                "id": "proc_aestdat",
+                "name": "Adverse Event Start Date",
+                "code": "AESTDAT",
+                "measurementUnit": null,
+                "unitOrigin": "NOT_APPLICABLE"
+              },
+              {
+                "id": "proc_aeendat",
+                "name": "Adverse Event End Date",
+                "code": "AEENDAT",
+                "measurementUnit": null,
+                "unitOrigin": "NOT_APPLICABLE"
+              },
+              {
+                "id": "proc_aeout",
+                "name": "Adverse Event Outcome",
+                "code": "AEOUT",
+                "measurementUnit": null,
+                "unitOrigin": "NOT_APPLICABLE"
+              }
+            ]
+          },
+          {
+            "id": "act_ds",
+            "name": "Disposition",
+            "definedProcedures": [
+              {
+                "id": "proc_protocol completion (day 360)",
+                "name": "Protocol Completion (Day 360)",
+                "code": "Protocol Completion (Day 360)",
+                "measurementUnit": null,
+                "unitOrigin": "NOT_APPLICABLE"
+              },
+              {
+                "id": "proc_disease progression",
+                "name": "Disease Progression",
+                "code": "Disease Progression",
+                "measurementUnit": null,
+                "unitOrigin": "NOT_APPLICABLE"
+              },
+              {
+                "id": "proc_death",
+                "name": "Death",
+                "code": "Death",
+                "measurementUnit": null,
+                "unitOrigin": "NOT_APPLICABLE"
+              },
+              {
+                "id": "proc_initiation of new systemic therapy",
+                "name": "Initiation of New Systemic Therapy",
+                "code": "Initiation of New Systemic Therapy",
+                "measurementUnit": null,
+                "unitOrigin": "NOT_APPLICABLE"
+              },
+              {
+                "id": "proc_dose-limiting toxicity (dlt) threshold",
+                "name": "Dose-Limiting Toxicity (DLT) Threshold",
+                "code": "Dose-Limiting Toxicity (DLT) Threshold",
+                "measurementUnit": null,
+                "unitOrigin": "NOT_APPLICABLE"
+              }
+            ]
+          },
+          {
+            "id": "act_ie.se.v01",
+            "name": "Inclusion/Exclusion Criteria",
+            "definedProcedures": [
+              {
+                "id": "proc_act_ie.se.v01",
+                "name": "Inclusion/Exclusion Criteria",
+                "code": "FORM.IE.SE.V01"
+              }
+            ]
+          },
+          {
+            "id": "act_ic.se.v01",
+            "name": "Informed Consent",
+            "definedProcedures": [
+              {
+                "id": "proc_act_ic.se.v01",
+                "name": "Informed Consent",
+                "code": "FORM.IC.SE.V01"
+              }
+            ]
+          },
+          {
+            "id": "act_dm.se.v01",
+            "name": "Demographics",
+            "definedProcedures": [
+              {
+                "id": "proc_act_dm.se.v01",
+                "name": "Demographics",
+                "code": "FORM.DM.SE.V01"
+              }
+            ]
+          },
+          {
+            "id": "act_mh.se.v01",
+            "name": "Medical History",
+            "definedProcedures": [
+              {
+                "id": "proc_act_mh.se.v01",
+                "name": "Medical History",
+                "code": "FORM.MH.SE.V01"
+              }
+            ]
+          },
+          {
+            "id": "act_vs.se.v01",
+            "name": "Vital Signs",
+            "definedProcedures": [
+              {
+                "id": "proc_act_vs.se.v01",
+                "name": "Vital Signs",
+                "code": "FORM.VS.SE.V01"
+              }
+            ]
+          },
+          {
+            "id": "act_lb.se.v01",
+            "name": "Laboratory Findings",
+            "definedProcedures": [
+              {
+                "id": "proc_act_lb.se.v01",
+                "name": "Laboratory Findings",
+                "code": "FORM.LB.SE.V01"
+              }
+            ]
+          },
+          {
+            "id": "act_vs.se.v02",
+            "name": "Vital Signs",
+            "definedProcedures": [
+              {
+                "id": "proc_act_vs.se.v02",
+                "name": "Vital Signs",
+                "code": "FORM.VS.SE.V02"
+              }
+            ]
+          },
+          {
+            "id": "act_pe.se.v02",
+            "name": "Physical Examination",
+            "definedProcedures": [
+              {
+                "id": "proc_act_pe.se.v02",
+                "name": "Physical Examination",
+                "code": "FORM.PE.SE.V02"
+              }
+            ]
+          },
+          {
+            "id": "act_lb.se.v02",
+            "name": "Laboratory Findings",
+            "definedProcedures": [
+              {
+                "id": "proc_act_lb.se.v02",
+                "name": "Laboratory Findings",
+                "code": "FORM.LB.SE.V02"
+              }
+            ]
+          },
+          {
+            "id": "act_pk.se.v02",
+            "name": "Pharmacokinetics",
+            "definedProcedures": [
+              {
+                "id": "proc_act_pk.se.v02",
+                "name": "Pharmacokinetics",
+                "code": "FORM.PK.SE.V02"
+              }
+            ]
+          },
+          {
+            "id": "act_cm.se.v02",
+            "name": "Concomitant Medications",
+            "definedProcedures": [
+              {
+                "id": "proc_act_cm.se.v02",
+                "name": "Concomitant Medications",
+                "code": "FORM.CM.SE.V02"
+              }
+            ]
+          },
+          {
+            "id": "act_ae.se.v02",
+            "name": "Adverse Event",
+            "definedProcedures": [
+              {
+                "id": "proc_act_ae.se.v02",
+                "name": "Adverse Event",
+                "code": "FORM.AE.SE.V02"
+              }
+            ]
+          },
+          {
+            "id": "act_bs.se.v02",
+            "name": "Biomarkers",
+            "definedProcedures": [
+              {
+                "id": "proc_act_bs.se.v02",
+                "name": "Biomarkers",
+                "code": "FORM.BS.SE.V02"
+              }
+            ]
+          },
+          {
+            "id": "act_eg.se.v02",
+            "name": "Electrocardiogram",
+            "definedProcedures": [
+              {
+                "id": "proc_act_eg.se.v02",
+                "name": "Electrocardiogram",
+                "code": "FORM.EG.SE.V02"
+              }
+            ]
+          },
+          {
+            "id": "act_pr.se.v02",
+            "name": "Procedures",
+            "definedProcedures": [
+              {
+                "id": "proc_act_pr.se.v02",
+                "name": "Procedures",
+                "code": "FORM.PR.SE.V02"
+              }
+            ]
+          },
+          {
+            "id": "act_vs.se.v03",
+            "name": "Vital Signs",
+            "definedProcedures": [
+              {
+                "id": "proc_act_vs.se.v03",
+                "name": "Vital Signs",
+                "code": "FORM.VS.SE.V03"
+              }
+            ]
+          },
+          {
+            "id": "act_lb.se.v03",
+            "name": "Laboratory Findings",
+            "definedProcedures": [
+              {
+                "id": "proc_act_lb.se.v03",
+                "name": "Laboratory Findings",
+                "code": "FORM.LB.SE.V03"
+              }
+            ]
+          },
+          {
+            "id": "act_ae.se.v03",
+            "name": "Adverse Event",
+            "definedProcedures": [
+              {
+                "id": "proc_act_ae.se.v03",
+                "name": "Adverse Event",
+                "code": "FORM.AE.SE.V03"
+              }
+            ]
+          },
+          {
+            "id": "act_ds.se.v03",
+            "name": "Disposition",
+            "definedProcedures": [
+              {
+                "id": "proc_act_ds.se.v03",
+                "name": "Disposition",
+                "code": "FORM.DS.SE.V03"
+              }
+            ]
+          }
+        ],
+        "activitySchedules": [
+          {
+            "id": "soa_1",
+            "activityId": "act_ic",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_2",
+            "activityId": "act_mh",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_3",
+            "activityId": "act_ex",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_4",
+            "activityId": "act_cm",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_5",
+            "activityId": "act_pr",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_6",
+            "activityId": "act_vs",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_7",
+            "activityId": "act_eg",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_8",
+            "activityId": "act_pe",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_9",
+            "activityId": "act_lb",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_10",
+            "activityId": "act_pk",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_11",
+            "activityId": "act_bs",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_12",
+            "activityId": "act_ae",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_13",
+            "activityId": "act_ds",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_14",
+            "activityId": "act_ie.se.v01",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_15",
+            "activityId": "act_ic.se.v01",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_16",
+            "activityId": "act_mh.se.v01",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_17",
+            "activityId": "act_vs.se.v01",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_18",
+            "activityId": "act_lb.se.v01",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_19",
+            "activityId": "act_vs.se.v02",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_20",
+            "activityId": "act_pe.se.v02",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_21",
+            "activityId": "act_lb.se.v02",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_22",
+            "activityId": "act_pk.se.v02",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_23",
+            "activityId": "act_cm.se.v02",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_24",
+            "activityId": "act_ae.se.v02",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_25",
+            "activityId": "act_bs.se.v02",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_26",
+            "activityId": "act_eg.se.v02",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_27",
+            "activityId": "act_pr.se.v02",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_28",
+            "activityId": "act_vs.se.v03",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_29",
+            "activityId": "act_lb.se.v03",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_30",
+            "activityId": "act_ae.se.v03",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_31",
+            "activityId": "act_ds.se.v03",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_32",
+            "activityId": "act_ic",
+            "encounterId": "SE.V01",
+            "epochId": "EP.1",
+            "mandatory": true
+          },
+          {
+            "id": "soa_33",
+            "activityId": "act_mh",
+            "encounterId": "SE.V01",
+            "epochId": "EP.1",
+            "mandatory": true
+          },
+          {
+            "id": "soa_34",
+            "activityId": "act_ex",
+            "encounterId": "SE.V01",
+            "epochId": "EP.1",
+            "mandatory": true
+          },
+          {
+            "id": "soa_35",
+            "activityId": "act_cm",
+            "encounterId": "SE.V01",
+            "epochId": "EP.1",
+            "mandatory": true
+          },
+          {
+            "id": "soa_36",
+            "activityId": "act_pr",
+            "encounterId": "SE.V01",
+            "epochId": "EP.1",
+            "mandatory": true
+          },
+          {
+            "id": "soa_37",
+            "activityId": "act_vs",
+            "encounterId": "SE.V01",
+            "epochId": "EP.1",
+            "mandatory": true
+          },
+          {
+            "id": "soa_38",
+            "activityId": "act_eg",
+            "encounterId": "SE.V01",
+            "epochId": "EP.1",
+            "mandatory": true
+          },
+          {
+            "id": "soa_39",
+            "activityId": "act_pe",
+            "encounterId": "SE.V01",
+            "epochId": "EP.1",
+            "mandatory": true
+          },
+          {
+            "id": "soa_40",
+            "activityId": "act_lb",
+            "encounterId": "SE.V01",
+            "epochId": "EP.1",
+            "mandatory": true
+          },
+          {
+            "id": "soa_41",
+            "activityId": "act_pk",
+            "encounterId": "SE.V01",
+            "epochId": "EP.1",
+            "mandatory": true
+          },
+          {
+            "id": "soa_42",
+            "activityId": "act_bs",
+            "encounterId": "SE.V01",
+            "epochId": "EP.1",
+            "mandatory": true
+          },
+          {
+            "id": "soa_43",
+            "activityId": "act_ae",
+            "encounterId": "SE.V01",
+            "epochId": "EP.1",
+            "mandatory": true
+          },
+          {
+            "id": "soa_44",
+            "activityId": "act_ds",
+            "encounterId": "SE.V01",
+            "epochId": "EP.1",
+            "mandatory": true
+          },
+          {
+            "id": "soa_45",
+            "activityId": "act_ie.se.v01",
+            "encounterId": "SE.V01",
+            "epochId": "EP.1",
+            "mandatory": true
+          },
+          {
+            "id": "soa_46",
+            "activityId": "act_ic.se.v01",
+            "encounterId": "SE.V01",
+            "epochId": "EP.1",
+            "mandatory": true
+          },
+          {
+            "id": "soa_47",
+            "activityId": "act_mh.se.v01",
+            "encounterId": "SE.V01",
+            "epochId": "EP.1",
+            "mandatory": true
+          },
+          {
+            "id": "soa_48",
+            "activityId": "act_vs.se.v01",
+            "encounterId": "SE.V01",
+            "epochId": "EP.1",
+            "mandatory": true
+          },
+          {
+            "id": "soa_49",
+            "activityId": "act_lb.se.v01",
+            "encounterId": "SE.V01",
+            "epochId": "EP.1",
+            "mandatory": true
+          },
+          {
+            "id": "soa_50",
+            "activityId": "act_vs.se.v02",
+            "encounterId": "SE.V01",
+            "epochId": "EP.1",
+            "mandatory": true
+          },
+          {
+            "id": "soa_51",
+            "activityId": "act_pe.se.v02",
+            "encounterId": "SE.V01",
+            "epochId": "EP.1",
+            "mandatory": true
+          },
+          {
+            "id": "soa_52",
+            "activityId": "act_lb.se.v02",
+            "encounterId": "SE.V01",
+            "epochId": "EP.1",
+            "mandatory": true
+          },
+          {
+            "id": "soa_53",
+            "activityId": "act_pk.se.v02",
+            "encounterId": "SE.V01",
+            "epochId": "EP.1",
+            "mandatory": true
+          },
+          {
+            "id": "soa_54",
+            "activityId": "act_cm.se.v02",
+            "encounterId": "SE.V01",
+            "epochId": "EP.1",
+            "mandatory": true
+          },
+          {
+            "id": "soa_55",
+            "activityId": "act_ae.se.v02",
+            "encounterId": "SE.V01",
+            "epochId": "EP.1",
+            "mandatory": true
+          },
+          {
+            "id": "soa_56",
+            "activityId": "act_bs.se.v02",
+            "encounterId": "SE.V01",
+            "epochId": "EP.1",
+            "mandatory": true
+          },
+          {
+            "id": "soa_57",
+            "activityId": "act_eg.se.v02",
+            "encounterId": "SE.V01",
+            "epochId": "EP.1",
+            "mandatory": true
+          },
+          {
+            "id": "soa_58",
+            "activityId": "act_pr.se.v02",
+            "encounterId": "SE.V01",
+            "epochId": "EP.1",
+            "mandatory": true
+          },
+          {
+            "id": "soa_59",
+            "activityId": "act_vs.se.v03",
+            "encounterId": "SE.V01",
+            "epochId": "EP.1",
+            "mandatory": true
+          },
+          {
+            "id": "soa_60",
+            "activityId": "act_lb.se.v03",
+            "encounterId": "SE.V01",
+            "epochId": "EP.1",
+            "mandatory": true
+          },
+          {
+            "id": "soa_61",
+            "activityId": "act_ae.se.v03",
+            "encounterId": "SE.V01",
+            "epochId": "EP.1",
+            "mandatory": true
+          },
+          {
+            "id": "soa_62",
+            "activityId": "act_ds.se.v03",
+            "encounterId": "SE.V01",
+            "epochId": "EP.1",
+            "mandatory": true
+          },
+          {
+            "id": "soa_63",
+            "activityId": "act_ic",
+            "encounterId": "SE.V03",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_64",
+            "activityId": "act_mh",
+            "encounterId": "SE.V03",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_65",
+            "activityId": "act_ex",
+            "encounterId": "SE.V03",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_66",
+            "activityId": "act_cm",
+            "encounterId": "SE.V03",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_67",
+            "activityId": "act_pr",
+            "encounterId": "SE.V03",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_68",
+            "activityId": "act_vs",
+            "encounterId": "SE.V03",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_69",
+            "activityId": "act_eg",
+            "encounterId": "SE.V03",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_70",
+            "activityId": "act_pe",
+            "encounterId": "SE.V03",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_71",
+            "activityId": "act_lb",
+            "encounterId": "SE.V03",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_72",
+            "activityId": "act_pk",
+            "encounterId": "SE.V03",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_73",
+            "activityId": "act_bs",
+            "encounterId": "SE.V03",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_74",
+            "activityId": "act_ae",
+            "encounterId": "SE.V03",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_75",
+            "activityId": "act_ds",
+            "encounterId": "SE.V03",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_76",
+            "activityId": "act_ie.se.v01",
+            "encounterId": "SE.V03",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_77",
+            "activityId": "act_ic.se.v01",
+            "encounterId": "SE.V03",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_78",
+            "activityId": "act_mh.se.v01",
+            "encounterId": "SE.V03",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_79",
+            "activityId": "act_vs.se.v01",
+            "encounterId": "SE.V03",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_80",
+            "activityId": "act_lb.se.v01",
+            "encounterId": "SE.V03",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_81",
+            "activityId": "act_vs.se.v02",
+            "encounterId": "SE.V03",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_82",
+            "activityId": "act_pe.se.v02",
+            "encounterId": "SE.V03",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_83",
+            "activityId": "act_lb.se.v02",
+            "encounterId": "SE.V03",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_84",
+            "activityId": "act_pk.se.v02",
+            "encounterId": "SE.V03",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_85",
+            "activityId": "act_cm.se.v02",
+            "encounterId": "SE.V03",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_86",
+            "activityId": "act_ae.se.v02",
+            "encounterId": "SE.V03",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_87",
+            "activityId": "act_bs.se.v02",
+            "encounterId": "SE.V03",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_88",
+            "activityId": "act_eg.se.v02",
+            "encounterId": "SE.V03",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_89",
+            "activityId": "act_pr.se.v02",
+            "encounterId": "SE.V03",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_90",
+            "activityId": "act_vs.se.v03",
+            "encounterId": "SE.V03",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_91",
+            "activityId": "act_lb.se.v03",
+            "encounterId": "SE.V03",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_92",
+            "activityId": "act_ae.se.v03",
+            "encounterId": "SE.V03",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_93",
+            "activityId": "act_ds.se.v03",
+            "encounterId": "SE.V03",
+            "epochId": "EP.2",
+            "mandatory": true
+          }
+        ],
+        "eligibilityCriteria": [
+          {
+            "id": "crit_ie_disease_type",
+            "name": "Disease Type",
+            "criterionType": "Inclusion",
+            "category": "Inclusion",
+            "description": "Disease Type"
+          },
+          {
+            "id": "crit_ie_safety_threshold_dlt",
+            "name": "Dose-Limiting Toxicity Threshold",
+            "criterionType": "Inclusion",
+            "category": "Inclusion",
+            "description": "Dose-Limiting Toxicity Threshold"
+          },
+          {
+            "id": "crit_ie_caregiver_access",
+            "name": "Caregiver Access Requirement",
+            "criterionType": "Inclusion",
+            "category": "Inclusion",
+            "description": "Caregiver Access Requirement"
+          }
+        ],
+        "arms": [
+          {
+            "id": "ARM.1",
+            "name": "Phase 1 Arm",
+            "armType": "Experimental",
+            "description": "Phase 1 Arm study cohort."
+          },
+          {
+            "id": "ARM.2",
+            "name": "Phase 2a Arm A",
+            "armType": "Active Comparator",
+            "description": "Phase 2a Arm A study cohort."
+          },
+          {
+            "id": "ARM.3",
+            "name": "Phase 2a Arm B",
+            "armType": "Active Comparator",
+            "description": "Phase 2a Arm B study cohort."
+          }
+        ],
+        "objectives": []
+      }
+    ]
+  }
+}

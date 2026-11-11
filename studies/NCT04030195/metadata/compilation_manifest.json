@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0.0",
+  "publisher": "VonCasper Solutions",
+  "nct_id": "NCT04030195",
+  "design_id": "study_3fc386fd",
+  "slot": 3,
+  "section": "foundational_archetype",
+  "category": "Archetype 2: CAR-T Multi-Cohort 3+3 Dose Escalation",
+  "study_title": "PBCAR20A Allogeneic Anti-CD20 CAR-T 3+3 Dose Escalation Study in NHL/CLL (NCT04030195)",
+  "protocol_sha256": "3fc386fdad7e96cd02c0610ccd08b992e05e4339f734cbcbf593ea7ab6618a3c",
+  "sap_sha256": "bb4e858a086404f160e3e29e4da42e02d06b442c6d7616863155322115f94a04",
+  "sap_note": "Companion SAP_001.pdf",
+  "study_url": "https://clinicaltrials.gov/study/NCT04030195",
+  "cdn_protocol_url": "https://cdn.clinicaltrials.gov/large-docs/95/NCT04030195/Prot_000.pdf",
+  "cdn_sap_url": "https://cdn.clinicaltrials.gov/large-docs/95/NCT04030195/SAP_001.pdf",
+  "alternate_cdn_urls": [],
+  "compilation_mode": "fresh_single_pass_no_resume",
+  "compilation_elapsed_seconds": 1476.4,
+  "finalized_at_utc": "2026-11-11T03:06:39.815894+00:00",
+  "telemetry": {
+    "event_count": 3,
+    "form_count": 15,
+    "item_group_count": 15,
+    "item_count": 75,
+    "edit_check_count": 46,
+    "node_count": 32,
+    "edge_count": 28
+  },
+  "artifacts": {
+    "exports/rave_als.xlsx": {
+      "size_bytes": 39370,
+      "sha256": "bab454eafb5a4bda335c32a4da12425620d99f900656269506ebacb09077fcaa"
+    },
+    "exports/veeva_cdms.xml": {
+      "size_bytes": 63387,
+      "sha256": "623394ac84dd46fb11b227077648e1c8e28e5e56a920d63beb55d3f2efa162dd"
+    },
+    "exports/cdisc_odm_v1.3.2.xml": {
+      "size_bytes": 150797,
+      "sha256": "93788931cf1146920c021c523ceaa0b2a97b89c248890fe0a9e03f1b13f8fb09"
+    },
+    "exports/transcelerate_usdm_v3.0.json": {
+      "size_bytes": 44064,
+      "sha256": "60e66f1d562d0c3d27433f8473e38ce90f00a33bcdf925859bc15e4f702e578e"
+    },
+    "metadata/provenance_matrix_21cfr11.xlsx": {
+      "size_bytes": 32041,
+      "sha256": "f7e0f294ece3e1143907b3af81d4317ad2fd8aed40545b788192b880d88cea02"
+    },
+    "visuals/canvas_standard.svg": {
+      "size_bytes": 3635200,
+      "sha256": "1590961152e36a1cb50036ced28fc875eddb6ab67d24ec213b700f60d05cba94"
+    },
+    "visuals/canvas_standard.pdf": {
+      "size_bytes": 665646,
+      "sha256": "488cde93b0f89a1f51aab5fe1b77acb5f5a15ed9f4c18d976bcac7d1c9483029"
+    },
+    "visuals/canvas_mindmap.svg": {
+      "size_bytes": 2976064,
+      "sha256": "b8ca33df4a3fa763a2511488445e2a0a167d1fff2e707a60bf627d17f60be490"
+    },
+    "visuals/canvas_mindmap.pdf": {
+      "size_bytes": 321899,
+      "sha256": "922304e05d68a27568ed88d221654104e170090e57f7c3b7f5663daf6c75a098"
+    }
+  }
+}
