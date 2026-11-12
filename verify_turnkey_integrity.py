@@ -348,6 +348,7 @@ def _check_openxml_xlsx(
     expected_nct_id: Optional[str] = None,
     expected_design_id: Optional[str] = None,
     expected_proto_sha: Optional[str] = None,
+    required_non_empty_sheets: Tuple[str, ...] = (),
 ) -> None:
     if not zipfile.is_zipfile(xlsx_path):
         errors.append(f"{label}: '{xlsx_path}' is not a valid OpenXML ZIP archive.")
@@ -359,12 +360,45 @@ def _check_openxml_xlsx(
                 errors.append(f"{label}: '{xlsx_path}' missing 'xl/workbook.xml'.")
                 return
             wb_root = ET.fromstring(zf.read("xl/workbook.xml"))
+            rel_map: Dict[str, str] = {}
+            if "xl/_rels/workbook.xml.rels" in names:
+                rels_root = ET.fromstring(zf.read("xl/_rels/workbook.xml.rels"))
+                for rel_el in rels_root:
+                    if local_name(rel_el.tag) == "Relationship":
+                        rid = rel_el.attrib.get("Id", "")
+                        rtarget = rel_el.attrib.get("Target", "")
+                        if rid and rtarget:
+                            rel_map[rid] = rtarget
             sheets = [el for el in wb_root.iter() if local_name(el.tag) == "sheet"]
             visible_sheets = [
                 s for s in sheets if s.attrib.get("name") != WATERMARK_SHEET_NAME
             ]
             if not visible_sheets:
                 errors.append(f"{label}: '{xlsx_path}' workbook contains zero data worksheet definitions.")
+            sheet_by_name = {s.attrib.get("name", ""): s for s in visible_sheets}
+            for req_sheet in required_non_empty_sheets:
+                sh_el = sheet_by_name.get(req_sheet)
+                if sh_el is None:
+                    errors.append(f"{label}: missing required worksheet '{req_sheet}'.")
+                    continue
+                rid_val = ""
+                for attr_k, attr_v in sh_el.attrib.items():
+                    if local_name(attr_k) == "id":
+                        rid_val = attr_v
+                        break
+                raw_target = rel_map.get(rid_val, "")
+                norm_target = raw_target.lstrip("/")
+                if norm_target and not norm_target.startswith("xl/") and f"xl/{norm_target}" in names:
+                    norm_target = f"xl/{norm_target}"
+                if not norm_target or norm_target not in names:
+                    errors.append(f"{label}: worksheet XML for '{req_sheet}' missing from archive.")
+                    continue
+                ws_root = ET.fromstring(zf.read(norm_target))
+                row_count = sum(1 for el in ws_root.iter() if local_name(el.tag) == "row")
+                if row_count < 2:
+                    errors.append(
+                        f"{label}: worksheet '{req_sheet}' contains zero compiled data rows (row_count={row_count})."
+                    )
     except Exception as exc:
         errors.append(f"{label}: failed to inspect OpenXML workbook '{xlsx_path}': {exc}")
         return
@@ -399,7 +433,7 @@ def _check_cdisc_odm_xml(xml_path: Path, nct_id: str, errors: List[str]) -> None
     if local_name(root.tag) != "ODM":
         errors.append(f"[{nct_id}] '{xml_path.name}' root tag must be 'ODM', got '{local_name(root.tag)}'.")
     found_tags = {local_name(el.tag) for el in root.iter()}
-    for req_tag in ("Study", "MetaDataVersion", "FormDef", "ItemDef"):
+    for req_tag in ("Study", "MetaDataVersion", "FormDef", "ItemDef", "ConditionDef"):
         if req_tag not in found_tags:
             errors.append(f"[{nct_id}] '{xml_path.name}' missing required ODM element '<{req_tag}>'.")
 
@@ -416,14 +450,15 @@ def _check_veeva_xml(xml_path: Path, nct_id: str, errors: List[str]) -> None:
         rname == "VeevaCDMS"
         and bool(root.attrib.get("study"))
         and {"Forms", "Form", "ItemGroup", "Item"}.issubset(found_tags)
+        and bool(found_tags & {"Rule", "RuleDef", "EditCheck"})
     )
     is_odm_compat = (
         rname == "ODM"
-        and {"Study", "MetaDataVersion", "FormDef", "ItemDef"}.issubset(found_tags)
+        and {"Study", "MetaDataVersion", "FormDef", "ItemDef", "ConditionDef"}.issubset(found_tags)
     )
     if not (is_veeva_native or is_odm_compat):
         errors.append(
-            f"[{nct_id}] '{xml_path.name}' missing required Veeva CDMS Forms/Items or ODM definitions."
+            f"[{nct_id}] '{xml_path.name}' missing required Veeva CDMS Forms/Items/Rules or ODM ConditionDef definitions."
         )
 
 
@@ -573,11 +608,21 @@ def verify_repository(repo_dir: Path) -> Tuple[bool, List[str]]:
                     f"expected {expected_sha}, got {actual_sha}."
                 )
 
-        # 1b. Verify 9 sibling artifacts in studies/<NCT_ID>/metadata/compilation_manifest.json
+        # 1b. Verify 9 sibling artifacts & non-zero EditCheck telemetry in studies/<NCT_ID>/metadata/compilation_manifest.json
+        st_ec_count = int((st.get("telemetry") or {}).get("edit_check_count") or 0)
+        if st_ec_count <= 0:
+            errors.append(
+                f"[{nct_id}] benchmark_manifest.json telemetry.edit_check_count must be > 0, got {st_ec_count}."
+            )
         cm_path = study_dir / "metadata" / "compilation_manifest.json"
         if cm_path.is_file():
             try:
                 cm = json.loads(cm_path.read_text(encoding="utf-8"))
+                cm_ec_count = int((cm.get("telemetry") or {}).get("edit_check_count") or 0)
+                if cm_ec_count <= 0:
+                    errors.append(
+                        f"[{nct_id}] compilation_manifest.json telemetry.edit_check_count must be > 0, got {cm_ec_count}."
+                    )
                 cm_artifacts: Dict[str, Any] = cm.get("artifacts", {})
                 if "metadata/compilation_manifest.json" in cm_artifacts:
                     errors.append(f"[{nct_id}] Circular self-hash forbidden in compilation_manifest.json.")
@@ -621,6 +666,7 @@ def verify_repository(repo_dir: Path) -> Tuple[bool, List[str]]:
                 expected_nct_id=nct_id,
                 expected_design_id=str(st.get("design_id") or ""),
                 expected_proto_sha=str(st.get("protocol_sha256") or ""),
+                required_non_empty_sheets=("EditChecks", "CheckSteps"),
             )
 
         prov_xlsx = study_dir / "metadata" / "provenance_matrix_21cfr11.xlsx"
@@ -632,6 +678,7 @@ def verify_repository(repo_dir: Path) -> Tuple[bool, List[str]]:
                 expected_nct_id=nct_id,
                 expected_design_id=str(st.get("design_id") or ""),
                 expected_proto_sha=str(st.get("protocol_sha256") or ""),
+                required_non_empty_sheets=("EditCheck_Provenance",),
             )
 
         _check_dual_canvas_visuals(study_dir, nct_id, errors)

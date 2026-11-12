@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
-<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:makoto="http://gflow.ai/ns/makoto/v1.0" FileType="Snapshot" FileOID="ODM.STUDY.001.20261111000734" CreationDateTime="2026-11-11T00:07:34Z" ODMVersion="1.3.2">
+<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:makoto="http://gflow.ai/ns/makoto/v1.0" FileType="Snapshot" FileOID="ODM.STUDY.001.20261112125529" CreationDateTime="2026-11-12T12:55:29Z" ODMVersion="1.3.2">
   <Study OID="STUDY.001">
     <GlobalVariables>
-      <StudyName>NCT01631552 Benchmark</StudyName>
-      <StudyDescription>Compiled GFlow study design for NCT01631552 Benchmark.</StudyDescription>
+      <StudyName>IMMU-132-01 Sacituzumab Govitecan Multi-Cyclic Solid Tumor Oncology Study (NCT01631552)</StudyName>
+      <StudyDescription>Compiled GFlow study design for IMMU-132-01 Sacituzumab Govitecan Multi-Cyclic Solid Tumor Oncology Study (NCT01631552).</StudyDescription>
       <ProtocolName>53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14</ProtocolName>
     </GlobalVariables>
     <BasicDefinitions>
@@ -429,8 +429,8 @@
       </ItemGroupDef>
       <ItemGroupDef OID="IG.DEMO" Name="Demographics Group" Repeating="No">
         <ItemRef ItemOID="ITEM.Cancer_Subtype" Mandatory="No"/>
-        <ItemRef ItemOID="ITEM.Height" Mandatory="No"/>
-        <ItemRef ItemOID="ITEM.Weight" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.Height" Mandatory="Yes"/>
+        <ItemRef ItemOID="ITEM.Weight" Mandatory="Yes"/>
       </ItemGroupDef>
       <ItemGroupDef OID="IG.MH" Name="Medical History Group" Repeating="Yes">
         <ItemRef ItemOID="ITEM.Prior_Malignancy_Type" Mandatory="No"/>
@@ -447,6 +447,11 @@
         <ItemRef ItemOID="ITEM.AnticipatedToxicityProfile" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.CoagulationMonitoring" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.PostTreatmentFollowUpTiming" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.DOSE_CALC" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.RDI" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.CUM_DOSE" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.COMPLIANCE_PCT" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.TRTDURD" Mandatory="No"/>
       </ItemGroupDef>
       <ItemGroupDef OID="IG.CM" Name="Concomitant Medications Group" Repeating="Yes">
         <ItemRef ItemOID="ITEM.Concomitant Medication" Mandatory="No"/>
@@ -456,7 +461,6 @@
       </ItemGroupDef>
       <ItemGroupDef OID="IG.PR" Name="Procedures Group" Repeating="Yes">
         <ItemRef ItemOID="ITEM.Drug Administration" Mandatory="No"/>
-        <ItemRef ItemOID="ITEM.Laboratory Monitoring" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.Material Handling" Mandatory="No"/>
       </ItemGroupDef>
       <ItemGroupDef OID="IG.VS" Name="Vital Signs Group" Repeating="Yes">
@@ -464,22 +468,43 @@
         <ItemRef ItemOID="ITEM.WEIGHT" Mandatory="Yes"/>
         <ItemRef ItemOID="ITEM.CREAT" Mandatory="Yes"/>
         <ItemRef ItemOID="ITEM.BILI" Mandatory="No"/>
-        <ItemRef ItemOID="ITEM.AST" Mandatory="Yes"/>
         <ItemRef ItemOID="ITEM.ALT" Mandatory="Yes"/>
+        <ItemRef ItemOID="ITEM.BMI" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.BSA" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.BSA_DUBOIS" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.IBW" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.ABW" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.PCHG" Mandatory="No"/>
       </ItemGroupDef>
       <ItemGroupDef OID="IG.EG" Name="Electrocardiogram Group" Repeating="Yes">
         <ItemRef ItemOID="ITEM.ECG_12_LEAD" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.QTC" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.VENTRICULAR_RATE" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.ECG_INTERPRETATION" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.QTCF" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.QTCB" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.QTCF_CHG" Mandatory="No"/>
       </ItemGroupDef>
       <ItemGroupDef OID="IG.PE" Name="Physical Examination Group" Repeating="No">
         <ItemRef ItemOID="ITEM.PHYSICAL_EXAM" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.ECOG_PS" Mandatory="No"/>
       </ItemGroupDef>
       <ItemGroupDef OID="IG.LB" Name="Laboratory Findings Group" Repeating="Yes">
-        <ItemRef ItemOID="ITEM.PT" Mandatory="No"/>
-        <ItemRef ItemOID="ITEM.PTT" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.CBC_CHEMISTRIES" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.HGB" Mandatory="Yes"/>
+        <ItemRef ItemOID="ITEM.WBC" Mandatory="Yes"/>
+        <ItemRef ItemOID="ITEM.ANC" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.PLT" Mandatory="Yes"/>
+        <ItemRef ItemOID="ITEM.CRCL" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.EGFR" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.BUN_CREAT_RATIO" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.ALC" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.NLR" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.ULN_RATIO" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.AST_ALT_RATIO" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.BILI_ULN_RATIO" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.HYS_LAW_FLAG" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.FIB4" Mandatory="No"/>
       </ItemGroupDef>
       <ItemGroupDef OID="IG.PK" Name="Pharmacokinetics Group" Repeating="No">
         <ItemRef ItemOID="ITEM.Calculated Dose (mg)" Mandatory="No"/>
@@ -495,6 +520,11 @@
         <ItemRef ItemOID="ITEM.Coagulation Monitoring" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.Toxicity Grading" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.Toxicity Distribution" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.AETERM" Mandatory="Yes"/>
+        <ItemRef ItemOID="ITEM.AESTDAT" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.AEENDAT" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.AEOUT" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.AEDUR" Mandatory="No"/>
       </ItemGroupDef>
       <ItemGroupDef OID="IG.DS" Name="Disposition Group" Repeating="No">
         <ItemRef ItemOID="ITEM.Discontinuation Reason" Mandatory="No"/>
@@ -545,9 +575,6 @@
         <MeasurementUnitRef MeasurementUnitOID="UNIT.DAYS"/>
       </ItemDef>
       <ItemDef OID="ITEM.Drug Administration" Name="Drug Administration" DataType="text"/>
-      <ItemDef OID="ITEM.Laboratory Monitoring" Name="Laboratory Monitoring" DataType="integer">
-        <MeasurementUnitRef MeasurementUnitOID="UNIT.COUNT"/>
-      </ItemDef>
       <ItemDef OID="ITEM.Material Handling" Name="Material Handling" DataType="text"/>
       <ItemDef OID="ITEM.HEIGHT" Name="Height" DataType="float">
         <MeasurementUnitRef MeasurementUnitOID="UNIT.HEIGHT"/>
@@ -565,10 +592,6 @@
         <MeasurementUnitRef MeasurementUnitOID="UNIT.BILI"/>
         <Alias Context="LOINC" Name="1975-2"/>
       </ItemDef>
-      <ItemDef OID="ITEM.AST" Name="AST" DataType="float">
-        <MeasurementUnitRef MeasurementUnitOID="UNIT.ENZYME"/>
-        <Alias Context="LOINC" Name="1920-8"/>
-      </ItemDef>
       <ItemDef OID="ITEM.ALT" Name="ALT" DataType="float">
         <MeasurementUnitRef MeasurementUnitOID="UNIT.ENZYME"/>
         <Alias Context="LOINC" Name="1742-6"/>
@@ -585,24 +608,129 @@
         <Alias Context="LOINC" Name="29545-1"/>
       </ItemDef>
       <ItemDef OID="ITEM.ECOG_PS" Name="ECOG Performance Status" DataType="text" CodeListRef="CL.ECOG"/>
+      <ItemDef OID="ITEM.CBC_CHEMISTRIES" Name="Complete Blood Count and Serum Chemistries" DataType="text"/>
+      <ItemDef OID="ITEM.HGB" Name="Hemoglobin" DataType="float">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.HGB"/>
+        <Alias Context="LOINC" Name="718-7"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.WBC" Name="White Blood Cell Count" DataType="float">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.CELL_COUNT"/>
+        <Alias Context="LOINC" Name="6690-2"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.ANC" Name="Absolute Neutrophil Count" DataType="float" MethodOID="MT.ANC">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.CELL_COUNT"/>
+        <Alias Context="LOINC" Name="751-8"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.PLT" Name="Platelet Count" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.CELL_COUNT"/>
+        <Alias Context="LOINC" Name="777-3"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.Calculated Dose (mg)" Name="Calculated Dose in milligrams" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.DOSE"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.AST" Name="AST" DataType="float">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.ENZYME"/>
+        <Alias Context="LOINC" Name="1920-8"/>
+      </ItemDef>
       <ItemDef OID="ITEM.PT" Name="Prothrombin Time" DataType="float">
         <MeasurementUnitRef MeasurementUnitOID="UNIT.SECONDS"/>
       </ItemDef>
       <ItemDef OID="ITEM.PTT" Name="Partial Thromboplastin Time" DataType="float">
         <MeasurementUnitRef MeasurementUnitOID="UNIT.SECONDS"/>
       </ItemDef>
-      <ItemDef OID="ITEM.Calculated Dose (mg)" Name="Calculated Dose in milligrams" DataType="integer">
-        <MeasurementUnitRef MeasurementUnitOID="UNIT.DOSE"/>
-      </ItemDef>
       <ItemDef OID="ITEM.SN-38/Trop-2 Interaction" Name="Mechanism of Action Marker" DataType="text"/>
+      <ItemDef OID="ITEM.Laboratory Monitoring" Name="Laboratory Monitoring" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.GRADE"/>
+      </ItemDef>
       <ItemDef OID="ITEM.Coagulation Monitoring" Name="Coagulation parameters (PT and PTT)" DataType="integer">
         <MeasurementUnitRef MeasurementUnitOID="UNIT.SECONDS"/>
       </ItemDef>
       <ItemDef OID="ITEM.Toxicity Grading" Name="CTCAE Severity Grading" DataType="integer" CodeListRef="CL.CTCAE"/>
       <ItemDef OID="ITEM.Toxicity Distribution" Name="Worst CTCAE Grade Frequency Distribution" DataType="integer" CodeListRef="CL.CTCAE"/>
+      <ItemDef OID="ITEM.AETERM" Name="Reported Term for the Adverse Event" DataType="text"/>
+      <ItemDef OID="ITEM.AESTDAT" Name="Adverse Event Start Date" DataType="date"/>
+      <ItemDef OID="ITEM.AEENDAT" Name="Adverse Event End Date" DataType="date"/>
+      <ItemDef OID="ITEM.AEOUT" Name="Adverse Event Outcome" DataType="text" CodeListRef="CL.AEOUT"/>
       <ItemDef OID="ITEM.Discontinuation Reason" Name="Discontinuation Reason" DataType="text"/>
       <ItemDef OID="ITEM.Dose Modification" Name="Dose Modification" DataType="text"/>
       <ItemDef OID="ITEM.Subject Status" Name="Subject Status" DataType="text"/>
+      <ItemDef OID="ITEM.BMI" Name="Body Mass Index (BMI, kg/m²)" DataType="float" MethodOID="MT.BMI">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.BMI"/>
+        <Alias Context="LOINC" Name="39156-5"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.BSA" Name="Body Surface Area - Mosteller (BSA, m²)" DataType="float" MethodOID="MT.BSA">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.BSA"/>
+        <Alias Context="LOINC" Name="3140-1"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.BSA_DUBOIS" Name="Body Surface Area - DuBois (m²)" DataType="float" MethodOID="MT.BSA_DUBOIS">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.BSA"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.IBW" Name="Ideal Body Weight - Devine (IBW, kg)" DataType="float" MethodOID="MT.IBW">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.WEIGHT"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.ABW" Name="Adjusted Body Weight (ABW, kg)" DataType="float" MethodOID="MT.ABW">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.WEIGHT"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.QTCF" Name="QTcF Interval - Fridericia (ms)" DataType="float" MethodOID="MT.QTCF">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.TIME_MS"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.QTCB" Name="QTcB Interval - Bazett (ms)" DataType="float" MethodOID="MT.QTCB">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.TIME_MS"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.QTCF_CHG" Name="Change from Baseline in QTcF (ms)" DataType="float" MethodOID="MT.QTCF_CHG">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.TIME_MS"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.CRCL" Name="Creatinine Clearance - Cockcroft-Gault (mL/min)" DataType="float" MethodOID="MT.CRCL_CG">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.CRCL"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.EGFR" Name="Estimated GFR - CKD-EPI (mL/min/1.73m²)" DataType="float" MethodOID="MT.EGFR_CKDEPI">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.EGFR"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.BUN_CREAT_RATIO" Name="BUN to Creatinine Ratio" DataType="float" MethodOID="MT.BUN_CREAT_RATIO">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.RATIO"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.ALC" Name="Absolute Lymphocyte Count (ALC, 10^9/L)" DataType="float" MethodOID="MT.ALC">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.CELL_COUNT"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.NLR" Name="Neutrophil-to-Lymphocyte Ratio (NLR)" DataType="float" MethodOID="MT.NLR">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.RATIO"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.ULN_RATIO" Name="Hepatic Transaminase ULN Multiple (x ULN)" DataType="float" MethodOID="MT.ULN_RATIO">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.RATIO"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.AST_ALT_RATIO" Name="De Ritis AST/ALT Ratio" DataType="float" MethodOID="MT.AST_ALT_RATIO">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.RATIO"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.BILI_ULN_RATIO" Name="Total Bilirubin ULN Multiple (x ULN)" DataType="float" MethodOID="MT.BILI_ULN_RATIO">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.RATIO"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.HYS_LAW_FLAG" Name="FDA Hy's Law DILI Composite Indicator (0/1)" DataType="integer" MethodOID="MT.HYS_LAW_FLAG">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.RATIO"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.FIB4" Name="FIB-4 Hepatic Fibrosis Index" DataType="float" MethodOID="MT.FIB4">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.RATIO"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.DOSE_CALC" Name="Protocol Calculated Target Dose (mg)" DataType="float" MethodOID="MT.DOSE_CALC">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.DOSE"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.RDI" Name="Relative Dose Intensity (%)" DataType="float" MethodOID="MT.DOSE_INTENSITY">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.PERCENT"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.CUM_DOSE" Name="Cumulative Administered Dose (mg)" DataType="float" MethodOID="MT.CUM_DOSE">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.DOSE"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.COMPLIANCE_PCT" Name="Treatment Dosing Compliance (%)" DataType="float" MethodOID="MT.TREATMENT_COMPLIANCE">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.PERCENT"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.AEDUR" Name="Adverse Event Duration (Days)" DataType="integer" MethodOID="MT.AEDUR">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.DAYS"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.TRTDURD" Name="Total Treatment Exposure Duration (Days)" DataType="integer" MethodOID="MT.TRTDURD">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.DAYS"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.PCHG" Name="Percent Change from Baseline (%)" DataType="float" MethodOID="MT.CHG_BASELINE">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.PERCENT"/>
+      </ItemDef>
       <CodeListDef OID="CL.SEX" Name="Sex Codelist" DataType="text">
         <CodeListItem CodedValue="M">
           <Decode>
@@ -1002,9 +1130,921 @@
           </Decode>
         </CodeListItem>
       </CodeListDef>
+      <ConditionDef OID="COND.ANC_SAFETY_CLEARANCE" Name="Absolute Neutrophil Count Safety Clearance" Description="Absolute Neutrophil Count must be &gt;= 1.0 x 10^9/L to initiate cycle.">
+        <FormalExpression Context="Python">ITEM.ANC &gt;= 1.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="11" ProtocolSection="Table 2: Study Calendar" Confidence="1.0">
+          <makoto:SourceQuote>CBC, differential, platelets, and serum chemistries at each visit</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2849" y0="0.7438" x1="0.4298" y1="0.7607"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.AE_START_LE_END" Name="Adverse Event Date Chronology" Description="Adverse event resolution date must be on or after onset date.">
+        <FormalExpression Context="Python">ITEM.AESTDAT &lt;= ITEM.AEENDAT</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="47" ProtocolSection="Laboratory Monitoring" Confidence="1.0">
+          <makoto:SourceQuote>Laboratory test results will be graded according to CTCAE severity grade when applicable.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1062" y0="0.3515" x1="0.9036" y1="0.4362"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.AE_FATAL_DISPOSITION_SYNC" Name="Fatal Adverse Event Study Disposition Sync" Description="Fatal outcome requires matching Death disposition record.">
+        <FormalExpression Context="Python">ITEM.AEOUT == '4' or ITEM.AETOXGR == '5'</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="47" ProtocolSection="Laboratory Monitoring" Confidence="1.0">
+          <makoto:SourceQuote>Laboratory test results will be graded according to CTCAE severity grade when applicable.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1062" y0="0.3515" x1="0.9036" y1="0.4362"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.HEIGHT.HEIGHT" Name="Height — Height Physiological Extreme Check" Description="Enforces variable extreme bounds [100.0, 250.0] cm for Height.">
+        <FormalExpression Context="Python">100.0 &lt;= ITEM.Height &lt;= 250.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="49" ProtocolSection="Dosing Parameters" Confidence="1.0">
+          <makoto:SourceQuote>Height</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1069" y0="0.1268" x1="0.9031" y1="0.2261"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.WEIGHT.WEIGHT" Name="Weight — Body Weight Physiological Extreme Check" Description="Enforces variable extreme bounds [25.0, 300.0] kg for Weight.">
+        <FormalExpression Context="Python">25.0 &lt;= ITEM.Weight &lt;= 300.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="49" ProtocolSection="Dosing Parameters" Confidence="1.0">
+          <makoto:SourceQuote>Weight</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1069" y0="0.1268" x1="0.9031" y1="0.2261"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.DOSE.DOSEDISCREPANCYREPORTING" Name="Dose Discrepancy Reporting — Dosing &amp; Exposure Quantitative Plausibility Bounds" Description="Enforces variable extreme bounds [0.0, 10000.0] mg for Dose Discrepancy Reporting.">
+        <FormalExpression Context="Python">0.0 &lt;= ITEM.DoseDiscrepancyReporting &lt;= 10000.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="69" ProtocolSection="Pharmacy Procedures" Confidence="1.0">
+          <makoto:SourceQuote>Any variance between the calculated dose and the actual administered dose must be documented in source documents and Case Report Forms (CRFs)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.434" y0="0.0997" x1="0.5752" y1="0.112"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.TEMP.SHIPPINGTEMPERATURECONTROL" Name="Shipping Temperature Control — Body Temperature Physiological Extreme Check" Description="Enforces variable extreme bounds [34.0, 42.0] °C for Shipping Temperature Control.">
+        <FormalExpression Context="Python">34.0 &lt;= ITEM.ShippingTemperatureControl &lt;= 42.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="72" ProtocolSection="Logistics" Confidence="1.0">
+          <makoto:SourceQuote>use of cold gel packs for shipping study products. ... Use of dry ice for shipping is explicitly prohibited</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.3237" y0="0.1293" x1="0.6837" y1="0.1553"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.COAG.COAGULATIONMONITORING" Name="Coagulation Monitoring — Coagulation Parameter Extreme Check" Description="Enforces variable extreme bounds [0.5, 10.0] mg for Coagulation Monitoring.">
+        <FormalExpression Context="Python">0.5 &lt;= ITEM.CoagulationMonitoring &lt;= 10.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="22" ProtocolSection="Laboratory Monitoring" Confidence="1.0">
+          <makoto:SourceQuote>routine monitoring of Prothrombin Time (PT) and Partial Thromboplastin Time (PTT)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1064" y0="0.2201" x1="0.8944" y1="0.2871"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.CREAT.CREAT" Name="Creatinine — Serum Creatinine Physiological Extreme Check" Description="Enforces variable extreme bounds [0.1, 15.0] mg/dL for Creatinine.">
+        <FormalExpression Context="Python">0.1 &lt;= ITEM.CREAT &lt;= 15.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="8" ProtocolSection="Inclusion Criteria" Confidence="1.0">
+          <makoto:SourceQuote>adequate renal (creatinine ≤2.0 x IULN)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2827" y0="0.3439" x1="0.909" y1="0.6553"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.BILI.BILI" Name="Bilirubin — Total Bilirubin Physiological Extreme Check" Description="Enforces variable extreme bounds [0.05, 30.0] mg/dL for Bilirubin.">
+        <FormalExpression Context="Python">0.05 &lt;= ITEM.BILI &lt;= 30.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="8" ProtocolSection="Inclusion Criteria" Confidence="1.0">
+          <makoto:SourceQuote>hepatic function (bilirubin ≤1.5 x IULN</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2827" y0="0.3439" x1="0.909" y1="0.6553"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.HEPATIC.ALT" Name="ALT — Hepatic Enzyme / Transaminase Extreme Check" Description="Enforces variable extreme bounds [1, 2000] U/L for ALT.">
+        <FormalExpression Context="Python">1 &lt;= ITEM.ALT &lt;= 2000</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="8" ProtocolSection="Inclusion Criteria" Confidence="1.0">
+          <makoto:SourceQuote>AST and ALT ≤ 3 x IULN or 5 x IULN</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2827" y0="0.3439" x1="0.909" y1="0.6553"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.QTC.ECG_12_LEAD" Name="12-Lead ECG — QTc Interval Prolongation Safety Extreme Check" Description="Enforces variable extreme bounds [250, 500] ms for 12-Lead ECG.">
+        <FormalExpression Context="Python">250 &lt;= ITEM.ECG_12_LEAD &lt;= 500</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>N/A</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.QTC.QTC" Name="QTcF Interval — QTc Interval Prolongation Safety Extreme Check" Description="Enforces variable extreme bounds [250, 500] ms for QTcF Interval.">
+        <FormalExpression Context="Python">250 &lt;= ITEM.QTC &lt;= 500</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>N/A</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.HR.VENTRICULAR_RATE" Name="Ventricular Rate — Heart Rate Physiological Extreme Check" Description="Enforces variable extreme bounds [30, 220] bpm for Ventricular Rate.">
+        <FormalExpression Context="Python">30 &lt;= ITEM.VENTRICULAR_RATE &lt;= 220</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>N/A</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.ECOG.ECOG_PS" Name="ECOG Performance Status — ECOG Performance Status Scale Bounds" Description="Enforces variable extreme bounds [0, 5] grade for ECOG Performance Status.">
+        <FormalExpression Context="Python">0 &lt;= ITEM.ECOG_PS &lt;= 5</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="8" ProtocolSection="Inclusion Criteria" Confidence="1.0">
+          <makoto:SourceQuote>toxicity at study entry &lt; Grade 1 by NCI CTC v4.0</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2827" y0="0.3439" x1="0.909" y1="0.6553"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.HGB.CBC_CHEMISTRIES" Name="Complete Blood Count and Serum Chemistries — Hemoglobin Physiological Extreme Check" Description="Enforces variable extreme bounds [4.0, 22.0] g/dL for Complete Blood Count and Serum Chemistries.">
+        <FormalExpression Context="Python">4.0 &lt;= ITEM.CBC_CHEMISTRIES &lt;= 22.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="11" ProtocolSection="Table 2: Study Calendar" Confidence="1.0">
+          <makoto:SourceQuote>CBC, differential, platelets, and serum chemistries at each visit</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2849" y0="0.7438" x1="0.4298" y1="0.7607"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.HGB.HGB" Name="Hemoglobin — Hemoglobin Physiological Extreme Check" Description="Enforces variable extreme bounds [4.0, 22.0] g/dL for Hemoglobin.">
+        <FormalExpression Context="Python">4.0 &lt;= ITEM.HGB &lt;= 22.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="11" ProtocolSection="Table 2: Study Calendar" Confidence="1.0">
+          <makoto:SourceQuote>CBC, differential, platelets, and serum chemistries at each visit</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2849" y0="0.7438" x1="0.4298" y1="0.7607"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.WBC.WBC" Name="White Blood Cell Count — White Blood Cell Count Extreme Check" Description="Enforces variable extreme bounds [0.1, 100.0] 10^9/L for White Blood Cell Count.">
+        <FormalExpression Context="Python">0.1 &lt;= ITEM.WBC &lt;= 100.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="11" ProtocolSection="Table 2: Study Calendar" Confidence="1.0">
+          <makoto:SourceQuote>CBC, differential, platelets, and serum chemistries at each visit</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2849" y0="0.7438" x1="0.4298" y1="0.7607"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.ANC.ANC" Name="Absolute Neutrophil Count — Absolute Neutrophil Count Extreme Check" Description="Enforces variable extreme bounds [0.0, 50.0] 10^9/L for Absolute Neutrophil Count.">
+        <FormalExpression Context="Python">0.0 &lt;= ITEM.ANC &lt;= 50.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="11" ProtocolSection="Table 2: Study Calendar" Confidence="1.0">
+          <makoto:SourceQuote>CBC, differential, platelets, and serum chemistries at each visit</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2849" y0="0.7438" x1="0.4298" y1="0.7607"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.PLT.PLT" Name="Platelet Count — Platelet Count Physiological Extreme Check" Description="Enforces variable extreme bounds [5, 1500] 10^9/L for Platelet Count.">
+        <FormalExpression Context="Python">5 &lt;= ITEM.PLT &lt;= 1500</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="11" ProtocolSection="Table 2: Study Calendar" Confidence="1.0">
+          <makoto:SourceQuote>CBC, differential, platelets, and serum chemistries at each visit</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2849" y0="0.7438" x1="0.4298" y1="0.7607"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.DOSE.CALCULATED_DOSE_MG" Name="Calculated Dose in milligrams — Dosing &amp; Exposure Quantitative Plausibility Bounds" Description="Enforces variable extreme bounds [0.0, 10000.0] mg for Calculated Dose in milligrams.">
+        <FormalExpression Context="Python">0.0 &lt;= ITEM.Calculated Dose (mg) &lt;= 10000.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="4" ProtocolSection="Pharmacy Responsibilities" Confidence="1.0">
+          <makoto:SourceQuote>The actual dose in mg must be recorded in Source Documents and CRFs.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2827" y0="0.7732" x1="0.908" y1="0.9287"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.HEPATIC.AST" Name="AST — Hepatic Enzyme / Transaminase Extreme Check" Description="Enforces variable extreme bounds [1, 2000] U/L for AST.">
+        <FormalExpression Context="Python">1 &lt;= ITEM.AST &lt;= 2000</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="8" ProtocolSection="Inclusion Criteria" Confidence="1.0">
+          <makoto:SourceQuote>AST and ALT ≤ 3 x IULN or 5 x IULN</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2827" y0="0.3439" x1="0.909" y1="0.6553"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.COAG.PT" Name="Prothrombin Time — Coagulation Parameter Extreme Check" Description="Enforces variable extreme bounds [0.5, 10.0] s for Prothrombin Time.">
+        <FormalExpression Context="Python">0.5 &lt;= ITEM.PT &lt;= 10.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="71" ProtocolSection="Laboratory Monitoring" Confidence="1.0">
+          <makoto:SourceQuote>PT (Prothrombin Time): Required monitoring of coagulation status.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2797" y0="0.1159" x1="0.6408" y1="0.1422"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.COAG.PTT" Name="Partial Thromboplastin Time — Coagulation Parameter Extreme Check" Description="Enforces variable extreme bounds [0.5, 10.0] s for Partial Thromboplastin Time.">
+        <FormalExpression Context="Python">0.5 &lt;= ITEM.PTT &lt;= 10.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="71" ProtocolSection="Laboratory Monitoring" Confidence="1.0">
+          <makoto:SourceQuote>PTT (Partial Thromboplastin Time): Required monitoring of coagulation status.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2797" y0="0.1159" x1="0.6408" y1="0.1422"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.COAG.COAGULATION_MONITORING" Name="Coagulation parameters (PT and PTT) — Coagulation Parameter Extreme Check" Description="Enforces variable extreme bounds [0.5, 10.0] s for Coagulation parameters (PT and PTT).">
+        <FormalExpression Context="Python">0.5 &lt;= ITEM.Coagulation Monitoring &lt;= 10.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="47" ProtocolSection="Major Procedures and Measurements" Confidence="1.0">
+          <makoto:SourceQuote>Coagulation studies such as PT (Prothrombin Time) and PTT (Partial Thromboplastin Time) are required.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1062" y0="0.7961" x1="0.8979" y1="0.9162"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.CTCAE.TOXICITY_GRADING" Name="CTCAE Severity Grading — NCI-CTCAE Toxicity Grade Bounds" Description="Enforces variable extreme bounds [1, 5] grade for CTCAE Severity Grading.">
+        <FormalExpression Context="Python">1 &lt;= ITEM.Toxicity Grading &lt;= 5</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="47" ProtocolSection="Laboratory Monitoring" Confidence="1.0">
+          <makoto:SourceQuote>Laboratory test results will be graded according to CTCAE severity grade when applicable.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1062" y0="0.3515" x1="0.9036" y1="0.4362"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.CTCAE.TOXICITY_DISTRIBUTION" Name="Worst CTCAE Grade Frequency Distribution — NCI-CTCAE Toxicity Grade Bounds" Description="Enforces variable extreme bounds [1, 5] grade for Worst CTCAE Grade Frequency Distribution.">
+        <FormalExpression Context="Python">1 &lt;= ITEM.Toxicity Distribution &lt;= 5</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="47" ProtocolSection="Laboratory Monitoring" Confidence="1.0">
+          <makoto:SourceQuote>The frequency distribution of the worst CTCAE grade observed will be tabulated in a shift table for each parameter by dose group.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1062" y0="0.3515" x1="0.9036" y1="0.4362"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.DOSE.DOSE_MODIFICATION" Name="Dose Modification — Dosing &amp; Exposure Quantitative Plausibility Bounds" Description="Enforces variable extreme bounds [0.0, 10000.0] mg/kg for Dose Modification.">
+        <FormalExpression Context="Python">0.0 &lt;= ITEM.Dose Modification &lt;= 10000.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="18" ProtocolSection="Dosing and Safety" Confidence="1.0">
+          <makoto:SourceQuote>starting doses of 8 or 10 mg/kg... subsequently 10 mg/kg was selected for the ongoing Phase II portion</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1065" y0="0.546" x1="0.8928" y1="0.6306"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.BMI.BMI" Name="Body Mass Index (BMI, kg/m²) — Body Mass Index Physiological Extreme Check" Description="Enforces variable extreme bounds [10.0, 70.0] kg/m² for Body Mass Index (BMI, kg/m²).">
+        <FormalExpression Context="Python">10.0 &lt;= ITEM.BMI &lt;= 70.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="49" ProtocolSection="Dosing Parameters" Confidence="1.0">
+          <makoto:SourceQuote>Body Mass Index (BMI) Calculation synthesized from protocol assessment 'Height'.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1069" y0="0.1268" x1="0.9031" y1="0.2261"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.BSA.BSA" Name="Body Surface Area - Mosteller (BSA, m²) — Body Surface Area Physiological Extreme Check" Description="Enforces variable extreme bounds [0.5, 3.5] m² for Body Surface Area - Mosteller (BSA, m²).">
+        <FormalExpression Context="Python">0.5 &lt;= ITEM.BSA &lt;= 3.5</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="49" ProtocolSection="Dosing Parameters" Confidence="1.0">
+          <makoto:SourceQuote>Body Surface Area (BSA — Mosteller Formula) synthesized from protocol assessment 'Height'.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1069" y0="0.1268" x1="0.9031" y1="0.2261"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.BSA.BSA_DUBOIS" Name="Body Surface Area - DuBois (m²) — Body Surface Area Physiological Extreme Check" Description="Enforces variable extreme bounds [0.5, 3.5] m² for Body Surface Area - DuBois (m²).">
+        <FormalExpression Context="Python">0.5 &lt;= ITEM.BSA_DUBOIS &lt;= 3.5</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="49" ProtocolSection="Dosing Parameters" Confidence="1.0">
+          <makoto:SourceQuote>Body Surface Area (BSA — DuBois &amp; DuBois Formula) synthesized from protocol assessment 'Height'.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1069" y0="0.1268" x1="0.9031" y1="0.2261"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.WEIGHT.IBW" Name="Ideal Body Weight - Devine (IBW, kg) — Body Weight Physiological Extreme Check" Description="Enforces variable extreme bounds [25.0, 300.0] kg for Ideal Body Weight - Devine (IBW, kg).">
+        <FormalExpression Context="Python">25.0 &lt;= ITEM.IBW &lt;= 300.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="49" ProtocolSection="Dosing Parameters" Confidence="1.0">
+          <makoto:SourceQuote>Ideal Body Weight (IBW — Devine Formula) synthesized from protocol assessment 'Height'.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1069" y0="0.1268" x1="0.9031" y1="0.2261"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.WEIGHT.ABW" Name="Adjusted Body Weight (ABW, kg) — Body Weight Physiological Extreme Check" Description="Enforces variable extreme bounds [25.0, 300.0] kg for Adjusted Body Weight (ABW, kg).">
+        <FormalExpression Context="Python">25.0 &lt;= ITEM.ABW &lt;= 300.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="49" ProtocolSection="Dosing Parameters" Confidence="1.0">
+          <makoto:SourceQuote>Adjusted Body Weight (ABW — Obesity Dosing Cap) synthesized from protocol assessment 'Height'.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1069" y0="0.1268" x1="0.9031" y1="0.2261"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.QTC.QTCF" Name="QTcF Interval - Fridericia (ms) — QTc Interval Prolongation Safety Extreme Check" Description="Enforces variable extreme bounds [250, 500] ms for QTcF Interval - Fridericia (ms).">
+        <FormalExpression Context="Python">250 &lt;= ITEM.QTCF &lt;= 500</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Fridericia Rate-Corrected QT Interval (QTcF — ICH E14) synthesized from protocol assessment '12-Lead ECG'.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.QTC.QTCB" Name="QTcB Interval - Bazett (ms) — QTc Interval Prolongation Safety Extreme Check" Description="Enforces variable extreme bounds [250, 500] ms for QTcB Interval - Bazett (ms).">
+        <FormalExpression Context="Python">250 &lt;= ITEM.QTCB &lt;= 500</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Bazett Rate-Corrected QT Interval (QTcB — ICH E14) synthesized from protocol assessment '12-Lead ECG'.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.QTC.QTCF_CHG" Name="Change from Baseline in QTcF (ms) — QTc Interval Prolongation Safety Extreme Check" Description="Enforces variable extreme bounds [250, 500] ms for Change from Baseline in QTcF (ms).">
+        <FormalExpression Context="Python">250 &lt;= ITEM.QTCF_CHG &lt;= 500</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Longitudinal Change from Baseline in QTcF (Delta-QTcF — ICH E14) synthesized from protocol assessment '12-Lead ECG'.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.CREAT.CRCL" Name="Creatinine Clearance - Cockcroft-Gault (mL/min) — Serum Creatinine Physiological Extreme Check" Description="Enforces variable extreme bounds [0.1, 15.0] mL/min for Creatinine Clearance - Cockcroft-Gault (mL/min).">
+        <FormalExpression Context="Python">0.1 &lt;= ITEM.CRCL &lt;= 15.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="8" ProtocolSection="Inclusion Criteria" Confidence="1.0">
+          <makoto:SourceQuote>adequate renal (creatinine ≤2.0 x IULN)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2827" y0="0.3439" x1="0.909" y1="0.6553"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.EGFR.EGFR" Name="Estimated GFR - CKD-EPI (mL/min/1.73m²) — Renal Clearance / eGFR Physiological Extreme Check" Description="Enforces variable extreme bounds [5, 250] mL/min/1.73m² for Estimated GFR - CKD-EPI (mL/min/1.73m²).">
+        <FormalExpression Context="Python">5 &lt;= ITEM.EGFR &lt;= 250</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="8" ProtocolSection="Inclusion Criteria" Confidence="1.0">
+          <makoto:SourceQuote>adequate renal (creatinine ≤2.0 x IULN)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2827" y0="0.3439" x1="0.909" y1="0.6553"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.CREAT.BUN_CREAT_RATIO" Name="BUN to Creatinine Ratio — Serum Creatinine Physiological Extreme Check" Description="Enforces variable extreme bounds [0.1, 15.0] ratio for BUN to Creatinine Ratio.">
+        <FormalExpression Context="Python">0.1 &lt;= ITEM.BUN_CREAT_RATIO &lt;= 15.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="8" ProtocolSection="Inclusion Criteria" Confidence="1.0">
+          <makoto:SourceQuote>adequate renal (creatinine ≤2.0 x IULN)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2827" y0="0.3439" x1="0.909" y1="0.6553"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.ANC.NLR" Name="Neutrophil-to-Lymphocyte Ratio (NLR) — Absolute Neutrophil Count Extreme Check" Description="Enforces variable extreme bounds [0.0, 50.0] ratio for Neutrophil-to-Lymphocyte Ratio (NLR).">
+        <FormalExpression Context="Python">0.0 &lt;= ITEM.NLR &lt;= 50.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="11" ProtocolSection="Table 2: Study Calendar" Confidence="1.0">
+          <makoto:SourceQuote>CBC, differential, platelets, and serum chemistries at each visit</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2849" y0="0.7438" x1="0.4298" y1="0.7607"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.HEPATIC.ULN_RATIO" Name="Hepatic Transaminase ULN Multiple (x ULN) — Hepatic Enzyme / Transaminase Extreme Check" Description="Enforces variable extreme bounds [1, 2000] ratio for Hepatic Transaminase ULN Multiple (x ULN).">
+        <FormalExpression Context="Python">1 &lt;= ITEM.ULN_RATIO &lt;= 2000</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="8" ProtocolSection="Inclusion Criteria" Confidence="1.0">
+          <makoto:SourceQuote>hepatic function (bilirubin ≤1.5 x IULN</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2827" y0="0.3439" x1="0.909" y1="0.6553"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.HEPATIC.AST_ALT_RATIO" Name="De Ritis AST/ALT Ratio — Hepatic Enzyme / Transaminase Extreme Check" Description="Enforces variable extreme bounds [1, 2000] ratio for De Ritis AST/ALT Ratio.">
+        <FormalExpression Context="Python">1 &lt;= ITEM.AST_ALT_RATIO &lt;= 2000</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="8" ProtocolSection="Inclusion Criteria" Confidence="1.0">
+          <makoto:SourceQuote>AST and ALT ≤ 3 x IULN or 5 x IULN</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2827" y0="0.3439" x1="0.909" y1="0.6553"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.BILI.BILI_ULN_RATIO" Name="Total Bilirubin ULN Multiple (x ULN) — Total Bilirubin Physiological Extreme Check" Description="Enforces variable extreme bounds [0.05, 30.0] ratio for Total Bilirubin ULN Multiple (x ULN).">
+        <FormalExpression Context="Python">0.05 &lt;= ITEM.BILI_ULN_RATIO &lt;= 30.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="8" ProtocolSection="Inclusion Criteria" Confidence="1.0">
+          <makoto:SourceQuote>hepatic function (bilirubin ≤1.5 x IULN</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2827" y0="0.3439" x1="0.909" y1="0.6553"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.HEPATIC.FIB4" Name="FIB-4 Hepatic Fibrosis Index — Hepatic Enzyme / Transaminase Extreme Check" Description="Enforces variable extreme bounds [1, 2000] ratio for FIB-4 Hepatic Fibrosis Index.">
+        <FormalExpression Context="Python">1 &lt;= ITEM.FIB4 &lt;= 2000</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="8" ProtocolSection="Inclusion Criteria" Confidence="1.0">
+          <makoto:SourceQuote>AST and ALT ≤ 3 x IULN or 5 x IULN</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2827" y0="0.3439" x1="0.909" y1="0.6553"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.DOSE.DOSE_CALC" Name="Protocol Calculated Target Dose (mg) — Dosing &amp; Exposure Quantitative Plausibility Bounds" Description="Enforces variable extreme bounds [0.0, 10000.0] mg for Protocol Calculated Target Dose (mg).">
+        <FormalExpression Context="Python">0.0 &lt;= ITEM.DOSE_CALC &lt;= 10000.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="33" ProtocolSection="Protocol Adherence" Confidence="1.0">
+          <makoto:SourceQuote>Treatment delay for any reason &gt; 3 weeks (Treatment delays of up to 3 weeks will be allowed at the investigator's discretion)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1662" y0="0.2842" x1="0.8708" y1="0.3159"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.DOSE.RDI" Name="Relative Dose Intensity (%) — Dosing &amp; Exposure Quantitative Plausibility Bounds" Description="Enforces variable extreme bounds [0.0, 10000.0] % for Relative Dose Intensity (%).">
+        <FormalExpression Context="Python">0.0 &lt;= ITEM.RDI &lt;= 10000.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="33" ProtocolSection="Protocol Adherence" Confidence="1.0">
+          <makoto:SourceQuote>Treatment delay for any reason &gt; 3 weeks (Treatment delays of up to 3 weeks will be allowed at the investigator's discretion)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1662" y0="0.2842" x1="0.8708" y1="0.3159"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.DOSE.CUM_DOSE" Name="Cumulative Administered Dose (mg) — Dosing &amp; Exposure Quantitative Plausibility Bounds" Description="Enforces variable extreme bounds [0.0, 10000.0] mg for Cumulative Administered Dose (mg).">
+        <FormalExpression Context="Python">0.0 &lt;= ITEM.CUM_DOSE &lt;= 10000.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="33" ProtocolSection="Protocol Adherence" Confidence="1.0">
+          <makoto:SourceQuote>Treatment delay for any reason &gt; 3 weeks (Treatment delays of up to 3 weeks will be allowed at the investigator's discretion)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1662" y0="0.2842" x1="0.8708" y1="0.3159"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.DOSE.AEDUR" Name="Adverse Event Duration (Days) — Dosing &amp; Exposure Quantitative Plausibility Bounds" Description="Enforces variable extreme bounds [0.0, 10000.0] days for Adverse Event Duration (Days).">
+        <FormalExpression Context="Python">0.0 &lt;= ITEM.AEDUR &lt;= 10000.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="22" ProtocolSection="Safety Monitoring" Confidence="1.0">
+          <makoto:SourceQuote>NCI CTCAE v4.0 is used to grade all adverse events and to provide dose reduction, delay or cessation guidelines in the event of treatment-related toxicity</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1062" y0="0.2985" x1="0.9033" y1="0.5423"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.DOSE.TRTDURD" Name="Total Treatment Exposure Duration (Days) — Dosing &amp; Exposure Quantitative Plausibility Bounds" Description="Enforces variable extreme bounds [0.0, 10000.0] days for Total Treatment Exposure Duration (Days).">
+        <FormalExpression Context="Python">0.0 &lt;= ITEM.TRTDURD &lt;= 10000.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="69" ProtocolSection="Pharmacy Procedures" Confidence="1.0">
+          <makoto:SourceQuote>Any variance between the calculated dose and the actual administered dose must be documented in source documents and Case Report Forms (CRFs)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.434" y0="0.0997" x1="0.5752" y1="0.112"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.TIME.IC_BEFORE_PROCEDURES" Name="Informed Consent Prior to Study Procedures (BIMO Chronology)" Description="Informed Consent signature date must be on or prior to any screening or study procedure date (21 CFR Part 50 / ICH E6 GCP).">
+        <FormalExpression Context="Python">ITEM.Regulatory_Approval &lt;= STUDY_EVENT.VISDAT</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="4" ProtocolSection="Regulatory Compliance" Confidence="1.0">
+          <makoto:SourceQuote>The study requires prior Institutional Review Board (IRB) and Institutional Ethics Committee (IEC) approval</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2827" y0="0.7732" x1="0.908" y1="0.9287"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.TIME.NO_EVENTS_AFTER_DISPOSITION" Name="Post-Discontinuation / Death Chronology Guard" Description="No clinical assessment, laboratory draw, or dosing date may occur after subject discontinuation/death or in the future.">
+        <FormalExpression Context="Python">STUDY_EVENT.VISDAT &lt;= ITEM.Discontinuation Reason and STUDY_EVENT.VISDAT &lt;= TODAY()</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="18" ProtocolSection="Safety and Tolerability" Confidence="1.0">
+          <makoto:SourceQuote>Severe (Grade 3 or higher) toxicities have primarily included neutropenia, diarrhea and febrile neutropenia</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1065" y0="0.546" x1="0.8928" y1="0.6306"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.RECON.ELIGIBILITY_DOSE_RELEASE" Name="Eligibility Confirmation Prior to Study Dosing" Description="Subject cannot receive study treatment on FORM.EX if any Inclusion Criterion is unmet or any Exclusion Criterion is triggered on FORM.IE.">
+        <FormalExpression Context="Python">ITEM.Disease_Status == 'ELIGIBLE' and ITEM.InvestigationalDrug is not None</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="22" ProtocolSection="Study Drug Information" Confidence="1.0">
+          <makoto:SourceQuote>IMMU-132</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1064" y0="0.2201" x1="0.8944" y1="0.2871"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.RECON.AE_CONMED_LINK" Name="Adverse Event Concomitant Medication Reconciliation" Description="Adverse Event indicates concomitant medication treatment was given; a corresponding medication entry must be logged on FORM.CM.">
+        <FormalExpression Context="Python">FORM.AE.AECONTRT != 'Y' or ITEM.Prophylactic_Medication_Restriction is not None</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="26" ProtocolSection="Medication Management" Confidence="1.0">
+          <makoto:SourceQuote>Hematopoietic growth factors or blood transfusions are allowed at physician's discretion , but not prophylactically before the first IMMU-132 dose in Cycle 1</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1662" y0="0.7496" x1="0.8995" y1="0.7814"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.RECON.CS_LAB_REQUIRES_AE" Name="Clinically Significant Lab Abnormality to AE Reconciliation" Description="Post-baseline laboratory abnormality marked Clinically Significant (CS) requires a corresponding Adverse Event record on FORM.AE.">
+        <FormalExpression Context="Python">FORM.LB.LBCLSIG != 'Y' or FORM.AE.RECORD_COUNT &gt;= 1</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="22" ProtocolSection="Laboratory Monitoring" Confidence="1.0">
+          <makoto:SourceQuote>routine monitoring of Prothrombin Time (PT) and Partial Thromboplastin Time (PTT)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1064" y0="0.2201" x1="0.8944" y1="0.2871"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.RECON.HYS_LAW_HEPATOTOXICITY" Name="Hy's Law Drug-Induced Liver Injury (DILI) Safety Screen" Description="Potential Hy's Law Case (ALT/AST &gt;= 3x ULN with Total Bilirubin &gt;= 2x ULN): requires immediate medical monitor notification and SAE evaluation within 24 hours.">
+        <FormalExpression Context="Python">not (ITEM.ALT &gt;= 3.0 * ULN and ITEM.BILI &gt;= 2.0 * ULN)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="8" ProtocolSection="Inclusion Criteria" Confidence="1.0">
+          <makoto:SourceQuote>AST and ALT ≤ 3 x IULN or 5 x IULN</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2827" y0="0.3439" x1="0.909" y1="0.6553"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.DELTA.WEIGHT_BSA_RECALC" Name="Longitudinal Weight Change &gt;= 10% BSA &amp; Dose Recalculation" Description="Subject body weight changed by &gt; 10% from baseline; verify weight entry and recalculate Body Surface Area (BSA) and dosing.">
+        <FormalExpression Context="Python">abs(ITEM.Weight - BASELINE.WEIGHT) / BASELINE.WEIGHT &lt;= 0.10</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="49" ProtocolSection="Dosing Parameters" Confidence="1.0">
+          <makoto:SourceQuote>Weight</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1069" y0="0.1268" x1="0.9031" y1="0.2261"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.DELTA.QTCF_BASELINE_CHANGE" Name="QTcF Longitudinal Increase &gt; 60 ms from Baseline (ICH E14)" Description="QTcF interval increased by &gt; 60 ms from baseline (ICH E14 cardiac safety threshold); requires triplicate ECG confirmation and cardiology evaluation.">
+        <FormalExpression Context="Python">(ITEM.ECG_12_LEAD - BASELINE.ECG_12_LEAD) &lt;= 60</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>N/A</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <EditCheck OID="EC.GATE.ANC_CLEARANCE" Name="Pre-Dose ANC Safety Clearance Gate" Target="FORM.LB.ITEM.ANC" ConditionRef="COND.ANC_SAFETY_CLEARANCE">
+        <ErrorMessage>
+          <TranslatedText>ANC must be &gt;= 1.0 x 10^9/L before initiating next treatment cycle.</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="11" ProtocolSection="Table 2: Study Calendar" Confidence="1.0">
+          <makoto:SourceQuote>CBC, differential, platelets, and serum chemistries at each visit</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2849" y0="0.7438" x1="0.4298" y1="0.7607"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.AE.DATE_CHRONOLOGY" Name="Adverse Event Date Chronology Check" Target="FORM.AE.ITEM.AEENDAT" ConditionRef="COND.AE_START_LE_END">
+        <ErrorMessage>
+          <TranslatedText>Adverse event resolution date must be on or after adverse event start date.</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="47" ProtocolSection="Laboratory Monitoring" Confidence="1.0">
+          <makoto:SourceQuote>Laboratory test results will be graded according to CTCAE severity grade when applicable.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1062" y0="0.3515" x1="0.9036" y1="0.4362"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.AE.FATAL_DISPOSITION_SYNC" Name="Fatal AE Disposition Concurrence" Target="FORM.AE.ITEM.AEOUT" ConditionRef="COND.AE_FATAL_DISPOSITION_SYNC">
+        <ErrorMessage>
+          <TranslatedText>Fatal adverse event outcome requires subject disposition to be recorded as Death on FORM.DS.</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="47" ProtocolSection="Laboratory Monitoring" Confidence="1.0">
+          <makoto:SourceQuote>Laboratory test results will be graded according to CTCAE severity grade when applicable.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1062" y0="0.3515" x1="0.9036" y1="0.4362"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.HEIGHT.HEIGHT" Name="Height — Height Physiological Extreme Check" Target="FORM.DEMO.ITEM.Height" ConditionRef="COND.EXTREME.HEIGHT.HEIGHT">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Height (ITEM.Height): value must be within [100.0, 250.0] cm (Height Physiological Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="49" ProtocolSection="Dosing Parameters" Confidence="1.0">
+          <makoto:SourceQuote>Height</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1069" y0="0.1268" x1="0.9031" y1="0.2261"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.WEIGHT.WEIGHT" Name="Weight — Body Weight Physiological Extreme Check" Target="FORM.DEMO.ITEM.Weight" ConditionRef="COND.EXTREME.WEIGHT.WEIGHT">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Weight (ITEM.Weight): value must be within [25.0, 300.0] kg (Body Weight Physiological Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="49" ProtocolSection="Dosing Parameters" Confidence="1.0">
+          <makoto:SourceQuote>Weight</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1069" y0="0.1268" x1="0.9031" y1="0.2261"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.DOSE.DOSEDISCREPANCYREPORTING" Name="Dose Discrepancy Reporting — Dosing &amp; Exposure Quantitative Plausibility Bounds" Target="FORM.EX.ITEM.DoseDiscrepancyReporting" ConditionRef="COND.EXTREME.DOSE.DOSEDISCREPANCYREPORTING">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Dose Discrepancy Reporting (ITEM.DoseDiscrepancyReporting): value must be within [0.0, 10000.0] mg (Dosing &amp; Exposure Quantitative Plausibility Bounds).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="69" ProtocolSection="Pharmacy Procedures" Confidence="1.0">
+          <makoto:SourceQuote>Any variance between the calculated dose and the actual administered dose must be documented in source documents and Case Report Forms (CRFs)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.434" y0="0.0997" x1="0.5752" y1="0.112"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.TEMP.SHIPPINGTEMPERATURECONTROL" Name="Shipping Temperature Control — Body Temperature Physiological Extreme Check" Target="FORM.EX.ITEM.ShippingTemperatureControl" ConditionRef="COND.EXTREME.TEMP.SHIPPINGTEMPERATURECONTROL">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Shipping Temperature Control (ITEM.ShippingTemperatureControl): value must be within [34.0, 42.0] °C (Body Temperature Physiological Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="72" ProtocolSection="Logistics" Confidence="1.0">
+          <makoto:SourceQuote>use of cold gel packs for shipping study products. ... Use of dry ice for shipping is explicitly prohibited</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.3237" y0="0.1293" x1="0.6837" y1="0.1553"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.COAG.COAGULATIONMONITORING" Name="Coagulation Monitoring — Coagulation Parameter Extreme Check" Target="FORM.EX.ITEM.CoagulationMonitoring" ConditionRef="COND.EXTREME.COAG.COAGULATIONMONITORING">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Coagulation Monitoring (ITEM.CoagulationMonitoring): value must be within [0.5, 10.0] mg (Coagulation Parameter Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="22" ProtocolSection="Laboratory Monitoring" Confidence="1.0">
+          <makoto:SourceQuote>routine monitoring of Prothrombin Time (PT) and Partial Thromboplastin Time (PTT)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1064" y0="0.2201" x1="0.8944" y1="0.2871"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.CREAT.CREAT" Name="Creatinine — Serum Creatinine Physiological Extreme Check" Target="FORM.VS.ITEM.CREAT" ConditionRef="COND.EXTREME.CREAT.CREAT">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Creatinine (ITEM.CREAT): value must be within [0.1, 15.0] mg/dL (Serum Creatinine Physiological Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="8" ProtocolSection="Inclusion Criteria" Confidence="1.0">
+          <makoto:SourceQuote>adequate renal (creatinine ≤2.0 x IULN)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2827" y0="0.3439" x1="0.909" y1="0.6553"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.BILI.BILI" Name="Bilirubin — Total Bilirubin Physiological Extreme Check" Target="FORM.VS.ITEM.BILI" ConditionRef="COND.EXTREME.BILI.BILI">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Bilirubin (ITEM.BILI): value must be within [0.05, 30.0] mg/dL (Total Bilirubin Physiological Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="8" ProtocolSection="Inclusion Criteria" Confidence="1.0">
+          <makoto:SourceQuote>hepatic function (bilirubin ≤1.5 x IULN</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2827" y0="0.3439" x1="0.909" y1="0.6553"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.HEPATIC.ALT" Name="ALT — Hepatic Enzyme / Transaminase Extreme Check" Target="FORM.VS.ITEM.ALT" ConditionRef="COND.EXTREME.HEPATIC.ALT">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for ALT (ITEM.ALT): value must be within [1, 2000] U/L (Hepatic Enzyme / Transaminase Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="8" ProtocolSection="Inclusion Criteria" Confidence="1.0">
+          <makoto:SourceQuote>AST and ALT ≤ 3 x IULN or 5 x IULN</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2827" y0="0.3439" x1="0.909" y1="0.6553"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.QTC.ECG_12_LEAD" Name="12-Lead ECG — QTc Interval Prolongation Safety Extreme Check" Target="FORM.EG.ITEM.ECG_12_LEAD" ConditionRef="COND.EXTREME.QTC.ECG_12_LEAD">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for 12-Lead ECG (ITEM.ECG_12_LEAD): value must be within [250, 500] ms (QTc Interval Prolongation Safety Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>N/A</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.QTC.QTC" Name="QTcF Interval — QTc Interval Prolongation Safety Extreme Check" Target="FORM.EG.ITEM.QTC" ConditionRef="COND.EXTREME.QTC.QTC">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for QTcF Interval (ITEM.QTC): value must be within [250, 500] ms (QTc Interval Prolongation Safety Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>N/A</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.HR.VENTRICULAR_RATE" Name="Ventricular Rate — Heart Rate Physiological Extreme Check" Target="FORM.EG.ITEM.VENTRICULAR_RATE" ConditionRef="COND.EXTREME.HR.VENTRICULAR_RATE">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Ventricular Rate (ITEM.VENTRICULAR_RATE): value must be within [30, 220] bpm (Heart Rate Physiological Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>N/A</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.ECOG.ECOG_PS" Name="ECOG Performance Status — ECOG Performance Status Scale Bounds" Target="FORM.PE.ITEM.ECOG_PS" ConditionRef="COND.EXTREME.ECOG.ECOG_PS">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for ECOG Performance Status (ITEM.ECOG_PS): value must be within [0, 5] grade (ECOG Performance Status Scale Bounds).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="8" ProtocolSection="Inclusion Criteria" Confidence="1.0">
+          <makoto:SourceQuote>toxicity at study entry &lt; Grade 1 by NCI CTC v4.0</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2827" y0="0.3439" x1="0.909" y1="0.6553"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.HGB.CBC_CHEMISTRIES" Name="Complete Blood Count and Serum Chemistries — Hemoglobin Physiological Extreme Check" Target="FORM.LB.ITEM.CBC_CHEMISTRIES" ConditionRef="COND.EXTREME.HGB.CBC_CHEMISTRIES">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Complete Blood Count and Serum Chemistries (ITEM.CBC_CHEMISTRIES): value must be within [4.0, 22.0] g/dL (Hemoglobin Physiological Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="11" ProtocolSection="Table 2: Study Calendar" Confidence="1.0">
+          <makoto:SourceQuote>CBC, differential, platelets, and serum chemistries at each visit</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2849" y0="0.7438" x1="0.4298" y1="0.7607"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.HGB.HGB" Name="Hemoglobin — Hemoglobin Physiological Extreme Check" Target="FORM.LB.ITEM.HGB" ConditionRef="COND.EXTREME.HGB.HGB">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Hemoglobin (ITEM.HGB): value must be within [4.0, 22.0] g/dL (Hemoglobin Physiological Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="11" ProtocolSection="Table 2: Study Calendar" Confidence="1.0">
+          <makoto:SourceQuote>CBC, differential, platelets, and serum chemistries at each visit</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2849" y0="0.7438" x1="0.4298" y1="0.7607"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.WBC.WBC" Name="White Blood Cell Count — White Blood Cell Count Extreme Check" Target="FORM.LB.ITEM.WBC" ConditionRef="COND.EXTREME.WBC.WBC">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for White Blood Cell Count (ITEM.WBC): value must be within [0.1, 100.0] 10^9/L (White Blood Cell Count Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="11" ProtocolSection="Table 2: Study Calendar" Confidence="1.0">
+          <makoto:SourceQuote>CBC, differential, platelets, and serum chemistries at each visit</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2849" y0="0.7438" x1="0.4298" y1="0.7607"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.ANC.ANC" Name="Absolute Neutrophil Count — Absolute Neutrophil Count Extreme Check" Target="FORM.LB.ITEM.ANC" ConditionRef="COND.EXTREME.ANC.ANC">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Absolute Neutrophil Count (ITEM.ANC): value must be within [0.0, 50.0] 10^9/L (Absolute Neutrophil Count Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="11" ProtocolSection="Table 2: Study Calendar" Confidence="1.0">
+          <makoto:SourceQuote>CBC, differential, platelets, and serum chemistries at each visit</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2849" y0="0.7438" x1="0.4298" y1="0.7607"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.PLT.PLT" Name="Platelet Count — Platelet Count Physiological Extreme Check" Target="FORM.LB.ITEM.PLT" ConditionRef="COND.EXTREME.PLT.PLT">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Platelet Count (ITEM.PLT): value must be within [5, 1500] 10^9/L (Platelet Count Physiological Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="11" ProtocolSection="Table 2: Study Calendar" Confidence="1.0">
+          <makoto:SourceQuote>CBC, differential, platelets, and serum chemistries at each visit</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2849" y0="0.7438" x1="0.4298" y1="0.7607"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.DOSE.CALCULATED_DOSE_MG" Name="Calculated Dose in milligrams — Dosing &amp; Exposure Quantitative Plausibility Bounds" Target="FORM.PK.ITEM.Calculated Dose (mg)" ConditionRef="COND.EXTREME.DOSE.CALCULATED_DOSE_MG">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Calculated Dose in milligrams (ITEM.Calculated Dose (mg)): value must be within [0.0, 10000.0] mg (Dosing &amp; Exposure Quantitative Plausibility Bounds).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="4" ProtocolSection="Pharmacy Responsibilities" Confidence="1.0">
+          <makoto:SourceQuote>The actual dose in mg must be recorded in Source Documents and CRFs.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2827" y0="0.7732" x1="0.908" y1="0.9287"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.HEPATIC.AST" Name="AST — Hepatic Enzyme / Transaminase Extreme Check" Target="FORM.BS.ITEM.AST" ConditionRef="COND.EXTREME.HEPATIC.AST">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for AST (ITEM.AST): value must be within [1, 2000] U/L (Hepatic Enzyme / Transaminase Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="8" ProtocolSection="Inclusion Criteria" Confidence="1.0">
+          <makoto:SourceQuote>AST and ALT ≤ 3 x IULN or 5 x IULN</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2827" y0="0.3439" x1="0.909" y1="0.6553"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.COAG.PT" Name="Prothrombin Time — Coagulation Parameter Extreme Check" Target="FORM.BS.ITEM.PT" ConditionRef="COND.EXTREME.COAG.PT">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Prothrombin Time (ITEM.PT): value must be within [0.5, 10.0] s (Coagulation Parameter Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="71" ProtocolSection="Laboratory Monitoring" Confidence="1.0">
+          <makoto:SourceQuote>PT (Prothrombin Time): Required monitoring of coagulation status.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2797" y0="0.1159" x1="0.6408" y1="0.1422"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.COAG.PTT" Name="Partial Thromboplastin Time — Coagulation Parameter Extreme Check" Target="FORM.BS.ITEM.PTT" ConditionRef="COND.EXTREME.COAG.PTT">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Partial Thromboplastin Time (ITEM.PTT): value must be within [0.5, 10.0] s (Coagulation Parameter Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="71" ProtocolSection="Laboratory Monitoring" Confidence="1.0">
+          <makoto:SourceQuote>PTT (Partial Thromboplastin Time): Required monitoring of coagulation status.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2797" y0="0.1159" x1="0.6408" y1="0.1422"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.COAG.COAGULATION_MONITORING" Name="Coagulation parameters (PT and PTT) — Coagulation Parameter Extreme Check" Target="FORM.AE.ITEM.Coagulation Monitoring" ConditionRef="COND.EXTREME.COAG.COAGULATION_MONITORING">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Coagulation parameters (PT and PTT) (ITEM.Coagulation Monitoring): value must be within [0.5, 10.0] s (Coagulation Parameter Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="47" ProtocolSection="Major Procedures and Measurements" Confidence="1.0">
+          <makoto:SourceQuote>Coagulation studies such as PT (Prothrombin Time) and PTT (Partial Thromboplastin Time) are required.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1062" y0="0.7961" x1="0.8979" y1="0.9162"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.CTCAE.TOXICITY_GRADING" Name="CTCAE Severity Grading — NCI-CTCAE Toxicity Grade Bounds" Target="FORM.AE.ITEM.Toxicity Grading" ConditionRef="COND.EXTREME.CTCAE.TOXICITY_GRADING">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for CTCAE Severity Grading (ITEM.Toxicity Grading): value must be within [1, 5] grade (NCI-CTCAE Toxicity Grade Bounds).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="47" ProtocolSection="Laboratory Monitoring" Confidence="1.0">
+          <makoto:SourceQuote>Laboratory test results will be graded according to CTCAE severity grade when applicable.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1062" y0="0.3515" x1="0.9036" y1="0.4362"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.CTCAE.TOXICITY_DISTRIBUTION" Name="Worst CTCAE Grade Frequency Distribution — NCI-CTCAE Toxicity Grade Bounds" Target="FORM.AE.ITEM.Toxicity Distribution" ConditionRef="COND.EXTREME.CTCAE.TOXICITY_DISTRIBUTION">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Worst CTCAE Grade Frequency Distribution (ITEM.Toxicity Distribution): value must be within [1, 5] grade (NCI-CTCAE Toxicity Grade Bounds).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="47" ProtocolSection="Laboratory Monitoring" Confidence="1.0">
+          <makoto:SourceQuote>The frequency distribution of the worst CTCAE grade observed will be tabulated in a shift table for each parameter by dose group.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1062" y0="0.3515" x1="0.9036" y1="0.4362"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.DOSE.DOSE_MODIFICATION" Name="Dose Modification — Dosing &amp; Exposure Quantitative Plausibility Bounds" Target="FORM.DS.ITEM.Dose Modification" ConditionRef="COND.EXTREME.DOSE.DOSE_MODIFICATION">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Dose Modification (ITEM.Dose Modification): value must be within [0.0, 10000.0] mg/kg (Dosing &amp; Exposure Quantitative Plausibility Bounds).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="18" ProtocolSection="Dosing and Safety" Confidence="1.0">
+          <makoto:SourceQuote>starting doses of 8 or 10 mg/kg... subsequently 10 mg/kg was selected for the ongoing Phase II portion</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1065" y0="0.546" x1="0.8928" y1="0.6306"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.BMI.BMI" Name="Body Mass Index (BMI, kg/m²) — Body Mass Index Physiological Extreme Check" Target="FORM.VS.ITEM.BMI" ConditionRef="COND.EXTREME.BMI.BMI">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Body Mass Index (BMI, kg/m²) (ITEM.BMI): value must be within [10.0, 70.0] kg/m² (Body Mass Index Physiological Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="49" ProtocolSection="Dosing Parameters" Confidence="1.0">
+          <makoto:SourceQuote>Body Mass Index (BMI) Calculation synthesized from protocol assessment 'Height'.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1069" y0="0.1268" x1="0.9031" y1="0.2261"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.BSA.BSA" Name="Body Surface Area - Mosteller (BSA, m²) — Body Surface Area Physiological Extreme Check" Target="FORM.VS.ITEM.BSA" ConditionRef="COND.EXTREME.BSA.BSA">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Body Surface Area - Mosteller (BSA, m²) (ITEM.BSA): value must be within [0.5, 3.5] m² (Body Surface Area Physiological Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="49" ProtocolSection="Dosing Parameters" Confidence="1.0">
+          <makoto:SourceQuote>Body Surface Area (BSA — Mosteller Formula) synthesized from protocol assessment 'Height'.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1069" y0="0.1268" x1="0.9031" y1="0.2261"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.BSA.BSA_DUBOIS" Name="Body Surface Area - DuBois (m²) — Body Surface Area Physiological Extreme Check" Target="FORM.VS.ITEM.BSA_DUBOIS" ConditionRef="COND.EXTREME.BSA.BSA_DUBOIS">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Body Surface Area - DuBois (m²) (ITEM.BSA_DUBOIS): value must be within [0.5, 3.5] m² (Body Surface Area Physiological Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="49" ProtocolSection="Dosing Parameters" Confidence="1.0">
+          <makoto:SourceQuote>Body Surface Area (BSA — DuBois &amp; DuBois Formula) synthesized from protocol assessment 'Height'.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1069" y0="0.1268" x1="0.9031" y1="0.2261"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.WEIGHT.IBW" Name="Ideal Body Weight - Devine (IBW, kg) — Body Weight Physiological Extreme Check" Target="FORM.VS.ITEM.IBW" ConditionRef="COND.EXTREME.WEIGHT.IBW">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Ideal Body Weight - Devine (IBW, kg) (ITEM.IBW): value must be within [25.0, 300.0] kg (Body Weight Physiological Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="49" ProtocolSection="Dosing Parameters" Confidence="1.0">
+          <makoto:SourceQuote>Ideal Body Weight (IBW — Devine Formula) synthesized from protocol assessment 'Height'.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1069" y0="0.1268" x1="0.9031" y1="0.2261"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.WEIGHT.ABW" Name="Adjusted Body Weight (ABW, kg) — Body Weight Physiological Extreme Check" Target="FORM.VS.ITEM.ABW" ConditionRef="COND.EXTREME.WEIGHT.ABW">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Adjusted Body Weight (ABW, kg) (ITEM.ABW): value must be within [25.0, 300.0] kg (Body Weight Physiological Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="49" ProtocolSection="Dosing Parameters" Confidence="1.0">
+          <makoto:SourceQuote>Adjusted Body Weight (ABW — Obesity Dosing Cap) synthesized from protocol assessment 'Height'.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1069" y0="0.1268" x1="0.9031" y1="0.2261"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.QTC.QTCF" Name="QTcF Interval - Fridericia (ms) — QTc Interval Prolongation Safety Extreme Check" Target="FORM.EG.ITEM.QTCF" ConditionRef="COND.EXTREME.QTC.QTCF">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for QTcF Interval - Fridericia (ms) (ITEM.QTCF): value must be within [250, 500] ms (QTc Interval Prolongation Safety Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Fridericia Rate-Corrected QT Interval (QTcF — ICH E14) synthesized from protocol assessment '12-Lead ECG'.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.QTC.QTCB" Name="QTcB Interval - Bazett (ms) — QTc Interval Prolongation Safety Extreme Check" Target="FORM.EG.ITEM.QTCB" ConditionRef="COND.EXTREME.QTC.QTCB">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for QTcB Interval - Bazett (ms) (ITEM.QTCB): value must be within [250, 500] ms (QTc Interval Prolongation Safety Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Bazett Rate-Corrected QT Interval (QTcB — ICH E14) synthesized from protocol assessment '12-Lead ECG'.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.QTC.QTCF_CHG" Name="Change from Baseline in QTcF (ms) — QTc Interval Prolongation Safety Extreme Check" Target="FORM.EG.ITEM.QTCF_CHG" ConditionRef="COND.EXTREME.QTC.QTCF_CHG">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Change from Baseline in QTcF (ms) (ITEM.QTCF_CHG): value must be within [250, 500] ms (QTc Interval Prolongation Safety Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>Longitudinal Change from Baseline in QTcF (Delta-QTcF — ICH E14) synthesized from protocol assessment '12-Lead ECG'.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.CREAT.CRCL" Name="Creatinine Clearance - Cockcroft-Gault (mL/min) — Serum Creatinine Physiological Extreme Check" Target="FORM.LB.ITEM.CRCL" ConditionRef="COND.EXTREME.CREAT.CRCL">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Creatinine Clearance - Cockcroft-Gault (mL/min) (ITEM.CRCL): value must be within [0.1, 15.0] mL/min (Serum Creatinine Physiological Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="8" ProtocolSection="Inclusion Criteria" Confidence="1.0">
+          <makoto:SourceQuote>adequate renal (creatinine ≤2.0 x IULN)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2827" y0="0.3439" x1="0.909" y1="0.6553"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.EGFR.EGFR" Name="Estimated GFR - CKD-EPI (mL/min/1.73m²) — Renal Clearance / eGFR Physiological Extreme Check" Target="FORM.LB.ITEM.EGFR" ConditionRef="COND.EXTREME.EGFR.EGFR">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Estimated GFR - CKD-EPI (mL/min/1.73m²) (ITEM.EGFR): value must be within [5, 250] mL/min/1.73m² (Renal Clearance / eGFR Physiological Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="8" ProtocolSection="Inclusion Criteria" Confidence="1.0">
+          <makoto:SourceQuote>adequate renal (creatinine ≤2.0 x IULN)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2827" y0="0.3439" x1="0.909" y1="0.6553"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.CREAT.BUN_CREAT_RATIO" Name="BUN to Creatinine Ratio — Serum Creatinine Physiological Extreme Check" Target="FORM.LB.ITEM.BUN_CREAT_RATIO" ConditionRef="COND.EXTREME.CREAT.BUN_CREAT_RATIO">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for BUN to Creatinine Ratio (ITEM.BUN_CREAT_RATIO): value must be within [0.1, 15.0] ratio (Serum Creatinine Physiological Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="8" ProtocolSection="Inclusion Criteria" Confidence="1.0">
+          <makoto:SourceQuote>adequate renal (creatinine ≤2.0 x IULN)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2827" y0="0.3439" x1="0.909" y1="0.6553"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.ANC.NLR" Name="Neutrophil-to-Lymphocyte Ratio (NLR) — Absolute Neutrophil Count Extreme Check" Target="FORM.LB.ITEM.NLR" ConditionRef="COND.EXTREME.ANC.NLR">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Neutrophil-to-Lymphocyte Ratio (NLR) (ITEM.NLR): value must be within [0.0, 50.0] ratio (Absolute Neutrophil Count Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="11" ProtocolSection="Table 2: Study Calendar" Confidence="1.0">
+          <makoto:SourceQuote>CBC, differential, platelets, and serum chemistries at each visit</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2849" y0="0.7438" x1="0.4298" y1="0.7607"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.HEPATIC.ULN_RATIO" Name="Hepatic Transaminase ULN Multiple (x ULN) — Hepatic Enzyme / Transaminase Extreme Check" Target="FORM.LB.ITEM.ULN_RATIO" ConditionRef="COND.EXTREME.HEPATIC.ULN_RATIO">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Hepatic Transaminase ULN Multiple (x ULN) (ITEM.ULN_RATIO): value must be within [1, 2000] ratio (Hepatic Enzyme / Transaminase Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="8" ProtocolSection="Inclusion Criteria" Confidence="1.0">
+          <makoto:SourceQuote>hepatic function (bilirubin ≤1.5 x IULN</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2827" y0="0.3439" x1="0.909" y1="0.6553"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.HEPATIC.AST_ALT_RATIO" Name="De Ritis AST/ALT Ratio — Hepatic Enzyme / Transaminase Extreme Check" Target="FORM.LB.ITEM.AST_ALT_RATIO" ConditionRef="COND.EXTREME.HEPATIC.AST_ALT_RATIO">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for De Ritis AST/ALT Ratio (ITEM.AST_ALT_RATIO): value must be within [1, 2000] ratio (Hepatic Enzyme / Transaminase Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="8" ProtocolSection="Inclusion Criteria" Confidence="1.0">
+          <makoto:SourceQuote>AST and ALT ≤ 3 x IULN or 5 x IULN</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2827" y0="0.3439" x1="0.909" y1="0.6553"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.BILI.BILI_ULN_RATIO" Name="Total Bilirubin ULN Multiple (x ULN) — Total Bilirubin Physiological Extreme Check" Target="FORM.LB.ITEM.BILI_ULN_RATIO" ConditionRef="COND.EXTREME.BILI.BILI_ULN_RATIO">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Total Bilirubin ULN Multiple (x ULN) (ITEM.BILI_ULN_RATIO): value must be within [0.05, 30.0] ratio (Total Bilirubin Physiological Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="8" ProtocolSection="Inclusion Criteria" Confidence="1.0">
+          <makoto:SourceQuote>hepatic function (bilirubin ≤1.5 x IULN</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2827" y0="0.3439" x1="0.909" y1="0.6553"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.HEPATIC.FIB4" Name="FIB-4 Hepatic Fibrosis Index — Hepatic Enzyme / Transaminase Extreme Check" Target="FORM.LB.ITEM.FIB4" ConditionRef="COND.EXTREME.HEPATIC.FIB4">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for FIB-4 Hepatic Fibrosis Index (ITEM.FIB4): value must be within [1, 2000] ratio (Hepatic Enzyme / Transaminase Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="8" ProtocolSection="Inclusion Criteria" Confidence="1.0">
+          <makoto:SourceQuote>AST and ALT ≤ 3 x IULN or 5 x IULN</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2827" y0="0.3439" x1="0.909" y1="0.6553"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.DOSE.DOSE_CALC" Name="Protocol Calculated Target Dose (mg) — Dosing &amp; Exposure Quantitative Plausibility Bounds" Target="FORM.EX.ITEM.DOSE_CALC" ConditionRef="COND.EXTREME.DOSE.DOSE_CALC">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Protocol Calculated Target Dose (mg) (ITEM.DOSE_CALC): value must be within [0.0, 10000.0] mg (Dosing &amp; Exposure Quantitative Plausibility Bounds).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="33" ProtocolSection="Protocol Adherence" Confidence="1.0">
+          <makoto:SourceQuote>Treatment delay for any reason &gt; 3 weeks (Treatment delays of up to 3 weeks will be allowed at the investigator's discretion)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1662" y0="0.2842" x1="0.8708" y1="0.3159"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.DOSE.RDI" Name="Relative Dose Intensity (%) — Dosing &amp; Exposure Quantitative Plausibility Bounds" Target="FORM.EX.ITEM.RDI" ConditionRef="COND.EXTREME.DOSE.RDI">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Relative Dose Intensity (%) (ITEM.RDI): value must be within [0.0, 10000.0] % (Dosing &amp; Exposure Quantitative Plausibility Bounds).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="33" ProtocolSection="Protocol Adherence" Confidence="1.0">
+          <makoto:SourceQuote>Treatment delay for any reason &gt; 3 weeks (Treatment delays of up to 3 weeks will be allowed at the investigator's discretion)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1662" y0="0.2842" x1="0.8708" y1="0.3159"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.DOSE.CUM_DOSE" Name="Cumulative Administered Dose (mg) — Dosing &amp; Exposure Quantitative Plausibility Bounds" Target="FORM.EX.ITEM.CUM_DOSE" ConditionRef="COND.EXTREME.DOSE.CUM_DOSE">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Cumulative Administered Dose (mg) (ITEM.CUM_DOSE): value must be within [0.0, 10000.0] mg (Dosing &amp; Exposure Quantitative Plausibility Bounds).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="33" ProtocolSection="Protocol Adherence" Confidence="1.0">
+          <makoto:SourceQuote>Treatment delay for any reason &gt; 3 weeks (Treatment delays of up to 3 weeks will be allowed at the investigator's discretion)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1662" y0="0.2842" x1="0.8708" y1="0.3159"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.DOSE.AEDUR" Name="Adverse Event Duration (Days) — Dosing &amp; Exposure Quantitative Plausibility Bounds" Target="FORM.AE.ITEM.AEDUR" ConditionRef="COND.EXTREME.DOSE.AEDUR">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Adverse Event Duration (Days) (ITEM.AEDUR): value must be within [0.0, 10000.0] days (Dosing &amp; Exposure Quantitative Plausibility Bounds).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="22" ProtocolSection="Safety Monitoring" Confidence="1.0">
+          <makoto:SourceQuote>NCI CTCAE v4.0 is used to grade all adverse events and to provide dose reduction, delay or cessation guidelines in the event of treatment-related toxicity</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1062" y0="0.2985" x1="0.9033" y1="0.5423"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.DOSE.TRTDURD" Name="Total Treatment Exposure Duration (Days) — Dosing &amp; Exposure Quantitative Plausibility Bounds" Target="FORM.EX.ITEM.TRTDURD" ConditionRef="COND.EXTREME.DOSE.TRTDURD">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Total Treatment Exposure Duration (Days) (ITEM.TRTDURD): value must be within [0.0, 10000.0] days (Dosing &amp; Exposure Quantitative Plausibility Bounds).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="69" ProtocolSection="Pharmacy Procedures" Confidence="1.0">
+          <makoto:SourceQuote>Any variance between the calculated dose and the actual administered dose must be documented in source documents and Case Report Forms (CRFs)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.434" y0="0.0997" x1="0.5752" y1="0.112"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.TIME.IC_BEFORE_PROCEDURES" Name="Informed Consent Prior to Study Procedures (BIMO Chronology)" Target="FORM.IC.ITEM.Regulatory_Approval" ConditionRef="COND.TIME.IC_BEFORE_PROCEDURES">
+        <ErrorMessage>
+          <TranslatedText>Informed Consent signature date must be on or prior to any screening or study procedure date (21 CFR Part 50 / ICH E6 GCP).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="4" ProtocolSection="Regulatory Compliance" Confidence="1.0">
+          <makoto:SourceQuote>The study requires prior Institutional Review Board (IRB) and Institutional Ethics Committee (IEC) approval</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2827" y0="0.7732" x1="0.908" y1="0.9287"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.TIME.NO_EVENTS_AFTER_DISPOSITION" Name="Post-Discontinuation / Death Chronology Guard" Target="FORM.DS.ITEM.Discontinuation Reason" ConditionRef="COND.TIME.NO_EVENTS_AFTER_DISPOSITION">
+        <ErrorMessage>
+          <TranslatedText>No clinical assessment, laboratory draw, or dosing date may occur after subject discontinuation/death or in the future.</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="18" ProtocolSection="Safety and Tolerability" Confidence="1.0">
+          <makoto:SourceQuote>Severe (Grade 3 or higher) toxicities have primarily included neutropenia, diarrhea and febrile neutropenia</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1065" y0="0.546" x1="0.8928" y1="0.6306"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.RECON.ELIGIBILITY_DOSE_RELEASE" Name="Eligibility Confirmation Prior to Study Dosing" Target="FORM.EX.ITEM.InvestigationalDrug" ConditionRef="COND.RECON.ELIGIBILITY_DOSE_RELEASE">
+        <ErrorMessage>
+          <TranslatedText>Subject cannot receive study treatment on FORM.EX if any Inclusion Criterion is unmet or any Exclusion Criterion is triggered on FORM.IE.</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="22" ProtocolSection="Study Drug Information" Confidence="1.0">
+          <makoto:SourceQuote>IMMU-132</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1064" y0="0.2201" x1="0.8944" y1="0.2871"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.RECON.AE_CONMED_LINK" Name="Adverse Event Concomitant Medication Reconciliation" Target="FORM.CM.ITEM.Prophylactic_Medication_Restriction" ConditionRef="COND.RECON.AE_CONMED_LINK">
+        <ErrorMessage>
+          <TranslatedText>Adverse Event indicates concomitant medication treatment was given; a corresponding medication entry must be logged on FORM.CM.</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="26" ProtocolSection="Medication Management" Confidence="1.0">
+          <makoto:SourceQuote>Hematopoietic growth factors or blood transfusions are allowed at physician's discretion , but not prophylactically before the first IMMU-132 dose in Cycle 1</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1662" y0="0.7496" x1="0.8995" y1="0.7814"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.RECON.CS_LAB_REQUIRES_AE" Name="Clinically Significant Lab Abnormality to AE Reconciliation" Target="FORM.LB.ITEM.CoagulationMonitoring" ConditionRef="COND.RECON.CS_LAB_REQUIRES_AE">
+        <ErrorMessage>
+          <TranslatedText>Post-baseline laboratory abnormality marked Clinically Significant (CS) requires a corresponding Adverse Event record on FORM.AE.</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="22" ProtocolSection="Laboratory Monitoring" Confidence="1.0">
+          <makoto:SourceQuote>routine monitoring of Prothrombin Time (PT) and Partial Thromboplastin Time (PTT)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1064" y0="0.2201" x1="0.8944" y1="0.2871"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.RECON.HYS_LAW_HEPATOTOXICITY" Name="Hy's Law Drug-Induced Liver Injury (DILI) Safety Screen" Target="FORM.LB.ITEM.ALT" ConditionRef="COND.RECON.HYS_LAW_HEPATOTOXICITY">
+        <ErrorMessage>
+          <TranslatedText>Potential Hy's Law Case (ALT/AST &gt;= 3x ULN with Total Bilirubin &gt;= 2x ULN): requires immediate medical monitor notification and SAE evaluation within 24 hours.</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="8" ProtocolSection="Inclusion Criteria" Confidence="1.0">
+          <makoto:SourceQuote>AST and ALT ≤ 3 x IULN or 5 x IULN</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.2827" y0="0.3439" x1="0.909" y1="0.6553"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.DELTA.WEIGHT_BSA_RECALC" Name="Longitudinal Weight Change &gt;= 10% BSA &amp; Dose Recalculation" Target="FORM.VS.ITEM.Weight" ConditionRef="COND.DELTA.WEIGHT_BSA_RECALC">
+        <ErrorMessage>
+          <TranslatedText>Subject body weight changed by &gt; 10% from baseline; verify weight entry and recalculate Body Surface Area (BSA) and dosing.</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="49" ProtocolSection="Dosing Parameters" Confidence="1.0">
+          <makoto:SourceQuote>Weight</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1069" y0="0.1268" x1="0.9031" y1="0.2261"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.DELTA.QTCF_BASELINE_CHANGE" Name="QTcF Longitudinal Increase &gt; 60 ms from Baseline (ICH E14)" Target="FORM.EG.ITEM.ECG_12_LEAD" ConditionRef="COND.DELTA.QTCF_BASELINE_CHANGE">
+        <ErrorMessage>
+          <TranslatedText>QTcF interval increased by &gt; 60 ms from baseline (ICH E14 cardiac safety threshold); requires triplicate ECG confirmation and cardiology evaluation.</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+          <makoto:SourceQuote>N/A</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
       <MethodDef OID="MT.BSA" Name="Body Surface Area Calculation (Mosteller)" Type="Derivation">
         <Description>
-          <TranslatedText>Mosteller formula: sqrt((HEIGHT * WEIGHT) / 3600)</TranslatedText>
+          <TranslatedText>Mathematical derivation specification extracted from attached SAP Section Section 5.2.1. Baseline Demographic Characteristics &amp; Anthropometrics.</TranslatedText>
         </Description>
         <FormalExpression Context="Python">round(((ITEM.HEIGHT * ITEM.WEIGHT) / 3600) ** 0.5, 2)</FormalExpression>
         <makoto:SourceGrounding DocumentType="SAP" DocumentHash="ec458b7a83a5e83b3ada944b66dbe4dc672c702cf35393df36c3955b789a8950" PageNumber="19" ProtocolSection="Section 5.2.1. Baseline Demographic Characteristics &amp; Anthropometrics" Confidence="1.0">
@@ -1014,7 +2054,7 @@
       </MethodDef>
       <MethodDef OID="MT.BMI" Name="Body Mass Index Calculation" Type="Derivation">
         <Description>
-          <TranslatedText>BMI formula: WEIGHT / ((HEIGHT / 100) ^ 2)</TranslatedText>
+          <TranslatedText>Mathematical derivation specification extracted from attached SAP Section Section 5.2.1. Baseline Demographic Characteristics.</TranslatedText>
         </Description>
         <FormalExpression Context="Python">round(ITEM.WEIGHT / ((ITEM.HEIGHT / 100) ** 2), 1)</FormalExpression>
         <makoto:SourceGrounding DocumentType="SAP" DocumentHash="ec458b7a83a5e83b3ada944b66dbe4dc672c702cf35393df36c3955b789a8950" PageNumber="19" ProtocolSection="Section 5.2.1. Baseline Demographic Characteristics" Confidence="1.0">
@@ -1024,7 +2064,7 @@
       </MethodDef>
       <MethodDef OID="MT.ANC" Name="Absolute Neutrophil Count Calculation" Type="Derivation">
         <Description>
-          <TranslatedText>ANC calculation: WBC * (NEUT / 100)</TranslatedText>
+          <TranslatedText>Mathematical derivation specification extracted from attached SAP Section Section 7.1. Adverse Events &amp; Laboratory Safety Evaluation.</TranslatedText>
         </Description>
         <FormalExpression Context="Python">round(ITEM.WBC * (ITEM.NEUT / 100), 2)</FormalExpression>
         <makoto:SourceGrounding DocumentType="SAP" DocumentHash="ec458b7a83a5e83b3ada944b66dbe4dc672c702cf35393df36c3955b789a8950" PageNumber="32" ProtocolSection="Section 7.1. Adverse Events &amp; Laboratory Safety Evaluation" Confidence="1.0">
@@ -1034,17 +2074,17 @@
       </MethodDef>
       <MethodDef OID="MT.NCI_Toxicity_Grade_3_Threshold" Name="Severe Infusion Reaction Threshold" Type="Derivation">
         <Description>
-          <TranslatedText>Identification of severe or life-threatening infusion reactions based on NCI toxicity grading.</TranslatedText>
+          <TranslatedText>Mathematical formula dynamically extracted from Protocol Page 36.</TranslatedText>
         </Description>
         <FormalExpression Context="Python">toxicity_grade &gt;= 3</FormalExpression>
-        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="36" ProtocolSection="" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="36" ProtocolSection="Section 5.2. Derived Endpoints" Confidence="1.0">
           <makoto:SourceQuote>For a serious infusion reaction considered severe or life threatening (NCI toxicity Grade 3 or higher) an infusion must be permanently terminated.</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.107" y0="0.0991" x1="0.285" y1="0.1129"/>
         </makoto:SourceGrounding>
       </MethodDef>
       <MethodDef OID="MT.BSA_DUBOIS" Name="Body Surface Area (BSA — DuBois &amp; DuBois Formula)" Type="Derivation">
         <Description>
-          <TranslatedText>Body Surface Area (BSA, m^2) via DuBois &amp; DuBois allometric equation: 0.007184 * (WEIGHT^0.425) * (HEIGHT^0.725).</TranslatedText>
+          <TranslatedText>Clinical derivation (MT.BSA_DUBOIS: Body Surface Area (BSA — DuBois &amp; DuBois Formula)) synthesized from protocol assessment 'Height'.</TranslatedText>
         </Description>
         <FormalExpression Context="Python">round(0.007184 * (ITEM.WEIGHT ** 0.425) * (ITEM.HEIGHT ** 0.725), 2)</FormalExpression>
         <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="49" ProtocolSection="Dosing Parameters" Confidence="1.0">
@@ -1054,7 +2094,7 @@
       </MethodDef>
       <MethodDef OID="MT.IBW" Name="Ideal Body Weight (IBW — Devine Formula)" Type="Derivation">
         <Description>
-          <TranslatedText>Ideal Body Weight (IBW, kg) via Devine formula for sex-stratified height above 152.4 cm (60 inches).</TranslatedText>
+          <TranslatedText>Clinical derivation (MT.IBW: Ideal Body Weight (IBW — Devine Formula)) synthesized from protocol assessment 'Height'.</TranslatedText>
         </Description>
         <FormalExpression Context="Python">round((50.0 if ITEM.SEX == 'M' else 45.5) + 0.9055 * (ITEM.HEIGHT - 152.4), 1)</FormalExpression>
         <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="49" ProtocolSection="Dosing Parameters" Confidence="1.0">
@@ -1064,7 +2104,7 @@
       </MethodDef>
       <MethodDef OID="MT.ABW" Name="Adjusted Body Weight (ABW — Obesity Dosing Cap)" Type="Derivation">
         <Description>
-          <TranslatedText>Adjusted Body Weight (ABW, kg) for obese subjects (WEIGHT &gt; 1.2 * IBW): IBW + 0.4 * (WEIGHT - IBW).</TranslatedText>
+          <TranslatedText>Clinical derivation (MT.ABW: Adjusted Body Weight (ABW — Obesity Dosing Cap)) synthesized from protocol assessment 'Height'.</TranslatedText>
         </Description>
         <FormalExpression Context="Python">round(ITEM.IBW + 0.4 * max(0.0, ITEM.WEIGHT - ITEM.IBW), 1)</FormalExpression>
         <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="49" ProtocolSection="Dosing Parameters" Confidence="1.0">
@@ -1074,7 +2114,7 @@
       </MethodDef>
       <MethodDef OID="MT.QTCF" Name="Fridericia Rate-Corrected QT Interval (QTcF — ICH E14)" Type="Derivation">
         <Description>
-          <TranslatedText>ICH E14 Fridericia rate-corrected QT interval (QTcF, ms): QT * (60 / EGHR)^(1/3).</TranslatedText>
+          <TranslatedText>Clinical derivation (MT.QTCF: Fridericia Rate-Corrected QT Interval (QTcF — ICH E14)) synthesized from protocol assessment '12-Lead ECG'.</TranslatedText>
         </Description>
         <FormalExpression Context="Python">round(ITEM.QT * ((60.0 / ITEM.EGHR) ** (1.0 / 3.0)), 1)</FormalExpression>
         <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
@@ -1084,7 +2124,7 @@
       </MethodDef>
       <MethodDef OID="MT.QTCB" Name="Bazett Rate-Corrected QT Interval (QTcB — ICH E14)" Type="Derivation">
         <Description>
-          <TranslatedText>ICH E14 Bazett rate-corrected QT interval (QTcB, ms): QT * (60 / EGHR)^(1/2).</TranslatedText>
+          <TranslatedText>Clinical derivation (MT.QTCB: Bazett Rate-Corrected QT Interval (QTcB — ICH E14)) synthesized from protocol assessment '12-Lead ECG'.</TranslatedText>
         </Description>
         <FormalExpression Context="Python">round(ITEM.QT * ((60.0 / ITEM.EGHR) ** 0.5), 1)</FormalExpression>
         <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
@@ -1094,7 +2134,7 @@
       </MethodDef>
       <MethodDef OID="MT.QTCF_CHG" Name="Longitudinal Change from Baseline in QTcF (Delta-QTcF — ICH E14)" Type="Derivation">
         <Description>
-          <TranslatedText>ICH E14 longitudinal change from baseline in Fridericia-corrected QT interval (Delta-QTcF, ms) for &gt;30 ms and &gt;60 ms outlier flagging.</TranslatedText>
+          <TranslatedText>Clinical derivation (MT.QTCF_CHG: Longitudinal Change from Baseline in QTcF (Delta-QTcF — ICH E14)) synthesized from protocol assessment '12-Lead ECG'.</TranslatedText>
         </Description>
         <FormalExpression Context="Python">round(ITEM.QTCF - BASELINE.QTCF, 1)</FormalExpression>
         <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
@@ -1104,7 +2144,7 @@
       </MethodDef>
       <MethodDef OID="MT.CRCL_CG" Name="Creatinine Clearance (Cockcroft-Gault CrCl)" Type="Derivation">
         <Description>
-          <TranslatedText>Cockcroft-Gault Creatinine Clearance (CrCl, mL/min) for renal dosing adjustment based on age, weight, serum creatinine, and sex.</TranslatedText>
+          <TranslatedText>Clinical derivation (MT.CRCL_CG: Creatinine Clearance (Cockcroft-Gault CrCl)) synthesized from protocol assessment 'Creatinine'.</TranslatedText>
         </Description>
         <FormalExpression Context="Python">round(((140 - ITEM.AGE) * ITEM.WEIGHT) / (72.0 * ITEM.CREAT) * (0.85 if ITEM.SEX == 'F' else 1.0), 1)</FormalExpression>
         <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="8" ProtocolSection="Inclusion Criteria" Confidence="1.0">
@@ -1114,7 +2154,7 @@
       </MethodDef>
       <MethodDef OID="MT.EGFR_CKDEPI" Name="Estimated GFR (CKD-EPI 2021 Race-Free Equation)" Type="Derivation">
         <Description>
-          <TranslatedText>2021 CKD-EPI race-free estimated Glomerular Filtration Rate (eGFR, mL/min/1.73m^2) derived from serum creatinine, age, and sex.</TranslatedText>
+          <TranslatedText>Clinical derivation (MT.EGFR_CKDEPI: Estimated GFR (CKD-EPI 2021 Race-Free Equation)) synthesized from protocol assessment 'Creatinine'.</TranslatedText>
         </Description>
         <FormalExpression Context="Python">round(142 * (min(ITEM.CREAT / (0.7 if ITEM.SEX == 'F' else 0.9), 1.0) ** (-0.241 if ITEM.SEX == 'F' else -0.302)) * (max(ITEM.CREAT / (0.7 if ITEM.SEX == 'F' else 0.9), 1.0) ** -1.200) * (0.9938 ** ITEM.AGE) * (1.012 if ITEM.SEX == 'F' else 1.0), 1)</FormalExpression>
         <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="8" ProtocolSection="Inclusion Criteria" Confidence="1.0">
@@ -1124,7 +2164,7 @@
       </MethodDef>
       <MethodDef OID="MT.BUN_CREAT_RATIO" Name="Blood Urea Nitrogen to Creatinine Ratio (BUN/Cr)" Type="Derivation">
         <Description>
-          <TranslatedText>Blood Urea Nitrogen to Serum Creatinine ratio (BUN/Cr) for pre-renal azotemia and dehydration screening.</TranslatedText>
+          <TranslatedText>Clinical derivation (MT.BUN_CREAT_RATIO: Blood Urea Nitrogen to Creatinine Ratio (BUN/Cr)) synthesized from protocol assessment 'Creatinine'.</TranslatedText>
         </Description>
         <FormalExpression Context="Python">round(ITEM.BUN / ITEM.CREAT, 1)</FormalExpression>
         <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="8" ProtocolSection="Inclusion Criteria" Confidence="1.0">
@@ -1134,7 +2174,7 @@
       </MethodDef>
       <MethodDef OID="MT.ALC" Name="Absolute Lymphocyte Count (ALC) Calculation" Type="Derivation">
         <Description>
-          <TranslatedText>Absolute Lymphocyte Count (ALC, 10^9/L) derived from total white blood cell count and lymphocyte percentage: WBC * (LYM / 100).</TranslatedText>
+          <TranslatedText>Clinical derivation (MT.ALC: Absolute Lymphocyte Count (ALC) Calculation) synthesized from protocol assessment 'Routine safety laboratories (hematology and serum chemistry)'.</TranslatedText>
         </Description>
         <FormalExpression Context="Python">round(ITEM.WBC * (ITEM.LYM / 100.0), 2)</FormalExpression>
         <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="47" ProtocolSection="Laboratory Monitoring" Confidence="1.0">
@@ -1144,7 +2184,7 @@
       </MethodDef>
       <MethodDef OID="MT.NLR" Name="Neutrophil-to-Lymphocyte Ratio (NLR — Immune Prognostic Index)" Type="Derivation">
         <Description>
-          <TranslatedText>Neutrophil-to-Lymphocyte Ratio (NLR) prognostic inflammatory biomarker derived as ANC divided by ALC.</TranslatedText>
+          <TranslatedText>Clinical derivation (MT.NLR: Neutrophil-to-Lymphocyte Ratio (NLR — Immune Prognostic Index)) synthesized from protocol assessment 'Routine safety laboratories (hematology and serum chemistry)'.</TranslatedText>
         </Description>
         <FormalExpression Context="Python">round(ITEM.ANC / ITEM.ALC, 2)</FormalExpression>
         <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="47" ProtocolSection="Laboratory Monitoring" Confidence="1.0">
@@ -1154,7 +2194,7 @@
       </MethodDef>
       <MethodDef OID="MT.ULN_RATIO" Name="Hepatic Enzyme / Bilirubin Upper Limit of Normal Ratio (x ULN)" Type="Derivation">
         <Description>
-          <TranslatedText>Hepatic transaminase Upper Limit of Normal multiple (ALT / ALT_ULN) for NCI-CTCAE hepatotoxicity grading.</TranslatedText>
+          <TranslatedText>Clinical derivation (MT.ULN_RATIO: Hepatic Enzyme / Bilirubin Upper Limit of Normal Ratio (x ULN)) synthesized from protocol assessment 'Bilirubin'.</TranslatedText>
         </Description>
         <FormalExpression Context="Python">round(ITEM.ALT / ITEM.ALT_ULN, 2)</FormalExpression>
         <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="8" ProtocolSection="Inclusion Criteria" Confidence="1.0">
@@ -1164,7 +2204,7 @@
       </MethodDef>
       <MethodDef OID="MT.AST_ALT_RATIO" Name="De Ritis Hepatic Transaminase Ratio (AST/ALT)" Type="Derivation">
         <Description>
-          <TranslatedText>De Ritis ratio of Aspartate Aminotransferase (AST) to Alanine Aminotransferase (ALT) for hepatocellular injury differentiation.</TranslatedText>
+          <TranslatedText>Clinical derivation (MT.AST_ALT_RATIO: De Ritis Hepatic Transaminase Ratio (AST/ALT)) synthesized from protocol assessment 'AST'.</TranslatedText>
         </Description>
         <FormalExpression Context="Python">round(ITEM.AST / ITEM.ALT, 2)</FormalExpression>
         <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="8" ProtocolSection="Inclusion Criteria" Confidence="1.0">
@@ -1174,7 +2214,7 @@
       </MethodDef>
       <MethodDef OID="MT.BILI_ULN_RATIO" Name="Total Bilirubin Upper Limit of Normal Multiple (TBILI x ULN)" Type="Derivation">
         <Description>
-          <TranslatedText>Total Bilirubin Upper Limit of Normal multiple (TBILI / TBILI_ULN) for NCI-CTCAE hyperbilirubinemia grading and Hy's Law evaluation.</TranslatedText>
+          <TranslatedText>Clinical derivation (MT.BILI_ULN_RATIO: Total Bilirubin Upper Limit of Normal Multiple (TBILI x ULN)) synthesized from protocol assessment 'Bilirubin'.</TranslatedText>
         </Description>
         <FormalExpression Context="Python">round(ITEM.TBILI / ITEM.TBILI_ULN, 2)</FormalExpression>
         <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="8" ProtocolSection="Inclusion Criteria" Confidence="1.0">
@@ -1184,7 +2224,7 @@
       </MethodDef>
       <MethodDef OID="MT.HYS_LAW_FLAG" Name="FDA Drug-Induced Liver Injury (Hy's Law) Composite Flag" Type="Derivation">
         <Description>
-          <TranslatedText>FDA DILI Guidance composite Hy's Law biochemical criterion: (ALT &gt;= 3x ULN or AST &gt;= 3x ULN) and Total Bilirubin &gt;= 2x ULN.</TranslatedText>
+          <TranslatedText>Clinical derivation (MT.HYS_LAW_FLAG: FDA Drug-Induced Liver Injury (Hy's Law) Composite Flag) synthesized from protocol assessment 'Bilirubin'.</TranslatedText>
         </Description>
         <FormalExpression Context="Python">1 if ((ITEM.ALT / ITEM.ALT_ULN &gt;= 3.0 or ITEM.AST / ITEM.AST_ULN &gt;= 3.0) and (ITEM.TBILI / ITEM.TBILI_ULN &gt;= 2.0)) else 0</FormalExpression>
         <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="8" ProtocolSection="Inclusion Criteria" Confidence="1.0">
@@ -1194,7 +2234,7 @@
       </MethodDef>
       <MethodDef OID="MT.CORR_CALCIUM" Name="Albumin-Corrected Serum Calcium (Payne Formula)" Type="Derivation">
         <Description>
-          <TranslatedText>Payne albumin-corrected serum calcium (mg/dL): CALCIUM + 0.8 * (4.0 - ALB).</TranslatedText>
+          <TranslatedText>Clinical derivation (MT.CORR_CALCIUM: Albumin-Corrected Serum Calcium (Payne Formula)) synthesized from protocol assessment 'Routine safety laboratories (hematology and serum chemistry)'.</TranslatedText>
         </Description>
         <FormalExpression Context="Python">round(ITEM.CALCIUM + 0.8 * (4.0 - ITEM.ALB), 2)</FormalExpression>
         <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="47" ProtocolSection="Laboratory Monitoring" Confidence="1.0">
@@ -1204,7 +2244,7 @@
       </MethodDef>
       <MethodDef OID="MT.ANION_GAP" Name="Serum Anion Gap (Metabolic Acidosis Screening)" Type="Derivation">
         <Description>
-          <TranslatedText>Serum Anion Gap (mmol/L) for metabolic acidosis evaluation: SODIUM - (CHLORIDE + BICARB).</TranslatedText>
+          <TranslatedText>Clinical derivation (MT.ANION_GAP: Serum Anion Gap (Metabolic Acidosis Screening)) synthesized from protocol assessment 'Routine safety laboratories (hematology and serum chemistry)'.</TranslatedText>
         </Description>
         <FormalExpression Context="Python">round(ITEM.SODIUM - (ITEM.CHLORIDE + ITEM.BICARB), 1)</FormalExpression>
         <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="47" ProtocolSection="Laboratory Monitoring" Confidence="1.0">
@@ -1214,7 +2254,7 @@
       </MethodDef>
       <MethodDef OID="MT.FIB4" Name="Fibrosis-4 (FIB-4) Hepatic Fibrosis Index" Type="Derivation">
         <Description>
-          <TranslatedText>Non-invasive FIB-4 hepatic fibrosis index derived from Age, AST, Platelets, and ALT: (AGE * AST) / (PLT * sqrt(ALT)).</TranslatedText>
+          <TranslatedText>Clinical derivation (MT.FIB4: Fibrosis-4 (FIB-4) Hepatic Fibrosis Index) synthesized from protocol assessment 'AST'.</TranslatedText>
         </Description>
         <FormalExpression Context="Python">round((ITEM.AGE * ITEM.AST) / (ITEM.PLT * (ITEM.ALT ** 0.5)), 2)</FormalExpression>
         <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="8" ProtocolSection="Inclusion Criteria" Confidence="1.0">
@@ -1224,7 +2264,7 @@
       </MethodDef>
       <MethodDef OID="MT.DOSE_CALC" Name="Protocol Weight / BSA-Adjusted Planned Dose Calculation" Type="Derivation">
         <Description>
-          <TranslatedText>Protocol-prescribed weight-based (mg/kg) or BSA-based (mg/m^2) target dose calculation prior to drug preparation.</TranslatedText>
+          <TranslatedText>Clinical derivation (MT.DOSE_CALC: Protocol Weight / BSA-Adjusted Planned Dose Calculation) synthesized from protocol assessment 'Treatment Delay Tolerance'.</TranslatedText>
         </Description>
         <FormalExpression Context="Python">round(ITEM.WEIGHT * ITEM.DOSE_LEVEL_MG_KG, 1)</FormalExpression>
         <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="33" ProtocolSection="Protocol Adherence" Confidence="1.0">
@@ -1234,7 +2274,7 @@
       </MethodDef>
       <MethodDef OID="MT.DOSE_INTENSITY" Name="Relative Dose Intensity (RDI %) Calculation" Type="Derivation">
         <Description>
-          <TranslatedText>Relative Dose Intensity (RDI, %) calculated as actual administered dose divided by protocol-planned dose.</TranslatedText>
+          <TranslatedText>Clinical derivation (MT.DOSE_INTENSITY: Relative Dose Intensity (RDI %) Calculation) synthesized from protocol assessment 'Treatment Delay Tolerance'.</TranslatedText>
         </Description>
         <FormalExpression Context="Python">round((ITEM.EXDOSE / ITEM.EXDOSE_PLANNED) * 100.0, 1)</FormalExpression>
         <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="33" ProtocolSection="Protocol Adherence" Confidence="1.0">
@@ -1244,7 +2284,7 @@
       </MethodDef>
       <MethodDef OID="MT.CUM_DOSE" Name="Cumulative Study Drug Exposure Dose (ADEX.CUMDOSE)" Type="Derivation">
         <Description>
-          <TranslatedText>Cumulative administered study drug dose across all completed treatment cycles.</TranslatedText>
+          <TranslatedText>Clinical derivation (MT.CUM_DOSE: Cumulative Study Drug Exposure Dose (ADEX.CUMDOSE)) synthesized from protocol assessment 'Treatment Delay Tolerance'.</TranslatedText>
         </Description>
         <FormalExpression Context="Python">round(ITEM.CUM_DOSE_PRIOR + ITEM.EXDOSE, 1)</FormalExpression>
         <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="33" ProtocolSection="Protocol Adherence" Confidence="1.0">
@@ -1254,7 +2294,7 @@
       </MethodDef>
       <MethodDef OID="MT.TREATMENT_COMPLIANCE" Name="Study Treatment Dosing Compliance Percentage (%)" Type="Derivation">
         <Description>
-          <TranslatedText>Treatment compliance percentage derived from total doses administered/taken divided by planned doses over the treatment period.</TranslatedText>
+          <TranslatedText>Clinical derivation (MT.TREATMENT_COMPLIANCE: Study Treatment Dosing Compliance Percentage (%)) synthesized from protocol assessment 'Treatment Delay Tolerance'.</TranslatedText>
         </Description>
         <FormalExpression Context="Python">round((ITEM.DOSES_TAKEN / ITEM.DOSES_PLANNED) * 100.0, 1)</FormalExpression>
         <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="33" ProtocolSection="Protocol Adherence" Confidence="1.0">
@@ -1264,7 +2304,7 @@
       </MethodDef>
       <MethodDef OID="MT.AEDUR" Name="Adverse Event Duration (ADAE.AEDUR)" Type="Derivation">
         <Description>
-          <TranslatedText>CDISC ADaM ADAE adverse event duration (AEDUR, days) from onset date (AESTDAT) to resolution date (AEENDAT) inclusive.</TranslatedText>
+          <TranslatedText>Clinical derivation (MT.AEDUR: Adverse Event Duration (ADAE.AEDUR)) synthesized from protocol assessment 'Toxicity Monitoring Protocol'.</TranslatedText>
         </Description>
         <FormalExpression Context="Python">(ITEM.AEENDAT - ITEM.AESTDAT).days + 1</FormalExpression>
         <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="22" ProtocolSection="Safety Monitoring" Confidence="1.0">
@@ -1274,7 +2314,7 @@
       </MethodDef>
       <MethodDef OID="MT.TRTDURD" Name="Total Treatment Exposure Duration (ADSL.TRTDURD)" Type="Derivation">
         <Description>
-          <TranslatedText>CDISC ADaM ADSL Total Treatment Duration in days: (TRTEDT - TRTSDT) + 1.</TranslatedText>
+          <TranslatedText>Clinical derivation (MT.TRTDURD: Total Treatment Exposure Duration (ADSL.TRTDURD)) synthesized from protocol assessment 'Dose Discrepancy Reporting'.</TranslatedText>
         </Description>
         <FormalExpression Context="Python">(ITEM.EXENDTC - ITEM.EXSTDTC).days + 1</FormalExpression>
         <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="69" ProtocolSection="Pharmacy Procedures" Confidence="1.0">
@@ -1284,7 +2324,7 @@
       </MethodDef>
       <MethodDef OID="MT.CHG_BASELINE" Name="ADaM Longitudinal Change &amp; Percent Change from Baseline (CHG / PCHG)" Type="Derivation">
         <Description>
-          <TranslatedText>CDISC ADaM longitudinal Change from Baseline (CHG = AVAL - BASE) and Percent Change from Baseline (PCHG = 100 * (AVAL - BASE) / BASE).</TranslatedText>
+          <TranslatedText>Clinical derivation (MT.CHG_BASELINE: ADaM Longitudinal Change &amp; Percent Change from Baseline (CHG / PCHG)) synthesized from protocol assessment 'Weight'.</TranslatedText>
         </Description>
         <FormalExpression Context="Python">round(((ITEM.AVAL - BASELINE.BASE) / BASELINE.BASE) * 100.0, 1)</FormalExpression>
         <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="53457f06937a66903bda3434ed014deb0e98544a2990c92a9f26c68c3a083e14" PageNumber="49" ProtocolSection="Dosing Parameters" Confidence="1.0">
@@ -1292,198 +2332,6 @@
           <makoto:BoundingBox x0="0.1069" y0="0.1268" x1="0.9031" y1="0.2261"/>
         </makoto:SourceGrounding>
       </MethodDef>
-      <makoto:VisualLayout>
-        <makoto:Nodes>
-          <makoto:Node id="EP.1" type="epochGroup">
-            <makoto:Position x="360" y="50"/>
-          </makoto:Node>
-          <makoto:Node id="SE.V01" type="visit">
-            <makoto:Position x="40" y="160"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.IE.SE.V01" type="form">
-            <makoto:Position x="40" y="320"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.IC.SE.V01" type="form">
-            <makoto:Position x="40" y="450"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.DM.SE.V01" type="form">
-            <makoto:Position x="40" y="580"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.MH.SE.V01" type="form">
-            <makoto:Position x="40" y="710"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.VS.SE.V01" type="form">
-            <makoto:Position x="40" y="840"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.LB.SE.V01" type="form">
-            <makoto:Position x="40" y="970"/>
-          </makoto:Node>
-          <makoto:Node id="ARM.1" type="arm">
-            <makoto:Position x="740" y="150"/>
-          </makoto:Node>
-          <makoto:Node id="ARM.2" type="arm">
-            <makoto:Position x="740" y="250"/>
-          </makoto:Node>
-          <makoto:Node id="ARM.3" type="arm">
-            <makoto:Position x="740" y="350"/>
-          </makoto:Node>
-          <makoto:Node id="ARM.4" type="arm">
-            <makoto:Position x="740" y="450"/>
-          </makoto:Node>
-          <makoto:Node id="ARM.5" type="arm">
-            <makoto:Position x="740" y="550"/>
-          </makoto:Node>
-          <makoto:Node id="ARM.6" type="arm">
-            <makoto:Position x="740" y="650"/>
-          </makoto:Node>
-          <makoto:Node id="EP.2" type="epochGroup">
-            <makoto:Position x="960" y="50"/>
-          </makoto:Node>
-          <makoto:Node id="CYCLE_GROUP.EP.2" type="cycleTemplateGroup">
-            <makoto:Position x="40" y="80"/>
-          </makoto:Node>
-          <makoto:Node id="SE.V02" type="visit">
-            <makoto:Position x="30" y="80"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.VS.SE.V02.SE.V02" type="form">
-            <makoto:Position x="30" y="240"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.PE.SE.V02.SE.V02" type="form">
-            <makoto:Position x="30" y="370"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.LB.SE.V02.SE.V02" type="form">
-            <makoto:Position x="30" y="500"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.PK.SE.V02.SE.V02" type="form">
-            <makoto:Position x="30" y="630"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.CM.SE.V02.SE.V02" type="form">
-            <makoto:Position x="30" y="760"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.AE.SE.V02.SE.V02" type="form">
-            <makoto:Position x="30" y="890"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.BS.SE.V02.SE.V02" type="form">
-            <makoto:Position x="30" y="1020"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.EG.SE.V02.SE.V02" type="form">
-            <makoto:Position x="30" y="1150"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.PR.SE.V02.SE.V02" type="form">
-            <makoto:Position x="30" y="1280"/>
-          </makoto:Node>
-          <makoto:Node id="SE.V03" type="visit">
-            <makoto:Position x="330" y="80"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.VS.SE.V02.SE.V03" type="form">
-            <makoto:Position x="330" y="240"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.PE.SE.V02.SE.V03" type="form">
-            <makoto:Position x="330" y="370"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.LB.SE.V02.SE.V03" type="form">
-            <makoto:Position x="330" y="500"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.PK.SE.V02.SE.V03" type="form">
-            <makoto:Position x="330" y="630"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.CM.SE.V02.SE.V03" type="form">
-            <makoto:Position x="330" y="760"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.AE.SE.V02.SE.V03" type="form">
-            <makoto:Position x="330" y="890"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.BS.SE.V02.SE.V03" type="form">
-            <makoto:Position x="330" y="1020"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.EG.SE.V02.SE.V03" type="form">
-            <makoto:Position x="330" y="1150"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.PR.SE.V02.SE.V03" type="form">
-            <makoto:Position x="330" y="1280"/>
-          </makoto:Node>
-          <makoto:Node id="GATE.EP.2.CYCLE" type="decisionGate">
-            <makoto:Position x="720" y="140"/>
-          </makoto:Node>
-          <makoto:Node id="EP.3" type="epochGroup">
-            <makoto:Position x="2000" y="50"/>
-          </makoto:Node>
-          <makoto:Node id="SE.V06" type="visit">
-            <makoto:Position x="30" y="160"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.VS.SE.V06" type="form">
-            <makoto:Position x="30" y="320"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.LB.SE.V06" type="form">
-            <makoto:Position x="30" y="450"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.AE.SE.V06" type="form">
-            <makoto:Position x="30" y="580"/>
-          </makoto:Node>
-          <makoto:Node id="SE.V05" type="visit">
-            <makoto:Position x="330" y="160"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.VS.SE.V05" type="form">
-            <makoto:Position x="330" y="320"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.LB.SE.V05" type="form">
-            <makoto:Position x="330" y="450"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.AE.SE.V05" type="form">
-            <makoto:Position x="330" y="580"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.DS.SE.V05" type="form">
-            <makoto:Position x="330" y="710"/>
-          </makoto:Node>
-        </makoto:Nodes>
-        <makoto:Edges>
-          <makoto:Edge id="e-ARM.1-SE.V01" source="ARM.1" target="SE.V01"/>
-          <makoto:Edge id="e-ARM.2-SE.V01" source="ARM.2" target="SE.V01"/>
-          <makoto:Edge id="e-ARM.3-SE.V01" source="ARM.3" target="SE.V01"/>
-          <makoto:Edge id="e-ARM.4-SE.V01" source="ARM.4" target="SE.V01"/>
-          <makoto:Edge id="e-ARM.5-SE.V01" source="ARM.5" target="SE.V01"/>
-          <makoto:Edge id="e-ARM.6-SE.V01" source="ARM.6" target="SE.V01"/>
-          <makoto:Edge id="e-epoch-EP.1-EP.2" source="EP.1" target="EP.2" animated="true"/>
-          <makoto:Edge id="e-epoch-EP.2-EP.3" source="EP.2" target="EP.3" animated="true"/>
-          <makoto:Edge id="e-SE.V01-CYCLE_GROUP.EP.2" source="SE.V01" target="CYCLE_GROUP.EP.2"/>
-          <makoto:Edge id="e-SE.V02-SE.V03" source="SE.V02" target="SE.V03"/>
-          <makoto:Edge id="e-SE.V02-FORM.VS.SE.V02.SE.V02" source="SE.V02" target="FORM.VS.SE.V02.SE.V02"/>
-          <makoto:Edge id="e-FORM.VS.SE.V02.SE.V02-FORM.PE.SE.V02.SE.V02" source="FORM.VS.SE.V02.SE.V02" target="FORM.PE.SE.V02.SE.V02"/>
-          <makoto:Edge id="e-FORM.PE.SE.V02.SE.V02-FORM.LB.SE.V02.SE.V02" source="FORM.PE.SE.V02.SE.V02" target="FORM.LB.SE.V02.SE.V02"/>
-          <makoto:Edge id="e-FORM.LB.SE.V02.SE.V02-FORM.PK.SE.V02.SE.V02" source="FORM.LB.SE.V02.SE.V02" target="FORM.PK.SE.V02.SE.V02"/>
-          <makoto:Edge id="e-FORM.PK.SE.V02.SE.V02-FORM.CM.SE.V02.SE.V02" source="FORM.PK.SE.V02.SE.V02" target="FORM.CM.SE.V02.SE.V02"/>
-          <makoto:Edge id="e-FORM.CM.SE.V02.SE.V02-FORM.AE.SE.V02.SE.V02" source="FORM.CM.SE.V02.SE.V02" target="FORM.AE.SE.V02.SE.V02"/>
-          <makoto:Edge id="e-FORM.AE.SE.V02.SE.V02-FORM.BS.SE.V02.SE.V02" source="FORM.AE.SE.V02.SE.V02" target="FORM.BS.SE.V02.SE.V02"/>
-          <makoto:Edge id="e-FORM.BS.SE.V02.SE.V02-FORM.EG.SE.V02.SE.V02" source="FORM.BS.SE.V02.SE.V02" target="FORM.EG.SE.V02.SE.V02"/>
-          <makoto:Edge id="e-FORM.EG.SE.V02.SE.V02-FORM.PR.SE.V02.SE.V02" source="FORM.EG.SE.V02.SE.V02" target="FORM.PR.SE.V02.SE.V02"/>
-          <makoto:Edge id="e-SE.V03-FORM.VS.SE.V02.SE.V03" source="SE.V03" target="FORM.VS.SE.V02.SE.V03"/>
-          <makoto:Edge id="e-FORM.VS.SE.V02.SE.V03-FORM.PE.SE.V02.SE.V03" source="FORM.VS.SE.V02.SE.V03" target="FORM.PE.SE.V02.SE.V03"/>
-          <makoto:Edge id="e-FORM.PE.SE.V02.SE.V03-FORM.LB.SE.V02.SE.V03" source="FORM.PE.SE.V02.SE.V03" target="FORM.LB.SE.V02.SE.V03"/>
-          <makoto:Edge id="e-FORM.LB.SE.V02.SE.V03-FORM.PK.SE.V02.SE.V03" source="FORM.LB.SE.V02.SE.V03" target="FORM.PK.SE.V02.SE.V03"/>
-          <makoto:Edge id="e-FORM.PK.SE.V02.SE.V03-FORM.CM.SE.V02.SE.V03" source="FORM.PK.SE.V02.SE.V03" target="FORM.CM.SE.V02.SE.V03"/>
-          <makoto:Edge id="e-FORM.CM.SE.V02.SE.V03-FORM.AE.SE.V02.SE.V03" source="FORM.CM.SE.V02.SE.V03" target="FORM.AE.SE.V02.SE.V03"/>
-          <makoto:Edge id="e-FORM.AE.SE.V02.SE.V03-FORM.BS.SE.V02.SE.V03" source="FORM.AE.SE.V02.SE.V03" target="FORM.BS.SE.V02.SE.V03"/>
-          <makoto:Edge id="e-FORM.BS.SE.V02.SE.V03-FORM.EG.SE.V02.SE.V03" source="FORM.BS.SE.V02.SE.V03" target="FORM.EG.SE.V02.SE.V03"/>
-          <makoto:Edge id="e-FORM.EG.SE.V02.SE.V03-FORM.PR.SE.V02.SE.V03" source="FORM.EG.SE.V02.SE.V03" target="FORM.PR.SE.V02.SE.V03"/>
-          <makoto:Edge id="e-CYCLE_GROUP.EP.2-GATE.EP.2.CYCLE" source="CYCLE_GROUP.EP.2" target="GATE.EP.2.CYCLE"/>
-          <makoto:Edge id="e-loopback-GATE.EP.2.CYCLE-CYCLE_GROUP.EP.2" source="GATE.EP.2.CYCLE" target="CYCLE_GROUP.EP.2" label="Cleared ➔ Next Cycle" animated="true"/>
-          <makoto:Edge id="e-exit-GATE.EP.2.CYCLE-SE.V06" source="GATE.EP.2.CYCLE" target="SE.V06" label="PD / Toxicity ➔ Exit" animated="true"/>
-          <makoto:Edge id="e-SE.V01-FORM.IE.SE.V01" source="SE.V01" target="FORM.IE.SE.V01"/>
-          <makoto:Edge id="e-FORM.IE.SE.V01-FORM.IC.SE.V01" source="FORM.IE.SE.V01" target="FORM.IC.SE.V01"/>
-          <makoto:Edge id="e-FORM.IC.SE.V01-FORM.DM.SE.V01" source="FORM.IC.SE.V01" target="FORM.DM.SE.V01"/>
-          <makoto:Edge id="e-FORM.DM.SE.V01-FORM.MH.SE.V01" source="FORM.DM.SE.V01" target="FORM.MH.SE.V01"/>
-          <makoto:Edge id="e-FORM.MH.SE.V01-FORM.VS.SE.V01" source="FORM.MH.SE.V01" target="FORM.VS.SE.V01"/>
-          <makoto:Edge id="e-FORM.VS.SE.V01-FORM.LB.SE.V01" source="FORM.VS.SE.V01" target="FORM.LB.SE.V01"/>
-          <makoto:Edge id="e-SE.V06-SE.V05" source="SE.V06" target="SE.V05"/>
-          <makoto:Edge id="e-SE.V06-FORM.VS.SE.V06" source="SE.V06" target="FORM.VS.SE.V06"/>
-          <makoto:Edge id="e-FORM.VS.SE.V06-FORM.LB.SE.V06" source="FORM.VS.SE.V06" target="FORM.LB.SE.V06"/>
-          <makoto:Edge id="e-FORM.LB.SE.V06-FORM.AE.SE.V06" source="FORM.LB.SE.V06" target="FORM.AE.SE.V06"/>
-          <makoto:Edge id="e-SE.V05-FORM.VS.SE.V05" source="SE.V05" target="FORM.VS.SE.V05"/>
-          <makoto:Edge id="e-FORM.VS.SE.V05-FORM.LB.SE.V05" source="FORM.VS.SE.V05" target="FORM.LB.SE.V05"/>
-          <makoto:Edge id="e-FORM.LB.SE.V05-FORM.AE.SE.V05" source="FORM.LB.SE.V05" target="FORM.AE.SE.V05"/>
-          <makoto:Edge id="e-FORM.AE.SE.V05-FORM.DS.SE.V05" source="FORM.AE.SE.V05" target="FORM.DS.SE.V05"/>
-        </makoto:Edges>
-      </makoto:VisualLayout>
     </MetaDataVersion>
   </Study>
 </ODM>

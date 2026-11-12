@@ -3,7 +3,7 @@
   "repository": "clinical-protocol-compilation-benchmarks",
   "publisher": "VonCasper Solutions",
   "license": "Apache-2.0",
-  "generated_at_utc": "2026-11-11T20:33:07.129186+00:00",
+  "generated_at_utc": "2026-11-12T12:55:29.862258+00:00",
   "study_count": 13,
   "total_indexed_study_files": 143,
   "studies": [
@@ -67,7 +67,7 @@
         },
         "metadata/compilation_manifest.json": {
           "size_bytes": 2419,
-          "sha256": "9df73c93bca64b4ead099d42931ab361ac7640055d55dffa499dd20c26a46db9"
+          "sha256": "17915b78163578fe5b66a1a755ed60dead0b26a07217557c42d444585b2ee6b1"
         },
         "README.md": {
           "size_bytes": 3122,
@@ -135,7 +135,7 @@
         },
         "metadata/compilation_manifest.json": {
           "size_bytes": 2471,
-          "sha256": "4c75dc2f3dcff733ddfbcbf512d222b97a3fbeb69d47b885d1312923e5e53b3d"
+          "sha256": "00dbe3c750b4ed9887c9f2aefe57d50f7c158c24bd4c56a7bbd86845e25a89cc"
         },
         "README.md": {
           "size_bytes": 3228,
@@ -203,7 +203,7 @@
         },
         "metadata/compilation_manifest.json": {
           "size_bytes": 2607,
-          "sha256": "8551e03e95583c545f3d92ced933e45e341a645333b567694fc7e4bc07c7cd4c"
+          "sha256": "bf25475634cb35dd8ee67941c3e45c7ca424df13addb3ed5e340a059bbe3e9df"
         },
         "README.md": {
           "size_bytes": 3426,
@@ -271,7 +271,7 @@
         },
         "metadata/compilation_manifest.json": {
           "size_bytes": 2598,
-          "sha256": "6ea41cfe8c1e1938220a8651e420d08061c3a15d26a02bc6b4348d10dae43f11"
+          "sha256": "257fdfa1091bf6392db1f763c74db3253c28723f20c82709c64473bc789fd2a8"
         },
         "README.md": {
           "size_bytes": 3417,
@@ -295,31 +295,31 @@
         "event_count": 6,
         "form_count": 15,
         "item_group_count": 15,
-        "item_count": 48,
-        "edit_check_count": 0,
+        "item_count": 82,
+        "edit_check_count": 57,
         "node_count": 47,
         "edge_count": 45
       },
       "files": {
         "exports/rave_als.xlsx": {
-          "size_bytes": 21477,
-          "sha256": "d8b3266037e1f2d6633119e88d101fe8e867937b318b11b7909c3de198b42aa4"
+          "size_bytes": 42084,
+          "sha256": "203429f97c951571fd1112b12a520fde3519f25f40160e2f47b21d2f14fc90a9"
         },
         "exports/veeva_cdms.xml": {
-          "size_bytes": 30303,
-          "sha256": "31e1af7fa16778f55989461ee49e23ad6a5e0464da6f24b49a395cef50b29ebc"
+          "size_bytes": 76429,
+          "sha256": "178adfd28d6bd74f6d6cb4eb1aa383a8d936e93eec6273b6fc7a82edfc3f8308"
         },
         "exports/cdisc_odm_v1.3.2.xml": {
-          "size_bytes": 81097,
-          "sha256": "ba8693e74932e63cf0729980640bc166645b6d90786727eca518caf8cee7feb5"
+          "size_bytes": 176621,
+          "sha256": "10155aff286c56c2dbe2526f49320b380fa1778f8c1828a7b0c1124dac3aae0b"
         },
         "exports/transcelerate_usdm_v3.0.json": {
           "size_bytes": 71155,
           "sha256": "e8f36dbbe32780bbf7b175e9dfe17c93a8c833195f64772ab1ffd1f2cdea02b0"
         },
         "metadata/provenance_matrix_21cfr11.xlsx": {
-          "size_bytes": 22560,
-          "sha256": "24ac8e8af6747d65a9a998ec8dddc5a95bcf776cb88a9dcc2ede47c7fad4fef6"
+          "size_bytes": 38630,
+          "sha256": "d0c33e69edb03b57f82f69262030df9c452f7a649b6360e5c7917019c2b62d94"
         },
         "visuals/canvas_standard.svg": {
           "size_bytes": 5123378,
@@ -338,12 +338,12 @@
           "sha256": "ba6b9a99ce87b517090d9fa378b1fa7fe35471e769ccd86648bbae98af1081d4"
         },
         "metadata/compilation_manifest.json": {
-          "size_bytes": 2600,
-          "sha256": "b44f8e1d872f040e3504a036d950ddc098c59c53501f10d8a768cb958f8d9162"
+          "size_bytes": 2602,
+          "sha256": "b9f4a115741b0bc36b850f4c7fcfe768577993fec1ed2a71dabac4e681534241"
         },
         "README.md": {
-          "size_bytes": 3418,
-          "sha256": "729eafa4161892fdc4c85f3e304b5a86bebc9100bbf46592f09ca3f5778e9c86"
+          "size_bytes": 3420,
+          "sha256": "d86ba43c792a1fb28611f4e426d71a95262771e4f161bab9f8bb0738dbd1e607"
         }
       }
     },
@@ -409,7 +409,7 @@
         },
         "metadata/compilation_manifest.json": {
           "size_bytes": 2641,
-          "sha256": "f819e3b66d6d5e8ca1a8ae35ca0eeff737cbae9932cbcd8cbed9a441d3be1ae6"
+          "sha256": "ba8bae0ec378b693e7b936e2c0d98e16354d6a4a164421a1fb9437c3cab3a4b3"
         },
         "README.md": {
           "size_bytes": 3640,
@@ -477,7 +477,7 @@
         },
         "metadata/compilation_manifest.json": {
           "size_bytes": 2433,
-          "sha256": "987bbc326d9cf15b8b5f2fc9c1f159a046c45c538c0bd54ed533f8630440b99a"
+          "sha256": "a550f10e4837aa92e1ddd5fa954b6e3fc17d3dfe0dab681ac906f314d152aff3"
         },
         "README.md": {
           "size_bytes": 3135,
@@ -545,7 +545,7 @@
         },
         "metadata/compilation_manifest.json": {
           "size_bytes": 2438,
-          "sha256": "3eadf8e0021b5066bf63bc242340b44b0418f186e04ec39d25eb559ee5202506"
+          "sha256": "eb3dfe18e50717e655121525ee3b158991900cd046c3a96c1ffdefefc011042e"
         },
         "README.md": {
           "size_bytes": 3140,
@@ -613,7 +613,7 @@
         },
         "metadata/compilation_manifest.json": {
           "size_bytes": 2435,
-          "sha256": "602434fbd6d658290b2a3521dff8e4a89cdeced66558da8a5bd82e2d9a338d3d"
+          "sha256": "044bc23564208f7b8df9ff368082d156f54fd113e06d394a56b71b119801a856"
         },
         "README.md": {
           "size_bytes": 3196,
@@ -681,7 +681,7 @@
         },
         "metadata/compilation_manifest.json": {
           "size_bytes": 2437,
-          "sha256": "2e0d8629c9c0f106fdfdad13525015ebb23b0239baf026f4a252db1aee801f2b"
+          "sha256": "13ff7517c067437f7bf307bf2f1e0c245f42ff52435fda6df2f1524d879925af"
         },
         "README.md": {
           "size_bytes": 3196,
@@ -749,7 +749,7 @@
         },
         "metadata/compilation_manifest.json": {
           "size_bytes": 2436,
-          "sha256": "18493dbe08e1a33b52aa17e126addf4b2e9bc5c58de212661eb06a57ede00e1e"
+          "sha256": "8933025493ebcda635cde82712c34fd79b2e788b317abaa9b40f2c12098d15b8"
         },
         "README.md": {
           "size_bytes": 3196,
@@ -817,7 +817,7 @@
         },
         "metadata/compilation_manifest.json": {
           "size_bytes": 2406,
-          "sha256": "b8de47e2794b979141f37c370e34e62f8ae652bead38f369e509f92675a891f1"
+          "sha256": "a458bc27d0547de3787dcb1a61a10f1968d6235506ae63263e3b283ea1e22e89"
         },
         "README.md": {
           "size_bytes": 3111,
@@ -885,7 +885,7 @@
         },
         "metadata/compilation_manifest.json": {
           "size_bytes": 2467,
-          "sha256": "fdd4e0b3d6b2a6b59838bcce5e813ab84dfaf4c09dbc966c1ba7ad3175a9607d"
+          "sha256": "4fc27bd96107931175500e346cb90c1fe6e584c2e68788166bfcde4c3a461978"
         },
         "README.md": {
           "size_bytes": 3227,
