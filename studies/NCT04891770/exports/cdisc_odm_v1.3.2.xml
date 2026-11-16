@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:makoto="http://gflow.ai/ns/makoto/v1.0" FileType="Snapshot" FileOID="ODM.STUDY.001.20261110223402" CreationDateTime="2026-11-10T22:34:02Z" ODMVersion="1.3.2">
+<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:makoto="http://gflow.ai/ns/makoto/v1.0" FileType="Snapshot" FileOID="ODM.STUDY.001.20261116182703" CreationDateTime="2026-11-16T18:27:03Z" ODMVersion="1.3.2">
   <Study OID="STUDY.001">
     <GlobalVariables>
       <StudyName>NCT04891770 Benchmark</StudyName>
@@ -442,7 +442,6 @@
         <ItemRef ItemOID="ITEM.Continuous Monitoring for Adverse Events" Mandatory="No"/>
       </ItemGroupDef>
       <ItemGroupDef OID="IG.VS" Name="Vital Signs Group" Repeating="Yes">
-        <ItemRef ItemOID="ITEM.ALT" Mandatory="Yes"/>
         <ItemRef ItemOID="ITEM.AST" Mandatory="Yes"/>
         <ItemRef ItemOID="ITEM.GGT" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.INR" Mandatory="No"/>
@@ -458,7 +457,6 @@
       </ItemGroupDef>
       <ItemGroupDef OID="IG.EG" Name="Electrocardiogram Group" Repeating="Yes">
         <ItemRef ItemOID="ITEM.ECG_12Lead" Mandatory="No"/>
-        <ItemRef ItemOID="ITEM.QTC" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.VentricularRate" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.ECG_Interpretation" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.QTCF" Mandatory="No"/>
@@ -472,12 +470,11 @@
         <ItemRef ItemOID="ITEM.HEIGHT" Mandatory="Yes"/>
       </ItemGroupDef>
       <ItemGroupDef OID="IG.LB" Name="Laboratory Findings Group" Repeating="Yes">
-        <ItemRef ItemOID="ITEM.HBV DNA" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.ALT" Mandatory="Yes"/>
-        <ItemRef ItemOID="ITEM.LLOC" Mandatory="No"/>
-        <ItemRef ItemOID="ITEM.HBsAg" Mandatory="No"/>
-        <ItemRef ItemOID="ITEM.anti-HBsAg" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.QTC" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.HBV DNA" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.LLOC" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.anti-HBsAg" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.ULN_RATIO" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.AST_ALT_RATIO" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.HYS_LAW_FLAG" Mandatory="No"/>
@@ -489,10 +486,10 @@
         <ItemRef ItemOID="ITEM.Sequence Analysis" Mandatory="No"/>
       </ItemGroupDef>
       <ItemGroupDef OID="IG.BS" Name="Biomarkers Group" Repeating="No">
+        <ItemRef ItemOID="ITEM.HBsAg" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.PBMC" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.Serum" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.Plasma" Mandatory="No"/>
-        <ItemRef ItemOID="ITEM.HBsAg" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.Anti-HBsAg" Mandatory="No"/>
       </ItemGroupDef>
       <ItemGroupDef OID="IG.AE" Name="Adverse Events Group" Repeating="Yes">
@@ -547,10 +544,6 @@
       <ItemDef OID="ITEM.Remote Study Drug Resupply" Name="Remote Study Drug Resupply" DataType="text"/>
       <ItemDef OID="ITEM.Serum Sample Collection for Sequencing" Name="Serum Sample Collection for Sequencing" DataType="text"/>
       <ItemDef OID="ITEM.Continuous Monitoring for Adverse Events" Name="Continuous Monitoring for Adverse Events" DataType="text"/>
-      <ItemDef OID="ITEM.ALT" Name="Alanine Aminotransferase" DataType="float">
-        <MeasurementUnitRef MeasurementUnitOID="UNIT.ENZYME"/>
-        <Alias Context="LOINC" Name="1742-6"/>
-      </ItemDef>
       <ItemDef OID="ITEM.AST" Name="Aspartate Aminotransferase" DataType="float">
         <MeasurementUnitRef MeasurementUnitOID="UNIT.ENZYME"/>
         <Alias Context="LOINC" Name="1920-8"/>
@@ -567,9 +560,6 @@
       <ItemDef OID="ITEM.AlcoholScreening" Name="Alcohol Screening" DataType="text"/>
       <ItemDef OID="ITEM.ECG Requirement" Name="ECG Screening Requirement" DataType="text"/>
       <ItemDef OID="ITEM.ECG_12Lead" Name="12-lead ECG" DataType="text"/>
-      <ItemDef OID="ITEM.QTC" Name="QTcF Interval" DataType="integer">
-        <MeasurementUnitRef MeasurementUnitOID="UNIT.TIME_MS"/>
-      </ItemDef>
       <ItemDef OID="ITEM.VentricularRate" Name="Ventricular Rate" DataType="integer">
         <MeasurementUnitRef MeasurementUnitOID="UNIT.HR"/>
       </ItemDef>
@@ -586,13 +576,19 @@
         <MeasurementUnitRef MeasurementUnitOID="UNIT.HEIGHT"/>
         <Alias Context="LOINC" Name="8302-2"/>
       </ItemDef>
+      <ItemDef OID="ITEM.ALT" Name="Alanine Aminotransferase" DataType="float">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.ENZYME"/>
+        <Alias Context="LOINC" Name="1742-6"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.QTC" Name="QTcF Interval" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.TIME_MS"/>
+      </ItemDef>
       <ItemDef OID="ITEM.HBV DNA" Name="Hepatitis B Virus DNA" DataType="integer">
         <MeasurementUnitRef MeasurementUnitOID="UNIT.MG_DL"/>
       </ItemDef>
       <ItemDef OID="ITEM.LLOC" Name="Lower Limit of Quantitation" DataType="integer">
         <MeasurementUnitRef MeasurementUnitOID="UNIT.MG_DL"/>
       </ItemDef>
-      <ItemDef OID="ITEM.HBsAg" Name="Hepatitis B surface antigen" DataType="text"/>
       <ItemDef OID="ITEM.anti-HBsAg" Name="Anti-Hepatitis B surface antibody" DataType="text"/>
       <ItemDef OID="ITEM.HBV RNA" Name="HBV RNA" DataType="integer">
         <MeasurementUnitRef MeasurementUnitOID="UNIT.NG_ML"/>
@@ -600,6 +596,7 @@
       <ItemDef OID="ITEM.Sequence Analysis" Name="Sequence Analysis of HBV genome" DataType="integer">
         <MeasurementUnitRef MeasurementUnitOID="UNIT.NG_ML"/>
       </ItemDef>
+      <ItemDef OID="ITEM.HBsAg" Name="Hepatitis B surface antigen" DataType="text"/>
       <ItemDef OID="ITEM.PBMC" Name="Peripheral Blood Mononuclear Cells" DataType="integer">
         <MeasurementUnitRef MeasurementUnitOID="UNIT.COUNT"/>
       </ItemDef>
@@ -1090,21 +1087,21 @@
       </CodeListDef>
       <ConditionDef OID="COND.AE_START_LE_END" Name="Adverse Event Date Chronology" Description="Adverse event resolution date must be on or after onset date.">
         <FormalExpression Context="Python">ITEM.AESTDAT &lt;= ITEM.AEENDAT</FormalExpression>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="82" ProtocolSection="Safety Monitoring" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="82" ProtocolSection="Safety Monitoring" Confidence="1.0">
           <makoto:SourceQuote>Site personnel will record all SAE data on the applicable eCRFs and from there transmit the SAE information to Gilead PS within 24 hours of the investigator’s knowledge of the event</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.1176" y0="0.6881" x1="0.8734" y1="0.7763"/>
         </makoto:SourceGrounding>
       </ConditionDef>
       <ConditionDef OID="COND.AE_GRADE3_DOSE_DELAY" Name="Grade 3+ Toxicity Dose Delay Requirement" Description="Severe toxicity (CTCAE Grade &gt;= 3) mandates dose delay or modification.">
         <FormalExpression Context="Python">ITEM.AETOXGR &gt;= 3</FormalExpression>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="82" ProtocolSection="Safety Monitoring" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="82" ProtocolSection="Safety Monitoring" Confidence="1.0">
           <makoto:SourceQuote>Site personnel will record all SAE data on the applicable eCRFs and from there transmit the SAE information to Gilead PS within 24 hours of the investigator’s knowledge of the event</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.1176" y0="0.6881" x1="0.8734" y1="0.7763"/>
         </makoto:SourceGrounding>
       </ConditionDef>
       <ConditionDef OID="COND.AE_FATAL_DISPOSITION_SYNC" Name="Fatal Adverse Event Study Disposition Sync" Description="Fatal outcome requires matching Death disposition record.">
         <FormalExpression Context="Python">ITEM.AEOUT == '4' or ITEM.AETOXGR == '5'</FormalExpression>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="82" ProtocolSection="Safety Monitoring" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="82" ProtocolSection="Safety Monitoring" Confidence="1.0">
           <makoto:SourceQuote>Site personnel will record all SAE data on the applicable eCRFs and from there transmit the SAE information to Gilead PS within 24 hours of the investigator’s knowledge of the event</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.1176" y0="0.6881" x1="0.8734" y1="0.7763"/>
         </makoto:SourceGrounding>
@@ -1121,13 +1118,6 @@
         <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="f115ce8761b6557c64921a79a5d2efad9ce5fa0681eebab508c131e8fe6a6379" PageNumber="65" ProtocolSection="Study Design/Visits" Confidence="1.0">
           <makoto:SourceQuote>• Sparse PK collection visits for SLGN in Cohort 1 and Cohort 2 Group A: Weeks 12, 20, and 32</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.1176" y0="0.1649" x1="0.751" y1="0.2009"/>
-        </makoto:SourceGrounding>
-      </ConditionDef>
-      <ConditionDef OID="COND.EXTREME.HEPATIC.ALT" Name="Alanine Aminotransferase — Hepatic Enzyme / Transaminase Extreme Check" Description="Enforces variable extreme bounds [1, 2000] U/L for Alanine Aminotransferase.">
-        <FormalExpression Context="Python">1 &lt;= ITEM.ALT &lt;= 2000</FormalExpression>
-        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="f115ce8761b6557c64921a79a5d2efad9ce5fa0681eebab508c131e8fe6a6379" PageNumber="12" ProtocolSection="Laboratory Tests" Confidence="1.0">
-          <makoto:SourceQuote>serum ALT and aspartate aminotransferase (AST), total bilirubin, gamma-glutamyl transferase (GGT), international normalized ratio (INR), serum albumin, and alcohol screening.</makoto:SourceQuote>
-          <makoto:BoundingBox x0="0.3355" y0="0.1193" x1="0.8757" y1="0.5091"/>
         </makoto:SourceGrounding>
       </ConditionDef>
       <ConditionDef OID="COND.EXTREME.HEPATIC.AST" Name="Aspartate Aminotransferase — Hepatic Enzyme / Transaminase Extreme Check" Description="Enforces variable extreme bounds [1, 2000] U/L for Aspartate Aminotransferase.">
@@ -1172,13 +1162,6 @@
           <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
         </makoto:SourceGrounding>
       </ConditionDef>
-      <ConditionDef OID="COND.EXTREME.QTC.QTC" Name="QTcF Interval — QTc Interval Prolongation Safety Extreme Check" Description="Enforces variable extreme bounds [250, 500] ms for QTcF Interval.">
-        <FormalExpression Context="Python">250 &lt;= ITEM.QTC &lt;= 500</FormalExpression>
-        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="f115ce8761b6557c64921a79a5d2efad9ce5fa0681eebab508c131e8fe6a6379" PageNumber="11" ProtocolSection="Not explicitly detailed in provided text" Confidence="1.0">
-          <makoto:SourceQuote>N/A</makoto:SourceQuote>
-          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
-        </makoto:SourceGrounding>
-      </ConditionDef>
       <ConditionDef OID="COND.EXTREME.HR.VENTRICULARRATE" Name="Ventricular Rate — Heart Rate Physiological Extreme Check" Description="Enforces variable extreme bounds [30, 220] bpm for Ventricular Rate.">
         <FormalExpression Context="Python">30 &lt;= ITEM.VentricularRate &lt;= 220</FormalExpression>
         <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="f115ce8761b6557c64921a79a5d2efad9ce5fa0681eebab508c131e8fe6a6379" PageNumber="11" ProtocolSection="Not explicitly detailed in provided text" Confidence="1.0">
@@ -1212,6 +1195,20 @@
         <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="f115ce8761b6557c64921a79a5d2efad9ce5fa0681eebab508c131e8fe6a6379" PageNumber="12" ProtocolSection="Clinical Assessment" Confidence="1.0">
           <makoto:SourceQuote>the clinical assessment of the participant should be performed. The assessment should include a physical examination, evaluation of the participant’s mental status, and the following laboratory tests</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.1176" y0="0.046" x1="0.8824" y1="0.089"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.HEPATIC.ALT" Name="Alanine Aminotransferase — Hepatic Enzyme / Transaminase Extreme Check" Description="Enforces variable extreme bounds [1, 2000] U/L for Alanine Aminotransferase.">
+        <FormalExpression Context="Python">1 &lt;= ITEM.ALT &lt;= 2000</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="f115ce8761b6557c64921a79a5d2efad9ce5fa0681eebab508c131e8fe6a6379" PageNumber="12" ProtocolSection="Laboratory Tests" Confidence="1.0">
+          <makoto:SourceQuote>serum ALT and aspartate aminotransferase (AST), total bilirubin, gamma-glutamyl transferase (GGT), international normalized ratio (INR), serum albumin, and alcohol screening.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.3355" y0="0.1193" x1="0.8757" y1="0.5091"/>
+        </makoto:SourceGrounding>
+      </ConditionDef>
+      <ConditionDef OID="COND.EXTREME.QTC.QTC" Name="QTcF Interval — QTc Interval Prolongation Safety Extreme Check" Description="Enforces variable extreme bounds [250, 500] ms for QTcF Interval.">
+        <FormalExpression Context="Python">250 &lt;= ITEM.QTC &lt;= 500</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="f115ce8761b6557c64921a79a5d2efad9ce5fa0681eebab508c131e8fe6a6379" PageNumber="11" ProtocolSection="Not explicitly detailed in provided text" Confidence="1.0">
+          <makoto:SourceQuote>N/A</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
         </makoto:SourceGrounding>
       </ConditionDef>
       <ConditionDef OID="COND.EXTREME.BIOMARKER.ANTI_HBSAG" Name="Anti-Hepatitis B surface antibody — Biomarker / Immunoassay Quantitative Extreme Check" Description="Enforces variable extreme bounds [0.0, 10000.0] units for Anti-Hepatitis B surface antibody.">
@@ -1397,7 +1394,7 @@
         </makoto:SourceGrounding>
       </ConditionDef>
       <ConditionDef OID="COND.RECON.HYS_LAW_HEPATOTOXICITY" Name="Hy's Law Drug-Induced Liver Injury (DILI) Safety Screen" Description="Potential Hy's Law Case (ALT/AST &gt;= 3x ULN with Total Bilirubin &gt;= 2x ULN): requires immediate medical monitor notification and SAE evaluation within 24 hours.">
-        <FormalExpression Context="Python">not (ITEM.ALT &gt;= 3.0 * ULN and ITEM.ALT &gt;= 2.0 * ULN)</FormalExpression>
+        <FormalExpression Context="Python">not (ITEM.AST &gt;= 3.0 * ULN and ITEM.AST &gt;= 2.0 * ULN)</FormalExpression>
         <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="f115ce8761b6557c64921a79a5d2efad9ce5fa0681eebab508c131e8fe6a6379" PageNumber="12" ProtocolSection="Laboratory Tests" Confidence="1.0">
           <makoto:SourceQuote>serum ALT and aspartate aminotransferase (AST), total bilirubin, gamma-glutamyl transferase (GGT), international normalized ratio (INR), serum albumin, and alcohol screening.</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.3355" y0="0.1193" x1="0.8757" y1="0.5091"/>
@@ -1421,7 +1418,7 @@
         <ErrorMessage>
           <TranslatedText>Adverse event resolution date must be on or after adverse event start date.</TranslatedText>
         </ErrorMessage>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="82" ProtocolSection="Safety Monitoring" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="82" ProtocolSection="Safety Monitoring" Confidence="1.0">
           <makoto:SourceQuote>Site personnel will record all SAE data on the applicable eCRFs and from there transmit the SAE information to Gilead PS within 24 hours of the investigator’s knowledge of the event</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.1176" y0="0.6881" x1="0.8734" y1="0.7763"/>
         </makoto:SourceGrounding>
@@ -1430,7 +1427,7 @@
         <ErrorMessage>
           <TranslatedText>CTCAE Grade 3 or higher toxicity reported; requires completion of Dose Modification form.</TranslatedText>
         </ErrorMessage>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="82" ProtocolSection="Safety Monitoring" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="82" ProtocolSection="Safety Monitoring" Confidence="1.0">
           <makoto:SourceQuote>Site personnel will record all SAE data on the applicable eCRFs and from there transmit the SAE information to Gilead PS within 24 hours of the investigator’s knowledge of the event</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.1176" y0="0.6881" x1="0.8734" y1="0.7763"/>
         </makoto:SourceGrounding>
@@ -1439,7 +1436,7 @@
         <ErrorMessage>
           <TranslatedText>Fatal adverse event outcome requires subject disposition to be recorded as Death on FORM.DS.</TranslatedText>
         </ErrorMessage>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="82" ProtocolSection="Safety Monitoring" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="82" ProtocolSection="Safety Monitoring" Confidence="1.0">
           <makoto:SourceQuote>Site personnel will record all SAE data on the applicable eCRFs and from there transmit the SAE information to Gilead PS within 24 hours of the investigator’s knowledge of the event</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.1176" y0="0.6881" x1="0.8734" y1="0.7763"/>
         </makoto:SourceGrounding>
@@ -1460,15 +1457,6 @@
         <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="f115ce8761b6557c64921a79a5d2efad9ce5fa0681eebab508c131e8fe6a6379" PageNumber="65" ProtocolSection="Study Design/Visits" Confidence="1.0">
           <makoto:SourceQuote>• Sparse PK collection visits for SLGN in Cohort 1 and Cohort 2 Group A: Weeks 12, 20, and 32</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.1176" y0="0.1649" x1="0.751" y1="0.2009"/>
-        </makoto:SourceGrounding>
-      </EditCheck>
-      <EditCheck OID="EC.EXTREME.HEPATIC.ALT" Name="Alanine Aminotransferase — Hepatic Enzyme / Transaminase Extreme Check" Target="FORM.VS.ITEM.ALT" ConditionRef="COND.EXTREME.HEPATIC.ALT">
-        <ErrorMessage>
-          <TranslatedText>Variable extreme check failed for Alanine Aminotransferase (ITEM.ALT): value must be within [1, 2000] U/L (Hepatic Enzyme / Transaminase Extreme Check).</TranslatedText>
-        </ErrorMessage>
-        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="f115ce8761b6557c64921a79a5d2efad9ce5fa0681eebab508c131e8fe6a6379" PageNumber="12" ProtocolSection="Laboratory Tests" Confidence="1.0">
-          <makoto:SourceQuote>serum ALT and aspartate aminotransferase (AST), total bilirubin, gamma-glutamyl transferase (GGT), international normalized ratio (INR), serum albumin, and alcohol screening.</makoto:SourceQuote>
-          <makoto:BoundingBox x0="0.3355" y0="0.1193" x1="0.8757" y1="0.5091"/>
         </makoto:SourceGrounding>
       </EditCheck>
       <EditCheck OID="EC.EXTREME.HEPATIC.AST" Name="Aspartate Aminotransferase — Hepatic Enzyme / Transaminase Extreme Check" Target="FORM.VS.ITEM.AST" ConditionRef="COND.EXTREME.HEPATIC.AST">
@@ -1525,15 +1513,6 @@
           <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
         </makoto:SourceGrounding>
       </EditCheck>
-      <EditCheck OID="EC.EXTREME.QTC.QTC" Name="QTcF Interval — QTc Interval Prolongation Safety Extreme Check" Target="FORM.EG.ITEM.QTC" ConditionRef="COND.EXTREME.QTC.QTC">
-        <ErrorMessage>
-          <TranslatedText>Variable extreme check failed for QTcF Interval (ITEM.QTC): value must be within [250, 500] ms (QTc Interval Prolongation Safety Extreme Check).</TranslatedText>
-        </ErrorMessage>
-        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="f115ce8761b6557c64921a79a5d2efad9ce5fa0681eebab508c131e8fe6a6379" PageNumber="11" ProtocolSection="Not explicitly detailed in provided text" Confidence="1.0">
-          <makoto:SourceQuote>N/A</makoto:SourceQuote>
-          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
-        </makoto:SourceGrounding>
-      </EditCheck>
       <EditCheck OID="EC.EXTREME.HR.VENTRICULARRATE" Name="Ventricular Rate — Heart Rate Physiological Extreme Check" Target="FORM.EG.ITEM.VentricularRate" ConditionRef="COND.EXTREME.HR.VENTRICULARRATE">
         <ErrorMessage>
           <TranslatedText>Variable extreme check failed for Ventricular Rate (ITEM.VentricularRate): value must be within [30, 220] bpm (Heart Rate Physiological Extreme Check).</TranslatedText>
@@ -1577,6 +1556,24 @@
         <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="f115ce8761b6557c64921a79a5d2efad9ce5fa0681eebab508c131e8fe6a6379" PageNumber="12" ProtocolSection="Clinical Assessment" Confidence="1.0">
           <makoto:SourceQuote>the clinical assessment of the participant should be performed. The assessment should include a physical examination, evaluation of the participant’s mental status, and the following laboratory tests</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.1176" y0="0.046" x1="0.8824" y1="0.089"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.HEPATIC.ALT" Name="Alanine Aminotransferase — Hepatic Enzyme / Transaminase Extreme Check" Target="FORM.LB.ITEM.ALT" ConditionRef="COND.EXTREME.HEPATIC.ALT">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for Alanine Aminotransferase (ITEM.ALT): value must be within [1, 2000] U/L (Hepatic Enzyme / Transaminase Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="f115ce8761b6557c64921a79a5d2efad9ce5fa0681eebab508c131e8fe6a6379" PageNumber="12" ProtocolSection="Laboratory Tests" Confidence="1.0">
+          <makoto:SourceQuote>serum ALT and aspartate aminotransferase (AST), total bilirubin, gamma-glutamyl transferase (GGT), international normalized ratio (INR), serum albumin, and alcohol screening.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.3355" y0="0.1193" x1="0.8757" y1="0.5091"/>
+        </makoto:SourceGrounding>
+      </EditCheck>
+      <EditCheck OID="EC.EXTREME.QTC.QTC" Name="QTcF Interval — QTc Interval Prolongation Safety Extreme Check" Target="FORM.LB.ITEM.QTC" ConditionRef="COND.EXTREME.QTC.QTC">
+        <ErrorMessage>
+          <TranslatedText>Variable extreme check failed for QTcF Interval (ITEM.QTC): value must be within [250, 500] ms (QTc Interval Prolongation Safety Extreme Check).</TranslatedText>
+        </ErrorMessage>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="f115ce8761b6557c64921a79a5d2efad9ce5fa0681eebab508c131e8fe6a6379" PageNumber="11" ProtocolSection="Not explicitly detailed in provided text" Confidence="1.0">
+          <makoto:SourceQuote>N/A</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
         </makoto:SourceGrounding>
       </EditCheck>
       <EditCheck OID="EC.EXTREME.BIOMARKER.ANTI_HBSAG" Name="Anti-Hepatitis B surface antibody — Biomarker / Immunoassay Quantitative Extreme Check" Target="FORM.LB.ITEM.anti-HBsAg" ConditionRef="COND.EXTREME.BIOMARKER.ANTI_HBSAG">
@@ -1804,7 +1801,7 @@
           <makoto:BoundingBox x0="0.1176" y0="0.5226" x1="0.7425" y1="0.552"/>
         </makoto:SourceGrounding>
       </EditCheck>
-      <EditCheck OID="EC.RECON.CS_LAB_REQUIRES_AE" Name="Clinically Significant Lab Abnormality to AE Reconciliation" Target="FORM.LB.ITEM.ALT" ConditionRef="COND.RECON.CS_LAB_REQUIRES_AE">
+      <EditCheck OID="EC.RECON.CS_LAB_REQUIRES_AE" Name="Clinically Significant Lab Abnormality to AE Reconciliation" Target="FORM.LB.ITEM.AST" ConditionRef="COND.RECON.CS_LAB_REQUIRES_AE">
         <ErrorMessage>
           <TranslatedText>Post-baseline laboratory abnormality marked Clinically Significant (CS) requires a corresponding Adverse Event record on FORM.AE.</TranslatedText>
         </ErrorMessage>
@@ -1813,7 +1810,7 @@
           <makoto:BoundingBox x0="0.3355" y0="0.1193" x1="0.8757" y1="0.5091"/>
         </makoto:SourceGrounding>
       </EditCheck>
-      <EditCheck OID="EC.RECON.HYS_LAW_HEPATOTOXICITY" Name="Hy's Law Drug-Induced Liver Injury (DILI) Safety Screen" Target="FORM.LB.ITEM.ALT" ConditionRef="COND.RECON.HYS_LAW_HEPATOTOXICITY">
+      <EditCheck OID="EC.RECON.HYS_LAW_HEPATOTOXICITY" Name="Hy's Law Drug-Induced Liver Injury (DILI) Safety Screen" Target="FORM.LB.ITEM.AST" ConditionRef="COND.RECON.HYS_LAW_HEPATOTOXICITY">
         <ErrorMessage>
           <TranslatedText>Potential Hy's Law Case (ALT/AST &gt;= 3x ULN with Total Bilirubin &gt;= 2x ULN): requires immediate medical monitor notification and SAE evaluation within 24 hours.</TranslatedText>
         </ErrorMessage>
@@ -1840,36 +1837,6 @@
           <makoto:BoundingBox x0="0.1176" y0="0.5664" x1="0.85" y1="0.6181"/>
         </makoto:SourceGrounding>
       </EditCheck>
-      <MethodDef OID="MT.METAVIR_ISHAK" Name="Liver Fibrosis Score" Type="Classification">
-        <Description>
-          <TranslatedText>Assessment of liver fibrosis severity using Metavir or Ishak scoring systems.</TranslatedText>
-        </Description>
-        <FormalExpression Context="Clinical Assessment">Metavir &gt;= 3 or Ishak fibrosis score &gt;= 4</FormalExpression>
-        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="f115ce8761b6557c64921a79a5d2efad9ce5fa0681eebab508c131e8fe6a6379" PageNumber="50" ProtocolSection="" Confidence="1.0">
-          <makoto:SourceQuote>Metavir ≥ 3 or Ishak fibrosis score ≥ 4 by a liver biopsy within 1 year of screening</makoto:SourceQuote>
-          <makoto:BoundingBox x0="0.1176" y0="0.046" x1="0.8824" y1="0.089"/>
-        </makoto:SourceGrounding>
-      </MethodDef>
-      <MethodDef OID="MT.HBsAg_Threshold" Name="HBsAg Upper Limit for Enrollment" Type="Threshold">
-        <Description>
-          <TranslatedText>Maximum HBsAg level allowed for specific participant enrollment.</TranslatedText>
-        </Description>
-        <FormalExpression Context="Threshold">HBsAg &lt;= 100 IU/mL</FormalExpression>
-        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="f115ce8761b6557c64921a79a5d2efad9ce5fa0681eebab508c131e8fe6a6379" PageNumber="42" ProtocolSection="" Confidence="1.0">
-          <makoto:SourceQuote>up to 20% of participants can have HBsAg ≤ 100 IU/mL</makoto:SourceQuote>
-          <makoto:BoundingBox x0="0.1176" y0="0.046" x1="0.8824" y1="0.089"/>
-        </makoto:SourceGrounding>
-      </MethodDef>
-      <MethodDef OID="MT.Pregnancy_Test_Requirement" Name="Pregnancy Testing Protocol" Type="Procedure">
-        <Description>
-          <TranslatedText>Requirement for pregnancy testing in females of childbearing potential.</TranslatedText>
-        </Description>
-        <FormalExpression Context="Procedure">Serum pregnancy test (females of childbearing potential only)</FormalExpression>
-        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="f115ce8761b6557c64921a79a5d2efad9ce5fa0681eebab508c131e8fe6a6379" PageNumber="77" ProtocolSection="" Confidence="1.0">
-          <makoto:SourceQuote>Serum pregnancy test (females of childbearing potential only)</makoto:SourceQuote>
-          <makoto:BoundingBox x0="0.1173" y0="0.0446" x1="0.2961" y1="0.0903"/>
-        </makoto:SourceGrounding>
-      </MethodDef>
       <MethodDef OID="MT.BMI" Name="Body Mass Index (BMI) Calculation" Type="Derivation">
         <Description>
           <TranslatedText>Body Mass Index (BMI, kg/m^2) derived from body weight (kg) and height (cm): WEIGHT / ((HEIGHT / 100)^2).</TranslatedText>

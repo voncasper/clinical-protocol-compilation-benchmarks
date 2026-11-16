@@ -54,7 +54,7 @@
           {
             "id": "SE.V02",
             "name": "Dosing Visit (Every 4 Weeks)",
-            "epochId": "EP.1",
+            "epochId": "EP.2",
             "sequenceNumber": 1,
             "targetDay": 7.0,
             "windowBeforeDays": 3.0,
@@ -102,14 +102,14 @@
                 "name": "Regulatory Consent Compliance",
                 "code": "Consent_Compliance",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               },
               {
                 "id": "proc_record_maintenance",
                 "name": "Investigator Record Maintenance",
                 "code": "Record_Maintenance",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               }
             ]
           },
@@ -122,14 +122,14 @@
                 "name": "Pediatric Age Group",
                 "code": "Age_Pediatric",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               },
               {
                 "id": "proc_sex_gender",
                 "name": "Sex/Gender",
                 "code": "Sex_Gender",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               }
             ]
           },
@@ -142,14 +142,14 @@
                 "name": "Prior Nucleos(t)ide Treatment",
                 "code": "Prior_NUC_Treatment",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               },
               {
                 "id": "proc_baseline_hbsag",
                 "name": "Baseline HBsAg Level",
                 "code": "Baseline_HBsAg",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               }
             ]
           },
@@ -162,35 +162,35 @@
                 "name": "Investigational Product",
                 "code": "Drug_Name",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               },
               {
                 "id": "proc_dosing_regimen",
                 "name": "Dosing Regimen",
                 "code": "Dosing_Regimen",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               },
               {
                 "id": "proc_contraception_restriction",
                 "name": "Male Contraception Restriction",
                 "code": "Contraception_Restriction",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               },
               {
                 "id": "proc_sampling_method_molecular",
                 "name": "Molecular Analysis Method",
                 "code": "Sampling_Method_Molecular",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               },
               {
                 "id": "proc_sampling_method_pk",
                 "name": "Pharmacokinetics Sampling Method",
                 "code": "Sampling_Method_PK",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               },
               {
                 "id": "proc_clinical_symptom_monitoring",
@@ -210,28 +210,28 @@
                 "name": "Prohibited GI Motility Agents",
                 "code": "Prohibited GI Motility Agents",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               },
               {
                 "id": "proc_prohibited nephrotoxic agents",
                 "name": "Prohibited Nephrotoxic Agents",
                 "code": "Prohibited Nephrotoxic Agents",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               },
               {
                 "id": "proc_nuc treatment initiation",
                 "name": "NUC Treatment Initiation",
                 "code": "NUC Treatment Initiation",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               },
               {
                 "id": "proc_analgesic preference",
                 "name": "Analgesic Preference",
                 "code": "Analgesic Preference",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               }
             ]
           },
@@ -251,28 +251,28 @@
                 "name": "Symptom-directed Physical Examination",
                 "code": "Symptom-directed Physical Examination",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               },
               {
                 "id": "proc_remote study drug resupply",
                 "name": "Remote Study Drug Resupply",
                 "code": "Remote Study Drug Resupply",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               },
               {
                 "id": "proc_serum sample collection for sequencing",
                 "name": "Serum Sample Collection for Sequencing",
                 "code": "Serum Sample Collection for Sequencing",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               },
               {
                 "id": "proc_continuous monitoring for adverse events",
                 "name": "Continuous Monitoring for Adverse Events",
                 "code": "Continuous Monitoring for Adverse Events",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               }
             ]
           },
@@ -280,13 +280,6 @@
             "id": "act_vs",
             "name": "Vital Signs",
             "definedProcedures": [
-              {
-                "id": "proc_alt",
-                "name": "Alanine Aminotransferase",
-                "code": "ALT",
-                "measurementUnit": "U/L",
-                "unitOrigin": "CDASH_INFERRED"
-              },
               {
                 "id": "proc_ast",
                 "name": "Aspartate Aminotransferase",
@@ -320,7 +313,14 @@
                 "name": "Alcohol Screening",
                 "code": "AlcoholScreening",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
+              },
+              {
+                "id": "proc_ecg requirement",
+                "name": "ECG Screening Requirement",
+                "code": "ECG Requirement",
+                "measurementUnit": null,
+                "unitOrigin": null
               }
             ]
           },
@@ -333,14 +333,7 @@
                 "name": "12-lead ECG",
                 "code": "ECG_12Lead",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
-              },
-              {
-                "id": "proc_qtc",
-                "name": "QTcF Interval",
-                "code": "QTC",
-                "measurementUnit": "ms",
-                "unitOrigin": "CDASH_INFERRED"
+                "unitOrigin": null
               },
               {
                 "id": "proc_ventricularrate",
@@ -354,7 +347,7 @@
                 "name": "Overall ECG Interpretation",
                 "code": "ECG_Interpretation",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               }
             ]
           },
@@ -367,14 +360,14 @@
                 "name": "Complete Physical Examination",
                 "code": "PhysicalExam",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               },
               {
                 "id": "proc_ecog_ps",
                 "name": "ECOG Performance Status",
                 "code": "ECOG_PS",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               },
               {
                 "id": "proc_weight",
@@ -397,17 +390,24 @@
             "name": "Laboratory Findings",
             "definedProcedures": [
               {
-                "id": "proc_hbv dna",
-                "name": "Hepatitis B Virus DNA",
-                "code": "HBV DNA",
-                "measurementUnit": "mg/dL",
-                "unitOrigin": "CDASH_INFERRED"
-              },
-              {
                 "id": "proc_alt",
                 "name": "Alanine Aminotransferase",
                 "code": "ALT",
                 "measurementUnit": "U/L",
+                "unitOrigin": "CDASH_INFERRED"
+              },
+              {
+                "id": "proc_qtc",
+                "name": "QTcF Interval",
+                "code": "QTC",
+                "measurementUnit": "ms",
+                "unitOrigin": "CDASH_INFERRED"
+              },
+              {
+                "id": "proc_hbv dna",
+                "name": "Hepatitis B Virus DNA",
+                "code": "HBV DNA",
+                "measurementUnit": "mg/dL",
                 "unitOrigin": "CDASH_INFERRED"
               },
               {
@@ -418,25 +418,11 @@
                 "unitOrigin": "CDASH_INFERRED"
               },
               {
-                "id": "proc_hbsag",
-                "name": "Hepatitis B surface antigen",
-                "code": "HBsAg",
-                "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
-              },
-              {
                 "id": "proc_anti-hbsag",
                 "name": "Anti-Hepatitis B surface antibody",
                 "code": "anti-HBsAg",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
-              },
-              {
-                "id": "proc_qtc",
-                "name": "QT interval corrected for heart rate (Fridericia)",
-                "code": "QTC",
-                "measurementUnit": "bpm",
-                "unitOrigin": "CDASH_INFERRED"
+                "unitOrigin": null
               }
             ]
           },
@@ -465,6 +451,13 @@
             "name": "Biomarkers",
             "definedProcedures": [
               {
+                "id": "proc_hbsag",
+                "name": "Hepatitis B surface antigen",
+                "code": "HBsAg",
+                "measurementUnit": null,
+                "unitOrigin": null
+              },
+              {
                 "id": "proc_pbmc",
                 "name": "Peripheral Blood Mononuclear Cells",
                 "code": "PBMC",
@@ -486,18 +479,11 @@
                 "unitOrigin": "CDASH_INFERRED"
               },
               {
-                "id": "proc_hbsag",
-                "name": "Hepatitis B surface antigen",
-                "code": "HBsAg",
-                "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
-              },
-              {
                 "id": "proc_anti-hbsag",
                 "name": "Anti-HBsAg seroconversion",
                 "code": "Anti-HBsAg",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               }
             ]
           },
@@ -510,14 +496,14 @@
                 "name": "Definition of Misuse",
                 "code": "Misuse Definition",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               },
               {
                 "id": "proc_pregnancy/reproductive monitoring",
                 "name": "Pregnancy/Reproductive Monitoring Criteria",
                 "code": "Pregnancy/Reproductive Monitoring",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               },
               {
                 "id": "proc_qtc interval limits",
@@ -537,42 +523,42 @@
                 "name": "HBsAg Loss",
                 "code": "HBsAg Loss",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               },
               {
                 "id": "proc_anti-hbsag seroconversion",
                 "name": "Anti-HBsAg Seroconversion",
                 "code": "Anti-HBsAg Seroconversion",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               },
               {
                 "id": "proc_organ/marrow transplant status",
                 "name": "Organ/Marrow Transplant Status",
                 "code": "Organ/Marrow Transplant Status",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               },
               {
                 "id": "proc_ana presence",
                 "name": "Presence of ANA",
                 "code": "ANA Presence",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               },
               {
                 "id": "proc_participant noncompliance",
                 "name": "Participant Noncompliance",
                 "code": "Participant Noncompliance",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               },
               {
                 "id": "proc_sadr",
                 "name": "Serious Adverse Drug Reaction",
                 "code": "SADR",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               }
             ]
           },
@@ -824,238 +810,238 @@
             "id": "soa_1",
             "activityId": "act_ic",
             "encounterId": "SE.V02",
-            "epochId": "EP.1",
+            "epochId": "EP.2",
             "mandatory": true
           },
           {
             "id": "soa_2",
             "activityId": "act_mh",
             "encounterId": "SE.V02",
-            "epochId": "EP.1",
+            "epochId": "EP.2",
             "mandatory": true
           },
           {
             "id": "soa_3",
             "activityId": "act_ex",
             "encounterId": "SE.V02",
-            "epochId": "EP.1",
+            "epochId": "EP.2",
             "mandatory": true
           },
           {
             "id": "soa_4",
             "activityId": "act_cm",
             "encounterId": "SE.V02",
-            "epochId": "EP.1",
+            "epochId": "EP.2",
             "mandatory": true
           },
           {
             "id": "soa_5",
             "activityId": "act_pr",
             "encounterId": "SE.V02",
-            "epochId": "EP.1",
+            "epochId": "EP.2",
             "mandatory": true
           },
           {
             "id": "soa_6",
             "activityId": "act_vs",
             "encounterId": "SE.V02",
-            "epochId": "EP.1",
+            "epochId": "EP.2",
             "mandatory": true
           },
           {
             "id": "soa_7",
             "activityId": "act_eg",
             "encounterId": "SE.V02",
-            "epochId": "EP.1",
+            "epochId": "EP.2",
             "mandatory": true
           },
           {
             "id": "soa_8",
             "activityId": "act_pe",
             "encounterId": "SE.V02",
-            "epochId": "EP.1",
+            "epochId": "EP.2",
             "mandatory": true
           },
           {
             "id": "soa_9",
             "activityId": "act_lb",
             "encounterId": "SE.V02",
-            "epochId": "EP.1",
+            "epochId": "EP.2",
             "mandatory": true
           },
           {
             "id": "soa_10",
             "activityId": "act_pk",
             "encounterId": "SE.V02",
-            "epochId": "EP.1",
+            "epochId": "EP.2",
             "mandatory": true
           },
           {
             "id": "soa_11",
             "activityId": "act_bs",
             "encounterId": "SE.V02",
-            "epochId": "EP.1",
+            "epochId": "EP.2",
             "mandatory": true
           },
           {
             "id": "soa_12",
             "activityId": "act_ae",
             "encounterId": "SE.V02",
-            "epochId": "EP.1",
+            "epochId": "EP.2",
             "mandatory": true
           },
           {
             "id": "soa_13",
             "activityId": "act_ds",
             "encounterId": "SE.V02",
-            "epochId": "EP.1",
+            "epochId": "EP.2",
             "mandatory": true
           },
           {
             "id": "soa_14",
             "activityId": "act_ie.se.v01",
             "encounterId": "SE.V02",
-            "epochId": "EP.1",
+            "epochId": "EP.2",
             "mandatory": true
           },
           {
             "id": "soa_15",
             "activityId": "act_ic.se.v01",
             "encounterId": "SE.V02",
-            "epochId": "EP.1",
+            "epochId": "EP.2",
             "mandatory": true
           },
           {
             "id": "soa_16",
             "activityId": "act_mh.se.v01",
             "encounterId": "SE.V02",
-            "epochId": "EP.1",
+            "epochId": "EP.2",
             "mandatory": true
           },
           {
             "id": "soa_17",
             "activityId": "act_vs.se.v01",
             "encounterId": "SE.V02",
-            "epochId": "EP.1",
+            "epochId": "EP.2",
             "mandatory": true
           },
           {
             "id": "soa_18",
             "activityId": "act_lb.se.v01",
             "encounterId": "SE.V02",
-            "epochId": "EP.1",
+            "epochId": "EP.2",
             "mandatory": true
           },
           {
             "id": "soa_19",
             "activityId": "act_vs.se.v02.se.v02",
             "encounterId": "SE.V02",
-            "epochId": "EP.1",
+            "epochId": "EP.2",
             "mandatory": true
           },
           {
             "id": "soa_20",
             "activityId": "act_pe.se.v02.se.v02",
             "encounterId": "SE.V02",
-            "epochId": "EP.1",
+            "epochId": "EP.2",
             "mandatory": true
           },
           {
             "id": "soa_21",
             "activityId": "act_lb.se.v02.se.v02",
             "encounterId": "SE.V02",
-            "epochId": "EP.1",
+            "epochId": "EP.2",
             "mandatory": true
           },
           {
             "id": "soa_22",
             "activityId": "act_pk.se.v02.se.v02",
             "encounterId": "SE.V02",
-            "epochId": "EP.1",
+            "epochId": "EP.2",
             "mandatory": true
           },
           {
             "id": "soa_23",
             "activityId": "act_cm.se.v02.se.v02",
             "encounterId": "SE.V02",
-            "epochId": "EP.1",
+            "epochId": "EP.2",
             "mandatory": true
           },
           {
             "id": "soa_24",
             "activityId": "act_ae.se.v02.se.v02",
             "encounterId": "SE.V02",
-            "epochId": "EP.1",
+            "epochId": "EP.2",
             "mandatory": true
           },
           {
             "id": "soa_25",
             "activityId": "act_bs.se.v02.se.v02",
             "encounterId": "SE.V02",
-            "epochId": "EP.1",
+            "epochId": "EP.2",
             "mandatory": true
           },
           {
             "id": "soa_26",
             "activityId": "act_eg.se.v02.se.v02",
             "encounterId": "SE.V02",
-            "epochId": "EP.1",
+            "epochId": "EP.2",
             "mandatory": true
           },
           {
             "id": "soa_27",
             "activityId": "act_pr.se.v02.se.v02",
             "encounterId": "SE.V02",
-            "epochId": "EP.1",
+            "epochId": "EP.2",
             "mandatory": true
           },
           {
             "id": "soa_28",
             "activityId": "act_vs.se.v03",
             "encounterId": "SE.V02",
-            "epochId": "EP.1",
+            "epochId": "EP.2",
             "mandatory": true
           },
           {
             "id": "soa_29",
             "activityId": "act_lb.se.v03",
             "encounterId": "SE.V02",
-            "epochId": "EP.1",
+            "epochId": "EP.2",
             "mandatory": true
           },
           {
             "id": "soa_30",
             "activityId": "act_ae.se.v03",
             "encounterId": "SE.V02",
-            "epochId": "EP.1",
+            "epochId": "EP.2",
             "mandatory": true
           },
           {
             "id": "soa_31",
             "activityId": "act_vs.se.v04",
             "encounterId": "SE.V02",
-            "epochId": "EP.1",
+            "epochId": "EP.2",
             "mandatory": true
           },
           {
             "id": "soa_32",
             "activityId": "act_lb.se.v04",
             "encounterId": "SE.V02",
-            "epochId": "EP.1",
+            "epochId": "EP.2",
             "mandatory": true
           },
           {
             "id": "soa_33",
             "activityId": "act_ae.se.v04",
             "encounterId": "SE.V02",
-            "epochId": "EP.1",
+            "epochId": "EP.2",
             "mandatory": true
           },
           {
             "id": "soa_34",
             "activityId": "act_ds.se.v04",
             "encounterId": "SE.V02",
-            "epochId": "EP.1",
+            "epochId": "EP.2",
             "mandatory": true
           },
           {

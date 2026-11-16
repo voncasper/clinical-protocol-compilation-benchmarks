@@ -32,7 +32,7 @@
 
 | Study Events (Visits) | eCRF Forms | Item Groups | eCRF Items | Edit Checks | Canvas Nodes | Canvas Edges |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| `3` | `15` | `15` | `75` | `46` | `32` | `28` |
+| `3` | `15` | `15` | `75` | `46` | `29` | `27` |
 
 ---
 
@@ -40,12 +40,12 @@
 
 | Relative Artifact Path | Size (Bytes) | Verified SHA-256 Digest |
 | :--- | ---: | :--- |
-| [`./exports/rave_als.xlsx`](./exports/rave_als.xlsx) | `36,887` | `2b9a56bb5673a338b88519a27a94b949729e4e5d5fc877018c46f47ff6ef16bc` |
-| [`./exports/veeva_cdms.xml`](./exports/veeva_cdms.xml) | `63,387` | `623394ac84dd46fb11b227077648e1c8e28e5e56a920d63beb55d3f2efa162dd` |
-| [`./exports/cdisc_odm_v1.3.2.xml`](./exports/cdisc_odm_v1.3.2.xml) | `150,797` | `93788931cf1146920c021c523ceaa0b2a97b89c248890fe0a9e03f1b13f8fb09` |
-| [`./exports/transcelerate_usdm_v3.0.json`](./exports/transcelerate_usdm_v3.0.json) | `44,064` | `60e66f1d562d0c3d27433f8473e38ce90f00a33bcdf925859bc15e4f702e578e` |
-| [`./metadata/provenance_matrix_21cfr11.xlsx`](./metadata/provenance_matrix_21cfr11.xlsx) | `33,607` | `196d3f1ce351e45bd53818c5e2abab2b8f175bd311121db23c1d318adab974ef` |
-| [`./visuals/canvas_standard.svg`](./visuals/canvas_standard.svg) | `3,635,200` | `1590961152e36a1cb50036ced28fc875eddb6ab67d24ec213b700f60d05cba94` |
-| [`./visuals/canvas_standard.pdf`](./visuals/canvas_standard.pdf) | `665,646` | `488cde93b0f89a1f51aab5fe1b77acb5f5a15ed9f4c18d976bcac7d1c9483029` |
-| [`./visuals/canvas_mindmap.svg`](./visuals/canvas_mindmap.svg) | `2,976,064` | `b8ca33df4a3fa763a2511488445e2a0a167d1fff2e707a60bf627d17f60be490` |
-| [`./visuals/canvas_mindmap.pdf`](./visuals/canvas_mindmap.pdf) | `321,899` | `922304e05d68a27568ed88d221654104e170090e57f7c3b7f5663daf6c75a098` |
+| [`./exports/rave_als.xlsx`](./exports/rave_als.xlsx) | `36,691` | `118274d2a4c336df5f6c45c3bc37169c1795edaaa24a6fcd685a7ce54e0f89b0` |
+| [`./exports/veeva_cdms.xml`](./exports/veeva_cdms.xml) | `63,081` | `700abd73f7e1f33361f21f2730d2bf4284fc145b7fc3255b3ad4cf1374de5160` |
+| [`./exports/cdisc_odm_v1.3.2.xml`](./exports/cdisc_odm_v1.3.2.xml) | `148,906` | `689defae88a0a4695674ed5feb29b20b5b6fca249716bc479f486bec5957f210` |
+| [`./exports/transcelerate_usdm_v3.0.json`](./exports/transcelerate_usdm_v3.0.json) | `43,285` | `78ac85a8df10cc6722a74f7dc1c19acadf5c92c883f87ff01de907395ad2bfb5` |
+| [`./metadata/provenance_matrix_21cfr11.xlsx`](./metadata/provenance_matrix_21cfr11.xlsx) | `31,877` | `54d0172c3f33a530d0253061090747cf21f506dd182a15a5f98f48c58ded89ae` |
+| [`./visuals/canvas_standard.svg`](./visuals/canvas_standard.svg) | `3,298,632` | `8e4e6e7e366963e061d35dd5fbdfbe956394ffbfeeb6f35e3625514816d6d5a6` |
+| [`./visuals/canvas_standard.pdf`](./visuals/canvas_standard.pdf) | `583,115` | `e9a4221db4d4cd47d6681580c88c6d88548a7c92a6e9d8bfd26d55188bbe1abe` |
+| [`./visuals/canvas_mindmap.svg`](./visuals/canvas_mindmap.svg) | `2,976,463` | `38230a32fc0f4ddecef83be3afde4a18cb49a56442a7cf35add81ddc1bd9acb8` |
+| [`./visuals/canvas_mindmap.pdf`](./visuals/canvas_mindmap.pdf) | `321,889` | `4b8d0398756a67a0a3257e2df88edd9cd07db461cb5fb3294010071ce08b011a` |

@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:makoto="http://gflow.ai/ns/makoto/v1.0" FileType="Snapshot" FileOID="ODM.STUDY.001.20261110225636" CreationDateTime="2026-11-10T22:56:36Z" ODMVersion="1.3.2">
+<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:makoto="http://gflow.ai/ns/makoto/v1.0" FileType="Snapshot" FileOID="ODM.STUDY.001.20261116182721" CreationDateTime="2026-11-16T18:27:21Z" ODMVersion="1.3.2">
   <Study OID="STUDY.001">
     <GlobalVariables>
       <StudyName>NCT03084237 Benchmark</StudyName>
@@ -1103,21 +1103,21 @@
       </ConditionDef>
       <ConditionDef OID="COND.AE_START_LE_END" Name="Adverse Event Date Chronology" Description="Adverse event resolution date must be on or after onset date.">
         <FormalExpression Context="Python">ITEM.AESTDAT &lt;= ITEM.AEENDAT</FormalExpression>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="43" ProtocolSection="Safety Monitoring" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="43" ProtocolSection="Safety Monitoring" Confidence="1.0">
           <makoto:SourceQuote>Adverse events must be collected from the time of Informed Consent through 30 days after the final dose of the study drug.</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
         </makoto:SourceGrounding>
       </ConditionDef>
       <ConditionDef OID="COND.AE_GRADE3_DOSE_DELAY" Name="Grade 3+ Toxicity Dose Delay Requirement" Description="Severe toxicity (CTCAE Grade &gt;= 3) mandates dose delay or modification.">
         <FormalExpression Context="Python">ITEM.AETOXGR &gt;= 3</FormalExpression>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="43" ProtocolSection="Safety Monitoring" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="43" ProtocolSection="Safety Monitoring" Confidence="1.0">
           <makoto:SourceQuote>Adverse events must be collected from the time of Informed Consent through 30 days after the final dose of the study drug.</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
         </makoto:SourceGrounding>
       </ConditionDef>
       <ConditionDef OID="COND.AE_FATAL_DISPOSITION_SYNC" Name="Fatal Adverse Event Study Disposition Sync" Description="Fatal outcome requires matching Death disposition record.">
         <FormalExpression Context="Python">ITEM.AEOUT == '4' or ITEM.AETOXGR == '5'</FormalExpression>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="43" ProtocolSection="Safety Monitoring" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="43" ProtocolSection="Safety Monitoring" Confidence="1.0">
           <makoto:SourceQuote>Adverse events must be collected from the time of Informed Consent through 30 days after the final dose of the study drug.</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
         </makoto:SourceGrounding>
@@ -1485,7 +1485,7 @@
         <ErrorMessage>
           <TranslatedText>Adverse event resolution date must be on or after adverse event start date.</TranslatedText>
         </ErrorMessage>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="43" ProtocolSection="Safety Monitoring" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="43" ProtocolSection="Safety Monitoring" Confidence="1.0">
           <makoto:SourceQuote>Adverse events must be collected from the time of Informed Consent through 30 days after the final dose of the study drug.</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
         </makoto:SourceGrounding>
@@ -1494,7 +1494,7 @@
         <ErrorMessage>
           <TranslatedText>CTCAE Grade 3 or higher toxicity reported; requires completion of Dose Modification form.</TranslatedText>
         </ErrorMessage>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="43" ProtocolSection="Safety Monitoring" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="43" ProtocolSection="Safety Monitoring" Confidence="1.0">
           <makoto:SourceQuote>Adverse events must be collected from the time of Informed Consent through 30 days after the final dose of the study drug.</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
         </makoto:SourceGrounding>
@@ -1503,7 +1503,7 @@
         <ErrorMessage>
           <TranslatedText>Fatal adverse event outcome requires subject disposition to be recorded as Death on FORM.DS.</TranslatedText>
         </ErrorMessage>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="43" ProtocolSection="Safety Monitoring" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="43" ProtocolSection="Safety Monitoring" Confidence="1.0">
           <makoto:SourceQuote>Adverse events must be collected from the time of Informed Consent through 30 days after the final dose of the study drug.</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
         </makoto:SourceGrounding>
@@ -2327,16 +2327,12 @@
           <makoto:Node id="FORM.DS.SE.V04" type="form">
             <makoto:Position x="40" y="710"/>
           </makoto:Node>
-          <makoto:Node id="EP.4" type="epochGroup">
-            <makoto:Position x="2400" y="50"/>
-          </makoto:Node>
         </makoto:Nodes>
         <makoto:Edges>
           <makoto:Edge id="e-ARM.1-SE.V01" source="ARM.1" target="SE.V01"/>
           <makoto:Edge id="e-ARM.2-SE.V01" source="ARM.2" target="SE.V01"/>
           <makoto:Edge id="e-epoch-EP.1-EP.2" source="EP.1" target="EP.2" animated="true"/>
           <makoto:Edge id="e-epoch-EP.2-EP.3" source="EP.2" target="EP.3" animated="true"/>
-          <makoto:Edge id="e-epoch-EP.3-EP.4" source="EP.3" target="EP.4" animated="true"/>
           <makoto:Edge id="e-SE.V01-CYCLE_GROUP.EP.2" source="SE.V01" target="CYCLE_GROUP.EP.2"/>
           <makoto:Edge id="e-SE.V02-SE.V03" source="SE.V02" target="SE.V03"/>
           <makoto:Edge id="e-SE.V02-FORM.VS.SE.V02.SE.V02" source="SE.V02" target="FORM.VS.SE.V02.SE.V02"/>

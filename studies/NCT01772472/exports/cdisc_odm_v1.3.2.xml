@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:makoto="http://gflow.ai/ns/makoto/v1.0" FileType="Snapshot" FileOID="ODM.STUDY.001.20261111003222" CreationDateTime="2026-11-11T00:32:22Z" ODMVersion="1.3.2">
+<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:makoto="http://gflow.ai/ns/makoto/v1.0" FileType="Snapshot" FileOID="ODM.STUDY.001.20261116182758" CreationDateTime="2026-11-16T18:27:58Z" ODMVersion="1.3.2">
   <Study OID="STUDY.001">
     <GlobalVariables>
       <StudyName>NCT01772472 Benchmark</StudyName>
@@ -442,8 +442,6 @@
         <ItemRef ItemOID="ITEM.Weight" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.Vital Sign Monitoring" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.Cardiac Function Assessment" Mandatory="No"/>
-        <ItemRef ItemOID="ITEM.SYSBP" Mandatory="Yes"/>
-        <ItemRef ItemOID="ITEM.DIABP" Mandatory="Yes"/>
         <ItemRef ItemOID="ITEM.BMI" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.BSA" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.BSA_DUBOIS" Mandatory="No"/>
@@ -481,7 +479,6 @@
         <ItemRef ItemOID="ITEM.AE Reporting Mechanism" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.AE Severity Tracking" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.ALT Toxicity Management" Mandatory="No"/>
-        <ItemRef ItemOID="ITEM.Discontinuation Trigger" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.AEDUR" Mandatory="No"/>
       </ItemGroupDef>
       <ItemGroupDef OID="IG.DS" Name="Disposition Group" Repeating="No">
@@ -1062,7 +1059,7 @@
       </CodeListDef>
       <ConditionDef OID="COND.SYSBP_GT_DIABP" Name="Systolic BP Greater Than Diastolic BP" Description="Systolic blood pressure must exceed diastolic blood pressure.">
         <FormalExpression Context="Python">ITEM.SYSBP &gt; ITEM.DIABP</FormalExpression>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
           <makoto:SourceQuote>Not explicitly present in provided text</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
         </makoto:SourceGrounding>
@@ -1435,7 +1432,7 @@
         <ErrorMessage>
           <TranslatedText>Systolic blood pressure must be strictly greater than diastolic blood pressure.</TranslatedText>
         </ErrorMessage>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
           <makoto:SourceQuote>Not explicitly present in provided text</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
         </makoto:SourceGrounding>
@@ -1913,9 +1910,9 @@
           <TranslatedText>BMI formula: WEIGHT / ((HEIGHT / 100) ^ 2)</TranslatedText>
         </Description>
         <FormalExpression Context="Python">round(ITEM.WEIGHT / ((ITEM.HEIGHT / 100) ** 2), 1)</FormalExpression>
-        <makoto:SourceGrounding DocumentType="SAP" DocumentHash="2c1031877d283b0bf4406382dc389cb91bf8827bb3fb4e47497e7bf244db27d9" PageNumber="5" ProtocolSection="Section 5.2.1. Baseline Demographic Characteristics" Confidence="1.0">
-          <makoto:SourceQuote>Female patients of childbearing potential will be instructed to immediately inform the investigator if they become pregnant during the study or within 7 months after the last dose of study drug. A Pre</makoto:SourceQuote>
-          <makoto:BoundingBox x0="0.1765" y0="0.3093" x1="0.8797" y1="0.4739"/>
+        <makoto:SourceGrounding DocumentType="SAP" DocumentHash="2c1031877d283b0bf4406382dc389cb91bf8827bb3fb4e47497e7bf244db27d9" PageNumber="24" ProtocolSection="Section 5.2.1. Baseline Demographic Characteristics" Confidence="1.0">
+          <makoto:SourceQuote>[Pg 24] addition up to 5 slides for exploratory biomarker research. A central laboratory will perform both IHC and ISH assays; however, only one positive result is required for eligibility. In the eve</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1" y0="0.15" x1="0.9" y1="0.25"/>
         </makoto:SourceGrounding>
       </MethodDef>
       <MethodDef OID="MT.ANC" Name="Absolute Neutrophil Count Calculation" Type="Derivation">
@@ -1923,29 +1920,9 @@
           <TranslatedText>ANC calculation: WBC * (NEUT / 100)</TranslatedText>
         </Description>
         <FormalExpression Context="Python">round(ITEM.WBC * (ITEM.NEUT / 100), 2)</FormalExpression>
-        <makoto:SourceGrounding DocumentType="SAP" DocumentHash="2c1031877d283b0bf4406382dc389cb91bf8827bb3fb4e47497e7bf244db27d9" PageNumber="31" ProtocolSection="Section 7.1. Adverse Events &amp; Laboratory Safety Evaluation" Confidence="1.0">
-          <makoto:SourceQuote>rastuzumab emtansine discontinuation. Eleven of these were laboratory abnormalities requiring discontinuation (none were Grade 4), and 9 were due to symptomatic AEs (2 Grade 3 [fatigue, joint crepitat</makoto:SourceQuote>
-          <makoto:BoundingBox x0="0.1768" y0="0.0922" x1="0.8922" y1="0.4837"/>
-        </makoto:SourceGrounding>
-      </MethodDef>
-      <MethodDef OID="MT.TRST_CONC_STAT" Name="Trastuzumab Concentration Summary Statistics" Type="Statistical Summary">
-        <Description>
-          <TranslatedText>Calculation of descriptive statistics for individual and mean trastuzumab serum concentrations over time.</TranslatedText>
-        </Description>
-        <FormalExpression Context="Python">numpy.mean(concentrations), numpy.std(concentrations), numpy.median(concentrations), numpy.min(concentrations), numpy.max(concentrations)</FormalExpression>
-        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="51072f903c0f0c881db0dea7ed4c8bba0a7d28bd1e95a946e573981db158c460" PageNumber="93" ProtocolSection="" Confidence="1.0">
-          <makoto:SourceQuote>Individual and mean trastuzumab serum concentrations versus time data will be plotted, tabulated, and summarized (e.g., mean, standard deviation, coefficient of variation, median, minimum, maximum, and range).</makoto:SourceQuote>
-          <makoto:BoundingBox x0="0.177" y0="0.0922" x1="0.8838" y1="0.124"/>
-        </makoto:SourceGrounding>
-      </MethodDef>
-      <MethodDef OID="MT.HEM_THRESHOLD" Name="Hemoglobin Minimum Threshold" Type="Threshold">
-        <Description>
-          <TranslatedText>Minimum acceptable hemoglobin level for inclusion/safety monitoring.</TranslatedText>
-        </Description>
-        <FormalExpression Context="Python">hemoglobin &gt;= 9.0</FormalExpression>
-        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="51072f903c0f0c881db0dea7ed4c8bba0a7d28bd1e95a946e573981db158c460" PageNumber="17" ProtocolSection="" Confidence="1.0">
-          <makoto:SourceQuote>Hemoglobin ≥9.0 g/dL</makoto:SourceQuote>
-          <makoto:BoundingBox x0="0.2364" y0="0.0885" x1="0.3935" y1="0.1001"/>
+        <makoto:SourceGrounding DocumentType="SAP" DocumentHash="2c1031877d283b0bf4406382dc389cb91bf8827bb3fb4e47497e7bf244db27d9" PageNumber="25" ProtocolSection="Section 7.1. Adverse Events &amp; Laboratory Safety Evaluation" Confidence="1.0">
+          <makoto:SourceQuote>[Pg 25] Group (ECOG) performance status 0 or 1 12. Life expectancy  6 months 13. Adequate organ function during screening, defined as: a. Absolute neutrophil count  1200 cells/mm3 b. Platelet count </makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1" y0="0.15" x1="0.9" y1="0.25"/>
         </makoto:SourceGrounding>
       </MethodDef>
       <MethodDef OID="MT.BSA" Name="Body Surface Area (BSA — Mosteller Formula)" Type="Derivation">
@@ -2180,68 +2157,74 @@
       </MethodDef>
       <makoto:VisualLayout>
         <makoto:Nodes>
-          <makoto:Node id="EP.1" type="epochGroup">
-            <makoto:Position x="360" y="50"/>
-          </makoto:Node>
-          <makoto:Node id="SE.V01" type="visit">
-            <makoto:Position x="30" y="160"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.IE.SE.V01" type="form">
-            <makoto:Position x="30" y="320"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.IC.SE.V01" type="form">
-            <makoto:Position x="30" y="450"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.DM.SE.V01" type="form">
-            <makoto:Position x="30" y="580"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.MH.SE.V01" type="form">
-            <makoto:Position x="30" y="710"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.VS.SE.V01" type="form">
-            <makoto:Position x="30" y="840"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.LB.SE.V01" type="form">
-            <makoto:Position x="30" y="970"/>
-          </makoto:Node>
-          <makoto:Node id="SE.V02" type="visit">
-            <makoto:Position x="330" y="160"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.VS.SE.V02" type="form">
-            <makoto:Position x="330" y="320"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.PE.SE.V02" type="form">
-            <makoto:Position x="330" y="450"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.LB.SE.V02" type="form">
-            <makoto:Position x="330" y="580"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.PK.SE.V02" type="form">
-            <makoto:Position x="330" y="710"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.CM.SE.V02" type="form">
-            <makoto:Position x="330" y="840"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.AE.SE.V02" type="form">
-            <makoto:Position x="330" y="970"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.BS.SE.V02" type="form">
-            <makoto:Position x="330" y="1100"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.EG.SE.V02" type="form">
-            <makoto:Position x="330" y="1230"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.PR.SE.V02" type="form">
-            <makoto:Position x="330" y="1360"/>
-          </makoto:Node>
           <makoto:Node id="ARM.1" type="arm">
-            <makoto:Position x="1020" y="275"/>
+            <makoto:Position x="380" y="275"/>
           </makoto:Node>
           <makoto:Node id="ARM.2" type="arm">
-            <makoto:Position x="1020" y="525"/>
+            <makoto:Position x="380" y="525"/>
           </makoto:Node>
-          <makoto:Node id="EP.2" type="epochGroup">
-            <makoto:Position x="1240" y="50"/>
+          <makoto:Node id="EP.1" type="epochGroup">
+            <makoto:Position x="600" y="50"/>
+          </makoto:Node>
+          <makoto:Node id="SE.V01" type="visit">
+            <makoto:Position x="40" y="160"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.IE.SE.V01" type="form">
+            <makoto:Position x="40" y="320"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.IC.SE.V01" type="form">
+            <makoto:Position x="40" y="450"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.DM.SE.V01" type="form">
+            <makoto:Position x="40" y="580"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.MH.SE.V01" type="form">
+            <makoto:Position x="40" y="710"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.VS.SE.V01" type="form">
+            <makoto:Position x="40" y="840"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.LB.SE.V01" type="form">
+            <makoto:Position x="40" y="970"/>
+          </makoto:Node>
+          <makoto:Node id="CYCLE_GROUP.EP.1" type="cycleTemplateGroup">
+            <makoto:Position x="340" y="80"/>
+          </makoto:Node>
+          <makoto:Node id="SE.V02" type="visit">
+            <makoto:Position x="30" y="80"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.VS.SE.V02.SE.V02" type="form">
+            <makoto:Position x="30" y="240"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.PE.SE.V02.SE.V02" type="form">
+            <makoto:Position x="30" y="370"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.LB.SE.V02.SE.V02" type="form">
+            <makoto:Position x="30" y="500"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.PK.SE.V02.SE.V02" type="form">
+            <makoto:Position x="30" y="630"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.CM.SE.V02.SE.V02" type="form">
+            <makoto:Position x="30" y="760"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.AE.SE.V02.SE.V02" type="form">
+            <makoto:Position x="30" y="890"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.BS.SE.V02.SE.V02" type="form">
+            <makoto:Position x="30" y="1020"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.EG.SE.V02.SE.V02" type="form">
+            <makoto:Position x="30" y="1150"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.PR.SE.V02.SE.V02" type="form">
+            <makoto:Position x="30" y="1280"/>
+          </makoto:Node>
+          <makoto:Node id="GATE.EP.1.CYCLE" type="decisionGate">
+            <makoto:Position x="720" y="140"/>
+          </makoto:Node>
+          <makoto:Node id="EP.3" type="epochGroup">
+            <makoto:Position x="1640" y="50"/>
           </makoto:Node>
           <makoto:Node id="SE.V03" type="visit">
             <makoto:Position x="40" y="160"/>
@@ -2258,32 +2241,30 @@
           <makoto:Node id="FORM.DS.SE.V03" type="form">
             <makoto:Position x="40" y="710"/>
           </makoto:Node>
-          <makoto:Node id="EP.3" type="epochGroup">
-            <makoto:Position x="1640" y="50"/>
-          </makoto:Node>
         </makoto:Nodes>
         <makoto:Edges>
           <makoto:Edge id="e-ARM.1-SE.V01" source="ARM.1" target="SE.V01"/>
           <makoto:Edge id="e-ARM.2-SE.V01" source="ARM.2" target="SE.V01"/>
-          <makoto:Edge id="e-epoch-EP.1-EP.2" source="EP.1" target="EP.2" animated="true"/>
-          <makoto:Edge id="e-epoch-EP.2-EP.3" source="EP.2" target="EP.3" animated="true"/>
-          <makoto:Edge id="e-SE.V01-SE.V02" source="SE.V01" target="SE.V02"/>
-          <makoto:Edge id="e-SE.V02-SE.V03" source="SE.V02" target="SE.V03"/>
+          <makoto:Edge id="e-epoch-EP.1-EP.3" source="EP.1" target="EP.3" animated="true"/>
           <makoto:Edge id="e-SE.V01-FORM.IE.SE.V01" source="SE.V01" target="FORM.IE.SE.V01"/>
           <makoto:Edge id="e-FORM.IE.SE.V01-FORM.IC.SE.V01" source="FORM.IE.SE.V01" target="FORM.IC.SE.V01"/>
           <makoto:Edge id="e-FORM.IC.SE.V01-FORM.DM.SE.V01" source="FORM.IC.SE.V01" target="FORM.DM.SE.V01"/>
           <makoto:Edge id="e-FORM.DM.SE.V01-FORM.MH.SE.V01" source="FORM.DM.SE.V01" target="FORM.MH.SE.V01"/>
           <makoto:Edge id="e-FORM.MH.SE.V01-FORM.VS.SE.V01" source="FORM.MH.SE.V01" target="FORM.VS.SE.V01"/>
           <makoto:Edge id="e-FORM.VS.SE.V01-FORM.LB.SE.V01" source="FORM.VS.SE.V01" target="FORM.LB.SE.V01"/>
-          <makoto:Edge id="e-SE.V02-FORM.VS.SE.V02" source="SE.V02" target="FORM.VS.SE.V02"/>
-          <makoto:Edge id="e-FORM.VS.SE.V02-FORM.PE.SE.V02" source="FORM.VS.SE.V02" target="FORM.PE.SE.V02"/>
-          <makoto:Edge id="e-FORM.PE.SE.V02-FORM.LB.SE.V02" source="FORM.PE.SE.V02" target="FORM.LB.SE.V02"/>
-          <makoto:Edge id="e-FORM.LB.SE.V02-FORM.PK.SE.V02" source="FORM.LB.SE.V02" target="FORM.PK.SE.V02"/>
-          <makoto:Edge id="e-FORM.PK.SE.V02-FORM.CM.SE.V02" source="FORM.PK.SE.V02" target="FORM.CM.SE.V02"/>
-          <makoto:Edge id="e-FORM.CM.SE.V02-FORM.AE.SE.V02" source="FORM.CM.SE.V02" target="FORM.AE.SE.V02"/>
-          <makoto:Edge id="e-FORM.AE.SE.V02-FORM.BS.SE.V02" source="FORM.AE.SE.V02" target="FORM.BS.SE.V02"/>
-          <makoto:Edge id="e-FORM.BS.SE.V02-FORM.EG.SE.V02" source="FORM.BS.SE.V02" target="FORM.EG.SE.V02"/>
-          <makoto:Edge id="e-FORM.EG.SE.V02-FORM.PR.SE.V02" source="FORM.EG.SE.V02" target="FORM.PR.SE.V02"/>
+          <makoto:Edge id="e-SE.V01-SE.V02" source="SE.V01" target="SE.V02"/>
+          <makoto:Edge id="e-SE.V02-FORM.VS.SE.V02.SE.V02" source="SE.V02" target="FORM.VS.SE.V02.SE.V02"/>
+          <makoto:Edge id="e-FORM.VS.SE.V02.SE.V02-FORM.PE.SE.V02.SE.V02" source="FORM.VS.SE.V02.SE.V02" target="FORM.PE.SE.V02.SE.V02"/>
+          <makoto:Edge id="e-FORM.PE.SE.V02.SE.V02-FORM.LB.SE.V02.SE.V02" source="FORM.PE.SE.V02.SE.V02" target="FORM.LB.SE.V02.SE.V02"/>
+          <makoto:Edge id="e-FORM.LB.SE.V02.SE.V02-FORM.PK.SE.V02.SE.V02" source="FORM.LB.SE.V02.SE.V02" target="FORM.PK.SE.V02.SE.V02"/>
+          <makoto:Edge id="e-FORM.PK.SE.V02.SE.V02-FORM.CM.SE.V02.SE.V02" source="FORM.PK.SE.V02.SE.V02" target="FORM.CM.SE.V02.SE.V02"/>
+          <makoto:Edge id="e-FORM.CM.SE.V02.SE.V02-FORM.AE.SE.V02.SE.V02" source="FORM.CM.SE.V02.SE.V02" target="FORM.AE.SE.V02.SE.V02"/>
+          <makoto:Edge id="e-FORM.AE.SE.V02.SE.V02-FORM.BS.SE.V02.SE.V02" source="FORM.AE.SE.V02.SE.V02" target="FORM.BS.SE.V02.SE.V02"/>
+          <makoto:Edge id="e-FORM.BS.SE.V02.SE.V02-FORM.EG.SE.V02.SE.V02" source="FORM.BS.SE.V02.SE.V02" target="FORM.EG.SE.V02.SE.V02"/>
+          <makoto:Edge id="e-FORM.EG.SE.V02.SE.V02-FORM.PR.SE.V02.SE.V02" source="FORM.EG.SE.V02.SE.V02" target="FORM.PR.SE.V02.SE.V02"/>
+          <makoto:Edge id="e-SE.V02-GATE.EP.1.CYCLE" source="SE.V02" target="GATE.EP.1.CYCLE"/>
+          <makoto:Edge id="e-loopback-GATE.EP.1.CYCLE-SE.V02" source="GATE.EP.1.CYCLE" target="SE.V02" label="Cleared ➔ Next Cycle" animated="true"/>
+          <makoto:Edge id="e-exit-GATE.EP.1.CYCLE-EP.3" source="GATE.EP.1.CYCLE" target="EP.3" label="PD / Toxicity ➔ Exit" animated="true"/>
           <makoto:Edge id="e-SE.V03-FORM.VS.SE.V03" source="SE.V03" target="FORM.VS.SE.V03"/>
           <makoto:Edge id="e-FORM.VS.SE.V03-FORM.LB.SE.V03" source="FORM.VS.SE.V03" target="FORM.LB.SE.V03"/>
           <makoto:Edge id="e-FORM.LB.SE.V03-FORM.AE.SE.V03" source="FORM.LB.SE.V03" target="FORM.AE.SE.V03"/>

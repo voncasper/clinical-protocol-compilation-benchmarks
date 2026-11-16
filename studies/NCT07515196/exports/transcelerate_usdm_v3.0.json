@@ -52,29 +52,29 @@
         ],
         "encounters": [
           {
-            "id": "SE.V02",
-            "name": "Intervention Visit",
-            "epochId": "EP.2",
-            "sequenceNumber": 1,
-            "targetDay": 7.0,
-            "windowBeforeDays": 3.0,
-            "windowAfterDays": 3.0,
-            "environmentalSetting": "Clinic"
-          },
-          {
             "id": "SE.V01",
             "name": "Screening Visit",
             "epochId": "EP.1",
-            "sequenceNumber": 2,
+            "sequenceNumber": 1,
             "targetDay": -28.0,
             "windowBeforeDays": 0.0,
             "windowAfterDays": 3.0,
             "environmentalSetting": "Clinic"
           },
           {
+            "id": "SE.V02",
+            "name": "Intervention Visit",
+            "epochId": "EP.2",
+            "sequenceNumber": 2,
+            "targetDay": 14.0,
+            "windowBeforeDays": 3.0,
+            "windowAfterDays": 3.0,
+            "environmentalSetting": "Clinic"
+          },
+          {
             "id": "SE.V03",
             "name": "Outcome Assessment Visit",
-            "epochId": "EP.2",
+            "epochId": "EP.3",
             "sequenceNumber": 3,
             "targetDay": 21.0,
             "windowBeforeDays": 3.0,
@@ -92,7 +92,7 @@
                 "name": "Informed Consent Obtained",
                 "code": "Consent Status",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               }
             ]
           },
@@ -112,14 +112,14 @@
                 "name": "Sex",
                 "code": "Sex",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               },
               {
                 "id": "proc_race",
                 "name": "Race/Ethnicity",
                 "code": "Race",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               },
               {
                 "id": "proc_height",
@@ -146,7 +146,7 @@
                 "name": "History of Frostbite",
                 "code": "Frostbite History",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               }
             ]
           },
@@ -179,28 +179,28 @@
                 "name": "Permitted Concomitant Medications",
                 "code": "Permitted Concomitant Medications",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               },
               {
                 "id": "proc_prohibited concomitant medications",
                 "name": "Prohibited Concomitant Medications",
                 "code": "Prohibited Concomitant Medications",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               },
               {
                 "id": "proc_corticosteroid restriction",
                 "name": "Corticosteroid Restriction",
                 "code": "Corticosteroid Restriction",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               },
               {
                 "id": "proc_cyp3a4/ddi caution",
                 "name": "CYP3A4/DDI Caution",
                 "code": "CYP3A4/DDI Caution",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               },
               {
                 "id": "proc_washout period",
@@ -295,7 +295,7 @@
                 "name": "12-Lead ECG",
                 "code": "ECG_Lead_12",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               },
               {
                 "id": "proc_qtc",
@@ -322,14 +322,14 @@
                 "name": "Complete Physical Examination",
                 "code": "PhysicalExam_Complete",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               },
               {
                 "id": "proc_ecog_ps",
                 "name": "ECOG Performance Status",
                 "code": "ECOG_PS",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               }
             ]
           },
@@ -372,42 +372,42 @@
                 "name": "AE Monitoring Procedure",
                 "code": "AE_Monitoring_Procedure",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               },
               {
                 "id": "proc_sae_reporting_criteria",
                 "name": "SAE Reporting Criteria",
                 "code": "SAE_Reporting_Criteria",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               },
               {
                 "id": "proc_toxicity_grading",
                 "name": "Toxicity Grading",
                 "code": "Toxicity_Grading",
-                "measurementUnit": "grade",
-                "unitOrigin": "CDASH_INFERRED"
+                "measurementUnit": null,
+                "unitOrigin": null
               },
               {
                 "id": "proc_aeterm",
                 "name": "Reported Term for the Adverse Event",
                 "code": "AETERM",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               },
               {
                 "id": "proc_aestdat",
                 "name": "Adverse Event Start Date",
                 "code": "AESTDAT",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               },
               {
                 "id": "proc_aeendat",
                 "name": "Adverse Event End Date",
                 "code": "AEENDAT",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               }
             ]
           },
@@ -420,21 +420,21 @@
                 "name": "Inclusion Criteria",
                 "code": "InclusionCriteria",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               },
               {
                 "id": "proc_exclusioncriteria",
                 "name": "Exclusion Criteria",
                 "code": "ExclusionCriteria",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               },
               {
                 "id": "proc_consentstatus",
                 "name": "Informed Consent",
                 "code": "ConsentStatus",
                 "measurementUnit": null,
-                "unitOrigin": "NOT_APPLICABLE"
+                "unitOrigin": null
               },
               {
                 "id": "proc_studydesign",
@@ -666,666 +666,666 @@
           {
             "id": "soa_1",
             "activityId": "act_ic",
-            "encounterId": "SE.V02",
-            "epochId": "EP.2",
-            "mandatory": true
-          },
-          {
-            "id": "soa_2",
-            "activityId": "act_mh",
-            "encounterId": "SE.V02",
-            "epochId": "EP.2",
-            "mandatory": true
-          },
-          {
-            "id": "soa_3",
-            "activityId": "act_ex",
-            "encounterId": "SE.V02",
-            "epochId": "EP.2",
-            "mandatory": true
-          },
-          {
-            "id": "soa_4",
-            "activityId": "act_cm",
-            "encounterId": "SE.V02",
-            "epochId": "EP.2",
-            "mandatory": true
-          },
-          {
-            "id": "soa_5",
-            "activityId": "act_pr",
-            "encounterId": "SE.V02",
-            "epochId": "EP.2",
-            "mandatory": true
-          },
-          {
-            "id": "soa_6",
-            "activityId": "act_vs",
-            "encounterId": "SE.V02",
-            "epochId": "EP.2",
-            "mandatory": true
-          },
-          {
-            "id": "soa_7",
-            "activityId": "act_eg",
-            "encounterId": "SE.V02",
-            "epochId": "EP.2",
-            "mandatory": true
-          },
-          {
-            "id": "soa_8",
-            "activityId": "act_pe",
-            "encounterId": "SE.V02",
-            "epochId": "EP.2",
-            "mandatory": true
-          },
-          {
-            "id": "soa_9",
-            "activityId": "act_lb",
-            "encounterId": "SE.V02",
-            "epochId": "EP.2",
-            "mandatory": true
-          },
-          {
-            "id": "soa_10",
-            "activityId": "act_pk",
-            "encounterId": "SE.V02",
-            "epochId": "EP.2",
-            "mandatory": true
-          },
-          {
-            "id": "soa_11",
-            "activityId": "act_bs",
-            "encounterId": "SE.V02",
-            "epochId": "EP.2",
-            "mandatory": true
-          },
-          {
-            "id": "soa_12",
-            "activityId": "act_ae",
-            "encounterId": "SE.V02",
-            "epochId": "EP.2",
-            "mandatory": true
-          },
-          {
-            "id": "soa_13",
-            "activityId": "act_ds",
-            "encounterId": "SE.V02",
-            "epochId": "EP.2",
-            "mandatory": true
-          },
-          {
-            "id": "soa_14",
-            "activityId": "act_ie.se.v01",
-            "encounterId": "SE.V02",
-            "epochId": "EP.2",
-            "mandatory": true
-          },
-          {
-            "id": "soa_15",
-            "activityId": "act_ic.se.v01",
-            "encounterId": "SE.V02",
-            "epochId": "EP.2",
-            "mandatory": true
-          },
-          {
-            "id": "soa_16",
-            "activityId": "act_mh.se.v01",
-            "encounterId": "SE.V02",
-            "epochId": "EP.2",
-            "mandatory": true
-          },
-          {
-            "id": "soa_17",
-            "activityId": "act_vs.se.v01",
-            "encounterId": "SE.V02",
-            "epochId": "EP.2",
-            "mandatory": true
-          },
-          {
-            "id": "soa_18",
-            "activityId": "act_lb.se.v01",
-            "encounterId": "SE.V02",
-            "epochId": "EP.2",
-            "mandatory": true
-          },
-          {
-            "id": "soa_19",
-            "activityId": "act_vs.se.v02",
-            "encounterId": "SE.V02",
-            "epochId": "EP.2",
-            "mandatory": true
-          },
-          {
-            "id": "soa_20",
-            "activityId": "act_pe.se.v02",
-            "encounterId": "SE.V02",
-            "epochId": "EP.2",
-            "mandatory": true
-          },
-          {
-            "id": "soa_21",
-            "activityId": "act_lb.se.v02",
-            "encounterId": "SE.V02",
-            "epochId": "EP.2",
-            "mandatory": true
-          },
-          {
-            "id": "soa_22",
-            "activityId": "act_pk.se.v02",
-            "encounterId": "SE.V02",
-            "epochId": "EP.2",
-            "mandatory": true
-          },
-          {
-            "id": "soa_23",
-            "activityId": "act_cm.se.v02",
-            "encounterId": "SE.V02",
-            "epochId": "EP.2",
-            "mandatory": true
-          },
-          {
-            "id": "soa_24",
-            "activityId": "act_ae.se.v02",
-            "encounterId": "SE.V02",
-            "epochId": "EP.2",
-            "mandatory": true
-          },
-          {
-            "id": "soa_25",
-            "activityId": "act_bs.se.v02",
-            "encounterId": "SE.V02",
-            "epochId": "EP.2",
-            "mandatory": true
-          },
-          {
-            "id": "soa_26",
-            "activityId": "act_eg.se.v02",
-            "encounterId": "SE.V02",
-            "epochId": "EP.2",
-            "mandatory": true
-          },
-          {
-            "id": "soa_27",
-            "activityId": "act_pr.se.v02",
-            "encounterId": "SE.V02",
-            "epochId": "EP.2",
-            "mandatory": true
-          },
-          {
-            "id": "soa_28",
-            "activityId": "act_vs.se.v03",
-            "encounterId": "SE.V02",
-            "epochId": "EP.2",
-            "mandatory": true
-          },
-          {
-            "id": "soa_29",
-            "activityId": "act_lb.se.v03",
-            "encounterId": "SE.V02",
-            "epochId": "EP.2",
-            "mandatory": true
-          },
-          {
-            "id": "soa_30",
-            "activityId": "act_ae.se.v03",
-            "encounterId": "SE.V02",
-            "epochId": "EP.2",
-            "mandatory": true
-          },
-          {
-            "id": "soa_31",
-            "activityId": "act_ds.se.v03",
-            "encounterId": "SE.V02",
-            "epochId": "EP.2",
-            "mandatory": true
-          },
-          {
-            "id": "soa_32",
-            "activityId": "act_ic",
             "encounterId": "SE.V01",
             "epochId": "EP.1",
             "mandatory": true
           },
           {
-            "id": "soa_33",
+            "id": "soa_2",
             "activityId": "act_dm",
             "encounterId": "SE.V01",
             "epochId": "EP.1",
             "mandatory": true
           },
           {
-            "id": "soa_34",
+            "id": "soa_3",
             "activityId": "act_mh",
             "encounterId": "SE.V01",
             "epochId": "EP.1",
             "mandatory": true
           },
           {
-            "id": "soa_35",
+            "id": "soa_4",
             "activityId": "act_ex",
             "encounterId": "SE.V01",
             "epochId": "EP.1",
             "mandatory": true
           },
           {
-            "id": "soa_36",
+            "id": "soa_5",
             "activityId": "act_cm",
             "encounterId": "SE.V01",
             "epochId": "EP.1",
             "mandatory": true
           },
           {
-            "id": "soa_37",
+            "id": "soa_6",
             "activityId": "act_pr",
             "encounterId": "SE.V01",
             "epochId": "EP.1",
             "mandatory": true
           },
           {
-            "id": "soa_38",
+            "id": "soa_7",
             "activityId": "act_vs",
             "encounterId": "SE.V01",
             "epochId": "EP.1",
             "mandatory": true
           },
           {
-            "id": "soa_39",
+            "id": "soa_8",
             "activityId": "act_eg",
             "encounterId": "SE.V01",
             "epochId": "EP.1",
             "mandatory": true
           },
           {
-            "id": "soa_40",
+            "id": "soa_9",
             "activityId": "act_pe",
             "encounterId": "SE.V01",
             "epochId": "EP.1",
             "mandatory": true
           },
           {
-            "id": "soa_41",
+            "id": "soa_10",
             "activityId": "act_lb",
             "encounterId": "SE.V01",
             "epochId": "EP.1",
             "mandatory": true
           },
           {
-            "id": "soa_42",
+            "id": "soa_11",
             "activityId": "act_pk",
             "encounterId": "SE.V01",
             "epochId": "EP.1",
             "mandatory": true
           },
           {
-            "id": "soa_43",
+            "id": "soa_12",
             "activityId": "act_bs",
             "encounterId": "SE.V01",
             "epochId": "EP.1",
             "mandatory": true
           },
           {
-            "id": "soa_44",
+            "id": "soa_13",
             "activityId": "act_ae",
             "encounterId": "SE.V01",
             "epochId": "EP.1",
             "mandatory": true
           },
           {
-            "id": "soa_45",
+            "id": "soa_14",
             "activityId": "act_ds",
             "encounterId": "SE.V01",
             "epochId": "EP.1",
             "mandatory": true
           },
           {
-            "id": "soa_46",
+            "id": "soa_15",
             "activityId": "act_ie.se.v01",
             "encounterId": "SE.V01",
             "epochId": "EP.1",
             "mandatory": true
           },
           {
-            "id": "soa_47",
+            "id": "soa_16",
             "activityId": "act_ic.se.v01",
             "encounterId": "SE.V01",
             "epochId": "EP.1",
             "mandatory": true
           },
           {
-            "id": "soa_48",
+            "id": "soa_17",
             "activityId": "act_dm.se.v01",
             "encounterId": "SE.V01",
             "epochId": "EP.1",
             "mandatory": true
           },
           {
-            "id": "soa_49",
+            "id": "soa_18",
             "activityId": "act_mh.se.v01",
             "encounterId": "SE.V01",
             "epochId": "EP.1",
             "mandatory": true
           },
           {
-            "id": "soa_50",
+            "id": "soa_19",
             "activityId": "act_vs.se.v01",
             "encounterId": "SE.V01",
             "epochId": "EP.1",
             "mandatory": true
           },
           {
-            "id": "soa_51",
+            "id": "soa_20",
             "activityId": "act_lb.se.v01",
             "encounterId": "SE.V01",
             "epochId": "EP.1",
             "mandatory": true
           },
           {
-            "id": "soa_52",
+            "id": "soa_21",
             "activityId": "act_vs.se.v02",
             "encounterId": "SE.V01",
             "epochId": "EP.1",
             "mandatory": true
           },
           {
-            "id": "soa_53",
+            "id": "soa_22",
             "activityId": "act_pe.se.v02",
             "encounterId": "SE.V01",
             "epochId": "EP.1",
             "mandatory": true
           },
           {
-            "id": "soa_54",
+            "id": "soa_23",
             "activityId": "act_lb.se.v02",
             "encounterId": "SE.V01",
             "epochId": "EP.1",
             "mandatory": true
           },
           {
-            "id": "soa_55",
+            "id": "soa_24",
             "activityId": "act_pk.se.v02",
             "encounterId": "SE.V01",
             "epochId": "EP.1",
             "mandatory": true
           },
           {
-            "id": "soa_56",
+            "id": "soa_25",
             "activityId": "act_cm.se.v02",
             "encounterId": "SE.V01",
             "epochId": "EP.1",
             "mandatory": true
           },
           {
-            "id": "soa_57",
+            "id": "soa_26",
             "activityId": "act_ae.se.v02",
             "encounterId": "SE.V01",
             "epochId": "EP.1",
             "mandatory": true
           },
           {
-            "id": "soa_58",
+            "id": "soa_27",
             "activityId": "act_bs.se.v02",
             "encounterId": "SE.V01",
             "epochId": "EP.1",
             "mandatory": true
           },
           {
-            "id": "soa_59",
+            "id": "soa_28",
             "activityId": "act_eg.se.v02",
             "encounterId": "SE.V01",
             "epochId": "EP.1",
             "mandatory": true
           },
           {
-            "id": "soa_60",
+            "id": "soa_29",
             "activityId": "act_pr.se.v02",
             "encounterId": "SE.V01",
             "epochId": "EP.1",
             "mandatory": true
           },
           {
-            "id": "soa_61",
+            "id": "soa_30",
             "activityId": "act_vs.se.v03",
             "encounterId": "SE.V01",
             "epochId": "EP.1",
             "mandatory": true
           },
           {
-            "id": "soa_62",
+            "id": "soa_31",
             "activityId": "act_lb.se.v03",
             "encounterId": "SE.V01",
             "epochId": "EP.1",
             "mandatory": true
           },
           {
-            "id": "soa_63",
+            "id": "soa_32",
             "activityId": "act_ae.se.v03",
             "encounterId": "SE.V01",
             "epochId": "EP.1",
             "mandatory": true
           },
           {
-            "id": "soa_64",
+            "id": "soa_33",
             "activityId": "act_ds.se.v03",
             "encounterId": "SE.V01",
             "epochId": "EP.1",
+            "mandatory": true
+          },
+          {
+            "id": "soa_34",
+            "activityId": "act_ic",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_35",
+            "activityId": "act_mh",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_36",
+            "activityId": "act_ex",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_37",
+            "activityId": "act_cm",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_38",
+            "activityId": "act_pr",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_39",
+            "activityId": "act_vs",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_40",
+            "activityId": "act_eg",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_41",
+            "activityId": "act_pe",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_42",
+            "activityId": "act_lb",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_43",
+            "activityId": "act_pk",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_44",
+            "activityId": "act_bs",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_45",
+            "activityId": "act_ae",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_46",
+            "activityId": "act_ds",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_47",
+            "activityId": "act_ie.se.v01",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_48",
+            "activityId": "act_ic.se.v01",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_49",
+            "activityId": "act_mh.se.v01",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_50",
+            "activityId": "act_vs.se.v01",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_51",
+            "activityId": "act_lb.se.v01",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_52",
+            "activityId": "act_vs.se.v02",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_53",
+            "activityId": "act_pe.se.v02",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_54",
+            "activityId": "act_lb.se.v02",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_55",
+            "activityId": "act_pk.se.v02",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_56",
+            "activityId": "act_cm.se.v02",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_57",
+            "activityId": "act_ae.se.v02",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_58",
+            "activityId": "act_bs.se.v02",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_59",
+            "activityId": "act_eg.se.v02",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_60",
+            "activityId": "act_pr.se.v02",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_61",
+            "activityId": "act_vs.se.v03",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_62",
+            "activityId": "act_lb.se.v03",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_63",
+            "activityId": "act_ae.se.v03",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
+            "mandatory": true
+          },
+          {
+            "id": "soa_64",
+            "activityId": "act_ds.se.v03",
+            "encounterId": "SE.V02",
+            "epochId": "EP.2",
             "mandatory": true
           },
           {
             "id": "soa_65",
             "activityId": "act_ic",
             "encounterId": "SE.V03",
-            "epochId": "EP.2",
+            "epochId": "EP.3",
             "mandatory": true
           },
           {
             "id": "soa_66",
             "activityId": "act_mh",
             "encounterId": "SE.V03",
-            "epochId": "EP.2",
+            "epochId": "EP.3",
             "mandatory": true
           },
           {
             "id": "soa_67",
             "activityId": "act_ex",
             "encounterId": "SE.V03",
-            "epochId": "EP.2",
+            "epochId": "EP.3",
             "mandatory": true
           },
           {
             "id": "soa_68",
             "activityId": "act_cm",
             "encounterId": "SE.V03",
-            "epochId": "EP.2",
+            "epochId": "EP.3",
             "mandatory": true
           },
           {
             "id": "soa_69",
             "activityId": "act_pr",
             "encounterId": "SE.V03",
-            "epochId": "EP.2",
+            "epochId": "EP.3",
             "mandatory": true
           },
           {
             "id": "soa_70",
             "activityId": "act_vs",
             "encounterId": "SE.V03",
-            "epochId": "EP.2",
+            "epochId": "EP.3",
             "mandatory": true
           },
           {
             "id": "soa_71",
             "activityId": "act_eg",
             "encounterId": "SE.V03",
-            "epochId": "EP.2",
+            "epochId": "EP.3",
             "mandatory": true
           },
           {
             "id": "soa_72",
             "activityId": "act_pe",
             "encounterId": "SE.V03",
-            "epochId": "EP.2",
+            "epochId": "EP.3",
             "mandatory": true
           },
           {
             "id": "soa_73",
             "activityId": "act_lb",
             "encounterId": "SE.V03",
-            "epochId": "EP.2",
+            "epochId": "EP.3",
             "mandatory": true
           },
           {
             "id": "soa_74",
             "activityId": "act_pk",
             "encounterId": "SE.V03",
-            "epochId": "EP.2",
+            "epochId": "EP.3",
             "mandatory": true
           },
           {
             "id": "soa_75",
             "activityId": "act_bs",
             "encounterId": "SE.V03",
-            "epochId": "EP.2",
+            "epochId": "EP.3",
             "mandatory": true
           },
           {
             "id": "soa_76",
             "activityId": "act_ae",
             "encounterId": "SE.V03",
-            "epochId": "EP.2",
+            "epochId": "EP.3",
             "mandatory": true
           },
           {
             "id": "soa_77",
             "activityId": "act_ds",
             "encounterId": "SE.V03",
-            "epochId": "EP.2",
+            "epochId": "EP.3",
             "mandatory": true
           },
           {
             "id": "soa_78",
             "activityId": "act_ie.se.v01",
             "encounterId": "SE.V03",
-            "epochId": "EP.2",
+            "epochId": "EP.3",
             "mandatory": true
           },
           {
             "id": "soa_79",
             "activityId": "act_ic.se.v01",
             "encounterId": "SE.V03",
-            "epochId": "EP.2",
+            "epochId": "EP.3",
             "mandatory": true
           },
           {
             "id": "soa_80",
             "activityId": "act_mh.se.v01",
             "encounterId": "SE.V03",
-            "epochId": "EP.2",
+            "epochId": "EP.3",
             "mandatory": true
           },
           {
             "id": "soa_81",
             "activityId": "act_vs.se.v01",
             "encounterId": "SE.V03",
-            "epochId": "EP.2",
+            "epochId": "EP.3",
             "mandatory": true
           },
           {
             "id": "soa_82",
             "activityId": "act_lb.se.v01",
             "encounterId": "SE.V03",
-            "epochId": "EP.2",
+            "epochId": "EP.3",
             "mandatory": true
           },
           {
             "id": "soa_83",
             "activityId": "act_vs.se.v02",
             "encounterId": "SE.V03",
-            "epochId": "EP.2",
+            "epochId": "EP.3",
             "mandatory": true
           },
           {
             "id": "soa_84",
             "activityId": "act_pe.se.v02",
             "encounterId": "SE.V03",
-            "epochId": "EP.2",
+            "epochId": "EP.3",
             "mandatory": true
           },
           {
             "id": "soa_85",
             "activityId": "act_lb.se.v02",
             "encounterId": "SE.V03",
-            "epochId": "EP.2",
+            "epochId": "EP.3",
             "mandatory": true
           },
           {
             "id": "soa_86",
             "activityId": "act_pk.se.v02",
             "encounterId": "SE.V03",
-            "epochId": "EP.2",
+            "epochId": "EP.3",
             "mandatory": true
           },
           {
             "id": "soa_87",
             "activityId": "act_cm.se.v02",
             "encounterId": "SE.V03",
-            "epochId": "EP.2",
+            "epochId": "EP.3",
             "mandatory": true
           },
           {
             "id": "soa_88",
             "activityId": "act_ae.se.v02",
             "encounterId": "SE.V03",
-            "epochId": "EP.2",
+            "epochId": "EP.3",
             "mandatory": true
           },
           {
             "id": "soa_89",
             "activityId": "act_bs.se.v02",
             "encounterId": "SE.V03",
-            "epochId": "EP.2",
+            "epochId": "EP.3",
             "mandatory": true
           },
           {
             "id": "soa_90",
             "activityId": "act_eg.se.v02",
             "encounterId": "SE.V03",
-            "epochId": "EP.2",
+            "epochId": "EP.3",
             "mandatory": true
           },
           {
             "id": "soa_91",
             "activityId": "act_pr.se.v02",
             "encounterId": "SE.V03",
-            "epochId": "EP.2",
+            "epochId": "EP.3",
             "mandatory": true
           },
           {
             "id": "soa_92",
             "activityId": "act_vs.se.v03",
             "encounterId": "SE.V03",
-            "epochId": "EP.2",
+            "epochId": "EP.3",
             "mandatory": true
           },
           {
             "id": "soa_93",
             "activityId": "act_lb.se.v03",
             "encounterId": "SE.V03",
-            "epochId": "EP.2",
+            "epochId": "EP.3",
             "mandatory": true
           },
           {
             "id": "soa_94",
             "activityId": "act_ae.se.v03",
             "encounterId": "SE.V03",
-            "epochId": "EP.2",
+            "epochId": "EP.3",
             "mandatory": true
           },
           {
             "id": "soa_95",
             "activityId": "act_ds.se.v03",
             "encounterId": "SE.V03",
-            "epochId": "EP.2",
+            "epochId": "EP.3",
             "mandatory": true
           }
         ],

@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:makoto="http://gflow.ai/ns/makoto/v1.0" FileType="Snapshot" FileOID="ODM.STUDY.001.20261111024330" CreationDateTime="2026-11-11T02:43:30Z" ODMVersion="1.3.2">
+<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:makoto="http://gflow.ai/ns/makoto/v1.0" FileType="Snapshot" FileOID="ODM.STUDY.001.20261116182943" CreationDateTime="2026-11-16T18:29:43Z" ODMVersion="1.3.2">
   <Study OID="STUDY.001">
     <GlobalVariables>
       <StudyName>NCT05307783 Benchmark</StudyName>
@@ -409,7 +409,6 @@
         <ItemGroupRef ItemGroupOID="IG.DS" Mandatory="Yes"/>
       </FormDef>
       <ItemGroupDef OID="IG.IE" Name="Inclusion/Exclusion Criteria Group" Repeating="No">
-        <ItemRef ItemOID="ITEM.Age" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.Bleeding Site" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.Screen Failure Status" Mandatory="No"/>
       </ItemGroupDef>
@@ -427,8 +426,6 @@
       </ItemGroupDef>
       <ItemGroupDef OID="IG.EX" Name="Exposure Group" Repeating="Yes">
         <ItemRef ItemOID="ITEM.EmboCube Embolization Gelatin Usage" Mandatory="No"/>
-        <ItemRef ItemOID="ITEM.Adverse Event Reporting" Mandatory="No"/>
-        <ItemRef ItemOID="ITEM.Device Malfunction Reporting" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.DOSE_CALC" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.RDI" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.CUM_DOSE" Mandatory="No"/>
@@ -443,9 +440,8 @@
         <ItemRef ItemOID="ITEM.Washout Requirement" Mandatory="No"/>
       </ItemGroupDef>
       <ItemGroupDef OID="IG.PR" Name="Procedures Group" Repeating="Yes">
-        <ItemRef ItemOID="ITEM.EmboCube Embolization Gelatin Administration" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.Device Malfunction Reporting" Mandatory="No"/>
-        <ItemRef ItemOID="ITEM.Adverse Event Reporting" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.EmboCube Embolization Gelatin Administration" Mandatory="No"/>
       </ItemGroupDef>
       <ItemGroupDef OID="IG.VS" Name="Vital Signs Group" Repeating="Yes">
         <ItemRef ItemOID="ITEM.SYSBP" Mandatory="Yes"/>
@@ -496,26 +492,24 @@
         <ItemRef ItemOID="ITEM.AEDUR" Mandatory="No"/>
       </ItemGroupDef>
       <ItemGroupDef OID="IG.DS" Name="Disposition Group" Repeating="No">
+        <ItemRef ItemOID="ITEM.Adverse Event Reporting" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.Enrollment Status" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.Protocol Deviation" Mandatory="No"/>
-        <ItemRef ItemOID="ITEM.Adverse Event Reporting" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.Analysis Set" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.STUDYDY" Mandatory="No"/>
       </ItemGroupDef>
-      <ItemDef OID="ITEM.Age" Name="Age" DataType="integer">
-        <MeasurementUnitRef MeasurementUnitOID="UNIT.YEARS"/>
-      </ItemDef>
       <ItemDef OID="ITEM.Bleeding Site" Name="Bleeding Site" DataType="text"/>
       <ItemDef OID="ITEM.Screen Failure Status" Name="Screen Failure Status" DataType="text"/>
       <ItemDef OID="ITEM.Consent Status" Name="Consent Status" DataType="text"/>
+      <ItemDef OID="ITEM.Age" Name="Age" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.YEARS"/>
+      </ItemDef>
       <ItemDef OID="ITEM.Sex" Name="Sex" DataType="text" CodeListRef="CL.SEX"/>
       <ItemDef OID="ITEM.Baseline Condition" Name="Baseline Condition" DataType="text"/>
       <ItemDef OID="ITEM.Ischemic Event History" Name="Ischemic Event History" DataType="text"/>
       <ItemDef OID="ITEM.EmboCube Embolization Gelatin Usage" Name="EmboCube Embolization Gelatin Usage" DataType="integer">
         <MeasurementUnitRef MeasurementUnitOID="UNIT.DOSE"/>
       </ItemDef>
-      <ItemDef OID="ITEM.Adverse Event Reporting" Name="Adverse Event Reporting" DataType="text"/>
-      <ItemDef OID="ITEM.Device Malfunction Reporting" Name="Device Malfunction Reporting" DataType="text"/>
       <ItemDef OID="ITEM.Permitted Medications" Name="Permitted Medications" DataType="text"/>
       <ItemDef OID="ITEM.Prohibited Medications" Name="Prohibited Medications" DataType="text"/>
       <ItemDef OID="ITEM.Corticosteroid Restriction" Name="Corticosteroid Restriction" DataType="text"/>
@@ -523,6 +517,7 @@
       <ItemDef OID="ITEM.Washout Requirement" Name="Washout Requirement" DataType="integer">
         <MeasurementUnitRef MeasurementUnitOID="UNIT.DAYS"/>
       </ItemDef>
+      <ItemDef OID="ITEM.Device Malfunction Reporting" Name="Device Malfunction Reporting" DataType="text"/>
       <ItemDef OID="ITEM.EmboCube Embolization Gelatin Administration" Name="EmboCube Embolization Gelatin Administration" DataType="text"/>
       <ItemDef OID="ITEM.SYSBP" Name="Systolic Blood Pressure" DataType="integer">
         <MeasurementUnitRef MeasurementUnitOID="UNIT.PRESSURE"/>
@@ -580,6 +575,7 @@
       <ItemDef OID="ITEM.AESTDAT" Name="Adverse Event Start Date" DataType="date"/>
       <ItemDef OID="ITEM.AEENDAT" Name="Adverse Event End Date" DataType="date"/>
       <ItemDef OID="ITEM.AEOUT" Name="Adverse Event Outcome" DataType="text" CodeListRef="CL.AEOUT"/>
+      <ItemDef OID="ITEM.Adverse Event Reporting" Name="Adverse Event Reporting" DataType="text"/>
       <ItemDef OID="ITEM.Enrollment Status" Name="Enrollment Status" DataType="text"/>
       <ItemDef OID="ITEM.Protocol Deviation" Name="Protocol Deviation" DataType="text"/>
       <ItemDef OID="ITEM.Analysis Set" Name="Analysis Set" DataType="text"/>
@@ -1041,28 +1037,28 @@
       </CodeListDef>
       <ConditionDef OID="COND.SYSBP_GT_DIABP" Name="Systolic BP Greater Than Diastolic BP" Description="Systolic blood pressure must exceed diastolic blood pressure.">
         <FormalExpression Context="Python">ITEM.SYSBP &gt; ITEM.DIABP</FormalExpression>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="11" ProtocolSection="Not Found" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="11" ProtocolSection="Not Found" Confidence="1.0">
           <makoto:SourceQuote>Not explicitly listed in provided snippets for specific measurement values.</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
         </makoto:SourceGrounding>
       </ConditionDef>
       <ConditionDef OID="COND.AE_START_LE_END" Name="Adverse Event Date Chronology" Description="Adverse event resolution date must be on or after onset date.">
         <FormalExpression Context="Python">ITEM.AESTDAT &lt;= ITEM.AEENDAT</FormalExpression>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="14" ProtocolSection="7.1" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="14" ProtocolSection="7.1" Confidence="1.0">
           <makoto:SourceQuote>7.1 Adverse Event definitions</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.1183" y0="0.2047" x1="0.3647" y1="0.2139"/>
         </makoto:SourceGrounding>
       </ConditionDef>
       <ConditionDef OID="COND.AE_GRADE3_DOSE_DELAY" Name="Grade 3+ Toxicity Dose Delay Requirement" Description="Severe toxicity (CTCAE Grade &gt;= 3) mandates dose delay or modification.">
         <FormalExpression Context="Python">ITEM.AETOXGR &gt;= 3</FormalExpression>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="14" ProtocolSection="7.1" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="14" ProtocolSection="7.1" Confidence="1.0">
           <makoto:SourceQuote>7.1 Adverse Event definitions</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.1183" y0="0.2047" x1="0.3647" y1="0.2139"/>
         </makoto:SourceGrounding>
       </ConditionDef>
       <ConditionDef OID="COND.AE_FATAL_DISPOSITION_SYNC" Name="Fatal Adverse Event Study Disposition Sync" Description="Fatal outcome requires matching Death disposition record.">
         <FormalExpression Context="Python">ITEM.AEOUT == '4' or ITEM.AETOXGR == '5'</FormalExpression>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="14" ProtocolSection="7.1" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="14" ProtocolSection="7.1" Confidence="1.0">
           <makoto:SourceQuote>7.1 Adverse Event definitions</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.1183" y0="0.2047" x1="0.3647" y1="0.2139"/>
         </makoto:SourceGrounding>
@@ -1258,9 +1254,9 @@
       </ConditionDef>
       <ConditionDef OID="COND.EXTREME.DOSE.AEDUR" Name="Adverse Event Duration (Days) — Dosing &amp; Exposure Quantitative Plausibility Bounds" Description="Enforces variable extreme bounds [0.0, 10000.0] days for Adverse Event Duration (Days).">
         <FormalExpression Context="Python">0.0 &lt;= ITEM.AEDUR &lt;= 10000.0</FormalExpression>
-        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="5fc98924b2e462b0f900e397e6b34aacb2b663761b056b8bcaf183eb3b8a2a99" PageNumber="3" ProtocolSection="Adverse Event Reporting" Confidence="1.0">
-          <makoto:SourceQuote>7.4 | Adverse Event Reporting Requirements</makoto:SourceQuote>
-          <makoto:BoundingBox x0="0.1464" y0="0.1545" x1="0.8822" y1="0.8919"/>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="5fc98924b2e462b0f900e397e6b34aacb2b663761b056b8bcaf183eb3b8a2a99" PageNumber="14" ProtocolSection="7.1" Confidence="1.0">
+          <makoto:SourceQuote>7.1 Adverse Event definitions</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1183" y0="0.2047" x1="0.3647" y1="0.2139"/>
         </makoto:SourceGrounding>
       </ConditionDef>
       <ConditionDef OID="COND.EXTREME.DOSE.TRTDURD" Name="Total Treatment Exposure Duration (Days) — Dosing &amp; Exposure Quantitative Plausibility Bounds" Description="Enforces variable extreme bounds [0.0, 10000.0] days for Total Treatment Exposure Duration (Days).">
@@ -1278,14 +1274,14 @@
         </makoto:SourceGrounding>
       </ConditionDef>
       <ConditionDef OID="COND.TIME.NO_EVENTS_AFTER_DISPOSITION" Name="Post-Discontinuation / Death Chronology Guard" Description="No clinical assessment, laboratory draw, or dosing date may occur after subject discontinuation/death or in the future.">
-        <FormalExpression Context="Python">STUDY_EVENT.VISDAT &lt;= ITEM.Enrollment Status and STUDY_EVENT.VISDAT &lt;= TODAY()</FormalExpression>
-        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="5fc98924b2e462b0f900e397e6b34aacb2b663761b056b8bcaf183eb3b8a2a99" PageNumber="3" ProtocolSection="Inclusion/Exclusion Criteria" Confidence="1.0">
-          <makoto:SourceQuote>Subjects consented prior to the procedure but who do not receive EmboCube are classified as 'Screen Failures'.</makoto:SourceQuote>
-          <makoto:BoundingBox x0="0.1538" y0="0.1169" x1="0.2418" y1="0.1263"/>
+        <FormalExpression Context="Python">STUDY_EVENT.VISDAT &lt;= ITEM.Adverse Event Reporting and STUDY_EVENT.VISDAT &lt;= TODAY()</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="5fc98924b2e462b0f900e397e6b34aacb2b663761b056b8bcaf183eb3b8a2a99" PageNumber="3" ProtocolSection="Adverse Event Reporting" Confidence="1.0">
+          <makoto:SourceQuote>7.4 | Adverse Event Reporting Requirements</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1464" y0="0.1545" x1="0.8822" y1="0.8919"/>
         </makoto:SourceGrounding>
       </ConditionDef>
       <ConditionDef OID="COND.RECON.ELIGIBILITY_DOSE_RELEASE" Name="Eligibility Confirmation Prior to Study Dosing" Description="Subject cannot receive study treatment on FORM.EX if any Inclusion Criterion is unmet or any Exclusion Criterion is triggered on FORM.IE.">
-        <FormalExpression Context="Python">ITEM.Age == 'ELIGIBLE' and ITEM.EmboCube Embolization Gelatin Usage is not None</FormalExpression>
+        <FormalExpression Context="Python">ITEM.Bleeding Site == 'ELIGIBLE' and ITEM.EmboCube Embolization Gelatin Usage is not None</FormalExpression>
         <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="5fc98924b2e462b0f900e397e6b34aacb2b663761b056b8bcaf183eb3b8a2a99" PageNumber="9" ProtocolSection="Device Preparation and Use" Confidence="1.0">
           <makoto:SourceQuote>This study does not involve submitting subjects to any procedures additional to those performed under normal conditions of use of the device.</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.118" y0="0.6313" x1="0.8511" y1="0.6552"/>
@@ -1323,7 +1319,7 @@
         <ErrorMessage>
           <TranslatedText>Systolic blood pressure must be strictly greater than diastolic blood pressure.</TranslatedText>
         </ErrorMessage>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="11" ProtocolSection="Not Found" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="11" ProtocolSection="Not Found" Confidence="1.0">
           <makoto:SourceQuote>Not explicitly listed in provided snippets for specific measurement values.</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
         </makoto:SourceGrounding>
@@ -1332,7 +1328,7 @@
         <ErrorMessage>
           <TranslatedText>Adverse event resolution date must be on or after adverse event start date.</TranslatedText>
         </ErrorMessage>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="14" ProtocolSection="7.1" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="14" ProtocolSection="7.1" Confidence="1.0">
           <makoto:SourceQuote>7.1 Adverse Event definitions</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.1183" y0="0.2047" x1="0.3647" y1="0.2139"/>
         </makoto:SourceGrounding>
@@ -1341,7 +1337,7 @@
         <ErrorMessage>
           <TranslatedText>CTCAE Grade 3 or higher toxicity reported; requires completion of Dose Modification form.</TranslatedText>
         </ErrorMessage>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="14" ProtocolSection="7.1" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="14" ProtocolSection="7.1" Confidence="1.0">
           <makoto:SourceQuote>7.1 Adverse Event definitions</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.1183" y0="0.2047" x1="0.3647" y1="0.2139"/>
         </makoto:SourceGrounding>
@@ -1350,12 +1346,12 @@
         <ErrorMessage>
           <TranslatedText>Fatal adverse event outcome requires subject disposition to be recorded as Death on FORM.DS.</TranslatedText>
         </ErrorMessage>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="14" ProtocolSection="7.1" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="14" ProtocolSection="7.1" Confidence="1.0">
           <makoto:SourceQuote>7.1 Adverse Event definitions</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.1183" y0="0.2047" x1="0.3647" y1="0.2139"/>
         </makoto:SourceGrounding>
       </EditCheck>
-      <EditCheck OID="EC.EXTREME.AGE.AGE" Name="Age — Adult Clinical Trial Age Plausibility Bounds" Target="FORM.IE.ITEM.Age" ConditionRef="COND.EXTREME.AGE.AGE">
+      <EditCheck OID="EC.EXTREME.AGE.AGE" Name="Age — Adult Clinical Trial Age Plausibility Bounds" Target="FORM.DEMO.ITEM.Age" ConditionRef="COND.EXTREME.AGE.AGE">
         <ErrorMessage>
           <TranslatedText>Variable extreme check failed for Age (ITEM.Age): value must be within [18, 100] years (Adult Clinical Trial Age Plausibility Bounds).</TranslatedText>
         </ErrorMessage>
@@ -1602,9 +1598,9 @@
         <ErrorMessage>
           <TranslatedText>Variable extreme check failed for Adverse Event Duration (Days) (ITEM.AEDUR): value must be within [0.0, 10000.0] days (Dosing &amp; Exposure Quantitative Plausibility Bounds).</TranslatedText>
         </ErrorMessage>
-        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="5fc98924b2e462b0f900e397e6b34aacb2b663761b056b8bcaf183eb3b8a2a99" PageNumber="3" ProtocolSection="Adverse Event Reporting" Confidence="1.0">
-          <makoto:SourceQuote>7.4 | Adverse Event Reporting Requirements</makoto:SourceQuote>
-          <makoto:BoundingBox x0="0.1464" y0="0.1545" x1="0.8822" y1="0.8919"/>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="5fc98924b2e462b0f900e397e6b34aacb2b663761b056b8bcaf183eb3b8a2a99" PageNumber="14" ProtocolSection="7.1" Confidence="1.0">
+          <makoto:SourceQuote>7.1 Adverse Event definitions</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1183" y0="0.2047" x1="0.3647" y1="0.2139"/>
         </makoto:SourceGrounding>
       </EditCheck>
       <EditCheck OID="EC.EXTREME.DOSE.TRTDURD" Name="Total Treatment Exposure Duration (Days) — Dosing &amp; Exposure Quantitative Plausibility Bounds" Target="FORM.EX.ITEM.TRTDURD" ConditionRef="COND.EXTREME.DOSE.TRTDURD">
@@ -1625,13 +1621,13 @@
           <makoto:BoundingBox x0="0.1185" y0="0.7133" x1="0.8507" y1="0.754"/>
         </makoto:SourceGrounding>
       </EditCheck>
-      <EditCheck OID="EC.TIME.NO_EVENTS_AFTER_DISPOSITION" Name="Post-Discontinuation / Death Chronology Guard" Target="FORM.DS.ITEM.Enrollment Status" ConditionRef="COND.TIME.NO_EVENTS_AFTER_DISPOSITION">
+      <EditCheck OID="EC.TIME.NO_EVENTS_AFTER_DISPOSITION" Name="Post-Discontinuation / Death Chronology Guard" Target="FORM.DS.ITEM.Adverse Event Reporting" ConditionRef="COND.TIME.NO_EVENTS_AFTER_DISPOSITION">
         <ErrorMessage>
           <TranslatedText>No clinical assessment, laboratory draw, or dosing date may occur after subject discontinuation/death or in the future.</TranslatedText>
         </ErrorMessage>
-        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="5fc98924b2e462b0f900e397e6b34aacb2b663761b056b8bcaf183eb3b8a2a99" PageNumber="3" ProtocolSection="Inclusion/Exclusion Criteria" Confidence="1.0">
-          <makoto:SourceQuote>Subjects consented prior to the procedure but who do not receive EmboCube are classified as 'Screen Failures'.</makoto:SourceQuote>
-          <makoto:BoundingBox x0="0.1538" y0="0.1169" x1="0.2418" y1="0.1263"/>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="5fc98924b2e462b0f900e397e6b34aacb2b663761b056b8bcaf183eb3b8a2a99" PageNumber="3" ProtocolSection="Adverse Event Reporting" Confidence="1.0">
+          <makoto:SourceQuote>7.4 | Adverse Event Reporting Requirements</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1464" y0="0.1545" x1="0.8822" y1="0.8919"/>
         </makoto:SourceGrounding>
       </EditCheck>
       <EditCheck OID="EC.RECON.ELIGIBILITY_DOSE_RELEASE" Name="Eligibility Confirmation Prior to Study Dosing" Target="FORM.EX.ITEM.EmboCube Embolization Gelatin Usage" ConditionRef="COND.RECON.ELIGIBILITY_DOSE_RELEASE">
@@ -1679,16 +1675,6 @@
           <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
         </makoto:SourceGrounding>
       </EditCheck>
-      <MethodDef OID="MT.PRIMARY_ENDPOINT_SUCCESS" Name="Clinical Success Definition" Type="Derivation">
-        <Description>
-          <TranslatedText>Clinical success is defined as the cessation of bleeding post-embolization and the absence of rebleeding at the treated site requiring reintervention (repeat embolization or additional surgery) within 24 hours.</TranslatedText>
-        </Description>
-        <FormalExpression Context="Boolean">(Bleeding_Stopped == True) AND (Rebleeding_Within_24h == False)</FormalExpression>
-        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="5fc98924b2e462b0f900e397e6b34aacb2b663761b056b8bcaf183eb3b8a2a99" PageNumber="6" ProtocolSection="" Confidence="1.0">
-          <makoto:SourceQuote>clinical success defined as cessation of bleeding post-embolization and absence of rebleeding at the treated site requiring reintervention (repeat embolization or additional surgery) within 24 hours.</makoto:SourceQuote>
-          <makoto:BoundingBox x0="0.1541" y0="0.0872" x1="0.3343" y1="0.0965"/>
-        </makoto:SourceGrounding>
-      </MethodDef>
       <MethodDef OID="MT.BMI" Name="Body Mass Index (BMI) Calculation" Type="Derivation">
         <Description>
           <TranslatedText>Body Mass Index (BMI, kg/m^2) derived from body weight (kg) and height (cm): WEIGHT / ((HEIGHT / 100)^2).</TranslatedText>
@@ -1834,9 +1820,9 @@
           <TranslatedText>CDISC SDTM DM.AGE derivation at date of informed consent: floor((RFICDTC - BRTHDTC) / 365.25).</TranslatedText>
         </Description>
         <FormalExpression Context="Python">int((ITEM.RFICDTC - ITEM.BRTHDTC).days // 365.25)</FormalExpression>
-        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="5fc98924b2e462b0f900e397e6b34aacb2b663761b056b8bcaf183eb3b8a2a99" PageNumber="10" ProtocolSection="Eligibility Criteria" Confidence="1.0">
-          <makoto:SourceQuote>$\geq$ 18 years old</makoto:SourceQuote>
-          <makoto:BoundingBox x0="0.1181" y0="0.0872" x1="0.851" y1="0.1426"/>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="5fc98924b2e462b0f900e397e6b34aacb2b663761b056b8bcaf183eb3b8a2a99" PageNumber="19" ProtocolSection="Informed Consent Requirements" Confidence="1.0">
+          <makoto:SourceQuote>The Investigator must submit and, where necessary, obtain approval from the EC/IRB for all subsequent significant Protocol amendments and significant changes to the Informed Consent form.</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1185" y0="0.7133" x1="0.8507" y1="0.754"/>
         </makoto:SourceGrounding>
       </MethodDef>
       <MethodDef OID="MT.STUDY_DAY" Name="CDISC Study Day (--DY, No-Day-0 Convention)" Type="Derivation">
@@ -1854,9 +1840,9 @@
           <TranslatedText>CDISC ADaM ADAE adverse event duration (AEDUR, days) from onset date (AESTDAT) to resolution date (AEENDAT) inclusive.</TranslatedText>
         </Description>
         <FormalExpression Context="Python">(ITEM.AEENDAT - ITEM.AESTDAT).days + 1</FormalExpression>
-        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="5fc98924b2e462b0f900e397e6b34aacb2b663761b056b8bcaf183eb3b8a2a99" PageNumber="3" ProtocolSection="Adverse Event Reporting" Confidence="1.0">
-          <makoto:SourceQuote>7.4 | Adverse Event Reporting Requirements</makoto:SourceQuote>
-          <makoto:BoundingBox x0="0.1464" y0="0.1545" x1="0.8822" y1="0.8919"/>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="5fc98924b2e462b0f900e397e6b34aacb2b663761b056b8bcaf183eb3b8a2a99" PageNumber="14" ProtocolSection="7.1" Confidence="1.0">
+          <makoto:SourceQuote>7.1 Adverse Event definitions</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1183" y0="0.2047" x1="0.3647" y1="0.2139"/>
         </makoto:SourceGrounding>
       </MethodDef>
       <MethodDef OID="MT.TRTDURD" Name="Total Treatment Exposure Duration (ADSL.TRTDURD)" Type="Derivation">
@@ -1959,38 +1945,32 @@
           <makoto:Node id="EP.3" type="epochGroup">
             <makoto:Position x="1640" y="50"/>
           </makoto:Node>
-          <makoto:Node id="SE.V05" type="visit">
+          <makoto:Node id="SE.V04" type="visit">
             <makoto:Position x="30" y="160"/>
           </makoto:Node>
-          <makoto:Node id="FORM.VS.SE.V05" type="form">
+          <makoto:Node id="FORM.VS.SE.V04" type="form">
             <makoto:Position x="30" y="320"/>
           </makoto:Node>
-          <makoto:Node id="FORM.EX_TUNE.SE.V05" type="form">
+          <makoto:Node id="FORM.LB.SE.V04" type="form">
             <makoto:Position x="30" y="450"/>
           </makoto:Node>
-          <makoto:Node id="FORM.LB.SE.V05" type="form">
+          <makoto:Node id="FORM.AE.SE.V04" type="form">
             <makoto:Position x="30" y="580"/>
           </makoto:Node>
-          <makoto:Node id="FORM.AE.SE.V05" type="form">
-            <makoto:Position x="30" y="710"/>
-          </makoto:Node>
-          <makoto:Node id="SE.V04" type="visit">
+          <makoto:Node id="SE.V05" type="visit">
             <makoto:Position x="330" y="160"/>
           </makoto:Node>
-          <makoto:Node id="FORM.VS.SE.V04" type="form">
+          <makoto:Node id="FORM.VS.SE.V05" type="form">
             <makoto:Position x="330" y="320"/>
           </makoto:Node>
-          <makoto:Node id="FORM.EX_TUNE.SE.V04" type="form">
+          <makoto:Node id="FORM.LB.SE.V05" type="form">
             <makoto:Position x="330" y="450"/>
           </makoto:Node>
-          <makoto:Node id="FORM.LB.SE.V04" type="form">
+          <makoto:Node id="FORM.AE.SE.V05" type="form">
             <makoto:Position x="330" y="580"/>
           </makoto:Node>
-          <makoto:Node id="FORM.AE.SE.V04" type="form">
+          <makoto:Node id="FORM.DS.SE.V05" type="form">
             <makoto:Position x="330" y="710"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.DS.SE.V04" type="form">
-            <makoto:Position x="330" y="840"/>
           </makoto:Node>
         </makoto:Nodes>
         <makoto:Edges>
@@ -2006,7 +1986,7 @@
           <makoto:Edge id="e-FORM.MH.SE.V01-FORM.VS.SE.V01" source="FORM.MH.SE.V01" target="FORM.VS.SE.V01"/>
           <makoto:Edge id="e-FORM.VS.SE.V01-FORM.LB.SE.V01" source="FORM.VS.SE.V01" target="FORM.LB.SE.V01"/>
           <makoto:Edge id="e-SE.V02-SE.V03" source="SE.V02" target="SE.V03"/>
-          <makoto:Edge id="e-SE.V03-SE.V05" source="SE.V03" target="SE.V05"/>
+          <makoto:Edge id="e-SE.V03-SE.V04" source="SE.V03" target="SE.V04"/>
           <makoto:Edge id="e-SE.V02-FORM.VS.SE.V02" source="SE.V02" target="FORM.VS.SE.V02"/>
           <makoto:Edge id="e-FORM.VS.SE.V02-FORM.PE.SE.V02" source="FORM.VS.SE.V02" target="FORM.PE.SE.V02"/>
           <makoto:Edge id="e-FORM.PE.SE.V02-FORM.LB.SE.V02" source="FORM.PE.SE.V02" target="FORM.LB.SE.V02"/>
@@ -2019,16 +1999,14 @@
           <makoto:Edge id="e-SE.V03-FORM.VS.SE.V03" source="SE.V03" target="FORM.VS.SE.V03"/>
           <makoto:Edge id="e-FORM.VS.SE.V03-FORM.LB.SE.V03" source="FORM.VS.SE.V03" target="FORM.LB.SE.V03"/>
           <makoto:Edge id="e-FORM.LB.SE.V03-FORM.AE.SE.V03" source="FORM.LB.SE.V03" target="FORM.AE.SE.V03"/>
-          <makoto:Edge id="e-SE.V05-SE.V04" source="SE.V05" target="SE.V04"/>
-          <makoto:Edge id="e-SE.V05-FORM.VS.SE.V05" source="SE.V05" target="FORM.VS.SE.V05"/>
-          <makoto:Edge id="e-FORM.VS.SE.V05-FORM.EX_TUNE.SE.V05" source="FORM.VS.SE.V05" target="FORM.EX_TUNE.SE.V05"/>
-          <makoto:Edge id="e-FORM.EX_TUNE.SE.V05-FORM.LB.SE.V05" source="FORM.EX_TUNE.SE.V05" target="FORM.LB.SE.V05"/>
-          <makoto:Edge id="e-FORM.LB.SE.V05-FORM.AE.SE.V05" source="FORM.LB.SE.V05" target="FORM.AE.SE.V05"/>
+          <makoto:Edge id="e-SE.V04-SE.V05" source="SE.V04" target="SE.V05"/>
           <makoto:Edge id="e-SE.V04-FORM.VS.SE.V04" source="SE.V04" target="FORM.VS.SE.V04"/>
-          <makoto:Edge id="e-FORM.VS.SE.V04-FORM.EX_TUNE.SE.V04" source="FORM.VS.SE.V04" target="FORM.EX_TUNE.SE.V04"/>
-          <makoto:Edge id="e-FORM.EX_TUNE.SE.V04-FORM.LB.SE.V04" source="FORM.EX_TUNE.SE.V04" target="FORM.LB.SE.V04"/>
+          <makoto:Edge id="e-FORM.VS.SE.V04-FORM.LB.SE.V04" source="FORM.VS.SE.V04" target="FORM.LB.SE.V04"/>
           <makoto:Edge id="e-FORM.LB.SE.V04-FORM.AE.SE.V04" source="FORM.LB.SE.V04" target="FORM.AE.SE.V04"/>
-          <makoto:Edge id="e-FORM.AE.SE.V04-FORM.DS.SE.V04" source="FORM.AE.SE.V04" target="FORM.DS.SE.V04"/>
+          <makoto:Edge id="e-SE.V05-FORM.VS.SE.V05" source="SE.V05" target="FORM.VS.SE.V05"/>
+          <makoto:Edge id="e-FORM.VS.SE.V05-FORM.LB.SE.V05" source="FORM.VS.SE.V05" target="FORM.LB.SE.V05"/>
+          <makoto:Edge id="e-FORM.LB.SE.V05-FORM.AE.SE.V05" source="FORM.LB.SE.V05" target="FORM.AE.SE.V05"/>
+          <makoto:Edge id="e-FORM.AE.SE.V05-FORM.DS.SE.V05" source="FORM.AE.SE.V05" target="FORM.DS.SE.V05"/>
         </makoto:Edges>
       </makoto:VisualLayout>
     </MetaDataVersion>

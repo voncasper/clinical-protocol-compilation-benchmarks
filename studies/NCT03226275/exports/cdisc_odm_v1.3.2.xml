@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:makoto="http://gflow.ai/ns/makoto/v1.0" FileType="Snapshot" FileOID="ODM.STUDY.001.20261110234821" CreationDateTime="2026-11-10T23:48:21Z" ODMVersion="1.3.2">
+<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:makoto="http://gflow.ai/ns/makoto/v1.0" FileType="Snapshot" FileOID="ODM.STUDY.001.20261116182739" CreationDateTime="2026-11-16T18:27:39Z" ODMVersion="1.3.2">
   <Study OID="STUDY.001">
     <GlobalVariables>
       <StudyName>NCT03226275 Benchmark</StudyName>
@@ -1109,7 +1109,7 @@
       </CodeListDef>
       <ConditionDef OID="COND.SYSBP_GT_DIABP" Name="Systolic BP Greater Than Diastolic BP" Description="Systolic blood pressure must exceed diastolic blood pressure.">
         <FormalExpression Context="Python">ITEM.SYSBP &gt; ITEM.DIABP</FormalExpression>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="52" ProtocolSection="Discharge Procedures" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="52" ProtocolSection="Discharge Procedures" Confidence="1.0">
           <makoto:SourceQuote>At the day of discharge, a blood sample for determination of hematology and biochemistry will be taken and a urinalysis will be performed. Serum pregnancy test will be performed for females of childbearing potential only. Physical examination, ECG, and chest X-ray will be performed.</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.1647" y0="0.4744" x1="0.8876" y1="0.5404"/>
         </makoto:SourceGrounding>
@@ -1123,21 +1123,21 @@
       </ConditionDef>
       <ConditionDef OID="COND.AE_START_LE_END" Name="Adverse Event Date Chronology" Description="Adverse event resolution date must be on or after onset date.">
         <FormalExpression Context="Python">ITEM.AESTDAT &lt;= ITEM.AEENDAT</FormalExpression>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="59" ProtocolSection="Monitoring of Subjects with Adverse Events" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="59" ProtocolSection="Monitoring of Subjects with Adverse Events" Confidence="1.0">
           <makoto:SourceQuote>7.3.1.6 Monitoring of Subjects with Adverse Events</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.1185" y0="0.5581" x1="0.7196" y1="0.574"/>
         </makoto:SourceGrounding>
       </ConditionDef>
       <ConditionDef OID="COND.AE_GRADE3_DOSE_DELAY" Name="Grade 3+ Toxicity Dose Delay Requirement" Description="Severe toxicity (CTCAE Grade &gt;= 3) mandates dose delay or modification.">
         <FormalExpression Context="Python">ITEM.AETOXGR &gt;= 3</FormalExpression>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="59" ProtocolSection="Monitoring of Subjects with Adverse Events" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="59" ProtocolSection="Monitoring of Subjects with Adverse Events" Confidence="1.0">
           <makoto:SourceQuote>7.3.1.6 Monitoring of Subjects with Adverse Events</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.1185" y0="0.5581" x1="0.7196" y1="0.574"/>
         </makoto:SourceGrounding>
       </ConditionDef>
       <ConditionDef OID="COND.AE_FATAL_DISPOSITION_SYNC" Name="Fatal Adverse Event Study Disposition Sync" Description="Fatal outcome requires matching Death disposition record.">
         <FormalExpression Context="Python">ITEM.AEOUT == '4' or ITEM.AETOXGR == '5'</FormalExpression>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="59" ProtocolSection="Monitoring of Subjects with Adverse Events" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="59" ProtocolSection="Monitoring of Subjects with Adverse Events" Confidence="1.0">
           <makoto:SourceQuote>7.3.1.6 Monitoring of Subjects with Adverse Events</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.1185" y0="0.5581" x1="0.7196" y1="0.574"/>
         </makoto:SourceGrounding>
@@ -1447,7 +1447,7 @@
         <ErrorMessage>
           <TranslatedText>Systolic blood pressure must be strictly greater than diastolic blood pressure.</TranslatedText>
         </ErrorMessage>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="52" ProtocolSection="Discharge Procedures" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="52" ProtocolSection="Discharge Procedures" Confidence="1.0">
           <makoto:SourceQuote>At the day of discharge, a blood sample for determination of hematology and biochemistry will be taken and a urinalysis will be performed. Serum pregnancy test will be performed for females of childbearing potential only. Physical examination, ECG, and chest X-ray will be performed.</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.1647" y0="0.4744" x1="0.8876" y1="0.5404"/>
         </makoto:SourceGrounding>
@@ -1465,7 +1465,7 @@
         <ErrorMessage>
           <TranslatedText>Adverse event resolution date must be on or after adverse event start date.</TranslatedText>
         </ErrorMessage>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="59" ProtocolSection="Monitoring of Subjects with Adverse Events" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="59" ProtocolSection="Monitoring of Subjects with Adverse Events" Confidence="1.0">
           <makoto:SourceQuote>7.3.1.6 Monitoring of Subjects with Adverse Events</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.1185" y0="0.5581" x1="0.7196" y1="0.574"/>
         </makoto:SourceGrounding>
@@ -1474,7 +1474,7 @@
         <ErrorMessage>
           <TranslatedText>CTCAE Grade 3 or higher toxicity reported; requires completion of Dose Modification form.</TranslatedText>
         </ErrorMessage>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="59" ProtocolSection="Monitoring of Subjects with Adverse Events" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="59" ProtocolSection="Monitoring of Subjects with Adverse Events" Confidence="1.0">
           <makoto:SourceQuote>7.3.1.6 Monitoring of Subjects with Adverse Events</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.1185" y0="0.5581" x1="0.7196" y1="0.574"/>
         </makoto:SourceGrounding>
@@ -1483,7 +1483,7 @@
         <ErrorMessage>
           <TranslatedText>Fatal adverse event outcome requires subject disposition to be recorded as Death on FORM.DS.</TranslatedText>
         </ErrorMessage>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="59" ProtocolSection="Monitoring of Subjects with Adverse Events" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="59" ProtocolSection="Monitoring of Subjects with Adverse Events" Confidence="1.0">
           <makoto:SourceQuote>7.3.1.6 Monitoring of Subjects with Adverse Events</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.1185" y0="0.5581" x1="0.7196" y1="0.574"/>
         </makoto:SourceGrounding>
@@ -1880,9 +1880,9 @@
           <TranslatedText>BMI formula: WEIGHT / ((HEIGHT / 100) ^ 2)</TranslatedText>
         </Description>
         <FormalExpression Context="Python">round(ITEM.WEIGHT / ((ITEM.HEIGHT / 100) ** 2), 1)</FormalExpression>
-        <makoto:SourceGrounding DocumentType="SAP" DocumentHash="8e750f3fd37823118b4b4cb42e9b9f76bb777048f960621203bdff16d74962b4" PageNumber="8" ProtocolSection="Section 5.2.1. Baseline Demographic Characteristics" Confidence="1.0">
-          <makoto:SourceQuote>plasma concentration-time curve from time 0 to infinity | | AUCextra | extrapolated part of AUC0- f calculated by Clast/λ z , expressed in percent | | BE | bioequivalence | | BMI | body mass index | |</makoto:SourceQuote>
-          <makoto:BoundingBox x0="0.1325" y0="0.1403" x1="0.81" y1="0.8777"/>
+        <makoto:SourceGrounding DocumentType="SAP" DocumentHash="8e750f3fd37823118b4b4cb42e9b9f76bb777048f960621203bdff16d74962b4" PageNumber="9" ProtocolSection="Section 5.2.1. Baseline Demographic Characteristics" Confidence="1.0">
+          <makoto:SourceQuote>[Pg 9] e final analysis of data collected for protocol EMR200006-001. Results of the analyses described in this SAP will be included in the Clinical Study Report (CSR). Additionally, the planned analy</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1" y0="0.15" x1="0.9" y1="0.25"/>
         </makoto:SourceGrounding>
       </MethodDef>
       <MethodDef OID="MT.ANC" Name="Absolute Neutrophil Count Calculation" Type="Derivation">
@@ -1890,19 +1890,9 @@
           <TranslatedText>ANC calculation: WBC * (NEUT / 100)</TranslatedText>
         </Description>
         <FormalExpression Context="Python">round(ITEM.WBC * (ITEM.NEUT / 100), 2)</FormalExpression>
-        <makoto:SourceGrounding DocumentType="SAP" DocumentHash="8e750f3fd37823118b4b4cb42e9b9f76bb777048f960621203bdff16d74962b4" PageNumber="44" ProtocolSection="Section 7.1. Adverse Events &amp; Laboratory Safety Evaluation" Confidence="1.0">
-          <makoto:SourceQuote>| | Parameter Dimension/Unit | |-------------|-----------------------------| | Neutrophils | 10 9 /L and % | | Monocytes | 10 9 /L and % | | Lymphocytes | 10 9 /L and % |</makoto:SourceQuote>
-          <makoto:BoundingBox x0="0.242" y0="0.4436" x1="0.7162" y1="0.5236"/>
-        </makoto:SourceGrounding>
-      </MethodDef>
-      <MethodDef OID="MT.NAME" Name="Absolute Bioavailability Estimation" Type="Derivation">
-        <Description>
-          <TranslatedText>Estimation of the fraction of the drug that reaches systemic circulation after oral administration.</TranslatedText>
-        </Description>
-        <FormalExpression Context="Python">bioavailability = (AUC_oral / Dose_oral) / (AUC_IV / Dose_IV)</FormalExpression>
-        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="6d342d6d8f12696c4e5eeb559f327051b69062d35144ffe63ea9e84fd9abb534" PageNumber="19" ProtocolSection="" Confidence="1.0">
-          <makoto:SourceQuote>Absolute bioavailability has been estimated to be between 64% and 90%.</makoto:SourceQuote>
-          <makoto:BoundingBox x0="0.118" y0="0.0952" x1="0.5342" y1="0.1111"/>
+        <makoto:SourceGrounding DocumentType="SAP" DocumentHash="8e750f3fd37823118b4b4cb42e9b9f76bb777048f960621203bdff16d74962b4" PageNumber="34" ProtocolSection="Section 7.1. Adverse Events &amp; Laboratory Safety Evaluation" Confidence="1.0">
+          <makoto:SourceQuote>[Pg 34] Bisoprolol Amlodipine 5 mg/5 mg Combination Tablets Two-period Crossover Bioequivalence EMR200006-001 Final Version 2.2 C O N F I D E N T I A L I N F O R M A T I O N 34/36 Platelet distributio</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1" y0="0.15" x1="0.9" y1="0.25"/>
         </makoto:SourceGrounding>
       </MethodDef>
       <MethodDef OID="MT.BSA" Name="Body Surface Area (BSA — Mosteller Formula)" Type="Derivation">
@@ -2296,16 +2286,12 @@
           <makoto:Node id="FORM.DS.SE.V08" type="form">
             <makoto:Position x="330" y="710"/>
           </makoto:Node>
-          <makoto:Node id="EP.4" type="epochGroup">
-            <makoto:Position x="3280" y="50"/>
-          </makoto:Node>
         </makoto:Nodes>
         <makoto:Edges>
           <makoto:Edge id="e-ARM.1-SE.V01" source="ARM.1" target="SE.V01"/>
           <makoto:Edge id="e-ARM.2-SE.V01" source="ARM.2" target="SE.V01"/>
           <makoto:Edge id="e-epoch-EP.1-EP.2" source="EP.1" target="EP.2" animated="true"/>
           <makoto:Edge id="e-epoch-EP.2-EP.3" source="EP.2" target="EP.3" animated="true"/>
-          <makoto:Edge id="e-epoch-EP.3-EP.4" source="EP.3" target="EP.4" animated="true"/>
           <makoto:Edge id="e-SE.V01-CYCLE_GROUP.EP.2" source="SE.V01" target="CYCLE_GROUP.EP.2"/>
           <makoto:Edge id="e-SE.V03-SE.V04" source="SE.V03" target="SE.V04"/>
           <makoto:Edge id="e-SE.V04-SE.V05" source="SE.V04" target="SE.V05"/>

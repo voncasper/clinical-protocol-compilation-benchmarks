@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:makoto="http://gflow.ai/ns/makoto/v1.0" FileType="Snapshot" FileOID="ODM.STUDY.001.20261111015421" CreationDateTime="2026-11-11T01:54:21Z" ODMVersion="1.3.2">
+<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:makoto="http://gflow.ai/ns/makoto/v1.0" FileType="Snapshot" FileOID="ODM.STUDY.001.20261116182921" CreationDateTime="2026-11-16T18:29:21Z" ODMVersion="1.3.2">
   <Study OID="STUDY.001">
     <GlobalVariables>
       <StudyName>NCT07515196 Benchmark</StudyName>
@@ -1028,21 +1028,21 @@
       </CodeListDef>
       <ConditionDef OID="COND.SYSBP_GT_DIABP" Name="Systolic BP Greater Than Diastolic BP" Description="Systolic blood pressure must exceed diastolic blood pressure.">
         <FormalExpression Context="Python">ITEM.SYSBP &gt; ITEM.DIABP</FormalExpression>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="2" ProtocolSection="Study Objective" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="2" ProtocolSection="Study Objective" Confidence="1.0">
           <makoto:SourceQuote>Protocol 2: Sedative Effect of Music Listening on Pain Induced by a Thermal Stimulus (Cold Pressor Test)</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.118" y0="0.0947" x1="0.8874" y1="0.1301"/>
         </makoto:SourceGrounding>
       </ConditionDef>
       <ConditionDef OID="COND.AE_START_LE_END" Name="Adverse Event Date Chronology" Description="Adverse event resolution date must be on or after onset date.">
         <FormalExpression Context="Python">ITEM.AESTDAT &lt;= ITEM.AEENDAT</FormalExpression>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="8" ProtocolSection="N/A" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="8" ProtocolSection="N/A" Confidence="1.0">
           <makoto:SourceQuote>Not explicitly defined in the provided text.</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
         </makoto:SourceGrounding>
       </ConditionDef>
       <ConditionDef OID="COND.AE_FATAL_DISPOSITION_SYNC" Name="Fatal Adverse Event Study Disposition Sync" Description="Fatal outcome requires matching Death disposition record.">
         <FormalExpression Context="Python">ITEM.AEOUT == '4' or ITEM.AETOXGR == '5'</FormalExpression>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="8" ProtocolSection="N/A" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="8" ProtocolSection="N/A" Confidence="1.0">
           <makoto:SourceQuote>Not explicitly defined in the provided text.</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
         </makoto:SourceGrounding>
@@ -1303,7 +1303,7 @@
         <ErrorMessage>
           <TranslatedText>Systolic blood pressure must be strictly greater than diastolic blood pressure.</TranslatedText>
         </ErrorMessage>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="2" ProtocolSection="Study Objective" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="2" ProtocolSection="Study Objective" Confidence="1.0">
           <makoto:SourceQuote>Protocol 2: Sedative Effect of Music Listening on Pain Induced by a Thermal Stimulus (Cold Pressor Test)</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.118" y0="0.0947" x1="0.8874" y1="0.1301"/>
         </makoto:SourceGrounding>
@@ -1312,7 +1312,7 @@
         <ErrorMessage>
           <TranslatedText>Adverse event resolution date must be on or after adverse event start date.</TranslatedText>
         </ErrorMessage>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="8" ProtocolSection="N/A" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="8" ProtocolSection="N/A" Confidence="1.0">
           <makoto:SourceQuote>Not explicitly defined in the provided text.</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
         </makoto:SourceGrounding>
@@ -1321,7 +1321,7 @@
         <ErrorMessage>
           <TranslatedText>Fatal adverse event outcome requires subject disposition to be recorded as Death on FORM.DS.</TranslatedText>
         </ErrorMessage>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="8" ProtocolSection="N/A" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="8" ProtocolSection="N/A" Confidence="1.0">
           <makoto:SourceQuote>Not explicitly defined in the provided text.</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
         </makoto:SourceGrounding>
@@ -1856,52 +1856,52 @@
             <makoto:Position x="960" y="50"/>
           </makoto:Node>
           <makoto:Node id="SE.V02" type="visit">
-            <makoto:Position x="30" y="160"/>
+            <makoto:Position x="40" y="160"/>
           </makoto:Node>
           <makoto:Node id="FORM.VS.SE.V02" type="form">
-            <makoto:Position x="30" y="320"/>
+            <makoto:Position x="40" y="320"/>
           </makoto:Node>
           <makoto:Node id="FORM.PE.SE.V02" type="form">
-            <makoto:Position x="30" y="450"/>
+            <makoto:Position x="40" y="450"/>
           </makoto:Node>
           <makoto:Node id="FORM.LB.SE.V02" type="form">
-            <makoto:Position x="30" y="580"/>
+            <makoto:Position x="40" y="580"/>
           </makoto:Node>
           <makoto:Node id="FORM.PK.SE.V02" type="form">
-            <makoto:Position x="30" y="710"/>
+            <makoto:Position x="40" y="710"/>
           </makoto:Node>
           <makoto:Node id="FORM.CM.SE.V02" type="form">
-            <makoto:Position x="30" y="840"/>
+            <makoto:Position x="40" y="840"/>
           </makoto:Node>
           <makoto:Node id="FORM.AE.SE.V02" type="form">
-            <makoto:Position x="30" y="970"/>
+            <makoto:Position x="40" y="970"/>
           </makoto:Node>
           <makoto:Node id="FORM.BS.SE.V02" type="form">
-            <makoto:Position x="30" y="1100"/>
+            <makoto:Position x="40" y="1100"/>
           </makoto:Node>
           <makoto:Node id="FORM.EG.SE.V02" type="form">
-            <makoto:Position x="30" y="1230"/>
+            <makoto:Position x="40" y="1230"/>
           </makoto:Node>
           <makoto:Node id="FORM.PR.SE.V02" type="form">
-            <makoto:Position x="30" y="1360"/>
-          </makoto:Node>
-          <makoto:Node id="SE.V03" type="visit">
-            <makoto:Position x="330" y="160"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.VS.SE.V03" type="form">
-            <makoto:Position x="330" y="320"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.LB.SE.V03" type="form">
-            <makoto:Position x="330" y="450"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.AE.SE.V03" type="form">
-            <makoto:Position x="330" y="580"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.DS.SE.V03" type="form">
-            <makoto:Position x="330" y="710"/>
+            <makoto:Position x="40" y="1360"/>
           </makoto:Node>
           <makoto:Node id="EP.3" type="epochGroup">
-            <makoto:Position x="1640" y="50"/>
+            <makoto:Position x="1360" y="50"/>
+          </makoto:Node>
+          <makoto:Node id="SE.V03" type="visit">
+            <makoto:Position x="40" y="160"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.VS.SE.V03" type="form">
+            <makoto:Position x="40" y="320"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.LB.SE.V03" type="form">
+            <makoto:Position x="40" y="450"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.AE.SE.V03" type="form">
+            <makoto:Position x="40" y="580"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.DS.SE.V03" type="form">
+            <makoto:Position x="40" y="710"/>
           </makoto:Node>
         </makoto:Nodes>
         <makoto:Edges>

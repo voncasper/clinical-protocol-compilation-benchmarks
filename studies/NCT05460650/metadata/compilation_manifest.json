@@ -16,7 +16,7 @@
   "alternate_cdn_urls": [],
   "compilation_mode": "fresh_single_pass_no_resume",
   "compilation_elapsed_seconds": 865.17,
-  "finalized_at_utc": "2026-11-12T12:55:29.862258+00:00",
+  "finalized_at_utc": "2026-11-16T18:40:08.675878+00:00",
   "telemetry": {
     "event_count": 4,
     "form_count": 15,
@@ -28,40 +28,40 @@
   },
   "artifacts": {
     "exports/rave_als.xlsx": {
-      "size_bytes": 27868,
-      "sha256": "9a8d5ac4ad47d9a9b76d2f8674230fdf2fda49c10c88d585ef639f7f71a240a5"
+      "size_bytes": 27722,
+      "sha256": "c6a0fca8570f4cbe008388749796d1e83b0497ba77d0ed41d6a63fc240024ec9"
     },
     "exports/veeva_cdms.xml": {
-      "size_bytes": 43539,
-      "sha256": "7432b230ebcb24aaa6a76caa3ec01cb1507e3984c9db5c47883a45a020bb13c8"
+      "size_bytes": 43170,
+      "sha256": "703b68eed575fd52c4b76fd302eafd362af1ff33e9d245b4531dee35c259c1e4"
     },
     "exports/cdisc_odm_v1.3.2.xml": {
-      "size_bytes": 110553,
-      "sha256": "b7c643bafb64ac92c73ce1b23a1fe4e7254aeec019d582c9741dd38c1fc3057f"
+      "size_bytes": 110409,
+      "sha256": "a2476092614fd092e941ae26d1328244f425b612a03a00ad9f2f6a17896e05c9"
     },
     "exports/transcelerate_usdm_v3.0.json": {
-      "size_bytes": 46182,
-      "sha256": "9692b62e1b439a64d2e8754cd5297282918ecbd887ac0f7620f2224585f05ff9"
+      "size_bytes": 45485,
+      "sha256": "11273124c546dcab4b761fc4477e56db2b32df9b153e94e426e8113154f92950"
     },
     "metadata/provenance_matrix_21cfr11.xlsx": {
-      "size_bytes": 23993,
-      "sha256": "d0f3218574ed40c1bbde9437b72d7ee837b5857b51532f70ce75f9c7c9f3a417"
+      "size_bytes": 23440,
+      "sha256": "eab0b1fa7949b22dd2f98333fe16251ca70fc260a56593391f3665a9c3d11f4f"
     },
     "visuals/canvas_standard.svg": {
-      "size_bytes": 3706375,
-      "sha256": "46088f894a8b29886ab13c429cc7ba639edb909a4ed762c839f61b4fe324fdb8"
+      "size_bytes": 3706358,
+      "sha256": "060c09021f56e2c8852cb87e83170e9a980e3e1cb10002847b60eb3bcc3a6bfe"
     },
     "visuals/canvas_standard.pdf": {
-      "size_bytes": 589537,
-      "sha256": "dd02d3ccb6c91437c81ff2add0ba47d41416f21ffbe4bdbff1c85308b439b6ed"
+      "size_bytes": 561865,
+      "sha256": "ec6c28d9c63f6345118965c5d1bb68f136bb0f79b54d3ef5642f7c6d128676e4"
     },
     "visuals/canvas_mindmap.svg": {
-      "size_bytes": 3289575,
-      "sha256": "0d78773daa59747f284ff3b56eaaeacb293fa32946cf6f03f3a9702b75646098"
+      "size_bytes": 3289569,
+      "sha256": "e8cff928420381606df62f0d2e3e0c2f36fa01bf3f0ff469a0b488ad783ea194"
     },
     "visuals/canvas_mindmap.pdf": {
-      "size_bytes": 339747,
-      "sha256": "ad16ac687186ec613789ac714980ae089764e78358f894ee704bde842494661b"
+      "size_bytes": 337798,
+      "sha256": "e3d7ee817bd667f105c8967de0495f805528d1e4868ffca6eb7d7d56a07145c0"
     }
   }
 }

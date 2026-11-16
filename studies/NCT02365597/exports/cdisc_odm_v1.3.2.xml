@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:makoto="http://gflow.ai/ns/makoto/v1.0" FileType="Snapshot" FileOID="ODM.STUDY.001.20261111014151" CreationDateTime="2026-11-11T01:41:51Z" ODMVersion="1.3.2">
+<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:makoto="http://gflow.ai/ns/makoto/v1.0" FileType="Snapshot" FileOID="ODM.STUDY.001.20261116182858" CreationDateTime="2026-11-16T18:28:58Z" ODMVersion="1.3.2">
   <Study OID="STUDY.001">
     <GlobalVariables>
       <StudyName>NCT02365597 Benchmark</StudyName>
@@ -358,7 +358,7 @@
         <FormRef FormOID="FORM.LB" Mandatory="Yes"/>
         <FormRef FormOID="FORM.AE" Mandatory="Yes"/>
       </StudyEventDef>
-      <StudyEventDef OID="SE.TREATMENT" Name="On-Treatment Assessment Visit (Day 15)" Repeating="Yes" Type="Scheduled">
+      <StudyEventDef OID="SE.TREATMENT" Name="On-Treatment Assessment Visit (Day 15)" Repeating="No" Type="Scheduled">
         <FormRef FormOID="FORM.EX" Mandatory="Yes"/>
         <FormRef FormOID="FORM.CM" Mandatory="Yes"/>
         <FormRef FormOID="FORM.PR" Mandatory="Yes"/>
@@ -463,7 +463,6 @@
         <ItemRef ItemOID="ITEM.Serum Phosphate Level" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.Renal Function Status" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.Calcium Level" Mandatory="No"/>
-        <ItemRef ItemOID="ITEM.ANC" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.BMI" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.BSA" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.BSA_DUBOIS" Mandatory="No"/>
@@ -498,8 +497,7 @@
         <ItemRef ItemOID="ITEM.CRCL" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.EGFR" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.BUN_CREAT_RATIO" Mandatory="No"/>
-        <ItemRef ItemOID="ITEM.ALC" Mandatory="No"/>
-        <ItemRef ItemOID="ITEM.NLR" Mandatory="No"/>
+        <ItemRef ItemOID="ITEM.ANC" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.ULN_RATIO" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.AST_ALT_RATIO" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.BILI_ULN_RATIO" Mandatory="No"/>
@@ -569,10 +567,6 @@
       <ItemDef OID="ITEM.Renal Function Status" Name="Renal Function Status" DataType="text"/>
       <ItemDef OID="ITEM.Calcium Level" Name="Calcium Level" DataType="float">
         <MeasurementUnitRef MeasurementUnitOID="UNIT.MG_DL"/>
-      </ItemDef>
-      <ItemDef OID="ITEM.ANC" Name="Absolute Neutrophil Count" DataType="float" MethodOID="MT.ANC">
-        <MeasurementUnitRef MeasurementUnitOID="UNIT.CELL_COUNT"/>
-        <Alias Context="LOINC" Name="751-8"/>
       </ItemDef>
       <ItemDef OID="ITEM.ECG_12Lead" Name="12-lead ECG" DataType="text"/>
       <ItemDef OID="ITEM.QTcF_Interval" Name="QTcF Interval" DataType="float">
@@ -669,11 +663,9 @@
       <ItemDef OID="ITEM.BUN_CREAT_RATIO" Name="BUN to Creatinine Ratio" DataType="float" MethodOID="MT.BUN_CREAT_RATIO">
         <MeasurementUnitRef MeasurementUnitOID="UNIT.RATIO"/>
       </ItemDef>
-      <ItemDef OID="ITEM.ALC" Name="Absolute Lymphocyte Count (ALC, 10^9/L)" DataType="float" MethodOID="MT.ALC">
+      <ItemDef OID="ITEM.ANC" Name="Absolute Neutrophil Count (ANC, 10^9/L)" DataType="float" MethodOID="MT.ANC">
         <MeasurementUnitRef MeasurementUnitOID="UNIT.CELL_COUNT"/>
-      </ItemDef>
-      <ItemDef OID="ITEM.NLR" Name="Neutrophil-to-Lymphocyte Ratio (NLR)" DataType="float" MethodOID="MT.NLR">
-        <MeasurementUnitRef MeasurementUnitOID="UNIT.RATIO"/>
+        <Alias Context="LOINC" Name="751-8"/>
       </ItemDef>
       <ItemDef OID="ITEM.ULN_RATIO" Name="Hepatic Transaminase ULN Multiple (x ULN)" DataType="float" MethodOID="MT.ULN_RATIO">
         <MeasurementUnitRef MeasurementUnitOID="UNIT.RATIO"/>
@@ -1124,9 +1116,9 @@
       </CodeListDef>
       <ConditionDef OID="COND.ANC_SAFETY_CLEARANCE" Name="Absolute Neutrophil Count Safety Clearance" Description="Absolute Neutrophil Count must be &gt;= 1.0 x 10^9/L to initiate cycle.">
         <FormalExpression Context="Python">ITEM.ANC &gt;= 1.0</FormalExpression>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="64" ProtocolSection="Safety Monitoring" Confidence="1.0">
-          <makoto:SourceQuote>Absolute neutrophil count (ANC) &gt;1500/mm 3</makoto:SourceQuote>
-          <makoto:BoundingBox x0="0.2531" y0="0.0751" x1="0.6482" y1="0.0912"/>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="75af2dbccea681e4d4c1a38503187da261c9c03c4f10a2f080482ac6269f7eb7" PageNumber="144" ProtocolSection="Eligibility Criteria" Confidence="1.0">
+          <makoto:SourceQuote>hemoglobin level (&lt;10 g/dL versus ≥10 g/dL)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1178" y0="0.1104" x1="0.8873" y1="0.2393"/>
         </makoto:SourceGrounding>
       </ConditionDef>
       <ConditionDef OID="COND.AE_START_LE_END" Name="Adverse Event Date Chronology" Description="Adverse event resolution date must be on or after onset date.">
@@ -1225,13 +1217,6 @@
         <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="75af2dbccea681e4d4c1a38503187da261c9c03c4f10a2f080482ac6269f7eb7" PageNumber="20" ProtocolSection="Study Drug Management" Confidence="1.0">
           <makoto:SourceQuote>...Grade 3 hypocalcemia.</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.1217" y0="0.0687" x1="0.9092" y1="0.7085"/>
-        </makoto:SourceGrounding>
-      </ConditionDef>
-      <ConditionDef OID="COND.EXTREME.ANC.ANC" Name="Absolute Neutrophil Count — Absolute Neutrophil Count Extreme Check" Description="Enforces variable extreme bounds [0.0, 50.0] 10^9/L for Absolute Neutrophil Count.">
-        <FormalExpression Context="Python">0.0 &lt;= ITEM.ANC &lt;= 50.0</FormalExpression>
-        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="75af2dbccea681e4d4c1a38503187da261c9c03c4f10a2f080482ac6269f7eb7" PageNumber="64" ProtocolSection="Safety Monitoring" Confidence="1.0">
-          <makoto:SourceQuote>Absolute neutrophil count (ANC) &gt;1500/mm 3</makoto:SourceQuote>
-          <makoto:BoundingBox x0="0.2531" y0="0.0751" x1="0.6482" y1="0.0912"/>
         </makoto:SourceGrounding>
       </ConditionDef>
       <ConditionDef OID="COND.EXTREME.QTC.ECG_12LEAD" Name="12-lead ECG — QTc Interval Prolongation Safety Extreme Check" Description="Enforces variable extreme bounds [250, 500] ms for 12-lead ECG.">
@@ -1388,11 +1373,11 @@
           <makoto:BoundingBox x0="0.1185" y0="0.1184" x1="0.7047" y1="0.9126"/>
         </makoto:SourceGrounding>
       </ConditionDef>
-      <ConditionDef OID="COND.EXTREME.ANC.NLR" Name="Neutrophil-to-Lymphocyte Ratio (NLR) — Absolute Neutrophil Count Extreme Check" Description="Enforces variable extreme bounds [0.0, 50.0] ratio for Neutrophil-to-Lymphocyte Ratio (NLR).">
-        <FormalExpression Context="Python">0.0 &lt;= ITEM.NLR &lt;= 50.0</FormalExpression>
-        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="75af2dbccea681e4d4c1a38503187da261c9c03c4f10a2f080482ac6269f7eb7" PageNumber="64" ProtocolSection="Safety Monitoring" Confidence="1.0">
-          <makoto:SourceQuote>Absolute neutrophil count (ANC) &gt;1500/mm 3</makoto:SourceQuote>
-          <makoto:BoundingBox x0="0.2531" y0="0.0751" x1="0.6482" y1="0.0912"/>
+      <ConditionDef OID="COND.EXTREME.ANC.ANC" Name="Absolute Neutrophil Count (ANC, 10^9/L) — Absolute Neutrophil Count Extreme Check" Description="Enforces variable extreme bounds [0.0, 50.0] 10^9/L for Absolute Neutrophil Count (ANC, 10^9/L).">
+        <FormalExpression Context="Python">0.0 &lt;= ITEM.ANC &lt;= 50.0</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="75af2dbccea681e4d4c1a38503187da261c9c03c4f10a2f080482ac6269f7eb7" PageNumber="144" ProtocolSection="Eligibility Criteria" Confidence="1.0">
+          <makoto:SourceQuote>hemoglobin level (&lt;10 g/dL versus ≥10 g/dL)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1178" y0="0.1104" x1="0.8873" y1="0.2393"/>
         </makoto:SourceGrounding>
       </ConditionDef>
       <ConditionDef OID="COND.EXTREME.HEPATIC.ULN_RATIO" Name="Hepatic Transaminase ULN Multiple (x ULN) — Hepatic Enzyme / Transaminase Extreme Check" Description="Enforces variable extreme bounds [1, 2000] ratio for Hepatic Transaminase ULN Multiple (x ULN).">
@@ -1546,9 +1531,9 @@
         <ErrorMessage>
           <TranslatedText>ANC must be &gt;= 1.0 x 10^9/L before initiating next treatment cycle.</TranslatedText>
         </ErrorMessage>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="64" ProtocolSection="Safety Monitoring" Confidence="1.0">
-          <makoto:SourceQuote>Absolute neutrophil count (ANC) &gt;1500/mm 3</makoto:SourceQuote>
-          <makoto:BoundingBox x0="0.2531" y0="0.0751" x1="0.6482" y1="0.0912"/>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="75af2dbccea681e4d4c1a38503187da261c9c03c4f10a2f080482ac6269f7eb7" PageNumber="144" ProtocolSection="Eligibility Criteria" Confidence="1.0">
+          <makoto:SourceQuote>hemoglobin level (&lt;10 g/dL versus ≥10 g/dL)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1178" y0="0.1104" x1="0.8873" y1="0.2393"/>
         </makoto:SourceGrounding>
       </EditCheck>
       <EditCheck OID="EC.AE.DATE_CHRONOLOGY" Name="Adverse Event Date Chronology Check" Target="FORM.AE.ITEM.AEENDAT" ConditionRef="COND.AE_START_LE_END">
@@ -1675,15 +1660,6 @@
         <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="75af2dbccea681e4d4c1a38503187da261c9c03c4f10a2f080482ac6269f7eb7" PageNumber="20" ProtocolSection="Study Drug Management" Confidence="1.0">
           <makoto:SourceQuote>...Grade 3 hypocalcemia.</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.1217" y0="0.0687" x1="0.9092" y1="0.7085"/>
-        </makoto:SourceGrounding>
-      </EditCheck>
-      <EditCheck OID="EC.EXTREME.ANC.ANC" Name="Absolute Neutrophil Count — Absolute Neutrophil Count Extreme Check" Target="FORM.VS.ITEM.ANC" ConditionRef="COND.EXTREME.ANC.ANC">
-        <ErrorMessage>
-          <TranslatedText>Variable extreme check failed for Absolute Neutrophil Count (ITEM.ANC): value must be within [0.0, 50.0] 10^9/L (Absolute Neutrophil Count Extreme Check).</TranslatedText>
-        </ErrorMessage>
-        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="75af2dbccea681e4d4c1a38503187da261c9c03c4f10a2f080482ac6269f7eb7" PageNumber="64" ProtocolSection="Safety Monitoring" Confidence="1.0">
-          <makoto:SourceQuote>Absolute neutrophil count (ANC) &gt;1500/mm 3</makoto:SourceQuote>
-          <makoto:BoundingBox x0="0.2531" y0="0.0751" x1="0.6482" y1="0.0912"/>
         </makoto:SourceGrounding>
       </EditCheck>
       <EditCheck OID="EC.EXTREME.QTC.ECG_12LEAD" Name="12-lead ECG — QTc Interval Prolongation Safety Extreme Check" Target="FORM.EG.ITEM.ECG_12Lead" ConditionRef="COND.EXTREME.QTC.ECG_12LEAD">
@@ -1884,13 +1860,13 @@
           <makoto:BoundingBox x0="0.1185" y0="0.1184" x1="0.7047" y1="0.9126"/>
         </makoto:SourceGrounding>
       </EditCheck>
-      <EditCheck OID="EC.EXTREME.ANC.NLR" Name="Neutrophil-to-Lymphocyte Ratio (NLR) — Absolute Neutrophil Count Extreme Check" Target="FORM.LB.ITEM.NLR" ConditionRef="COND.EXTREME.ANC.NLR">
+      <EditCheck OID="EC.EXTREME.ANC.ANC" Name="Absolute Neutrophil Count (ANC, 10^9/L) — Absolute Neutrophil Count Extreme Check" Target="FORM.LB.ITEM.ANC" ConditionRef="COND.EXTREME.ANC.ANC">
         <ErrorMessage>
-          <TranslatedText>Variable extreme check failed for Neutrophil-to-Lymphocyte Ratio (NLR) (ITEM.NLR): value must be within [0.0, 50.0] ratio (Absolute Neutrophil Count Extreme Check).</TranslatedText>
+          <TranslatedText>Variable extreme check failed for Absolute Neutrophil Count (ANC, 10^9/L) (ITEM.ANC): value must be within [0.0, 50.0] 10^9/L (Absolute Neutrophil Count Extreme Check).</TranslatedText>
         </ErrorMessage>
-        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="75af2dbccea681e4d4c1a38503187da261c9c03c4f10a2f080482ac6269f7eb7" PageNumber="64" ProtocolSection="Safety Monitoring" Confidence="1.0">
-          <makoto:SourceQuote>Absolute neutrophil count (ANC) &gt;1500/mm 3</makoto:SourceQuote>
-          <makoto:BoundingBox x0="0.2531" y0="0.0751" x1="0.6482" y1="0.0912"/>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="75af2dbccea681e4d4c1a38503187da261c9c03c4f10a2f080482ac6269f7eb7" PageNumber="144" ProtocolSection="Eligibility Criteria" Confidence="1.0">
+          <makoto:SourceQuote>hemoglobin level (&lt;10 g/dL versus ≥10 g/dL)</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1178" y0="0.1104" x1="0.8873" y1="0.2393"/>
         </makoto:SourceGrounding>
       </EditCheck>
       <EditCheck OID="EC.EXTREME.HEPATIC.ULN_RATIO" Name="Hepatic Transaminase ULN Multiple (x ULN) — Hepatic Enzyme / Transaminase Extreme Check" Target="FORM.LB.ITEM.ULN_RATIO" ConditionRef="COND.EXTREME.HEPATIC.ULN_RATIO">
@@ -2082,46 +2058,6 @@
           <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
         </makoto:SourceGrounding>
       </EditCheck>
-      <MethodDef OID="MT.TUMOR_RESPONSE_CR" Name="Complete Response (CR) Criteria" Type="Derivation">
-        <Description>
-          <TranslatedText>A patient is considered in complete response (CR) if tumor markers normalize, provided they were initially above the upper normal limit.</TranslatedText>
-        </Description>
-        <FormalExpression Context="Python">is_CR = (initial_marker &gt; upper_limit) and (current_marker &lt;= upper_limit)</FormalExpression>
-        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="75af2dbccea681e4d4c1a38503187da261c9c03c4f10a2f080482ac6269f7eb7" PageNumber="130" ProtocolSection="" Confidence="1.0">
-          <makoto:SourceQuote>If markers are initially above the upper normal limit, however, they must normalize for a patient to be considered in complete response (CR).</makoto:SourceQuote>
-          <makoto:BoundingBox x0="0.1176" y0="0.0756" x1="0.8824" y1="0.1573"/>
-        </makoto:SourceGrounding>
-      </MethodDef>
-      <MethodDef OID="MT.PD_PROGRESSION" Name="Progressive Disease (PD) Threshold" Type="Derivation">
-        <Description>
-          <TranslatedText>Progressive disease is defined as a 20% increase in the sum of lesions compared to the smallest sum observed during the study.</TranslatedText>
-        </Description>
-        <FormalExpression Context="Python">is_PD = (current_sum &gt;= 1.2 * min_sum_on_study)</FormalExpression>
-        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="75af2dbccea681e4d4c1a38503187da261c9c03c4f10a2f080482ac6269f7eb7" PageNumber="133" ProtocolSection="" Confidence="1.0">
-          <makoto:SourceQuote>PD 20% increase over smallest sum on study or new lesions</makoto:SourceQuote>
-          <makoto:BoundingBox x0="0.1158" y0="0.0824" x1="0.8415" y1="0.7766"/>
-        </makoto:SourceGrounding>
-      </MethodDef>
-      <MethodDef OID="MT.AUC_REDUCTION_DDI" Name="DDI-Induced AUC Reduction" Type="Derivation">
-        <Description>
-          <TranslatedText>Quantification of the reduction in drug exposure (AUC) due to moderate CYP3A4 induction by concomitant medications.</TranslatedText>
-        </Description>
-        <FormalExpression Context="Python">AUC_reduction_factor = 0.2 to 0.5  # representing a 50% to 80% decrease in AUC</FormalExpression>
-        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="75af2dbccea681e4d4c1a38503187da261c9c03c4f10a2f080482ac6269f7eb7" PageNumber="59" ProtocolSection="" Confidence="1.0">
-          <makoto:SourceQuote>potential 50% to 80% decrease in AUC due to moderate CYP3A4 induction</makoto:SourceQuote>
-          <makoto:BoundingBox x0="0.118" y0="0.0764" x1="0.8712" y1="0.1074"/>
-        </makoto:SourceGrounding>
-      </MethodDef>
-      <MethodDef OID="MT.PHOSPHATE_TARGET" Name="Phosphate Range Target" Type="Derivation">
-        <Description>
-          <TranslatedText>The target range for phosphate levels to achieve optimum PD effect.</TranslatedText>
-        </Description>
-        <FormalExpression Context="Python">target_phosphate_range = (5.5, 7.0)</FormalExpression>
-        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="75af2dbccea681e4d4c1a38503187da261c9c03c4f10a2f080482ac6269f7eb7" PageNumber="59" ProtocolSection="" Confidence="1.0">
-          <makoto:SourceQuote>achieve an optimum PD effect (phosphate range 5.5-7mg/dL)</makoto:SourceQuote>
-          <makoto:BoundingBox x0="0.118" y0="0.0764" x1="0.8712" y1="0.1074"/>
-        </makoto:SourceGrounding>
-      </MethodDef>
       <MethodDef OID="MT.BMI" Name="Body Mass Index (BMI) Calculation" Type="Derivation">
         <Description>
           <TranslatedText>Body Mass Index (BMI, kg/m^2) derived from body weight (kg) and height (cm): WEIGHT / ((HEIGHT / 100)^2).</TranslatedText>
@@ -2240,26 +2176,6 @@
         <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="75af2dbccea681e4d4c1a38503187da261c9c03c4f10a2f080482ac6269f7eb7" PageNumber="144" ProtocolSection="Eligibility Criteria" Confidence="1.0">
           <makoto:SourceQuote>hemoglobin level (&lt;10 g/dL versus ≥10 g/dL)</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.1178" y0="0.1104" x1="0.8873" y1="0.2393"/>
-        </makoto:SourceGrounding>
-      </MethodDef>
-      <MethodDef OID="MT.ALC" Name="Absolute Lymphocyte Count (ALC) Calculation" Type="Derivation">
-        <Description>
-          <TranslatedText>Absolute Lymphocyte Count (ALC, 10^9/L) derived from total white blood cell count and lymphocyte percentage: WBC * (LYM / 100).</TranslatedText>
-        </Description>
-        <FormalExpression Context="Python">round(ITEM.WBC * (ITEM.LYM / 100.0), 2)</FormalExpression>
-        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="75af2dbccea681e4d4c1a38503187da261c9c03c4f10a2f080482ac6269f7eb7" PageNumber="64" ProtocolSection="Safety Monitoring" Confidence="1.0">
-          <makoto:SourceQuote>Absolute neutrophil count (ANC) &gt;1500/mm 3</makoto:SourceQuote>
-          <makoto:BoundingBox x0="0.2531" y0="0.0751" x1="0.6482" y1="0.0912"/>
-        </makoto:SourceGrounding>
-      </MethodDef>
-      <MethodDef OID="MT.NLR" Name="Neutrophil-to-Lymphocyte Ratio (NLR — Immune Prognostic Index)" Type="Derivation">
-        <Description>
-          <TranslatedText>Neutrophil-to-Lymphocyte Ratio (NLR) prognostic inflammatory biomarker derived as ANC divided by ALC.</TranslatedText>
-        </Description>
-        <FormalExpression Context="Python">round(ITEM.ANC / ITEM.ALC, 2)</FormalExpression>
-        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="75af2dbccea681e4d4c1a38503187da261c9c03c4f10a2f080482ac6269f7eb7" PageNumber="64" ProtocolSection="Safety Monitoring" Confidence="1.0">
-          <makoto:SourceQuote>Absolute neutrophil count (ANC) &gt;1500/mm 3</makoto:SourceQuote>
-          <makoto:BoundingBox x0="0.2531" y0="0.0751" x1="0.6482" y1="0.0912"/>
         </makoto:SourceGrounding>
       </MethodDef>
       <MethodDef OID="MT.ULN_RATIO" Name="Hepatic Enzyme / Bilirubin Upper Limit of Normal Ratio (x ULN)" Type="Derivation">
@@ -2424,102 +2340,174 @@
       </MethodDef>
       <makoto:VisualLayout>
         <makoto:Nodes>
-          <makoto:Node id="EP.1" type="epochGroup">
-            <makoto:Position x="360" y="50"/>
-          </makoto:Node>
-          <makoto:Node id="SE.V01" type="visit">
-            <makoto:Position x="30" y="160"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.IE.SE.V01" type="form">
-            <makoto:Position x="30" y="320"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.IC.SE.V01" type="form">
-            <makoto:Position x="30" y="450"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.DM.SE.V01" type="form">
-            <makoto:Position x="30" y="580"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.MH.SE.V01" type="form">
-            <makoto:Position x="30" y="710"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.VS.SE.V01" type="form">
-            <makoto:Position x="30" y="840"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.LB.SE.V01" type="form">
-            <makoto:Position x="30" y="970"/>
-          </makoto:Node>
-          <makoto:Node id="SE.V02" type="visit">
-            <makoto:Position x="330" y="160"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.VS.SE.V02" type="form">
-            <makoto:Position x="330" y="320"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.PE.SE.V02" type="form">
-            <makoto:Position x="330" y="450"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.LB.SE.V02" type="form">
-            <makoto:Position x="330" y="580"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.PK.SE.V02" type="form">
-            <makoto:Position x="330" y="710"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.CM.SE.V02" type="form">
-            <makoto:Position x="330" y="840"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.AE.SE.V02" type="form">
-            <makoto:Position x="330" y="970"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.DS.SE.V02" type="form">
-            <makoto:Position x="330" y="1100"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.BS.SE.V02" type="form">
-            <makoto:Position x="330" y="1230"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.EG.SE.V02" type="form">
-            <makoto:Position x="330" y="1360"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.PR.SE.V02" type="form">
-            <makoto:Position x="330" y="1490"/>
-          </makoto:Node>
           <makoto:Node id="ARM.1" type="arm">
-            <makoto:Position x="1020" y="233"/>
+            <makoto:Position x="380" y="233"/>
           </makoto:Node>
           <makoto:Node id="ARM.2" type="arm">
-            <makoto:Position x="1020" y="400"/>
+            <makoto:Position x="380" y="400"/>
           </makoto:Node>
           <makoto:Node id="ARM.3" type="arm">
-            <makoto:Position x="1020" y="566"/>
+            <makoto:Position x="380" y="566"/>
           </makoto:Node>
-          <makoto:Node id="EP.2" type="epochGroup">
-            <makoto:Position x="1240" y="50"/>
+          <makoto:Node id="EP.1" type="epochGroup">
+            <makoto:Position x="600" y="50"/>
+          </makoto:Node>
+          <makoto:Node id="SE.SCREENING" type="visit">
+            <makoto:Position x="40" y="160"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.IE.SE.SCREENING" type="form">
+            <makoto:Position x="40" y="320"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.IC.SE.SCREENING" type="form">
+            <makoto:Position x="40" y="450"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.DM.SE.SCREENING" type="form">
+            <makoto:Position x="40" y="580"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.MH.SE.SCREENING" type="form">
+            <makoto:Position x="40" y="710"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.VS.SE.SCREENING" type="form">
+            <makoto:Position x="40" y="840"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.LB.SE.SCREENING" type="form">
+            <makoto:Position x="40" y="970"/>
+          </makoto:Node>
+          <makoto:Node id="SE.BASELINE" type="visit">
+            <makoto:Position x="340" y="160"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.VS.SE.BASELINE" type="form">
+            <makoto:Position x="340" y="320"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.LB.SE.BASELINE" type="form">
+            <makoto:Position x="340" y="450"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.AE.SE.BASELINE" type="form">
+            <makoto:Position x="340" y="580"/>
+          </makoto:Node>
+          <makoto:Node id="CYCLE_GROUP.EP.1" type="cycleTemplateGroup">
+            <makoto:Position x="640" y="80"/>
+          </makoto:Node>
+          <makoto:Node id="SE.V01" type="visit">
+            <makoto:Position x="30" y="80"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.VS.SE.V01.SE.V01" type="form">
+            <makoto:Position x="30" y="240"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.PE.SE.V01.SE.V01" type="form">
+            <makoto:Position x="30" y="370"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.LB.SE.V01.SE.V01" type="form">
+            <makoto:Position x="30" y="500"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.PK.SE.V01.SE.V01" type="form">
+            <makoto:Position x="30" y="630"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.CM.SE.V01.SE.V01" type="form">
+            <makoto:Position x="30" y="760"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.AE.SE.V01.SE.V01" type="form">
+            <makoto:Position x="30" y="890"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.BS.SE.V01.SE.V01" type="form">
+            <makoto:Position x="30" y="1020"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.EG.SE.V01.SE.V01" type="form">
+            <makoto:Position x="30" y="1150"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.PR.SE.V01.SE.V01" type="form">
+            <makoto:Position x="30" y="1280"/>
+          </makoto:Node>
+          <makoto:Node id="SE.TREATMENT" type="visit">
+            <makoto:Position x="330" y="80"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.VS.SE.V01.SE.TREATMENT" type="form">
+            <makoto:Position x="330" y="240"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.PE.SE.V01.SE.TREATMENT" type="form">
+            <makoto:Position x="330" y="370"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.LB.SE.V01.SE.TREATMENT" type="form">
+            <makoto:Position x="330" y="500"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.PK.SE.V01.SE.TREATMENT" type="form">
+            <makoto:Position x="330" y="630"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.CM.SE.V01.SE.TREATMENT" type="form">
+            <makoto:Position x="330" y="760"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.AE.SE.V01.SE.TREATMENT" type="form">
+            <makoto:Position x="330" y="890"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.BS.SE.V01.SE.TREATMENT" type="form">
+            <makoto:Position x="330" y="1020"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.EG.SE.V01.SE.TREATMENT" type="form">
+            <makoto:Position x="330" y="1150"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.PR.SE.V01.SE.TREATMENT" type="form">
+            <makoto:Position x="330" y="1280"/>
+          </makoto:Node>
+          <makoto:Node id="GATE.EP.1.CYCLE" type="decisionGate">
+            <makoto:Position x="1320" y="140"/>
           </makoto:Node>
           <makoto:Node id="EP.3" type="epochGroup">
-            <makoto:Position x="1640" y="50"/>
+            <makoto:Position x="2240" y="50"/>
+          </makoto:Node>
+          <makoto:Node id="SE.V02" type="visit">
+            <makoto:Position x="40" y="160"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.VS.SE.V02" type="form">
+            <makoto:Position x="40" y="320"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.LB.SE.V02" type="form">
+            <makoto:Position x="40" y="450"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.AE.SE.V02" type="form">
+            <makoto:Position x="40" y="580"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.DS.SE.V02" type="form">
+            <makoto:Position x="40" y="710"/>
           </makoto:Node>
         </makoto:Nodes>
         <makoto:Edges>
-          <makoto:Edge id="e-ARM.1-SE.V01" source="ARM.1" target="SE.V01"/>
-          <makoto:Edge id="e-ARM.2-SE.V01" source="ARM.2" target="SE.V01"/>
-          <makoto:Edge id="e-ARM.3-SE.V01" source="ARM.3" target="SE.V01"/>
-          <makoto:Edge id="e-epoch-EP.1-EP.2" source="EP.1" target="EP.2" animated="true"/>
-          <makoto:Edge id="e-epoch-EP.2-EP.3" source="EP.2" target="EP.3" animated="true"/>
-          <makoto:Edge id="e-SE.V01-SE.V02" source="SE.V01" target="SE.V02"/>
-          <makoto:Edge id="e-SE.V01-FORM.IE.SE.V01" source="SE.V01" target="FORM.IE.SE.V01"/>
-          <makoto:Edge id="e-FORM.IE.SE.V01-FORM.IC.SE.V01" source="FORM.IE.SE.V01" target="FORM.IC.SE.V01"/>
-          <makoto:Edge id="e-FORM.IC.SE.V01-FORM.DM.SE.V01" source="FORM.IC.SE.V01" target="FORM.DM.SE.V01"/>
-          <makoto:Edge id="e-FORM.DM.SE.V01-FORM.MH.SE.V01" source="FORM.DM.SE.V01" target="FORM.MH.SE.V01"/>
-          <makoto:Edge id="e-FORM.MH.SE.V01-FORM.VS.SE.V01" source="FORM.MH.SE.V01" target="FORM.VS.SE.V01"/>
-          <makoto:Edge id="e-FORM.VS.SE.V01-FORM.LB.SE.V01" source="FORM.VS.SE.V01" target="FORM.LB.SE.V01"/>
+          <makoto:Edge id="e-ARM.1-SE.SCREENING" source="ARM.1" target="SE.SCREENING"/>
+          <makoto:Edge id="e-ARM.2-SE.SCREENING" source="ARM.2" target="SE.SCREENING"/>
+          <makoto:Edge id="e-ARM.3-SE.SCREENING" source="ARM.3" target="SE.SCREENING"/>
+          <makoto:Edge id="e-epoch-EP.1-EP.3" source="EP.1" target="EP.3" animated="true"/>
+          <makoto:Edge id="e-SE.SCREENING-FORM.IE.SE.SCREENING" source="SE.SCREENING" target="FORM.IE.SE.SCREENING"/>
+          <makoto:Edge id="e-FORM.IE.SE.SCREENING-FORM.IC.SE.SCREENING" source="FORM.IE.SE.SCREENING" target="FORM.IC.SE.SCREENING"/>
+          <makoto:Edge id="e-FORM.IC.SE.SCREENING-FORM.DM.SE.SCREENING" source="FORM.IC.SE.SCREENING" target="FORM.DM.SE.SCREENING"/>
+          <makoto:Edge id="e-FORM.DM.SE.SCREENING-FORM.MH.SE.SCREENING" source="FORM.DM.SE.SCREENING" target="FORM.MH.SE.SCREENING"/>
+          <makoto:Edge id="e-FORM.MH.SE.SCREENING-FORM.VS.SE.SCREENING" source="FORM.MH.SE.SCREENING" target="FORM.VS.SE.SCREENING"/>
+          <makoto:Edge id="e-FORM.VS.SE.SCREENING-FORM.LB.SE.SCREENING" source="FORM.VS.SE.SCREENING" target="FORM.LB.SE.SCREENING"/>
+          <makoto:Edge id="e-SE.SCREENING-SE.V01" source="SE.SCREENING" target="SE.V01"/>
+          <makoto:Edge id="e-SE.V01-SE.TREATMENT" source="SE.V01" target="SE.TREATMENT"/>
+          <makoto:Edge id="e-SE.V01-FORM.VS.SE.V01.SE.V01" source="SE.V01" target="FORM.VS.SE.V01.SE.V01"/>
+          <makoto:Edge id="e-FORM.VS.SE.V01.SE.V01-FORM.PE.SE.V01.SE.V01" source="FORM.VS.SE.V01.SE.V01" target="FORM.PE.SE.V01.SE.V01"/>
+          <makoto:Edge id="e-FORM.PE.SE.V01.SE.V01-FORM.LB.SE.V01.SE.V01" source="FORM.PE.SE.V01.SE.V01" target="FORM.LB.SE.V01.SE.V01"/>
+          <makoto:Edge id="e-FORM.LB.SE.V01.SE.V01-FORM.PK.SE.V01.SE.V01" source="FORM.LB.SE.V01.SE.V01" target="FORM.PK.SE.V01.SE.V01"/>
+          <makoto:Edge id="e-FORM.PK.SE.V01.SE.V01-FORM.CM.SE.V01.SE.V01" source="FORM.PK.SE.V01.SE.V01" target="FORM.CM.SE.V01.SE.V01"/>
+          <makoto:Edge id="e-FORM.CM.SE.V01.SE.V01-FORM.AE.SE.V01.SE.V01" source="FORM.CM.SE.V01.SE.V01" target="FORM.AE.SE.V01.SE.V01"/>
+          <makoto:Edge id="e-FORM.AE.SE.V01.SE.V01-FORM.BS.SE.V01.SE.V01" source="FORM.AE.SE.V01.SE.V01" target="FORM.BS.SE.V01.SE.V01"/>
+          <makoto:Edge id="e-FORM.BS.SE.V01.SE.V01-FORM.EG.SE.V01.SE.V01" source="FORM.BS.SE.V01.SE.V01" target="FORM.EG.SE.V01.SE.V01"/>
+          <makoto:Edge id="e-FORM.EG.SE.V01.SE.V01-FORM.PR.SE.V01.SE.V01" source="FORM.EG.SE.V01.SE.V01" target="FORM.PR.SE.V01.SE.V01"/>
+          <makoto:Edge id="e-SE.TREATMENT-FORM.VS.SE.V01.SE.TREATMENT" source="SE.TREATMENT" target="FORM.VS.SE.V01.SE.TREATMENT"/>
+          <makoto:Edge id="e-FORM.VS.SE.V01.SE.TREATMENT-FORM.PE.SE.V01.SE.TREATMENT" source="FORM.VS.SE.V01.SE.TREATMENT" target="FORM.PE.SE.V01.SE.TREATMENT"/>
+          <makoto:Edge id="e-FORM.PE.SE.V01.SE.TREATMENT-FORM.LB.SE.V01.SE.TREATMENT" source="FORM.PE.SE.V01.SE.TREATMENT" target="FORM.LB.SE.V01.SE.TREATMENT"/>
+          <makoto:Edge id="e-FORM.LB.SE.V01.SE.TREATMENT-FORM.PK.SE.V01.SE.TREATMENT" source="FORM.LB.SE.V01.SE.TREATMENT" target="FORM.PK.SE.V01.SE.TREATMENT"/>
+          <makoto:Edge id="e-FORM.PK.SE.V01.SE.TREATMENT-FORM.CM.SE.V01.SE.TREATMENT" source="FORM.PK.SE.V01.SE.TREATMENT" target="FORM.CM.SE.V01.SE.TREATMENT"/>
+          <makoto:Edge id="e-FORM.CM.SE.V01.SE.TREATMENT-FORM.AE.SE.V01.SE.TREATMENT" source="FORM.CM.SE.V01.SE.TREATMENT" target="FORM.AE.SE.V01.SE.TREATMENT"/>
+          <makoto:Edge id="e-FORM.AE.SE.V01.SE.TREATMENT-FORM.BS.SE.V01.SE.TREATMENT" source="FORM.AE.SE.V01.SE.TREATMENT" target="FORM.BS.SE.V01.SE.TREATMENT"/>
+          <makoto:Edge id="e-FORM.BS.SE.V01.SE.TREATMENT-FORM.EG.SE.V01.SE.TREATMENT" source="FORM.BS.SE.V01.SE.TREATMENT" target="FORM.EG.SE.V01.SE.TREATMENT"/>
+          <makoto:Edge id="e-FORM.EG.SE.V01.SE.TREATMENT-FORM.PR.SE.V01.SE.TREATMENT" source="FORM.EG.SE.V01.SE.TREATMENT" target="FORM.PR.SE.V01.SE.TREATMENT"/>
+          <makoto:Edge id="e-SE.TREATMENT-GATE.EP.1.CYCLE" source="SE.TREATMENT" target="GATE.EP.1.CYCLE"/>
+          <makoto:Edge id="e-loopback-GATE.EP.1.CYCLE-SE.V01" source="GATE.EP.1.CYCLE" target="SE.V01" label="Cleared ➔ Next Cycle" animated="true"/>
+          <makoto:Edge id="e-exit-GATE.EP.1.CYCLE-EP.3" source="GATE.EP.1.CYCLE" target="EP.3" label="PD / Toxicity ➔ Exit" animated="true"/>
           <makoto:Edge id="e-SE.V02-FORM.VS.SE.V02" source="SE.V02" target="FORM.VS.SE.V02"/>
-          <makoto:Edge id="e-FORM.VS.SE.V02-FORM.PE.SE.V02" source="FORM.VS.SE.V02" target="FORM.PE.SE.V02"/>
-          <makoto:Edge id="e-FORM.PE.SE.V02-FORM.LB.SE.V02" source="FORM.PE.SE.V02" target="FORM.LB.SE.V02"/>
-          <makoto:Edge id="e-FORM.LB.SE.V02-FORM.PK.SE.V02" source="FORM.LB.SE.V02" target="FORM.PK.SE.V02"/>
-          <makoto:Edge id="e-FORM.PK.SE.V02-FORM.CM.SE.V02" source="FORM.PK.SE.V02" target="FORM.CM.SE.V02"/>
-          <makoto:Edge id="e-FORM.CM.SE.V02-FORM.AE.SE.V02" source="FORM.CM.SE.V02" target="FORM.AE.SE.V02"/>
+          <makoto:Edge id="e-FORM.VS.SE.V02-FORM.LB.SE.V02" source="FORM.VS.SE.V02" target="FORM.LB.SE.V02"/>
+          <makoto:Edge id="e-FORM.LB.SE.V02-FORM.AE.SE.V02" source="FORM.LB.SE.V02" target="FORM.AE.SE.V02"/>
           <makoto:Edge id="e-FORM.AE.SE.V02-FORM.DS.SE.V02" source="FORM.AE.SE.V02" target="FORM.DS.SE.V02"/>
-          <makoto:Edge id="e-FORM.DS.SE.V02-FORM.BS.SE.V02" source="FORM.DS.SE.V02" target="FORM.BS.SE.V02"/>
-          <makoto:Edge id="e-FORM.BS.SE.V02-FORM.EG.SE.V02" source="FORM.BS.SE.V02" target="FORM.EG.SE.V02"/>
-          <makoto:Edge id="e-FORM.EG.SE.V02-FORM.PR.SE.V02" source="FORM.EG.SE.V02" target="FORM.PR.SE.V02"/>
         </makoto:Edges>
       </makoto:VisualLayout>
     </MetaDataVersion>

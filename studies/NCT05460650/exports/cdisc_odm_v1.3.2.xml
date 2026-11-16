@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:makoto="http://gflow.ai/ns/makoto/v1.0" FileType="Snapshot" FileOID="ODM.STUDY.001.20261111022654" CreationDateTime="2026-11-11T02:26:54Z" ODMVersion="1.3.2">
+<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:makoto="http://gflow.ai/ns/makoto/v1.0" FileType="Snapshot" FileOID="ODM.STUDY.001.20261116182933" CreationDateTime="2026-11-16T18:29:33Z" ODMVersion="1.3.2">
   <Study OID="STUDY.001">
     <GlobalVariables>
       <StudyName>NCT05460650 Benchmark</StudyName>
@@ -415,7 +415,6 @@
       </ItemGroupDef>
       <ItemGroupDef OID="IG.EX" Name="Exposure Group" Repeating="Yes">
         <ItemRef ItemOID="ITEM.App-Based Educational Intervention" Mandatory="No"/>
-        <ItemRef ItemOID="ITEM.Health Behavior Logging" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.Qualitative Interview" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.DOSE_CALC" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.RDI" Mandatory="No"/>
@@ -423,11 +422,11 @@
       </ItemGroupDef>
       <ItemGroupDef OID="IG.CM" Name="Concomitant Medications Group" Repeating="Yes"/>
       <ItemGroupDef OID="IG.PR" Name="Procedures Group" Repeating="Yes">
+        <ItemRef ItemOID="ITEM.Health Behavior Logging" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.DSDECOD" Mandatory="Yes"/>
         <ItemRef ItemOID="ITEM.Risk Verification" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.Psychiatric Screening" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.Demographics Collection" Mandatory="No"/>
-        <ItemRef ItemOID="ITEM.Health Behavior Logging" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.App Analytics Tracking" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.Qualitative Interviewing" Mandatory="No"/>
       </ItemGroupDef>
@@ -455,7 +454,6 @@
       <ItemGroupDef OID="IG.BS" Name="Biomarkers Group" Repeating="No"/>
       <ItemGroupDef OID="IG.AE" Name="Adverse Events Group" Repeating="Yes">
         <ItemRef ItemOID="ITEM.AETERM" Mandatory="Yes"/>
-        <ItemRef ItemOID="ITEM.AETERM" Mandatory="Yes"/>
         <ItemRef ItemOID="ITEM.AETOXGR" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.AESTDAT" Mandatory="No"/>
         <ItemRef ItemOID="ITEM.AEENDAT" Mandatory="No"/>
@@ -476,11 +474,11 @@
       <ItemDef OID="ITEM.App-Based Educational Intervention" Name="App-Based Educational Intervention" DataType="integer">
         <MeasurementUnitRef MeasurementUnitOID="UNIT.DOSE"/>
       </ItemDef>
-      <ItemDef OID="ITEM.Health Behavior Logging" Name="Health Behavior Logging" DataType="integer">
-        <MeasurementUnitRef MeasurementUnitOID="UNIT.DOSE"/>
-      </ItemDef>
       <ItemDef OID="ITEM.Qualitative Interview" Name="Qualitative Interview" DataType="integer">
         <MeasurementUnitRef MeasurementUnitOID="UNIT.DOSE"/>
+      </ItemDef>
+      <ItemDef OID="ITEM.Health Behavior Logging" Name="Health Behavior Logging" DataType="integer">
+        <MeasurementUnitRef MeasurementUnitOID="UNIT.COUNT"/>
       </ItemDef>
       <ItemDef OID="ITEM.DSDECOD" Name="Informed Consent" DataType="text" CodeListRef="CL.DISPOSITION"/>
       <ItemDef OID="ITEM.Risk Verification" Name="Risk Verification" DataType="integer">
@@ -968,28 +966,28 @@
       </CodeListDef>
       <ConditionDef OID="COND.SYSBP_GT_DIABP" Name="Systolic BP Greater Than Diastolic BP" Description="Systolic blood pressure must exceed diastolic blood pressure.">
         <FormalExpression Context="Python">ITEM.SYSBP &gt; ITEM.DIABP</FormalExpression>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="16" ProtocolSection="Safety Monitoring" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="16" ProtocolSection="Safety Monitoring" Confidence="1.0">
           <makoto:SourceQuote>No vital signs (e.g., Blood Pressure, Heart Rate) are listed as required measurements for this study.</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
         </makoto:SourceGrounding>
       </ConditionDef>
       <ConditionDef OID="COND.AE_START_LE_END" Name="Adverse Event Date Chronology" Description="Adverse event resolution date must be on or after onset date.">
         <FormalExpression Context="Python">ITEM.AESTDAT &lt;= ITEM.AEENDAT</FormalExpression>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="16" ProtocolSection="Safety Monitoring" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="16" ProtocolSection="Safety Monitoring" Confidence="1.0">
           <makoto:SourceQuote>No specific clinical adverse event monitoring procedures (e.g., clinical exams or lab tests for toxicity) are described in the provided text, as the study is focused on behavioral intervention and education rather than pharmaceutical administration.</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
         </makoto:SourceGrounding>
       </ConditionDef>
       <ConditionDef OID="COND.AE_GRADE3_DOSE_DELAY" Name="Grade 3+ Toxicity Dose Delay Requirement" Description="Severe toxicity (CTCAE Grade &gt;= 3) mandates dose delay or modification.">
         <FormalExpression Context="Python">ITEM.AETOXGR &gt;= 3</FormalExpression>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="16" ProtocolSection="Safety Monitoring" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="16" ProtocolSection="Safety Monitoring" Confidence="1.0">
           <makoto:SourceQuote>No specific clinical adverse event monitoring procedures (e.g., clinical exams or lab tests for toxicity) are described in the provided text, as the study is focused on behavioral intervention and education rather than pharmaceutical administration.</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
         </makoto:SourceGrounding>
       </ConditionDef>
       <ConditionDef OID="COND.AE_FATAL_DISPOSITION_SYNC" Name="Fatal Adverse Event Study Disposition Sync" Description="Fatal outcome requires matching Death disposition record.">
         <FormalExpression Context="Python">ITEM.AEOUT == '4' or ITEM.AETOXGR == '5'</FormalExpression>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="16" ProtocolSection="Safety Monitoring" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="16" ProtocolSection="Safety Monitoring" Confidence="1.0">
           <makoto:SourceQuote>No specific clinical adverse event monitoring procedures (e.g., clinical exams or lab tests for toxicity) are described in the provided text, as the study is focused on behavioral intervention and education rather than pharmaceutical administration.</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
         </makoto:SourceGrounding>
@@ -1166,7 +1164,7 @@
         <ErrorMessage>
           <TranslatedText>Systolic blood pressure must be strictly greater than diastolic blood pressure.</TranslatedText>
         </ErrorMessage>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="16" ProtocolSection="Safety Monitoring" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="16" ProtocolSection="Safety Monitoring" Confidence="1.0">
           <makoto:SourceQuote>No vital signs (e.g., Blood Pressure, Heart Rate) are listed as required measurements for this study.</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
         </makoto:SourceGrounding>
@@ -1175,7 +1173,7 @@
         <ErrorMessage>
           <TranslatedText>Adverse event resolution date must be on or after adverse event start date.</TranslatedText>
         </ErrorMessage>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="16" ProtocolSection="Safety Monitoring" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="16" ProtocolSection="Safety Monitoring" Confidence="1.0">
           <makoto:SourceQuote>No specific clinical adverse event monitoring procedures (e.g., clinical exams or lab tests for toxicity) are described in the provided text, as the study is focused on behavioral intervention and education rather than pharmaceutical administration.</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
         </makoto:SourceGrounding>
@@ -1184,7 +1182,7 @@
         <ErrorMessage>
           <TranslatedText>CTCAE Grade 3 or higher toxicity reported; requires completion of Dose Modification form.</TranslatedText>
         </ErrorMessage>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="16" ProtocolSection="Safety Monitoring" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="16" ProtocolSection="Safety Monitoring" Confidence="1.0">
           <makoto:SourceQuote>No specific clinical adverse event monitoring procedures (e.g., clinical exams or lab tests for toxicity) are described in the provided text, as the study is focused on behavioral intervention and education rather than pharmaceutical administration.</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
         </makoto:SourceGrounding>
@@ -1193,7 +1191,7 @@
         <ErrorMessage>
           <TranslatedText>Fatal adverse event outcome requires subject disposition to be recorded as Death on FORM.DS.</TranslatedText>
         </ErrorMessage>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="16" ProtocolSection="Safety Monitoring" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="16" ProtocolSection="Safety Monitoring" Confidence="1.0">
           <makoto:SourceQuote>No specific clinical adverse event monitoring procedures (e.g., clinical exams or lab tests for toxicity) are described in the provided text, as the study is focused on behavioral intervention and education rather than pharmaceutical administration.</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
         </makoto:SourceGrounding>
@@ -1536,98 +1534,98 @@
       </MethodDef>
       <makoto:VisualLayout>
         <makoto:Nodes>
-          <makoto:Node id="EP.1" type="epochGroup">
+          <makoto:Node id="EP.2" type="epochGroup">
             <makoto:Position x="360" y="50"/>
+          </makoto:Node>
+          <makoto:Node id="SE.V02" type="visit">
+            <makoto:Position x="40" y="160"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.VS.SE.V02" type="form">
+            <makoto:Position x="40" y="320"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.PE.SE.V02" type="form">
+            <makoto:Position x="40" y="450"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.LB.SE.V02" type="form">
+            <makoto:Position x="40" y="580"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.PK.SE.V02" type="form">
+            <makoto:Position x="40" y="710"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.CM.SE.V02" type="form">
+            <makoto:Position x="40" y="840"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.AE.SE.V02" type="form">
+            <makoto:Position x="40" y="970"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.BS.SE.V02" type="form">
+            <makoto:Position x="40" y="1100"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.EG.SE.V02" type="form">
+            <makoto:Position x="40" y="1230"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.PR.SE.V02" type="form">
+            <makoto:Position x="40" y="1360"/>
           </makoto:Node>
           <makoto:Node id="ARM.1" type="arm">
             <makoto:Position x="740" y="400"/>
           </makoto:Node>
-          <makoto:Node id="EP.2" type="epochGroup">
+          <makoto:Node id="EP.1" type="epochGroup">
             <makoto:Position x="960" y="50"/>
           </makoto:Node>
           <makoto:Node id="SE.V01" type="visit">
-            <makoto:Position x="30" y="160"/>
+            <makoto:Position x="40" y="160"/>
           </makoto:Node>
           <makoto:Node id="FORM.IE.SE.V01" type="form">
-            <makoto:Position x="30" y="320"/>
+            <makoto:Position x="40" y="320"/>
           </makoto:Node>
           <makoto:Node id="FORM.IC.SE.V01" type="form">
-            <makoto:Position x="30" y="450"/>
+            <makoto:Position x="40" y="450"/>
           </makoto:Node>
           <makoto:Node id="FORM.DM.SE.V01" type="form">
-            <makoto:Position x="30" y="580"/>
+            <makoto:Position x="40" y="580"/>
           </makoto:Node>
           <makoto:Node id="FORM.MH.SE.V01" type="form">
-            <makoto:Position x="30" y="710"/>
+            <makoto:Position x="40" y="710"/>
           </makoto:Node>
           <makoto:Node id="FORM.VS.SE.V01" type="form">
-            <makoto:Position x="30" y="840"/>
+            <makoto:Position x="40" y="840"/>
           </makoto:Node>
           <makoto:Node id="FORM.LB.SE.V01" type="form">
-            <makoto:Position x="30" y="970"/>
-          </makoto:Node>
-          <makoto:Node id="SE.V02" type="visit">
-            <makoto:Position x="330" y="160"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.VS.SE.V02" type="form">
-            <makoto:Position x="330" y="320"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.PE.SE.V02" type="form">
-            <makoto:Position x="330" y="450"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.LB.SE.V02" type="form">
-            <makoto:Position x="330" y="580"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.PK.SE.V02" type="form">
-            <makoto:Position x="330" y="710"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.CM.SE.V02" type="form">
-            <makoto:Position x="330" y="840"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.AE.SE.V02" type="form">
-            <makoto:Position x="330" y="970"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.BS.SE.V02" type="form">
-            <makoto:Position x="330" y="1100"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.EG.SE.V02" type="form">
-            <makoto:Position x="330" y="1230"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.PR.SE.V02" type="form">
-            <makoto:Position x="330" y="1360"/>
+            <makoto:Position x="40" y="970"/>
           </makoto:Node>
           <makoto:Node id="EP.3" type="epochGroup">
-            <makoto:Position x="1640" y="50"/>
+            <makoto:Position x="1360" y="50"/>
           </makoto:Node>
           <makoto:Node id="SE.V03" type="visit">
-            <makoto:Position x="30" y="160"/>
+            <makoto:Position x="40" y="160"/>
           </makoto:Node>
           <makoto:Node id="FORM.VS.SE.V03" type="form">
-            <makoto:Position x="30" y="320"/>
+            <makoto:Position x="40" y="320"/>
           </makoto:Node>
           <makoto:Node id="FORM.LB.SE.V03" type="form">
-            <makoto:Position x="30" y="450"/>
+            <makoto:Position x="40" y="450"/>
           </makoto:Node>
           <makoto:Node id="FORM.AE.SE.V03" type="form">
-            <makoto:Position x="30" y="580"/>
-          </makoto:Node>
-          <makoto:Node id="SE.V04" type="visit">
-            <makoto:Position x="330" y="160"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.VS.SE.V04" type="form">
-            <makoto:Position x="330" y="320"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.LB.SE.V04" type="form">
-            <makoto:Position x="330" y="450"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.AE.SE.V04" type="form">
-            <makoto:Position x="330" y="580"/>
-          </makoto:Node>
-          <makoto:Node id="FORM.DS.SE.V04" type="form">
-            <makoto:Position x="330" y="710"/>
+            <makoto:Position x="40" y="580"/>
           </makoto:Node>
           <makoto:Node id="EP.4" type="epochGroup">
-            <makoto:Position x="2320" y="50"/>
+            <makoto:Position x="1760" y="50"/>
+          </makoto:Node>
+          <makoto:Node id="SE.V04" type="visit">
+            <makoto:Position x="40" y="160"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.VS.SE.V04" type="form">
+            <makoto:Position x="40" y="320"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.LB.SE.V04" type="form">
+            <makoto:Position x="40" y="450"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.AE.SE.V04" type="form">
+            <makoto:Position x="40" y="580"/>
+          </makoto:Node>
+          <makoto:Node id="FORM.DS.SE.V04" type="form">
+            <makoto:Position x="40" y="710"/>
           </makoto:Node>
         </makoto:Nodes>
         <makoto:Edges>
@@ -1636,13 +1634,13 @@
           <makoto:Edge id="e-epoch-EP.2-EP.3" source="EP.2" target="EP.3" animated="true"/>
           <makoto:Edge id="e-epoch-EP.3-EP.4" source="EP.3" target="EP.4" animated="true"/>
           <makoto:Edge id="e-SE.V01-SE.V02" source="SE.V01" target="SE.V02"/>
-          <makoto:Edge id="e-SE.V02-SE.V03" source="SE.V02" target="SE.V03"/>
           <makoto:Edge id="e-SE.V01-FORM.IE.SE.V01" source="SE.V01" target="FORM.IE.SE.V01"/>
           <makoto:Edge id="e-FORM.IE.SE.V01-FORM.IC.SE.V01" source="FORM.IE.SE.V01" target="FORM.IC.SE.V01"/>
           <makoto:Edge id="e-FORM.IC.SE.V01-FORM.DM.SE.V01" source="FORM.IC.SE.V01" target="FORM.DM.SE.V01"/>
           <makoto:Edge id="e-FORM.DM.SE.V01-FORM.MH.SE.V01" source="FORM.DM.SE.V01" target="FORM.MH.SE.V01"/>
           <makoto:Edge id="e-FORM.MH.SE.V01-FORM.VS.SE.V01" source="FORM.MH.SE.V01" target="FORM.VS.SE.V01"/>
           <makoto:Edge id="e-FORM.VS.SE.V01-FORM.LB.SE.V01" source="FORM.VS.SE.V01" target="FORM.LB.SE.V01"/>
+          <makoto:Edge id="e-SE.V02-SE.V03" source="SE.V02" target="SE.V03"/>
           <makoto:Edge id="e-SE.V02-FORM.VS.SE.V02" source="SE.V02" target="FORM.VS.SE.V02"/>
           <makoto:Edge id="e-FORM.VS.SE.V02-FORM.PE.SE.V02" source="FORM.VS.SE.V02" target="FORM.PE.SE.V02"/>
           <makoto:Edge id="e-FORM.PE.SE.V02-FORM.LB.SE.V02" source="FORM.PE.SE.V02" target="FORM.LB.SE.V02"/>

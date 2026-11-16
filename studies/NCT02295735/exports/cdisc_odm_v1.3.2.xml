@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:makoto="http://gflow.ai/ns/makoto/v1.0" FileType="Snapshot" FileOID="ODM.STUDY.001.20261111030314" CreationDateTime="2026-11-11T03:03:14Z" ODMVersion="1.3.2">
+<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:makoto="http://gflow.ai/ns/makoto/v1.0" FileType="Snapshot" FileOID="ODM.STUDY.001.20261116183001" CreationDateTime="2026-11-16T18:30:01Z" ODMVersion="1.3.2">
   <Study OID="STUDY.001">
     <GlobalVariables>
       <StudyName>NCT02295735 Benchmark</StudyName>
@@ -1057,7 +1057,7 @@
       </CodeListDef>
       <ConditionDef OID="COND.SYSBP_GT_DIABP" Name="Systolic BP Greater Than Diastolic BP" Description="Systolic blood pressure must exceed diastolic blood pressure.">
         <FormalExpression Context="Python">ITEM.SYSBP &gt; ITEM.DIABP</FormalExpression>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
           <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
         </makoto:SourceGrounding>
@@ -1346,7 +1346,7 @@
         <ErrorMessage>
           <TranslatedText>Systolic blood pressure must be strictly greater than diastolic blood pressure.</TranslatedText>
         </ErrorMessage>
-        <makoto:SourceGrounding DocumentType="Protocol" DocumentHash="" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="" PageNumber="11" ProtocolSection="N/A" Confidence="1.0">
           <makoto:SourceQuote>Not explicitly found in provided text chunks</makoto:SourceQuote>
           <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
         </makoto:SourceGrounding>
@@ -1711,34 +1711,14 @@
           <makoto:BoundingBox x0="0.103" y0="0.1" x1="0.5" y1="0.15"/>
         </makoto:SourceGrounding>
       </EditCheck>
-      <MethodDef OID="MT.BRADEN_SCORE" Name="Braden Scale for Pressure Ulcer Risk" Type="Scoring System">
+      <MethodDef OID="MT.BMI" Name="Body Mass Index (BMI) Calculation" Type="Derivation">
         <Description>
-          <TranslatedText>A clinical scoring system used to assess the risk of developing pressure ulcers based on sensory perception, moisture, activity, mobility, nutrition, and skin integrity.</TranslatedText>
+          <TranslatedText>Body Mass Index (BMI, kg/m^2) derived from body weight (kg) and height (cm): WEIGHT / ((HEIGHT / 100)^2).</TranslatedText>
         </Description>
-        <FormalExpression Context="Python">sum(scores_per_category)</FormalExpression>
-        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="2" ProtocolSection="" Confidence="1.0">
-          <makoto:SourceQuote>monitoring of PU risk scores (Braden score)</makoto:SourceQuote>
-          <makoto:BoundingBox x0="0.1229" y0="0.0" x1="0.3601" y1="0.0201"/>
-        </makoto:SourceGrounding>
-      </MethodDef>
-      <MethodDef OID="MT.PU_CLASSIFICATION" Name="NPUAP/EPUAP PU Classification" Type="Categorization">
-        <Description>
-          <TranslatedText>Classification of pressure ulcers into categories II, III, IV, Unstageable, and Deep Tissue Injury (DTI) based on standardized criteria.</TranslatedText>
-        </Description>
-        <FormalExpression Context="Python">category_assignment(wound_depth, tissue_damage)</FormalExpression>
-        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="2" ProtocolSection="" Confidence="1.0">
-          <makoto:SourceQuote>Use of the NPUAP/EPUAP 2014 PU classification system to categorize ulcers (II, III, IV, DTI)</makoto:SourceQuote>
-          <makoto:BoundingBox x0="0.1229" y0="0.0" x1="0.3601" y1="0.0201"/>
-        </makoto:SourceGrounding>
-      </MethodDef>
-      <MethodDef OID="MT.BMI" Name="Body Mass Index" Type="Calculation">
-        <Description>
-          <TranslatedText>Calculation of body mass index from height and weight.</TranslatedText>
-        </Description>
-        <FormalExpression Context="Python">weight / (height ** 2)</FormalExpression>
-        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="16" ProtocolSection="" Confidence="1.0">
-          <makoto:SourceQuote>Body mass index</makoto:SourceQuote>
-          <makoto:BoundingBox x0="0.1229" y0="0.0" x1="0.3601" y1="0.0202"/>
+        <FormalExpression Context="Python">round(ITEM.WEIGHT / ((ITEM.HEIGHT / 100.0) ** 2), 1)</FormalExpression>
+        <makoto:SourceGrounding DocumentType="PROTOCOL" DocumentHash="7e9b8990136b06d29e3d31283a8e45806ab39b4803e5e5bfc1febf8ade58f7f1" PageNumber="16" ProtocolSection="Schedule of Assessments" Confidence="1.0">
+          <makoto:SourceQuote>Body mass index | • Obtained from clinical records</makoto:SourceQuote>
+          <makoto:BoundingBox x0="0.1139" y0="0.1447" x1="0.8675" y1="0.883"/>
         </makoto:SourceGrounding>
       </MethodDef>
       <MethodDef OID="MT.BSA" Name="Body Surface Area (BSA — Mosteller Formula)" Type="Derivation">
@@ -2087,6 +2067,9 @@
           <makoto:Node id="FORM.AE.SE.V03" type="form">
             <makoto:Position x="40" y="580"/>
           </makoto:Node>
+          <makoto:Node id="FORM.DS.SE.V03" type="form">
+            <makoto:Position x="40" y="710"/>
+          </makoto:Node>
         </makoto:Nodes>
         <makoto:Edges>
           <makoto:Edge id="e-ARM.1-SE.V01" source="ARM.1" target="SE.V01"/>
@@ -2145,6 +2128,7 @@
           <makoto:Edge id="e-SE.V03-FORM.VS.SE.V03" source="SE.V03" target="FORM.VS.SE.V03"/>
           <makoto:Edge id="e-FORM.VS.SE.V03-FORM.LB.SE.V03" source="FORM.VS.SE.V03" target="FORM.LB.SE.V03"/>
           <makoto:Edge id="e-FORM.LB.SE.V03-FORM.AE.SE.V03" source="FORM.LB.SE.V03" target="FORM.AE.SE.V03"/>
+          <makoto:Edge id="e-FORM.AE.SE.V03-FORM.DS.SE.V03" source="FORM.AE.SE.V03" target="FORM.DS.SE.V03"/>
         </makoto:Edges>
       </makoto:VisualLayout>
     </MetaDataVersion>
