@@ -3,7 +3,7 @@
   "repository": "clinical-protocol-compilation-benchmarks",
   "publisher": "VonCasper Solutions",
   "license": "Apache-2.0",
-  "generated_at_utc": "2026-11-16T18:40:08.675878+00:00",
+  "generated_at_utc": "2026-11-18T16:53:35.193980+00:00",
   "study_count": 13,
   "total_indexed_study_files": 143,
   "studies": [
@@ -30,8 +30,8 @@
       },
       "files": {
         "exports/rave_als.xlsx": {
-          "size_bytes": 38055,
-          "sha256": "cc2e6682f6ae77b8a0c6609b90e83b30dc832536622b8ec03868c810118453c4"
+          "size_bytes": 38719,
+          "sha256": "26aa5bda9c41b10b4e4f62492a28b414dfa735349891c04032678e364f165eee"
         },
         "exports/veeva_cdms.xml": {
           "size_bytes": 66691,
@@ -67,11 +67,11 @@
         },
         "metadata/compilation_manifest.json": {
           "size_bytes": 2419,
-          "sha256": "5479220d8984aea97265c153461becd664439f5be09a0a7cb07cfcdcecd41776"
+          "sha256": "0994be34ece40e74f37a7115768a1ffed38ab1cd4be8fb24871e999dcaa96da8"
         },
         "README.md": {
           "size_bytes": 3122,
-          "sha256": "84ac03cad9382d85883030b2de46fb6e96acb4b063e6c42a7ecfe268b8849ebc"
+          "sha256": "3d80b1ac430b3a1b996b065320d8b263cad2ab8b0e18e88ec066c9b37b3bed40"
         }
       }
     },
@@ -98,8 +98,8 @@
       },
       "files": {
         "exports/rave_als.xlsx": {
-          "size_bytes": 40054,
-          "sha256": "a8ee6237dd4cf1c81d83968953d21de269e8f64aef7723e176ce6bd9995741fb"
+          "size_bytes": 40650,
+          "sha256": "f071af1216eded199abb1b86a62fa0f6bd386a2e6097119362c225e9d897cfc0"
         },
         "exports/veeva_cdms.xml": {
           "size_bytes": 72485,
@@ -135,11 +135,11 @@
         },
         "metadata/compilation_manifest.json": {
           "size_bytes": 2471,
-          "sha256": "fabfeffee90c06bf55da7d7ccecbe1fbaf61c95958ffdd7b099620ce1e5f421a"
+          "sha256": "97bd0646dccc3643d7fa26182883649e22dcd66ced97d1296728c49c3393a763"
         },
         "README.md": {
           "size_bytes": 3228,
-          "sha256": "4b58dfa08b4f427bd241f984d370b533ecac2467b7a1986241712933eedc7c89"
+          "sha256": "1fef9d747452b9e9540f9d2ee717fb145a91b24e89590dcf8d5f413bd7372a68"
         }
       }
     },
@@ -166,8 +166,8 @@
       },
       "files": {
         "exports/rave_als.xlsx": {
-          "size_bytes": 36691,
-          "sha256": "118274d2a4c336df5f6c45c3bc37169c1795edaaa24a6fcd685a7ce54e0f89b0"
+          "size_bytes": 36603,
+          "sha256": "0954a1b292f377038aa72dcbd6faf153926a7106c9527f600ba99a4ee2f95a22"
         },
         "exports/veeva_cdms.xml": {
           "size_bytes": 63081,
@@ -203,11 +203,11 @@
         },
         "metadata/compilation_manifest.json": {
           "size_bytes": 2607,
-          "sha256": "de7385c58b3d6524de8228c6a564164496f7e408f70392d3a53c8dc3be127fc5"
+          "sha256": "a80f3107f07f6ecb85e9962fa25af5ea00b2819f159ee40254c8a9777211938b"
         },
         "README.md": {
           "size_bytes": 3426,
-          "sha256": "4ae8fe80c01a6876448d8612f3ae489e6bd7b7daee3f30ce2e538bca6ac170b5"
+          "sha256": "8ef4497adf54b3357df0f616c72f66f41dda5a70351e1efa30d949eed5c48b22"
         }
       }
     },
@@ -234,8 +234,8 @@
       },
       "files": {
         "exports/rave_als.xlsx": {
-          "size_bytes": 38732,
-          "sha256": "818c8f9e958e475cfaeb82d74bc5c4110a757daa79f0ae40f9dbebaab81452bc"
+          "size_bytes": 38653,
+          "sha256": "581df6eeb61a28b22958611ef8ad90e7147e1d09ddb8301e331c71b91b25f85e"
         },
         "exports/veeva_cdms.xml": {
           "size_bytes": 68055,
@@ -271,11 +271,11 @@
         },
         "metadata/compilation_manifest.json": {
           "size_bytes": 2598,
-          "sha256": "dfc64316f05fbd9b6f64377bc1f7fbd02cb6474f41f10673fc85a59f6a15f36b"
+          "sha256": "23eccfa024a9385d854765636a72fa5600cf46877c8251df1e0c77cfced41970"
         },
         "README.md": {
           "size_bytes": 3417,
-          "sha256": "c44bf8fd9c088da4fa38e554a35ff2ac91399a8245638b1fbe6477c9dd86f36f"
+          "sha256": "6b4d4749b011ea5aa9a82ff503fb50a8fd120a2d2839d6b4909f74f8bad06f3b"
         }
       }
     },
@@ -302,8 +302,8 @@
       },
       "files": {
         "exports/rave_als.xlsx": {
-          "size_bytes": 26741,
-          "sha256": "3c1f50a329861add54c1ad53312b3c084a4a555054ac9cc4c58f3ec5ca432b6d"
+          "size_bytes": 29129,
+          "sha256": "741112b45fc7a393a8088519e13afe9f0071e0b5cd7cab5e439262832517048e"
         },
         "exports/veeva_cdms.xml": {
           "size_bytes": 40746,
@@ -339,11 +339,11 @@
         },
         "metadata/compilation_manifest.json": {
           "size_bytes": 2602,
-          "sha256": "1fa38710a9b69ee6d1d26ebe2f53748d1cb4db5eb1239fadbe2d060c9e1065cd"
+          "sha256": "216f6b63d3f84d8bcc95144fc2fdf06b310957a2532acd644146fdda3092a683"
         },
         "README.md": {
           "size_bytes": 3421,
-          "sha256": "4657e7161e4f1b7d6f0310301048bb197868586714e4d0a8a853c82b138e21bc"
+          "sha256": "0626716f0135f63dd28d00eb8b0ba40b1b86720b70db599ec67903b1d1c5bb24"
         }
       }
     },
@@ -372,8 +372,8 @@
       },
       "files": {
         "exports/rave_als.xlsx": {
-          "size_bytes": 38215,
-          "sha256": "c2e3f528d1d1a23a601876828fcb841721834547d4bd0a96b773a08aa726e5fa"
+          "size_bytes": 39465,
+          "sha256": "fdbd420482891e5fb8747f77758a94aadcac744e48376254299568e5355b5cd3"
         },
         "exports/veeva_cdms.xml": {
           "size_bytes": 70160,
@@ -409,11 +409,11 @@
         },
         "metadata/compilation_manifest.json": {
           "size_bytes": 2641,
-          "sha256": "351d3f98b3240707490d7d1feeec51ff00a9ac289c0be4693687c6ef2bb757f5"
+          "sha256": "517ed7220af12c07cc67219e31ed6742f67722cd82d48a931f40e940b1e26761"
         },
         "README.md": {
           "size_bytes": 3640,
-          "sha256": "159e3ebcb5b58b152e5ba0fbca937df20aef01dcd60f3e8f5f8ebd27e57b3720"
+          "sha256": "de8c75742c609318211bfb4e042569a427e406dba6c6ce6d6cc8a348ddfa05e8"
         }
       }
     },
@@ -440,8 +440,8 @@
       },
       "files": {
         "exports/rave_als.xlsx": {
-          "size_bytes": 24751,
-          "sha256": "f501932c4ed4f4fe3f599a0f112b7e522d1569e3cd749ee42427a992099dd824"
+          "size_bytes": 25820,
+          "sha256": "79e1283f2ccd08ebc49615ff88e384ff1011533b6140cfd44c9b1b71c47790ca"
         },
         "exports/veeva_cdms.xml": {
           "size_bytes": 41729,
@@ -477,11 +477,11 @@
         },
         "metadata/compilation_manifest.json": {
           "size_bytes": 2435,
-          "sha256": "d35b91e1b59bb7cde344ac0342131508c8d3a0355a7f94177f3ce235624f91d7"
+          "sha256": "b9b4e556613f9cf34dcf833befd3c03233d1fbf80736d466458b61f0d33329f7"
         },
         "README.md": {
           "size_bytes": 3138,
-          "sha256": "66850dc209ac7389804de43469e0cf967e34b08671c86dcc5d9dba1cf530d8da"
+          "sha256": "814467e094c4f7f681a945d4a713f9513b9e8963db99dbb9d3e9b5648f83eec9"
         }
       }
     },
@@ -508,8 +508,8 @@
       },
       "files": {
         "exports/rave_als.xlsx": {
-          "size_bytes": 42547,
-          "sha256": "a1a80124c2d3d43ecdfbe41dbf58c43f60c18511c02da31e2313308fe24c554e"
+          "size_bytes": 43582,
+          "sha256": "2f07f72992422dd2518d8643eea9c5873033f2b65da46c2994471b0b70649993"
         },
         "exports/veeva_cdms.xml": {
           "size_bytes": 79354,
@@ -545,11 +545,11 @@
         },
         "metadata/compilation_manifest.json": {
           "size_bytes": 2438,
-          "sha256": "9f91aa5ec4f896fa6fd436c456baddfd7f05ce826e674e3b8f3dd405e30bb331"
+          "sha256": "4f04603460af6379ad8f83273a1348c39de51ce1d6daabbef13dda7ebdd16aa5"
         },
         "README.md": {
           "size_bytes": 3140,
-          "sha256": "d6263ec017d348aca7625b636c5c77c977b76ed14a93195243c059eecf5619d7"
+          "sha256": "9a1b3e70ac992e7f632f160a8cfd6d1e07a8a29bbc843c8bd2fa7b470bd25bf1"
         }
       }
     },
@@ -576,8 +576,8 @@
       },
       "files": {
         "exports/rave_als.xlsx": {
-          "size_bytes": 33283,
-          "sha256": "aa9d2c912793a852fc049468f7d88c0779af489ec3406ab2f739e424393d1d90"
+          "size_bytes": 33147,
+          "sha256": "d445ef4764421765ca89a3173207ae34637ec5da55e2520f09e33d84a3ab8251"
         },
         "exports/veeva_cdms.xml": {
           "size_bytes": 54952,
@@ -613,11 +613,11 @@
         },
         "metadata/compilation_manifest.json": {
           "size_bytes": 2435,
-          "sha256": "3af0a702360e8620c272d18d76a2056682c2bf47f19d93c7a8eafabc0024bff5"
+          "sha256": "85e3c1d3bdadc53f4b0b237483fc078fbcdd0a19f093830a359dcd9ff0eeaf4f"
         },
         "README.md": {
           "size_bytes": 3196,
-          "sha256": "6e78997f7f042b0de11a8899a0552d2ccc62b1ddcfe02b45318c340f969333c2"
+          "sha256": "56d443cb77a944343d2b950a31980ce3288319b163e0fa28a575caaaeb319f06"
         }
       }
     },
@@ -644,8 +644,8 @@
       },
       "files": {
         "exports/rave_als.xlsx": {
-          "size_bytes": 33258,
-          "sha256": "8e4e0b597d8ca7dc4d9797f0a41e06e714d7674b3d559a432347db2531e59b0b"
+          "size_bytes": 32941,
+          "sha256": "945b55835fcc07648444fd924e7473e7f983d4948a7d9048753b296d0da737c0"
         },
         "exports/veeva_cdms.xml": {
           "size_bytes": 55210,
@@ -681,11 +681,11 @@
         },
         "metadata/compilation_manifest.json": {
           "size_bytes": 2437,
-          "sha256": "a1e4ff4166a2c2553745517f157eebc47297f4102dd823dc9203d23698463f67"
+          "sha256": "4f8b4545c9076ed02ee4c725276f6364704302a83e0d37c208aa898ddcd0ff3e"
         },
         "README.md": {
           "size_bytes": 3196,
-          "sha256": "bfc9c272bab9197b975a520e8ed765cd16a044560cf105f8bc9be5c001dde7cb"
+          "sha256": "03e8bbe2443618ab6c9abd14707ad8d4f06a2c6443f199ae1b0748b805c17d7f"
         }
       }
     },
@@ -712,8 +712,8 @@
       },
       "files": {
         "exports/rave_als.xlsx": {
-          "size_bytes": 27722,
-          "sha256": "c6a0fca8570f4cbe008388749796d1e83b0497ba77d0ed41d6a63fc240024ec9"
+          "size_bytes": 27567,
+          "sha256": "f424ba2aabc70802aa18cae33cf81d620cacd783b05cfed2f1701cca33355df8"
         },
         "exports/veeva_cdms.xml": {
           "size_bytes": 43170,
@@ -749,11 +749,11 @@
         },
         "metadata/compilation_manifest.json": {
           "size_bytes": 2436,
-          "sha256": "d3278a5c373e350f0433d891adfb101b5259231815f5328c3f7511da6ca26243"
+          "sha256": "6a22d098d495d12b6ace86e556c624d952f6febad6b6ebc0dbe5fb2676aeecfd"
         },
         "README.md": {
           "size_bytes": 3196,
-          "sha256": "0c731d176c3f503bd9a6dcaf281c94930db84bb3947f19c8e2842f0dcba00541"
+          "sha256": "cc2b439315765e6eab360a0f3893a1ee9ecb61de80bb34643d991a6c59a41c00"
         }
       }
     },
@@ -780,8 +780,8 @@
       },
       "files": {
         "exports/rave_als.xlsx": {
-          "size_bytes": 33887,
-          "sha256": "c360ada41e0728375405e271626f558afacfe2b92c8cb17d5f4be134400fdff8"
+          "size_bytes": 33523,
+          "sha256": "d1884654aad4f2f3a01767970adccca5fe0af27d43a1261fe4097564ffde35f6"
         },
         "exports/veeva_cdms.xml": {
           "size_bytes": 56768,
@@ -817,11 +817,11 @@
         },
         "metadata/compilation_manifest.json": {
           "size_bytes": 2406,
-          "sha256": "7d4d9165e92aec6419d9eb2d2d1c584686afd6b6659753a226fe472104af9eb9"
+          "sha256": "fefdc1f1848c8a819b86f7168331ca6935082d4f51d9d7fa0e435fc988d7b925"
         },
         "README.md": {
           "size_bytes": 3111,
-          "sha256": "c13d50d8872004ccba74b4ed6f853e791987730ebc222fc0c437bf7215dd6cd2"
+          "sha256": "643eaa428f28c4a43aa4decb05dbce3366779a2c6359d05a9decb242a4418236"
         }
       }
     },
@@ -848,8 +848,8 @@
       },
       "files": {
         "exports/rave_als.xlsx": {
-          "size_bytes": 34722,
-          "sha256": "f74b5818d443daf0ab45cb478b2a2938b8898ae8c0fa165daf0004e60d6301be"
+          "size_bytes": 34528,
+          "sha256": "dceace22e04f55aa8d0a22eb7bb76c9a1833d27da0544643421894267bf83ef7"
         },
         "exports/veeva_cdms.xml": {
           "size_bytes": 59558,
@@ -885,11 +885,11 @@
         },
         "metadata/compilation_manifest.json": {
           "size_bytes": 2468,
-          "sha256": "54071974c3888fca718a55b8349665a094ad4806920a652fc98f9f1b95819042"
+          "sha256": "ab634d9177ba1374edacb1de552dbb6376485155985c978d51f5687300e976d7"
         },
         "README.md": {
           "size_bytes": 3228,
-          "sha256": "8f7670c606b72c0af861499f861ce95e25c418694fcb7b813fa07de1886e64b9"
+          "sha256": "9ca78172613ea0a555ff159f3e4026942d028d560f38df49b73d9f008629a52a"
         }
       }
     }

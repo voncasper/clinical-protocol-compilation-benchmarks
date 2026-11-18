@@ -31,7 +31,7 @@ python3 verify_turnkey_integrity.py
 python3 verify_turnkey_integrity.py --inspect-watermark studies/NCT01631552/exports/rave_als.xlsx
 ```
 
-*Last Manifest Finalization (UTC): `2026-11-16T18:40:08.675878+00:00`*
+*Last Manifest Finalization (UTC): `2026-11-18T16:53:35.193980+00:00`*
 
 ---
 

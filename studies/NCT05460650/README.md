@@ -40,7 +40,7 @@
 
 | Relative Artifact Path | Size (Bytes) | Verified SHA-256 Digest |
 | :--- | ---: | :--- |
-| [`./exports/rave_als.xlsx`](./exports/rave_als.xlsx) | `27,722` | `c6a0fca8570f4cbe008388749796d1e83b0497ba77d0ed41d6a63fc240024ec9` |
+| [`./exports/rave_als.xlsx`](./exports/rave_als.xlsx) | `27,567` | `f424ba2aabc70802aa18cae33cf81d620cacd783b05cfed2f1701cca33355df8` |
 | [`./exports/veeva_cdms.xml`](./exports/veeva_cdms.xml) | `43,170` | `703b68eed575fd52c4b76fd302eafd362af1ff33e9d245b4531dee35c259c1e4` |
 | [`./exports/cdisc_odm_v1.3.2.xml`](./exports/cdisc_odm_v1.3.2.xml) | `110,409` | `a2476092614fd092e941ae26d1328244f425b612a03a00ad9f2f6a17896e05c9` |
 | [`./exports/transcelerate_usdm_v3.0.json`](./exports/transcelerate_usdm_v3.0.json) | `45,485` | `11273124c546dcab4b761fc4477e56db2b32df9b153e94e426e8113154f92950` |

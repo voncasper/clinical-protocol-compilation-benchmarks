@@ -16,7 +16,7 @@
   "alternate_cdn_urls": [],
   "compilation_mode": "fresh_single_pass_no_resume",
   "compilation_elapsed_seconds": 1603.74,
-  "finalized_at_utc": "2026-11-16T18:40:08.675878+00:00",
+  "finalized_at_utc": "2026-11-18T16:53:35.193980+00:00",
   "telemetry": {
     "event_count": 8,
     "form_count": 15,
@@ -28,8 +28,8 @@
   },
   "artifacts": {
     "exports/rave_als.xlsx": {
-      "size_bytes": 38732,
-      "sha256": "818c8f9e958e475cfaeb82d74bc5c4110a757daa79f0ae40f9dbebaab81452bc"
+      "size_bytes": 38653,
+      "sha256": "581df6eeb61a28b22958611ef8ad90e7147e1d09ddb8301e331c71b91b25f85e"
     },
     "exports/veeva_cdms.xml": {
       "size_bytes": 68055,

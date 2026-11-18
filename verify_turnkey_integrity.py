@@ -4,12 +4,13 @@ Standalone Zero-Dependency Turnkey Benchmark Integrity Auditor
 ==============================================================
 Cryptographically verifies SHA-256 digests, namespace-agnostic CDISC ODM v1.3.2 &
 Veeva Vault CDMS XML structures, TransCelerate USDM v3.0 JSON schemas, OpenXML `.xlsx`
-workbooks (Medidata Rave ALS & 21 CFR Part 11 Provenance Matrix), Dual-Canvas Playwright
-vector diagrams (`canvas_standard.svg`/`.pdf` vs. `canvas_mindmap.svg`/`.pdf`), and
-Zero-IP repository hygiene using ONLY the Python 3 Standard Library.
+workbooks (5-Pass Medidata Rave ALS & Postfix RPN Stack Machine + 21 CFR Part 11
+Provenance Matrix), Dual-Canvas Playwright vector diagrams (`canvas_standard.svg`/`.pdf`
+vs. `canvas_mindmap.svg`/`.pdf`), and Zero-IP repository hygiene using ONLY the Python 3
+Standard Library.
 
 Usage:
-    python3 verify_turnkey_integrity.py [--repo-dir .]
+    python3 verify_turnkey_integrity.py [--repo-dir .] [--validate-rave-als [PATH]]
     python3 verify_turnkey_integrity.py --inspect-watermark studies/NCT01631552/exports/rave_als.xlsx
 """
 
@@ -17,7 +18,9 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import io
 import json
+import re
 import sys
 import xml.etree.ElementTree as ET
 import zipfile
@@ -92,6 +95,10 @@ def sha256_file(path: Path) -> str:
 
 def local_name(tag: str) -> str:
     return tag.split("}", 1)[-1] if "}" in tag else tag
+
+
+def _xml_local_name(tag: str) -> str:
+    return local_name(tag)
 
 
 WATERMARK_SHEET_NAME = "_GFlow_Provenance"
@@ -341,6 +348,713 @@ def inspect_xlsx_watermark(xlsx_path: Path) -> Dict[str, Any]:
     }
 
 
+# ---------------------------------------------------------------------------
+# 100% Python-Stdlib 5-Pass Rave ALS & Postfix RPN Validator + ODM Recompiler
+# ---------------------------------------------------------------------------
+
+REQUIRED_RAVE_ALS_SHEETS: Tuple[str, ...] = (
+    "Draft",
+    "Forms",
+    "Fields",
+    "Folders",
+    "Matrices",
+    "DataDictionaries",
+    "Derivations",
+    "EditChecks",
+    "CheckSteps",
+    "CheckActions",
+)
+
+REQUIRED_RAVE_ALS_COLUMNS: Dict[str, Tuple[str, ...]] = {
+    "Draft": ("ProjectName", "DraftName", "Active"),
+    "Forms": ("FormOID", "FormName", "Ordinal", "DraftFormActive"),
+    "Fields": (
+        "FormOID",
+        "FieldOID",
+        "Ordinal",
+        "DraftFieldName",
+        "VariableFormat",
+        "ControlType",
+        "DataDictionaryName",
+    ),
+    "Folders": ("FolderOID", "FolderName", "Ordinal", "DraftFolderActive"),
+    "Matrices": ("MatrixName", "FolderOID", "FormOID", "DraftFormActive"),
+    "DataDictionaries": ("DataDictionaryName", "CodedValue", "Ordinal", "UserDataString"),
+    "Derivations": (
+        "DerivationName",
+        "FormOID",
+        "FieldOID",
+        "VariableFormat",
+        "Ordinal",
+        "Active",
+        "Expression",
+    ),
+    "EditChecks": ("EditCheckName", "CheckActive", "DraftEditCheckActive"),
+    "CheckSteps": (
+        "EditCheckName",
+        "StepNumber",
+        "FormOID",
+        "FieldOID",
+        "VariableFormat",
+        "CheckValue",
+        "CheckOperator",
+        "LogicalOperator",
+        "RecordPosition",
+    ),
+    "CheckActions": (
+        "EditCheckName",
+        "ActionType",
+        "FormOID",
+        "FieldOID",
+        "Message",
+        "ActionNumber",
+    ),
+}
+
+FORBIDDEN_ALS_PROVENANCE_COLUMNS: Tuple[str, ...] = (
+    "SourceGrounding",
+    "BoundingBox",
+    "SourceQuote",
+    "CharInterval",
+    "DocumentHash",
+    "GroundingType",
+)
+
+RAVE_RESERVED_AUX_SHEETS = {
+    "codelists",
+    "unitdictionaries",
+    "labsettings",
+    "customfunctions",
+    "translations",
+    "checks",
+    "actions",
+    "steps",
+    "study",
+    "project",
+}
+
+VALID_RAVE_CONTROL_TYPES = {
+    "Text",
+    "LongText",
+    "Radio",
+    "DropDownList",
+    "CheckBox",
+    "DateTime",
+    "SearchList",
+    "DynamicSearchList",
+    "FileUpload",
+    "Signature",
+}
+CHOICE_RAVE_CONTROL_TYPES = {"Radio", "DropDownList", "CheckBox"}
+UNARY_RAVE_CHECK_OPERATORS = {
+    "IsEmpty",
+    "IsNotEmpty",
+    "IsDirty",
+    "IsNew",
+    "IsActive",
+    "IsFutureDate",
+    "IsPresent",
+    "NotExist",
+}
+BINARY_RAVE_CHECK_OPERATORS = {
+    "IsEqualTo",
+    "IsNotEqualTo",
+    "IsLessThan",
+    "IsLessThanOrEqualTo",
+    "IsGreaterThan",
+    "IsGreaterThanOrEqualTo",
+    "Contains",
+    "StartsWith",
+}
+UNARY_RAVE_LOGICAL_OPERATORS = {"NOT"}
+BINARY_RAVE_LOGICAL_OPERATORS = {"AND", "OR", "XOR"}
+
+_ALS_CONTROL_CHAR_RE = re.compile(r"[\x00-\x1f\x7f]")
+_ALS_CELL_REF_COL_RE = re.compile(r"^([A-Za-z]+)")
+_ALS_DATETIME_MASK_RE = re.compile(
+    r"^(?:(?:dd|UN|uu)[-/](?:MMM|MM|UNK)[-/])?yyyy(?:\s+HH:MM(?::SS)?)?$"
+    r"|^MMM[-/]yyyy$"
+    r"|^HH:MM(?::SS)?$"
+)
+_ALS_TEXT_FMT_RE = re.compile(r"^\$[1-9]\d{0,4}$")
+_ALS_INT_FMT_RE = re.compile(r"^[1-9]\d?$")
+_ALS_FLOAT_FMT_RE = re.compile(r"^[1-9]\d?\.[1-9]\d?$")
+
+
+def _col_letters_to_index(cell_ref: str) -> Optional[int]:
+    m = _ALS_CELL_REF_COL_RE.match(cell_ref or "")
+    if not m:
+        return None
+    col_idx = 0
+    for ch in m.group(1).upper():
+        col_idx = col_idx * 26 + (ord(ch) - ord("A") + 1)
+    return col_idx - 1
+
+
+def parse_openxml_workbook_bytes(xlsx_bytes: bytes) -> Dict[str, Any]:
+    """
+    100% Python-stdlib OpenXML `.xlsx` parser resolving `xl/sharedStrings.xml`, `inlineStr`,
+    numeric/boolean `<v>` cells, `activeTab`, sheet `state`, and `<c r="C5">` column letters.
+    """
+    parse_errors: List[str] = []
+    sheets_meta: List[Dict[str, Any]] = []
+    sheet_by_name: Dict[str, Dict[str, Any]] = {}
+    active_tab = "0"
+
+    if not xlsx_bytes or not zipfile.is_zipfile(io.BytesIO(xlsx_bytes)):
+        return {
+            "active_tab": active_tab,
+            "sheets": sheets_meta,
+            "sheet_by_name": sheet_by_name,
+            "parse_errors": ["Input bytes do not form a valid OpenXML ZIP archive."],
+        }
+
+    try:
+        with zipfile.ZipFile(io.BytesIO(xlsx_bytes), "r") as zf:
+            names = set(zf.namelist())
+            if "xl/workbook.xml" not in names:
+                return {
+                    "active_tab": active_tab,
+                    "sheets": sheets_meta,
+                    "sheet_by_name": sheet_by_name,
+                    "parse_errors": ["Workbook archive missing 'xl/workbook.xml'."],
+                }
+
+            shared_strings: List[str] = []
+            if "xl/sharedStrings.xml" in names:
+                sst_root = ET.fromstring(zf.read("xl/sharedStrings.xml"))
+                for si_el in sst_root:
+                    if _xml_local_name(si_el.tag) == "si":
+                        shared_strings.append(
+                            "".join(
+                                (t_el.text or "")
+                                for t_el in si_el.iter()
+                                if _xml_local_name(t_el.tag) == "t"
+                            )
+                        )
+
+            rel_map: Dict[str, str] = {}
+            if "xl/_rels/workbook.xml.rels" in names:
+                rels_root = ET.fromstring(zf.read("xl/_rels/workbook.xml.rels"))
+                for rel_el in rels_root:
+                    if _xml_local_name(rel_el.tag) == "Relationship":
+                        rid = rel_el.attrib.get("Id", "")
+                        rtarget = rel_el.attrib.get("Target", "")
+                        if rid and rtarget:
+                            rel_map[rid] = rtarget
+
+            wb_root = ET.fromstring(zf.read("xl/workbook.xml"))
+            for el in wb_root.iter():
+                if _xml_local_name(el.tag) == "workbookView":
+                    active_tab = el.attrib.get("activeTab", "0")
+                    break
+
+            raw_sheets = [el for el in wb_root.iter() if _xml_local_name(el.tag) == "sheet"]
+            for idx, sh_el in enumerate(raw_sheets):
+                sh_name = sh_el.attrib.get("name", "")
+                sh_state = sh_el.attrib.get("state", "visible")
+                rid_val = ""
+                for attr_k, attr_v in sh_el.attrib.items():
+                    if _xml_local_name(attr_k) == "id":
+                        rid_val = attr_v
+                        break
+                raw_target = rel_map.get(rid_val, "")
+                norm_target = raw_target.lstrip("/")
+                if norm_target and not norm_target.startswith("xl/") and f"xl/{norm_target}" in names:
+                    norm_target = f"xl/{norm_target}"
+
+                headers: List[str] = []
+                header_by_col: Dict[int, str] = {}
+                rows: List[Dict[str, str]] = []
+                row_numbers: List[int] = []
+
+                if not norm_target or norm_target not in names:
+                    parse_errors.append(
+                        f"Worksheet '{sh_name}' XML target '{raw_target}' (r:id='{rid_val}') missing from archive."
+                    )
+                else:
+                    ws_root = ET.fromstring(zf.read(norm_target))
+                    header_parsed = False
+                    fallback_row_num = 0
+                    for row_el in ws_root.iter():
+                        if _xml_local_name(row_el.tag) != "row":
+                            continue
+                        fallback_row_num += 1
+                        r_attr = row_el.attrib.get("r", "")
+                        excel_row_num = int(r_attr) if r_attr.isdigit() else fallback_row_num
+
+                        cell_map: Dict[int, str] = {}
+                        next_col = 0
+                        for c_el in row_el:
+                            if _xml_local_name(c_el.tag) != "c":
+                                continue
+                            c_ref = c_el.attrib.get("r", "")
+                            col_idx = _col_letters_to_index(c_ref)
+                            if col_idx is None:
+                                col_idx = next_col
+                            next_col = col_idx + 1
+
+                            c_type = c_el.attrib.get("t", "")
+                            if c_type == "inlineStr":
+                                raw_val = "".join(
+                                    (t_el.text or "")
+                                    for t_el in c_el.iter()
+                                    if _xml_local_name(t_el.tag) == "t"
+                                )
+                            elif c_type == "s":
+                                v_nodes = [ch for ch in c_el if _xml_local_name(ch.tag) == "v"]
+                                idx_str = (v_nodes[0].text or "").strip() if v_nodes else ""
+                                raw_val = (
+                                    shared_strings[int(idx_str)]
+                                    if idx_str.isdigit() and int(idx_str) < len(shared_strings)
+                                    else ""
+                                )
+                            elif c_type == "b":
+                                v_nodes = [ch for ch in c_el if _xml_local_name(ch.tag) == "v"]
+                                b_txt = (v_nodes[0].text or "").strip() if v_nodes else "0"
+                                raw_val = "TRUE" if b_txt == "1" else "FALSE"
+                            else:
+                                v_nodes = [ch for ch in c_el if _xml_local_name(ch.tag) == "v"]
+                                raw_val = (v_nodes[0].text or "") if v_nodes else ""
+
+                            cell_map[col_idx] = raw_val
+
+                        if not header_parsed:
+                            header_parsed = True
+                            if cell_map:
+                                max_col = max(cell_map.keys())
+                                for c_i in range(max_col + 1):
+                                    h_name = cell_map.get(c_i, "").strip()
+                                    if h_name:
+                                        header_by_col[c_i] = h_name
+                                        headers.append(h_name)
+                        else:
+                            if not header_by_col:
+                                continue
+                            row_dict = {
+                                h_name: cell_map.get(c_i, "").strip(" ")
+                                for c_i, h_name in header_by_col.items()
+                            }
+                            if any(v != "" for v in row_dict.values()):
+                                rows.append(row_dict)
+                                row_numbers.append(excel_row_num)
+
+                sh_info = {
+                    "index": idx,
+                    "name": sh_name,
+                    "state": sh_state,
+                    "target": norm_target,
+                    "headers": headers,
+                    "rows": rows,
+                    "row_numbers": row_numbers,
+                }
+                sheets_meta.append(sh_info)
+                if sh_name not in sheet_by_name:
+                    sheet_by_name[sh_name] = sh_info
+                else:
+                    parse_errors.append(f"Duplicate worksheet name '{sh_name}' in workbook.xml.")
+    except Exception as exc:
+        parse_errors.append(f"OpenXML workbook parse failure: {exc}")
+
+    return {
+        "active_tab": active_tab,
+        "sheets": sheets_meta,
+        "sheet_by_name": sheet_by_name,
+        "parse_errors": parse_errors,
+    }
+
+
+def is_rave_als_workbook(parsed_wb: Dict[str, Any]) -> bool:
+    sbn = parsed_wb.get("sheet_by_name", {})
+    if "Fields" not in sbn or "CheckSteps" not in sbn:
+        return False
+    cs_headers = set(sbn["CheckSteps"].get("headers", ()))
+    return "CheckOperator" in cs_headers
+
+
+def _als_positive_int(raw: str) -> Optional[int]:
+    txt = (raw or "").strip()
+    if not txt:
+        return None
+    if txt.isdigit():
+        val = int(txt)
+        return val if val > 0 else None
+    try:
+        fval = float(txt)
+        if fval.is_integer() and int(fval) > 0:
+            return int(fval)
+    except ValueError:
+        pass
+    return None
+
+
+def _is_valid_als_scalar_format(vfmt: str) -> bool:
+    return bool(
+        _ALS_TEXT_FMT_RE.match(vfmt)
+        or _ALS_INT_FMT_RE.match(vfmt)
+        or _ALS_FLOAT_FMT_RE.match(vfmt)
+    )
+
+
+def validate_rave_als_parsed(parsed: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Executes all 5 offline Medidata Rave Architect Loader (`ALS`) & Postfix RPN Stack passes
+    using only the Python 3 Standard Library.
+    """
+    p1_errors: List[str] = list(parsed.get("parse_errors", []))
+    p2_errors: List[str] = []
+    p3_errors: List[str] = []
+    p4_errors: List[str] = []
+    p5_errors: List[str] = []
+    rpn_traces: Dict[str, List[int]] = {}
+
+    sheets: List[Dict[str, Any]] = parsed.get("sheets", [])
+    sbn: Dict[str, Dict[str, Any]] = parsed.get("sheet_by_name", {})
+    active_tab = str(parsed.get("active_tab", "0"))
+
+    # Pass 1: Worksheet, Column Contract & veryHidden Watermark Non-Interference
+    if active_tab != "0":
+        p1_errors.append(f"[Pass 1] Workbook activeTab must be '0' ('Draft'), got activeTab='{active_tab}'.")
+    if sheets:
+        first_sheet = sheets[0]
+        if first_sheet["name"] != "Draft":
+            p1_errors.append(f"[Pass 1] Primary tab at index 0 must be 'Draft', got '{first_sheet['name']}'.")
+        if first_sheet["state"] != "visible":
+            p1_errors.append(f"[Pass 1] 'Draft' worksheet must be 'visible', got state='{first_sheet['state']}'.")
+
+    required_set = set(REQUIRED_RAVE_ALS_SHEETS)
+    required_lower_map = {s.lower(): s for s in REQUIRED_RAVE_ALS_SHEETS}
+    seen_lower: Dict[str, str] = {}
+    for sh in sheets:
+        sname = sh["name"]
+        slower = sname.lower()
+        if slower in seen_lower and seen_lower[slower] != sname:
+            p1_errors.append(f"[Pass 1] Case-insensitive worksheet collision between '{seen_lower[slower]}' and '{sname}'.")
+        seen_lower[slower] = sname
+        if sname in required_set:
+            if sh["state"] != "visible":
+                p1_errors.append(f"[Pass 1] Standard Rave ALS worksheet '{sname}' must be visible, got state='{sh['state']}'.")
+        elif sname == WATERMARK_SHEET_NAME:
+            if sh["state"] != "veryHidden":
+                p1_errors.append(
+                    f"[Pass 1] Auxiliary forensic watermark sheet '{WATERMARK_SHEET_NAME}' must have state='veryHidden', got '{sh['state']}'."
+                )
+            if sh["index"] != len(sheets) - 1:
+                p1_errors.append(
+                    f"[Pass 1] Auxiliary forensic watermark sheet '{WATERMARK_SHEET_NAME}' must be at index {len(sheets) - 1}, got {sh['index']}."
+                )
+        else:
+            if slower.startswith("matrix"):
+                p1_errors.append(f"[Pass 1] Illegal 'Matrix*' worksheet '{sname}' detected.")
+            elif slower in RAVE_RESERVED_AUX_SHEETS or slower in required_lower_map:
+                p1_errors.append(f"[Pass 1] Reserved Rave Architect worksheet collision on '{sname}'.")
+            else:
+                p1_errors.append(f"[Pass 1] Non-standard worksheet '{sname}' is not permitted in Rave ALS workbook.")
+
+    for req_sheet in REQUIRED_RAVE_ALS_SHEETS:
+        sh = sbn.get(req_sheet)
+        if sh is None:
+            p1_errors.append(f"[Pass 1] Missing required standard Rave ALS worksheet '{req_sheet}'.")
+            continue
+        hdr_set = set(sh["headers"])
+        missing_cols = [c for c in REQUIRED_RAVE_ALS_COLUMNS[req_sheet] if c not in hdr_set]
+        if missing_cols:
+            p1_errors.append(f"[Pass 1] Worksheet '{req_sheet}' missing required columns: {missing_cols}.")
+        leaked_cols = [c for c in FORBIDDEN_ALS_PROVENANCE_COLUMNS if c in hdr_set]
+        if leaked_cols:
+            p1_errors.append(f"[Pass 1] Worksheet '{req_sheet}' contains forbidden provenance columns: {leaked_cols}.")
+
+    draft_sh = sbn.get("Draft")
+    if draft_sh is not None:
+        if len(draft_sh["rows"]) < 1:
+            p1_errors.append("[Pass 1] 'Draft' worksheet must contain at least 1 row.")
+        else:
+            d0 = draft_sh["rows"][0]
+            if not d0.get("ProjectName") or not d0.get("DraftName"):
+                p1_errors.append("[Pass 1] 'Draft' row 1 must populate non-empty 'ProjectName' and 'DraftName'.")
+
+    # Pass 2: OID Hygiene & Primary Key Uniqueness
+    def _check_pk(sheet_name: str, col_name: str) -> None:
+        seen = set()
+        sh = sbn.get(sheet_name)
+        if not sh:
+            return
+        for idx, row in enumerate(sh["rows"]):
+            rnum = sh["row_numbers"][idx]
+            val = row.get(col_name, "")
+            if not val:
+                p2_errors.append(f"[Pass 2] {sheet_name} row {rnum}: '{col_name}' is empty.")
+                continue
+            if _ALS_CONTROL_CHAR_RE.search(val):
+                p2_errors.append(f"[Pass 2] {sheet_name} row {rnum}: '{col_name}' contains illegal control character: {val!r}.")
+            if val in seen:
+                p2_errors.append(f"[Pass 2] {sheet_name} row {rnum}: Duplicate {col_name} '{val}'.")
+            seen.add(val)
+
+    _check_pk("Folders", "FolderOID")
+    _check_pk("Forms", "FormOID")
+    _check_pk("EditChecks", "EditCheckName")
+    _check_pk("Derivations", "DerivationName")
+
+    fields_sh = sbn.get("Fields", {"rows": [], "row_numbers": []})
+    seen_fields = set()
+    for idx, row in enumerate(fields_sh["rows"]):
+        rnum = fields_sh["row_numbers"][idx]
+        f_oid = row.get("FormOID", "")
+        fld_oid = row.get("FieldOID", "")
+        if not f_oid or not fld_oid:
+            p2_errors.append(f"[Pass 2] Fields row {rnum}: FormOID ('{f_oid}') and FieldOID ('{fld_oid}') must both be non-empty.")
+            continue
+        if _ALS_CONTROL_CHAR_RE.search(f_oid) or _ALS_CONTROL_CHAR_RE.search(fld_oid):
+            p2_errors.append(f"[Pass 2] Fields row {rnum}: FormOID/FieldOID contains illegal control character: ({f_oid!r}, {fld_oid!r}).")
+        pair = (f_oid, fld_oid)
+        if pair in seen_fields:
+            p2_errors.append(f"[Pass 2] Fields row {rnum}: Duplicate (FormOID, FieldOID) pair {pair}.")
+        seen_fields.add(pair)
+
+    dd_sh = sbn.get("DataDictionaries", {"rows": [], "row_numbers": []})
+    seen_dd = set()
+    for idx, row in enumerate(dd_sh["rows"]):
+        rnum = dd_sh["row_numbers"][idx]
+        dd_name = row.get("DataDictionaryName", "")
+        coded = row.get("CodedValue", "")
+        if not dd_name or coded == "":
+            p2_errors.append(f"[Pass 2] DataDictionaries row {rnum}: DataDictionaryName and CodedValue must be non-empty.")
+            continue
+        if _ALS_CONTROL_CHAR_RE.search(dd_name) or _ALS_CONTROL_CHAR_RE.search(coded):
+            p2_errors.append(f"[Pass 2] DataDictionaries row {rnum}: Control character in ({dd_name!r}, {coded!r}).")
+        key = (dd_name, coded)
+        if key in seen_dd:
+            p2_errors.append(f"[Pass 2] DataDictionaries row {rnum}: Duplicate (DataDictionaryName, CodedValue) {key}.")
+        seen_dd.add(key)
+
+    # Pass 3: Cross-Sheet Relational Foreign-Key Integrity
+    known_forms = {r["FormOID"] for r in sbn.get("Forms", {}).get("rows", []) if r.get("FormOID")}
+    known_folders = {r["FolderOID"] for r in sbn.get("Folders", {}).get("rows", []) if r.get("FolderOID")}
+    known_dicts = {r["DataDictionaryName"] for r in dd_sh["rows"] if r.get("DataDictionaryName")}
+    known_fields = {(r["FormOID"], r["FieldOID"]) for r in fields_sh["rows"] if r.get("FormOID") and r.get("FieldOID")}
+    known_checks = {r["EditCheckName"] for r in sbn.get("EditChecks", {}).get("rows", []) if r.get("EditCheckName")}
+
+    for idx, row in enumerate(fields_sh["rows"]):
+        rnum = fields_sh["row_numbers"][idx]
+        f_oid = row.get("FormOID", "")
+        fld_oid = row.get("FieldOID", "")
+        dd_name = row.get("DataDictionaryName", "")
+        if f_oid and f_oid not in known_forms:
+            p3_errors.append(f"[Pass 3] Fields row {rnum} ('{fld_oid}'): FormOID '{f_oid}' does not exist in Forms.")
+        if dd_name and dd_name not in known_dicts:
+            p3_errors.append(f"[Pass 3] Fields row {rnum} ('{f_oid}.{fld_oid}'): DataDictionaryName '{dd_name}' does not exist in DataDictionaries.")
+
+    matrices_sh = sbn.get("Matrices", {"rows": [], "row_numbers": []})
+    for idx, row in enumerate(matrices_sh["rows"]):
+        rnum = matrices_sh["row_numbers"][idx]
+        fl_oid = row.get("FolderOID", "")
+        fm_oid = row.get("FormOID", "")
+        if fl_oid not in known_folders:
+            p3_errors.append(f"[Pass 3] Matrices row {rnum}: FolderOID '{fl_oid}' does not exist in Folders.")
+        if fm_oid not in known_forms:
+            p3_errors.append(f"[Pass 3] Matrices row {rnum}: FormOID '{fm_oid}' does not exist in Forms.")
+
+    derivs_sh = sbn.get("Derivations", {"rows": [], "row_numbers": []})
+    for idx, row in enumerate(derivs_sh["rows"]):
+        rnum = derivs_sh["row_numbers"][idx]
+        d_name = row.get("DerivationName", "")
+        f_oid = row.get("FormOID", "")
+        fld_oid = row.get("FieldOID", "")
+        if not f_oid or not fld_oid or (f_oid, fld_oid) not in known_fields:
+            p3_errors.append(f"[Pass 3] Derivations row {rnum} ('{d_name}'): target ({f_oid!r}, {fld_oid!r}) does not exist in Fields.")
+
+    steps_sh = sbn.get("CheckSteps", {"rows": [], "row_numbers": []})
+    checks_with_steps = set()
+    for idx, row in enumerate(steps_sh["rows"]):
+        rnum = steps_sh["row_numbers"][idx]
+        ec_name = row.get("EditCheckName", "")
+        f_oid = row.get("FormOID", "")
+        fld_oid = row.get("FieldOID", "")
+        if ec_name not in known_checks:
+            p3_errors.append(f"[Pass 3] CheckSteps row {rnum}: EditCheckName '{ec_name}' does not exist in EditChecks.")
+        else:
+            checks_with_steps.add(ec_name)
+        if f_oid or fld_oid:
+            if not f_oid or not fld_oid or (f_oid, fld_oid) not in known_fields:
+                p3_errors.append(f"[Pass 3] CheckSteps row {rnum} ('{ec_name}'): field reference ({f_oid!r}, {fld_oid!r}) does not exist in Fields.")
+
+    actions_sh = sbn.get("CheckActions", {"rows": [], "row_numbers": []})
+    checks_with_actions = set()
+    for idx, row in enumerate(actions_sh["rows"]):
+        rnum = actions_sh["row_numbers"][idx]
+        ec_name = row.get("EditCheckName", "")
+        f_oid = row.get("FormOID", "")
+        fld_oid = row.get("FieldOID", "")
+        if ec_name not in known_checks:
+            p3_errors.append(f"[Pass 3] CheckActions row {rnum}: EditCheckName '{ec_name}' does not exist in EditChecks.")
+        else:
+            checks_with_actions.add(ec_name)
+        if not f_oid or not fld_oid or (f_oid, fld_oid) not in known_fields:
+            p3_errors.append(f"[Pass 3] CheckActions row {rnum} ('{ec_name}'): action target ({f_oid!r}, {fld_oid!r}) does not exist in Fields.")
+
+    for ec_name in sorted(known_checks):
+        if ec_name not in checks_with_steps:
+            p3_errors.append(f"[Pass 3] EditCheck '{ec_name}' has zero CheckSteps rows.")
+        if ec_name not in checks_with_actions:
+            p3_errors.append(f"[Pass 3] EditCheck '{ec_name}' has zero CheckActions rows.")
+
+    # Pass 4: ControlType <-> VariableFormat <-> DataDictionary Compatibility
+    for idx, row in enumerate(fields_sh["rows"]):
+        rnum = fields_sh["row_numbers"][idx]
+        f_oid = row.get("FormOID", "")
+        fld_oid = row.get("FieldOID", "")
+        ctrl = row.get("ControlType", "")
+        vfmt = row.get("VariableFormat", "")
+        dd_name = row.get("DataDictionaryName", "")
+        if ctrl not in VALID_RAVE_CONTROL_TYPES:
+            p4_errors.append(f"[Pass 4] Fields row {rnum} ('{f_oid}.{fld_oid}'): unsupported Rave ControlType '{ctrl}'.")
+            continue
+        if ctrl in CHOICE_RAVE_CONTROL_TYPES:
+            if not dd_name:
+                p4_errors.append(f"[Pass 4] Fields row {rnum} ('{f_oid}.{fld_oid}'): ControlType '{ctrl}' requires non-empty DataDictionaryName.")
+            if not _is_valid_als_scalar_format(vfmt):
+                p4_errors.append(f"[Pass 4] Fields row {rnum} ('{f_oid}.{fld_oid}'): ControlType '{ctrl}' has invalid VariableFormat '{vfmt}'.")
+        elif ctrl == "DateTime":
+            if dd_name:
+                p4_errors.append(f"[Pass 4] Fields row {rnum} ('{f_oid}.{fld_oid}'): ControlType 'DateTime' cannot bind DataDictionaryName '{dd_name}'.")
+            if not _ALS_DATETIME_MASK_RE.match(vfmt):
+                p4_errors.append(f"[Pass 4] Fields row {rnum} ('{f_oid}.{fld_oid}'): ControlType 'DateTime' requires date/time mask, got '{vfmt}'.")
+        elif ctrl in {"Text", "LongText"}:
+            if dd_name:
+                p4_errors.append(f"[Pass 4] Fields row {rnum} ('{f_oid}.{fld_oid}'): ControlType '{ctrl}' cannot bind DataDictionaryName '{dd_name}'.")
+            if _ALS_DATETIME_MASK_RE.match(vfmt) or not _is_valid_als_scalar_format(vfmt):
+                p4_errors.append(f"[Pass 4] Fields row {rnum} ('{f_oid}.{fld_oid}'): ControlType '{ctrl}' has incompatible VariableFormat '{vfmt}'.")
+        else:
+            if vfmt and (_ALS_DATETIME_MASK_RE.match(vfmt) or not _is_valid_als_scalar_format(vfmt)):
+                p4_errors.append(f"[Pass 4] Fields row {rnum} ('{f_oid}.{fld_oid}'): ControlType '{ctrl}' has invalid VariableFormat '{vfmt}'.")
+
+    # Pass 5: Postfix Reverse Polish Notation (RPN) Stack Machine Simulation
+    grouped: Dict[str, List[Tuple[int, int, Dict[str, str]]]] = {}
+    for idx, row in enumerate(steps_sh["rows"]):
+        rnum = steps_sh["row_numbers"][idx]
+        ec_name = row.get("EditCheckName", "")
+        step_num_raw = row.get("StepNumber", "")
+        step_num = _als_positive_int(step_num_raw)
+        if step_num is None:
+            p5_errors.append(f"[Pass 5] CheckSteps row {rnum} ('{ec_name}'): StepNumber '{step_num_raw}' must be a positive integer.")
+            continue
+        grouped.setdefault(ec_name, []).append((step_num, rnum, row))
+
+    for ec_name, items in grouped.items():
+        items_sorted = sorted(items, key=lambda t: t[0])
+        expected_nums = list(range(1, len(items_sorted) + 1))
+        actual_nums = [t[0] for t in items_sorted]
+        if actual_nums != expected_nums:
+            p5_errors.append(
+                f"[Pass 5] EditCheck '{ec_name}': StepNumber sequence {actual_nums} must be consecutive 1..{len(items_sorted)}."
+            )
+
+        stack_depth = 0
+        trace: List[int] = []
+        aborted = False
+        for step_num, rnum, row in items_sorted:
+            f_oid = row.get("FormOID", "")
+            fld_oid = row.get("FieldOID", "")
+            chk_val = row.get("CheckValue", "")
+            chk_op = row.get("CheckOperator", "")
+            log_op = row.get("LogicalOperator", "")
+
+            has_field = bool(f_oid or fld_oid)
+            has_const = chk_val != ""
+
+            if chk_op.lower() == "customfunction":
+                p5_errors.append(f"[Pass 5] EditCheck '{ec_name}' Step {step_num} (row {rnum}): forbidden 'CustomFunction' placeholder.")
+                aborted = True
+                continue
+            if chk_op and log_op:
+                p5_errors.append(
+                    f"[Pass 5] EditCheck '{ec_name}' Step {step_num} (row {rnum}): combined CheckOperator '{chk_op}' and LogicalOperator '{log_op}' on same row."
+                )
+                aborted = True
+                continue
+            if has_field and has_const:
+                p5_errors.append(
+                    f"[Pass 5] EditCheck '{ec_name}' Step {step_num} (row {rnum}): cannot push both FieldOID '{fld_oid}' and CheckValue '{chk_val}'."
+                )
+                aborted = True
+                continue
+            if (has_field or has_const) and (chk_op or log_op):
+                p5_errors.append(
+                    f"[Pass 5] EditCheck '{ec_name}' Step {step_num} (row {rnum}): combined operand push and operator ('{chk_op or log_op}') on same row."
+                )
+                aborted = True
+                continue
+            if not has_field and not has_const and not chk_op and not log_op:
+                p5_errors.append(f"[Pass 5] EditCheck '{ec_name}' Step {step_num} (row {rnum}): empty no-op CheckStep row.")
+                aborted = True
+                continue
+
+            if has_field or has_const:
+                stack_depth += 1
+            elif chk_op:
+                if chk_op in UNARY_RAVE_CHECK_OPERATORS:
+                    if stack_depth < 1:
+                        p5_errors.append(
+                            f"[Pass 5] EditCheck '{ec_name}' Step {step_num} (row {rnum}): RPN stack underflow on unary CheckOperator '{chk_op}' (stack_depth={stack_depth} < 1)."
+                        )
+                        aborted = True
+                        continue
+                elif chk_op in BINARY_RAVE_CHECK_OPERATORS:
+                    if stack_depth < 2:
+                        p5_errors.append(
+                            f"[Pass 5] EditCheck '{ec_name}' Step {step_num} (row {rnum}): RPN stack underflow on binary CheckOperator '{chk_op}' (stack_depth={stack_depth} < 2)."
+                        )
+                        aborted = True
+                        continue
+                    stack_depth -= 1
+                else:
+                    p5_errors.append(f"[Pass 5] EditCheck '{ec_name}' Step {step_num} (row {rnum}): unknown Rave CheckOperator '{chk_op}'.")
+                    aborted = True
+                    continue
+            elif log_op:
+                if log_op in UNARY_RAVE_LOGICAL_OPERATORS:
+                    if stack_depth < 1:
+                        p5_errors.append(
+                            f"[Pass 5] EditCheck '{ec_name}' Step {step_num} (row {rnum}): RPN stack underflow on unary LogicalOperator '{log_op}' (stack_depth={stack_depth} < 1)."
+                        )
+                        aborted = True
+                        continue
+                elif log_op in BINARY_RAVE_LOGICAL_OPERATORS:
+                    if stack_depth < 2:
+                        p5_errors.append(
+                            f"[Pass 5] EditCheck '{ec_name}' Step {step_num} (row {rnum}): RPN stack underflow on LogicalOperator '{log_op}' (stack_depth={stack_depth} < 2)."
+                        )
+                        aborted = True
+                        continue
+                    stack_depth -= 1
+                else:
+                    p5_errors.append(f"[Pass 5] EditCheck '{ec_name}' Step {step_num} (row {rnum}): unknown Rave LogicalOperator '{log_op}'.")
+                    aborted = True
+                    continue
+
+            trace.append(stack_depth)
+
+        rpn_traces[ec_name] = trace
+        if not aborted and stack_depth != 1:
+            p5_errors.append(f"[Pass 5] EditCheck '{ec_name}' terminated with final_stack_depth={stack_depth} (expected 1).")
+
+    all_errors = p1_errors + p2_errors + p3_errors + p4_errors + p5_errors
+    return {
+        "is_valid": len(all_errors) == 0,
+        "errors": all_errors,
+        "sheet_row_counts": {sh["name"]: len(sh["rows"]) for sh in sheets},
+        "rpn_stack_traces": rpn_traces,
+        "pass_summary": {
+            "pass_1": len(p1_errors) == 0,
+            "pass_2": len(p2_errors) == 0,
+            "pass_3": len(p3_errors) == 0,
+            "pass_4": len(p4_errors) == 0,
+            "pass_5": len(p5_errors) == 0,
+        },
+    }
+
+
 def _check_openxml_xlsx(
     xlsx_path: Path,
     label: str,
@@ -349,58 +1063,43 @@ def _check_openxml_xlsx(
     expected_design_id: Optional[str] = None,
     expected_proto_sha: Optional[str] = None,
     required_non_empty_sheets: Tuple[str, ...] = (),
+    force_validate_rave_als: bool = False,
+    require_watermark: bool = True,
 ) -> None:
+    xlsx_path = Path(xlsx_path)
     if not zipfile.is_zipfile(xlsx_path):
         errors.append(f"{label}: '{xlsx_path}' is not a valid OpenXML ZIP archive.")
         return
-    try:
-        with zipfile.ZipFile(xlsx_path, "r") as zf:
-            names = set(zf.namelist())
-            if "xl/workbook.xml" not in names:
-                errors.append(f"{label}: '{xlsx_path}' missing 'xl/workbook.xml'.")
-                return
-            wb_root = ET.fromstring(zf.read("xl/workbook.xml"))
-            rel_map: Dict[str, str] = {}
-            if "xl/_rels/workbook.xml.rels" in names:
-                rels_root = ET.fromstring(zf.read("xl/_rels/workbook.xml.rels"))
-                for rel_el in rels_root:
-                    if local_name(rel_el.tag) == "Relationship":
-                        rid = rel_el.attrib.get("Id", "")
-                        rtarget = rel_el.attrib.get("Target", "")
-                        if rid and rtarget:
-                            rel_map[rid] = rtarget
-            sheets = [el for el in wb_root.iter() if local_name(el.tag) == "sheet"]
-            visible_sheets = [
-                s for s in sheets if s.attrib.get("name") != WATERMARK_SHEET_NAME
-            ]
-            if not visible_sheets:
-                errors.append(f"{label}: '{xlsx_path}' workbook contains zero data worksheet definitions.")
-            sheet_by_name = {s.attrib.get("name", ""): s for s in visible_sheets}
-            for req_sheet in required_non_empty_sheets:
-                sh_el = sheet_by_name.get(req_sheet)
-                if sh_el is None:
-                    errors.append(f"{label}: missing required worksheet '{req_sheet}'.")
-                    continue
-                rid_val = ""
-                for attr_k, attr_v in sh_el.attrib.items():
-                    if local_name(attr_k) == "id":
-                        rid_val = attr_v
-                        break
-                raw_target = rel_map.get(rid_val, "")
-                norm_target = raw_target.lstrip("/")
-                if norm_target and not norm_target.startswith("xl/") and f"xl/{norm_target}" in names:
-                    norm_target = f"xl/{norm_target}"
-                if not norm_target or norm_target not in names:
-                    errors.append(f"{label}: worksheet XML for '{req_sheet}' missing from archive.")
-                    continue
-                ws_root = ET.fromstring(zf.read(norm_target))
-                row_count = sum(1 for el in ws_root.iter() if local_name(el.tag) == "row")
-                if row_count < 2:
-                    errors.append(
-                        f"{label}: worksheet '{req_sheet}' contains zero compiled data rows (row_count={row_count})."
-                    )
-    except Exception as exc:
-        errors.append(f"{label}: failed to inspect OpenXML workbook '{xlsx_path}': {exc}")
+
+    parsed = parse_openxml_workbook_bytes(xlsx_path.read_bytes())
+    if parsed["parse_errors"]:
+        for perr in parsed["parse_errors"]:
+            errors.append(f"{label}: {perr}")
+        return
+
+    visible_sheets = [
+        s for s in parsed["sheets"] if s["name"] != WATERMARK_SHEET_NAME
+    ]
+    if not visible_sheets:
+        errors.append(f"{label}: '{xlsx_path}' workbook contains zero data worksheet definitions.")
+    sheet_by_name = {s["name"]: s for s in visible_sheets}
+    for req_sheet in required_non_empty_sheets:
+        sh_info = sheet_by_name.get(req_sheet)
+        if sh_info is None:
+            errors.append(f"{label}: missing required worksheet '{req_sheet}'.")
+            continue
+        if len(sh_info["rows"]) < 1:
+            errors.append(
+                f"{label}: worksheet '{req_sheet}' contains zero compiled data rows."
+            )
+
+    if force_validate_rave_als or is_rave_als_workbook(parsed):
+        als_res = validate_rave_als_parsed(parsed)
+        if not als_res["is_valid"]:
+            for aerr in als_res["errors"]:
+                errors.append(f"{label}: {aerr}")
+
+    if not require_watermark:
         return
 
     wm = inspect_xlsx_watermark(xlsx_path)
@@ -557,7 +1256,9 @@ def _check_zero_ip_sanitization(repo_dir: Path, expected_study_ids: Set[str], er
                 errors.append(f"[ZERO-IP VIOLATION] Could not scan '{rel_str}': {exc}")
 
 
-def verify_repository(repo_dir: Path) -> Tuple[bool, List[str]]:
+def verify_repository(
+    repo_dir: Path, force_validate_rave_als: bool = False
+) -> Tuple[bool, List[str]]:
     repo_dir = Path(repo_dir).resolve()
     errors: List[str] = []
 
@@ -667,6 +1368,7 @@ def verify_repository(repo_dir: Path) -> Tuple[bool, List[str]]:
                 expected_design_id=str(st.get("design_id") or ""),
                 expected_proto_sha=str(st.get("protocol_sha256") or ""),
                 required_non_empty_sheets=("EditChecks", "CheckSteps"),
+                force_validate_rave_als=force_validate_rave_als,
             )
 
         prov_xlsx = study_dir / "metadata" / "provenance_matrix_21cfr11.xlsx"
@@ -705,6 +1407,13 @@ def main(argv: List[str] | None = None) -> int:
         default=None,
         help="Extract and cryptographically verify Dual-Layer OpenXML G-Flow provenance watermark from an .xlsx file.",
     )
+    parser.add_argument(
+        "--validate-rave-als",
+        nargs="?",
+        const="__ALL__",
+        default=None,
+        help="Force 5-Pass Medidata Rave ALS & Postfix RPN Stack validation on all repo studies or a single .xlsx file.",
+    )
     args = parser.parse_args(argv)
 
     if args.inspect_watermark is not None:
@@ -719,13 +1428,34 @@ def main(argv: List[str] | None = None) -> int:
         print(json.dumps(report, indent=2))
         return 1
 
-    passed, errors = verify_repository(args.repo_dir)
+    if args.validate_rave_als is not None and args.validate_rave_als != "__ALL__":
+        als_target = Path(args.validate_rave_als)
+        if not als_target.is_file():
+            print(f"[FAIL] Rave ALS file does not exist: '{als_target}'.", file=sys.stderr)
+            return 1
+        parsed = parse_openxml_workbook_bytes(als_target.read_bytes())
+        als_rep = validate_rave_als_parsed(parsed)
+        if als_rep["is_valid"]:
+            print(
+                f"[PASS] RAVE ALS 5-PASS & RPN STACK VERIFIED: '{als_target}' "
+                f"(simulated_edit_checks={len(als_rep['rpn_stack_traces'])}, 0 errors)"
+            )
+            print(json.dumps(als_rep, indent=2))
+            return 0
+        print(f"[FAIL] RAVE ALS 5-PASS VALIDATION FAILED ({len(als_rep['errors'])} error(s)):", file=sys.stderr)
+        for aerr in als_rep["errors"]:
+            print(f"  - {aerr}", file=sys.stderr)
+        return 1
+
+    passed, errors = verify_repository(
+        args.repo_dir, force_validate_rave_als=(args.validate_rave_als == "__ALL__")
+    )
     if passed:
         bm = json.loads((Path(args.repo_dir).resolve() / "benchmark_manifest.json").read_text("utf-8"))
         n_studies = len(bm.get("studies", []))
         print(
-            f"[PASS] Verified 100% cryptographic, structural, Dual-Canvas SVG/PDF, Dual-Layer OpenXML Watermark, "
-            f"and Zero-IP integrity across {n_studies} studies ({n_studies * 11} study files)."
+            f"[PASS] Verified 100% cryptographic, structural, 5-Pass Rave ALS & RPN Stack, Dual-Canvas SVG/PDF, "
+            f"Dual-Layer OpenXML Watermark, and Zero-IP integrity across {n_studies} studies ({n_studies * 11} study files)."
         )
         return 0
 
